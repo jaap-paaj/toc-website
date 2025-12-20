@@ -10,10 +10,9 @@ export function HomeHeroModule() {
     <HomeModule
       id="hero"
       width="full"
-      spacing="none"
+      spacing="hero"
       className={cn(
-        "bg-[var(--toc-hero-bg)] text-[var(--toc-hero-text)]",
-        "pt-32 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32"
+        "bg-[var(--toc-hero-bg)] text-[var(--toc-hero-text)]"
       )}
     >
       <div className="container mx-auto">

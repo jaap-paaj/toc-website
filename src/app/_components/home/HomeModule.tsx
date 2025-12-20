@@ -1,17 +1,19 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-type HomeModuleSpacing = "standard" | "compact" | "none";
+type HomeModuleSpacing = "standard" | "compact" | "none" | "hero";
 
 const PADDING_TOP_MAP: Record<HomeModuleSpacing, string> = {
     standard: "pt-16 md:pt-24 lg:pt-32",
     compact: "pt-12 md:pt-16 lg:pt-20",
+    hero: "pt-32 md:pt-40 lg:pt-48",
     none: "",
 };
 
 const PADDING_BOTTOM_MAP: Record<HomeModuleSpacing, string> = {
     standard: "pb-16 md:pb-24 lg:pb-32",
     compact: "pb-12 md:pb-16 lg:pb-20",
+    hero: "pb-16 md:pb-24 lg:pb-32",
     none: "",
 };
 

@@ -18,9 +18,10 @@ export function EducateTestimonialsModule() {
         <HomeModule
             id="educate-testimonials"
             width="full"
+
+            tone="dark"
             spacing="standard"
             spacingEdge="bottom"
-            className="bg-background text-foreground"
         >
             <TestimonialsSection
                 headingLabel="TESTIMONIALS"
