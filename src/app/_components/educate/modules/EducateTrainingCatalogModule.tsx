@@ -34,6 +34,7 @@ const INNOVATION_TRAINING_ITEMS: EditorialItem[] = [
 export function EducateTrainingCatalogModule() {
     return (
         <HomeModule id="training-catalog" width="full" tone="light" spacing="standard" spacingEdge="bottom">
+            {/* EditorialCardGridSection provides internal top inset (pt-16+) for the divider */}
             <EditorialCardGridSection
                 categoryLabel="AI TRAINING"
                 intro="Hands-on programs that help you use AI to work smarter and explore new possibilities."

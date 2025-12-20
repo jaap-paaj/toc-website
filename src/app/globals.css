@@ -54,6 +54,7 @@
   /* Hero Module Tokens */
   --toc-hero-bg: var(--brand-primary);
   --toc-hero-text: #0A0A0A;
+  --toc-page-hero-copy-min-h: 8rem;
 }
 
 @layer components {
