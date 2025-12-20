@@ -33,12 +33,12 @@ const INNOVATION_TRAINING_ITEMS: EditorialItem[] = [
 
 export function EducateTrainingCatalogModule() {
     return (
-        <HomeModule id="training-catalog" width="full" tone="light" spacing="standard">
+        <HomeModule id="training-catalog" width="full" tone="light" spacing="standard" spacingEdge="bottom">
             <EditorialCardGridSection
                 categoryLabel="AI TRAINING"
                 intro="Hands-on programs that help you use AI to work smarter and explore new possibilities."
                 items={AI_TRAINING_ITEMS}
-                className="pb-16 md:pb-24" // Internal gap
+            // className="pb-16 md:pb-24" // removed to avoid double spacing with next section's internal top padding
             />
             <EditorialCardGridSection
                 categoryLabel="INNOVATION TRAINING"

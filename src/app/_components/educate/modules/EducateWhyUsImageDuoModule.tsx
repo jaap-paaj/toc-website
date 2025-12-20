@@ -12,9 +12,8 @@ export function EducateWhyUsImageDuoModule() {
             id="educate-image-duo"
             width="full"
             tone="split-light-dark"
-            spacing="none"
+            spacing="standard"
             spacingEdge="bottom"
-            className="pt-0 md:pt-0 pb-24 md:pb-24"
         >
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-[0.9fr_1.6fr] gap-4 md:gap-8 items-stretch">

@@ -25,30 +25,37 @@ export function EditorialCardGridSection({
 }: EditorialCardGridSectionProps) {
     return (
         <div className={cn("container mx-auto", className)}>
-            <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
-                <SectionHeader
-                    variant="split"
-                    divider={true}
-                    eyebrow={categoryLabel}
-                    description={intro}
-                />
+            {/* Divider Breathing Room Wrapper */}
+            <div className="pt-16 md:pt-24 lg:pt-32">
+                <div className="border-t border-border/40" />
+                <div className="pt-6 md:pt-8">
+                    <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
+                        <SectionHeader
+                            variant="split"
+                            divider={false}
+                            eyebrow={categoryLabel}
+                            description={intro}
+                        />
 
-                {/* Grid Block - Informational Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    {items.map((item, idx) => (
-                        <Surface
-                            key={idx}
-                            variant="catalog"
-                            className="flex flex-col gap-3 p-6 md:p-8"
-                        >
-                            <Heading level={3} size="card" className="font-semibold text-primary-foreground">
-                                {item.title}
-                            </Heading>
-                            <Text className="text-primary-foreground/60 text-sm leading-relaxed max-w-prose">
-                                {item.description}
-                            </Text>
-                        </Surface>
-                    ))}
+
+                        {/* Grid Block - Informational Cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                            {items.map((item, idx) => (
+                                <Surface
+                                    key={idx}
+                                    variant="catalog"
+                                    className="flex flex-col gap-3 p-6 md:p-8"
+                                >
+                                    <Heading level={3} size="card" className="font-semibold text-primary-foreground">
+                                        {item.title}
+                                    </Heading>
+                                    <Text className="text-primary-foreground/60 text-sm leading-relaxed max-w-prose">
+                                        {item.description}
+                                    </Text>
+                                </Surface>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
