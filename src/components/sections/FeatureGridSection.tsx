@@ -45,11 +45,9 @@ export function FeatureGridSection({
                     key={idx}
                     variant="card"
                     className={cn(
-                        "group relative flex flex-col p-6 md:p-8 h-full",
-                        // Add hover effect if href exists or generic card hover
-                        "transition-all duration-300 ease-out",
-                        "hover:bg-white/10 hover:border-white/20 hover:shadow-lg",
-                        "focus-within:bg-white/10 focus-within:border-white/20 focus-within:shadow-lg"
+                        "group relative flex flex-col p-6 md:p-8 h-full transition-all duration-300 ease-out",
+                        // Add hover effect ONLY if href exists (interactive)
+                        item.href && "hover:bg-white/10 hover:border-white/20 hover:shadow-lg focus-within:bg-white/10 focus-within:border-white/20 focus-within:shadow-lg"
                     )}
                 >
                     {item.id ? (
