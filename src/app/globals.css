@@ -1,0 +1,247 @@
+@import "tailwindcss";
+@source "../";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ========================================
+   TOC - Design System
+   ======================================== */
+
+:root {
+  /* TOC Brand Colors - Dark Theme Default */
+  --brand-primary: #CFFF4C;
+  /* Canonical Green */
+  --background: #0A0A0A;
+  --foreground: #EDEDED;
+  --card: #111111;
+  --card-foreground: #EDEDED;
+  --popover: #111111;
+  --popover-foreground: #EDEDED;
+  --primary: var(--brand-primary);
+  --primary-foreground: #0A0A0A;
+  --secondary: #1F1F1F;
+  --secondary-foreground: #EDEDED;
+  --muted: #171717;
+  --muted-foreground: #737373;
+  --accent: var(--brand-primary);
+  --accent-foreground: #0A0A0A;
+  --destructive: #7F1D1D;
+  --destructive-foreground: #FFFFFF;
+  --border: #262626;
+  --input: #262626;
+  --ring: var(--brand-primary);
+
+  /* Legacy references mapped to new system to prevent breakage */
+  --landal-primary: var(--brand-primary);
+  --landal-background: #0A0A0A;
+
+  /* Radius System */
+  --radius: 0.625rem;
+
+  /* TOC Nav Surface Tokens */
+  --toc-lime: var(--brand-primary);
+  --toc-nav-surface-bg: var(--brand-primary);
+  /* Solid, matches Hero */
+  /* Optimized for glass overlap */
+  --toc-nav-border: rgba(0, 0, 0, 0.14);
+  --toc-nav-shadow: 0 4px 32px rgba(0, 0, 0, 0.15);
+
+  /* Glass Tokens */
+  --glass-blur-lg: 40px;
+  --glass-saturate: 1.5;
+
+  /* Hero Module Tokens */
+  --toc-hero-bg: var(--brand-primary);
+  --toc-hero-text: #0A0A0A;
+}
+
+@layer components {
+
+  /* Container Surface: Shape, Border, Shadow */
+  .nav-surface {
+    border: 1px solid var(--toc-nav-border);
+    box-shadow: var(--toc-nav-shadow);
+  }
+
+  /* Glass Effect Layer (Underlay) - Now Solid */
+  .surface-glass-header {
+    background-color: color-mix(in srgb, var(--brand-primary) 95%, transparent) !important;
+    backdrop-filter: blur(var(--glass-blur-lg)) !important;
+    -webkit-backdrop-filter: blur(var(--glass-blur-lg)) !important;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Radii tokens */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Shadows */
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+  /* Typography */
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-sans);
+  /* Force serif to sans (Figtree) */
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Vertical spacing scale (page rhythm) */
+  --space-xs: 0.5rem;
+  /* small micro-gap */
+  --space-sm: 0.75rem;
+  /* body + small meta */
+  --space-md: 1.25rem;
+  /* standard stack within component */
+  --space-lg: 2rem;
+  /* standard section gap mobile */
+  --space-xl: 3rem;
+  /* section gap desktop */
+  --space-xxl: 4rem;
+  /* large hero / page break */
+
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+}
+
+
+
+@layer utilities {
+
+  /* Headings – TOC scale (All Sans) */
+  /* Hero Display: Massive, uppercase, tight */
+  .text-display-hero {
+    @apply text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black uppercase tracking-tighter leading-[0.85];
+  }
+
+  /* Shared display headline for black sections (About / CTA etc.) */
+  .text-display-section {
+    @apply text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter;
+    line-height: 0.9;
+  }
+
+  .text-heading-xl {
+    @apply text-5xl md:text-6xl lg:text-7xl leading-tight font-bold tracking-tight;
+  }
+
+  .text-heading-lg {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight;
+  }
+
+  .text-heading-md {
+    @apply text-2xl md:text-3xl lg:text-4xl leading-snug font-semibold tracking-tight;
+  }
+
+  .text-heading-sm {
+    @apply text-xl md:text-2xl leading-snug font-medium tracking-tight;
+  }
+
+  /* Body text scale */
+  .text-body-lg {
+    @apply text-lg leading-relaxed;
+  }
+
+  /* Generic vertical stack utilities */
+  .stack-page {
+    @apply flex flex-col gap-12 md:gap-16 lg:gap-20;
+  }
+
+  .stack-section {
+    @apply flex flex-col gap-4 md:gap-6;
+  }
+
+  .stack-tight {
+    @apply flex flex-col gap-2 md:gap-3;
+  }
+
+  .stack-hero {
+    @apply flex flex-col items-center text-center gap-4 md:gap-6;
+  }
+
+  /* Normalization Tiers (Hardening) */
+  .shadow-panel {
+    @apply shadow-sm;
+  }
+
+  .shadow-surface {
+    @apply shadow-md;
+  }
+
+  .shadow-surface-hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Radii */
+  .rounded-panel {
+    @apply rounded-2xl;
+  }
+
+  .rounded-surface {
+    @apply rounded-3xl;
+  }
+
+  /* Interaction Tokens (Micro-interactions) */
+
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
