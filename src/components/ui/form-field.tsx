@@ -8,6 +8,7 @@ import { spacing } from '@/design-system/tokens/spacing';
 interface FormFieldProps {
     label: string;
     description?: string;
+    error?: string;
     className?: string;
     children: React.ReactNode;
 }
@@ -15,6 +16,7 @@ interface FormFieldProps {
 export function FormField({
     label,
     description,
+    error,
     className,
     children,
 }: FormFieldProps) {
@@ -31,6 +33,11 @@ export function FormField({
                 )}
             </div>
             {children}
+            {error && (
+                <p className="text-sm font-medium text-destructive">
+                    {error}
+                </p>
+            )}
         </div>
     );
 }

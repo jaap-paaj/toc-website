@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import React from "react";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { Surface } from "@/design-system/components/Surfaces";
 import { spacing } from "@/design-system/tokens/spacing";
@@ -7,7 +8,7 @@ import { SectionHeader } from "./SectionHeader";
 
 export interface EditorialItem {
     title: string;
-    description: string;
+    description: string | React.ReactNode;
 }
 
 interface EditorialCardGridSectionProps {
@@ -49,7 +50,10 @@ export function EditorialCardGridSection({
                                     <Heading level={3} size="card" className="font-semibold text-primary-foreground">
                                         {item.title}
                                     </Heading>
-                                    <Text className="text-primary-foreground/60 text-sm leading-relaxed max-w-prose">
+                                    <Text
+                                        as={typeof item.description === 'string' ? 'p' : 'div'}
+                                        className="text-primary-foreground/60 text-sm leading-relaxed max-w-prose"
+                                    >
                                         {item.description}
                                     </Text>
                                 </Surface>

@@ -1,17 +1,32 @@
-import { Heading, Text } from "@/design-system/components/Typography";
-import { HomeModule } from "@/app/_components/home/HomeModule";
+import { HomeModule } from "../../home/HomeModule";
+import { Heading } from "@/design-system/components/Typography";
+import { layoutTokens } from "@/design-system/tokens/layout";
 
 export function ContactHeroModule() {
     return (
-        <HomeModule id="contact-hero" width="full" className="pt-32 md:pt-48 pb-16 md:pb-24">
-            <div className="container mx-auto px-6 md:px-8">
-                <div className="flex flex-col gap-6 md:gap-8 max-w-4xl">
-                    <Heading level={1} className="text-display-section">
-                        Contact
-                    </Heading>
-                    <Text size="lg" className="text-muted-foreground leading-relaxed">
-                        Ready to accelerate your AI journey? Whether you&apos;re looking for strategic guidance, custom automation, or team training, we&apos;re here to help. capability for sustainable digital innovation.
-                    </Text>
+        <HomeModule
+            id="contact-hero"
+            width="full"
+            tone="dark"
+            // Use "hero" spacing for top to match Educate/Automate visual band
+            spacing="hero"
+            spacingEdge="top"
+            // Manually apply "compact" bottom spacing to reduce height (pb-12 md:pb-16 lg:pb-20)
+            className="pb-12 md:pb-16 lg:pb-20"
+        >
+            <div className="container mx-auto">
+                {/* Canonical Hero Layout Reuse (Educate-style) */}
+                <div className={layoutTokens.splitHero}>
+                    {/* Left Column: Title Only */}
+                    <div className="flex flex-col gap-2">
+                        <Heading
+                            level={1}
+                            className="text-display-hero font-display xl:text-8xl w-full"
+                        >
+                            CONTACT
+                        </Heading>
+                    </div>
+                    {/* Right Column: Omitted (Functional Header) */}
                 </div>
             </div>
         </HomeModule>
