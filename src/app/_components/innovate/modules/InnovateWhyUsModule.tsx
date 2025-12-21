@@ -19,7 +19,7 @@ export function InnovateWhyUsModule() {
         <HomeModule id="why-innovate-with-us" width="full" tone="dark" spacing="standard" spacingEdge="bottom">
             <div className={cn("container mx-auto flex flex-col", spacing.component.sectionHeader)}>
                 <SectionHeader eyebrow={whyUs.eyebrow} variant="stacked" />
-                <FeatureGridSection items={items} columns={2} />
+                <FeatureGridSection items={items} columns={2} interactive={false} />
             </div>
         </HomeModule>
     );

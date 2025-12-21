@@ -22,12 +22,14 @@ export type FeatureGridSectionProps = {
      * defaults to 2.
      */
     columns?: 2 | 3 | 4;
+    interactive?: boolean;
     className?: string;
 };
 
 export function FeatureGridSection({
     items,
     columns = 2,
+    interactive = true,
     className
 }: FeatureGridSectionProps) {
     return (
@@ -47,8 +49,8 @@ export function FeatureGridSection({
                         className={cn(
                             "relative flex flex-col p-6 md:p-8 h-full transition-all duration-300 ease-out",
                             // If wrapped in Link (href exists), the Link has "group". 
-                            // If not wrapped, Surface is "group".
-                            !item.href && "group",
+                            // If not wrapped, Surface is "group" ONLY if interactive.
+                            !item.href && interactive && "group",
                             // Hover styles hook into group-hover/group-focus from parent Link
                             item.href && "group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-lg group-focus:bg-white/10 group-focus:border-white/20 group-focus:shadow-lg"
                         )}
