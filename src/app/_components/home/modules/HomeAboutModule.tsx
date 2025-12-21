@@ -63,10 +63,10 @@ export function HomeAboutModule() {
                         {/* Right: image */}
                         <div className="w-full">
                             <div className="rounded-surface border border-border shadow-surface overflow-hidden bg-card">
-                                {/* Put your image here (recommended path: /public/about/about.png) */}
+                                {/* Put your image here (recommended path: /public/images/about/about.png) */}
                                 <div className="relative w-full aspect-[16/10]">
                                     <Image
-                                        src="/about/about.png"
+                                        src="/images/about/about.png"
                                         alt="Workshop session with a presentation on AI agents"
                                         fill
                                         className="object-cover"

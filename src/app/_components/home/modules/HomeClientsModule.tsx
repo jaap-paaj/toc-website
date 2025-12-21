@@ -2,14 +2,14 @@ import { HomeModule } from "../HomeModule";
 import { ClientsSection } from "@/components/sections/ClientsSection";
 
 const CLIENT_LOGOS = [
-    { src: "/clients/akzo_logo.png", name: "AkzoNobel" },
-    { src: "/clients/eon_drive_logo.png", name: "E.ON Drive" },
-    { src: "/clients/eneco-logo.png", name: "Eneco" },
-    { src: "/clients/Intersport_logo.png", name: "Intersport" },
-    { src: "/clients/landal_logo.png", name: "Landal" },
-    { src: "/clients/ministerie_logo.png", name: "Ministerie van Justitie en Veiligheid" },
-    { src: "/clients/randstad_logo.png", name: "Randstad" },
-    { src: "/clients/reama_logo.png", name: "ReumaNederland" },
+    { src: "/images/clients/akzo_logo.png", name: "AkzoNobel" },
+    { src: "/images/clients/eon_drive_logo.png", name: "E.ON Drive" },
+    { src: "/images/clients/eneco_logo.png", name: "Eneco" },
+    { src: "/images/clients/intersport_logo.png", name: "Intersport" },
+    { src: "/images/clients/landal_logo.png", name: "Landal" },
+    { src: "/images/clients/ministerie_logo.png", name: "Ministerie van Justitie en Veiligheid" },
+    { src: "/images/clients/randstad_logo.png", name: "Randstad" },
+    { src: "/images/clients/reama_logo.png", name: "ReumaNederland" },
 ];
 
 export function HomeClientsModule() {

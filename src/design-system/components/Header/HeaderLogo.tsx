@@ -17,7 +17,7 @@ export function HeaderLogo({ className }: HeaderLogoProps) {
 
     const LogoImage = (
         <Image
-            src="/brand/toc/TOC_Logo_black.svg"
+            src="/images/brand/toc/TOC_Logo_black.svg"
             alt="The Only Constant"
             width={140}
             height={40}
