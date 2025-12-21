@@ -17,7 +17,7 @@ export function AutomateApproachModule() {
     }));
 
     return (
-        <HomeModule id="approach" width="full" tone="dark" spacing="standard" spacingEdge="both">
+        <HomeModule id="approach" width="full" tone="dark" pad="m" gap="none">
             <div className={cn("container mx-auto flex flex-col", spacing.component.sectionHeader)}>
                 <SectionHeader variant="stacked" eyebrow={approach.eyebrow} />
                 <FeatureGridSection items={items} columns={3} />

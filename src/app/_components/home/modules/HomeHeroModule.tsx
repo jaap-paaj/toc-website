@@ -12,6 +12,7 @@ export function HomeHeroModule() {
       id="hero"
       width="full"
       spacing="hero"
+      spacingEdge="both"
       className={cn(
         "bg-[var(--toc-hero-bg)] text-[var(--toc-hero-text)]"
       )}

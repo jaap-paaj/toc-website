@@ -14,7 +14,7 @@ const CLIENT_LOGOS = [
 
 export function HomeClientsModule() {
     return (
-        <HomeModule id="clients" width="full" spacing="standard" spacingEdge="bottom">
+        <HomeModule id="clients" width="full" spacing="standard" stacking="shared">
             <ClientsSection headingLabel="Clients" items={CLIENT_LOGOS} />
         </HomeModule>
     );

@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/Button";
 
 export function HomeFooterCtaModule() {
     return (
-        <HomeModule id="cta" width="full" spacing="none">
-            <div className="container mx-auto pb-16 md:pb-24 lg:pb-32">
+        <HomeModule id="cta" width="full" pad="m" padTop="none" gap="s">
+            <div className="container mx-auto">
                 <div
                     className={cn(
                         "rounded-surface border border-border shadow-surface overflow-hidden",

@@ -33,7 +33,7 @@ export function ContactDetailsModule() {
     ];
 
     return (
-        <HomeModule id="contact-details" width="full" tone="light" spacing="standard" spacingEdge="none">
+        <HomeModule id="contact-details" width="full" tone="light" spacing="standard" stacking="shared">
             {/* EditorialCardGridSection provides internal top inset (pt-16+) for the divider */}
             <EditorialCardGridSection
                 categoryLabel="COMPANY INFORMATION"

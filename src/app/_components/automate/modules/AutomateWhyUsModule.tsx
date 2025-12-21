@@ -16,14 +16,10 @@ export function AutomateWhyUsModule() {
     }));
 
     return (
-        <HomeModule id="why-automate-with-us" width="full" tone="dark" spacing="standard" spacingEdge="bottom">
+        <HomeModule id="why-automate-with-us" width="full" tone="dark" pad="m" padTop="none" gap="s">
             <div className={cn("container mx-auto flex flex-col", spacing.component.sectionHeader)}>
                 <SectionHeader variant="stacked" eyebrow={whyUs.eyebrow} />
-                {/* 
-                    FeatureGridSection handles non-interactivity automatically 
-                    because we are NOT passing an `href` property.
-                */}
-                <FeatureGridSection items={items} columns={2} className="py-0 md:py-0" />
+                <FeatureGridSection items={items} columns={2} interactive={false} />
             </div>
         </HomeModule>
     );

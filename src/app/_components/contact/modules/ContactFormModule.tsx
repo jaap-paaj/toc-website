@@ -58,7 +58,7 @@ export function ContactFormModule() {
     }
 
     return (
-        <HomeModule id="contact-form" width="container" tone="default" spacing="standard">
+        <HomeModule id="contact-form" width="container" tone="default" spacing="standard" spacingEdge="bottom">
             <div className="w-full max-w-4xl">
                 <div className={spacing.stackXl}>
                     <SectionHeader

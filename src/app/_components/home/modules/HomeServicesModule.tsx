@@ -24,7 +24,7 @@ const SERVICES_DATA = [
 
 export function HomeServicesModule() {
     return (
-        <HomeModule id="capabilities" width="full" spacing="none">
+        <HomeModule id="capabilities" width="full" spacing="standard" stacking="shared">
             <ServicesSection
                 headingLabel="Our Capabilities"
                 items={SERVICES_DATA}

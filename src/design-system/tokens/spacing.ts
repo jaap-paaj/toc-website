@@ -14,7 +14,7 @@ export const spacing = {
     // @deprecated - Margins should be avoided. Use a stack wrapper.
     stackHero: "mb-8 md:mb-10 lg:mb-12",
 
-    // Section Padding (Y-axis) - Keeping as is for internal consistency until further instructions
+    // Section Padding (Y-axis)
     sectionYSm: "py-4",
     sectionYMd: "py-8",
     sectionYLg: "py-12",
@@ -25,15 +25,60 @@ export const spacing = {
 
     // Semantic Spacing
     section: {
-        // Matches Hero internal bottom padding ramp
         heroFollower: "pt-10 md:pt-16 lg:pt-24",
     },
-    component: {
-        // Divider -> Title Vertical Rhythm
-        headerTransition: "mb-10 md:mb-12",
 
-        // Section Title -> Content Spacing Contract
+    component: {
+        headerTransition: "mb-10 md:mb-12",
         sectionHeader: "gap-6 md:gap-8",
     },
-} as const;
 
+    // --------------------------------------------------
+    // v4.1 BLOCK MODEL — SINGLE SOURCE OF TRUTH (TUNED)
+    // --------------------------------------------------
+
+    // Internal module padding (controls block “volume”)
+    // Goal: mobile stays good, md grows less, lg grows modestly.
+    modulePad: {
+        xs: "py-4 md:py-6 lg:py-8",
+        s: "py-12 md:py-12 lg:py-16", // was 12/16/20 -> tighter on md, modest on lg
+        m: "py-16 md:py-16 lg:py-24", // was 16/24/32 -> tablet no longer huge, desktop still “bigger”
+        l: "py-20 md:py-24 lg:py-32", // toned down
+        xl: "py-32 md:py-32 lg:py-40", // hero-ish scale without insane lg jump
+    },
+    // Explicit Top Padding (Hardening v4.1 - SSOT)
+    modulePadTop: {
+        xs: "pt-4 md:pt-6 lg:pt-8",
+        s: "pt-12 md:pt-12 lg:pt-16",
+        m: "pt-16 md:pt-16 lg:pt-24",
+        l: "pt-20 md:pt-24 lg:pt-32",
+        xl: "pt-32 md:pt-32 lg:pt-40",
+    },
+    // Explicit Bottom Padding (Hardening v4.1 - SSOT)
+    modulePadBottom: {
+        xs: "pb-4 md:pb-6 lg:pb-8",
+        s: "pb-12 md:pb-12 lg:pb-16",
+        m: "pb-16 md:pb-16 lg:pb-24",
+        l: "pb-20 md:pb-24 lg:pb-32",
+        xl: "pb-32 md:pb-32 lg:pb-40",
+    },
+
+    // External bottom spacing (controls separation between blocks)
+    // Goal: gaps should NOT keep growing; they should plateau/compress.
+    moduleGap: {
+        xs: "mb-4 md:mb-4 lg:mb-4",
+        s: "mb-12 md:mb-12 lg:mb-8",   // key: tablet smaller, desktop tighter
+        m: "mb-16 md:mb-16 lg:mb-12",
+        l: "mb-20 md:mb-20 lg:mb-16",
+        xl: "mb-32 md:mb-32 lg:mb-20",
+    },
+
+    // Optional top gap (opt-in only, exceptions)
+    moduleGapTop: {
+        xs: "mt-4 md:mt-4 lg:mt-4",
+        s: "mt-12 md:mt-12 lg:mt-8",
+        m: "mt-16 md:mt-16 lg:mt-12",
+        l: "mt-20 md:mt-20 lg:mt-16",
+        xl: "mt-32 md:mt-32 lg:mt-20",
+    },
+} as const;
