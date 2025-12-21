@@ -2,7 +2,7 @@
  * Application-wide constants
  */
 
-export const APP_NAME = "Landal AI Content Studio";
+export const APP_NAME = "TOC AI Content Studio";
 export const APP_VERSION = "1.0.0";
 export const APP_DESCRIPTION = "Enterprise-grade AI-powered content creation and management platform";
 
@@ -53,7 +53,7 @@ export const LIMITS = {
  * Local storage keys
  */
 export const STORAGE_KEYS = {
-    USER_PREFERENCES: "landal_user_preferences",
-    THEME: "landal_theme",
-    RECENT_PROJECTS: "landal_recent_projects",
+    USER_PREFERENCES: "toc_user_preferences",
+    THEME: "toc_theme",
+    RECENT_PROJECTS: "toc_recent_projects",
 } as const;

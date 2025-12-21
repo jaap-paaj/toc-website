@@ -33,8 +33,6 @@
   --ring: var(--brand-primary);
 
   /* Legacy references mapped to new system to prevent breakage */
-  --landal-primary: var(--brand-primary);
-  --landal-background: #0A0A0A;
 
   /* Radius System */
   --radius: 0.625rem;
@@ -218,6 +216,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {

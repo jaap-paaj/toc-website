@@ -6,7 +6,7 @@ const CLIENT_LOGOS = [
     { src: "/images/clients/eon_drive_logo.png", name: "E.ON Drive" },
     { src: "/images/clients/eneco_logo.png", name: "Eneco" },
     { src: "/images/clients/intersport_logo.png", name: "Intersport" },
-    { src: "/images/clients/landal_logo.png", name: "Landal" },
+
     { src: "/images/clients/ministerie_logo.png", name: "Ministerie van Justitie en Veiligheid" },
     { src: "/images/clients/randstad_logo.png", name: "Randstad" },
     { src: "/images/clients/reama_logo.png", name: "ReumaNederland" },

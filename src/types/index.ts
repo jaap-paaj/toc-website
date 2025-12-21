@@ -1,5 +1,5 @@
 /**
- * Common type definitions for the Landal AI Content Studio
+ * Common type definitions for the TOC AI Content Studio
  */
 
 export interface User {

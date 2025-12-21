@@ -4,6 +4,7 @@ import { HomeModule } from "../HomeModule";
 import { cn } from "@/lib/utils";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { BrandHeroHeadline } from "@/design-system/components/BrandHeroHeadline";
+import Link from "next/link";
 
 export function HomeHeroModule() {
   return (
@@ -33,12 +34,14 @@ export function HomeHeroModule() {
 
             {/* Bottom CTA */}
             <div className="mt-auto pt-10 md:pt-12">
-              <Button
-                size="xl"
-                className="bg-black text-white hover:bg-black/80 font-bold"
-              >
-                EXPLORE OUR SERVICES
-              </Button>
+              <Link href="#capabilities">
+                <Button
+                  size="xl"
+                  className="bg-black text-white hover:bg-black/80 font-bold"
+                >
+                  EXPLORE OUR CAPABILITIES
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
-# Landal AI Content Studio
+# TOC AI Content Studio
 
-Enterprise-grade AI-powered content creation and management platform for Landal GreenParks.
+Enterprise-grade AI-powered content creation and management platform for The Only Constant.
 
 ## 🚀 Tech Stack
 
@@ -12,7 +12,7 @@ Enterprise-grade AI-powered content creation and management platform for Landal 
 ## 📁 Project Structure
 
 ```
-landal-content-studio/
+toc-content-studio/
 ├── src/
 │   ├── app/                    # Next.js App Router pages
 │   │   ├── layout.tsx         # Root layout
@@ -49,7 +49,7 @@ landal-content-studio/
 <div className="bg-primary text-white">...</div>
 
 // Using CSS variables
-<div style={{ backgroundColor: 'var(--landal-primary)' }}>...</div>
+<div style={{ backgroundColor: 'var(--brand-primary)' }}>...</div>
 
 // Using utility classes
 <button className="btn-primary">Click me</button>
@@ -178,11 +178,11 @@ vercel
 
 ## 📄 License
 
-Proprietary - Landal GreenParks
+Proprietary - The Only Constant
 
 ## 👥 Team
 
-Built with ❤️ by the Landal Development Team
+Built with ❤️ by the TOC Development Team
 
 ---
 

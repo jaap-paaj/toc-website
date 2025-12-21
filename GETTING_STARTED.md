@@ -13,7 +13,7 @@ If you are adding spacing or layout in a page, you are doing it wrong.
 
 # PROJECT_SUMMARY.md
 
-## Landal Content Studio
+## TOC Content Studio
 
 This project uses a **contract-driven design system**.
 
