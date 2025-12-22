@@ -11,13 +11,13 @@ import { Button } from "@/components/ui/Button";
 
 export function HomeAboutModule() {
     return (
-        <HomeModule id="about" width="full" spacing="standard" spacingEdge="bottom">
+        <HomeModule id="about" width="full" pad="m" padTop="none" gap="s">
             <div
                 className={cn(
                     "container mx-auto"
                 )}
             >
-                <div className={cn(spacing.stackXl, "md:gap-16")}>
+                <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
                     {/* Section header */}
                     <SectionHeader
                         variant="stacked"

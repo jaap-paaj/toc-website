@@ -50,8 +50,9 @@ export function EducateWhyUsModule() {
             id="why-train-with-us"
             width="full"
             tone="dark"
-            spacing="standard"
-            spacingEdge="bottom"
+            pad="m"
+            padTop="none"
+            gap="none"
         >
             <WhyUsValueProps />
         </HomeModule>

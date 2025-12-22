@@ -14,28 +14,27 @@ interface ServicesSectionProps {
     headingLabel: string;
     items: ServiceItem[];
     className?: string;
+    spacingPreset?: "default" | "heroFollower";
 }
 
-export function ServicesSection({ headingLabel, items, className }: ServicesSectionProps) {
+export function ServicesSection({
+    headingLabel,
+    items,
+    className,
+    spacingPreset = "default",
+}: ServicesSectionProps) {
     return (
-        // Matches Hero Module Padding Bottom via token
         <div
             className={cn(
                 "container mx-auto",
-                spacing.section.heroFollower,
-                "pb-16 md:pb-24 lg:pb-32",
+                // Optional: only adds TOP padding to follow a hero (no bottom spacing leaks)
+                spacingPreset === "heroFollower" && spacing.section.heroFollower,
                 className
             )}
         >
             <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
-                {/* Section Header */}
                 <SectionHeader variant="stacked" eyebrow={headingLabel} />
-
-                {/* Services Grid */}
-                <FeatureGridSection
-                    items={items}
-                    columns={3}
-                />
+                <FeatureGridSection items={items} columns={3} />
             </div>
         </div>
     );

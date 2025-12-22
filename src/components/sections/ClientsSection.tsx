@@ -14,6 +14,7 @@ type ClientsSectionProps = {
     headingLabel?: string;
     items: ClientLogo[];
     className?: string;
+    spacingPreset?: "default" | "tight";
 };
 
 export function ClientsSection({

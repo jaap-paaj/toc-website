@@ -1,3 +1,4 @@
+// src/app/_components/home/modules/HomeClientsModule.tsx
 import { HomeModule } from "../HomeModule";
 import { ClientsSection } from "@/components/sections/ClientsSection";
 
@@ -14,7 +15,7 @@ const CLIENT_LOGOS = [
 
 export function HomeClientsModule() {
     return (
-        <HomeModule id="clients" width="full" spacing="standard" stacking="shared">
+        <HomeModule id="clients" width="full" pad="m" padTop="none" gap="s">
             <ClientsSection headingLabel="Clients" items={CLIENT_LOGOS} />
         </HomeModule>
     );

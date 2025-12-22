@@ -31,6 +31,9 @@ export const spacing = {
     component: {
         headerTransition: "mb-10 md:mb-12",
         sectionHeader: "gap-6 md:gap-8",
+        formSuccessPanel: "py-20 px-8",
+        formSuccessCta: "mt-4",
+        formActions: "pt-2",
     },
 
     // --------------------------------------------------

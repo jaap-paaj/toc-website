@@ -8,11 +8,9 @@ export function ContactHeroModule() {
             id="contact-hero"
             width="full"
             tone="dark"
-            // Use "hero" spacing for top to match Educate/Automate visual band
-            spacing="hero"
-            spacingEdge="top"
-            // Manually apply "compact" bottom spacing to reduce height (pb-12 md:pb-16 lg:pb-20)
-            className="pb-12 md:pb-16 lg:pb-20"
+            padTop="xl"
+            padBottom="m"
+            gap="none"
         >
             <div className="container mx-auto">
                 {/* Canonical Hero Layout Reuse (Educate-style) */}

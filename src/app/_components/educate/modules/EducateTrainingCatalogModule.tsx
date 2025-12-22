@@ -1,7 +1,12 @@
+import { cn } from "@/lib/utils";
+import React from "react";
 import { HomeModule } from "../../home/HomeModule";
-import { EditorialCardGridSection, EditorialItem } from "@/components/sections/EditorialCardGridSection";
+import { SectionHeader } from "@/components/sections/SectionHeader";
+import { Surface } from "@/design-system/components/Surfaces";
+import { Heading, Text } from "@/design-system/components/Typography";
+import { spacing } from "@/design-system/tokens/spacing";
 
-const AI_TRAINING_ITEMS: EditorialItem[] = [
+const AI_TRAINING_ITEMS = [
     {
         title: "AI INTRODUCTION",
         description: "Get a hands-on introduction to generative AI, tailored to your role and industry. Learn how it can transform your work, and build essential skills to innovate, automate, and create. No experience needed!",
@@ -20,7 +25,7 @@ const AI_TRAINING_ITEMS: EditorialItem[] = [
     }
 ];
 
-const INNOVATION_TRAINING_ITEMS: EditorialItem[] = [
+const INNOVATION_TRAINING_ITEMS = [
     {
         title: "INNOVATION BY DESIGN",
         description: "Master creative problem-solving with a human-centered approach. This training helps you understand users, reframe challenges, and design solutions that create real impact. You’ll learn practical methods you can apply immediately to any project or team.",
@@ -31,22 +36,69 @@ const INNOVATION_TRAINING_ITEMS: EditorialItem[] = [
     }
 ];
 
+// Local implementation of EditorialCardGridSection without the wrapper padding leaks
+function TrainingGrid({
+    categoryLabel,
+    intro,
+    items
+}: {
+    categoryLabel: string,
+    intro: string,
+    items: { title: string, description: string | React.ReactNode }[]
+}) {
+    return (
+        <div className="flex flex-col gap-6 md:gap-8">
+            {/* Divider */}
+            <div className="border-t border-border/40" />
+
+            {/* Header + Grid */}
+            <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
+                <SectionHeader
+                    variant="split"
+                    divider={false}
+                    eyebrow={categoryLabel}
+                    description={intro}
+                />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 [&>*]:h-auto [&>*]:min-h-0 items-start">
+                    {items.map((item, idx) => (
+                        <Surface
+                            key={idx}
+                            variant="catalog"
+                            className="flex flex-col gap-3 p-6 md:p-8"
+                        >
+                            <Heading level={3} size="card" className="font-semibold text-primary-foreground">
+                                {item.title}
+                            </Heading>
+                            <Text
+                                as={typeof item.description === 'string' ? "p" : "div"}
+                                className="text-primary-foreground/60 text-sm leading-relaxed max-w-prose"
+                            >
+                                {item.description}
+                            </Text>
+                        </Surface>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+
 export function EducateTrainingCatalogModule() {
     return (
-        <HomeModule id="training-catalog" width="full" tone="light" spacing="standard" spacingEdge="bottom">
-            {/* EditorialCardGridSection provides internal top inset (pt-16+) for the divider */}
-            <EditorialCardGridSection
-                categoryLabel="AI TRAINING"
-                intro="Hands-on programs that help you use AI to work smarter and explore new possibilities."
-                items={AI_TRAINING_ITEMS}
-            // className="pb-16 md:pb-24" // removed to avoid double spacing with next section's internal top padding
-            />
-            <EditorialCardGridSection
-                categoryLabel="INNOVATION TRAINING"
-                intro="Human-centered programs that help you explore opportunities and design better products and services."
-                items={INNOVATION_TRAINING_ITEMS}
-            // className="" // No padding needed
-            />
+        <HomeModule id="training-catalog" width="full" tone="light" pad="m" gap="s">
+            <div className="container mx-auto flex flex-col gap-16 md:gap-24">
+                <TrainingGrid
+                    categoryLabel="AI TRAINING"
+                    intro="Hands-on programs that help you use AI to work smarter and explore new possibilities."
+                    items={AI_TRAINING_ITEMS}
+                />
+                <TrainingGrid
+                    categoryLabel="INNOVATION TRAINING"
+                    intro="Human-centered programs that help you explore opportunities and design better products and services."
+                    items={INNOVATION_TRAINING_ITEMS}
+                />
+            </div>
         </HomeModule>
     );
 }

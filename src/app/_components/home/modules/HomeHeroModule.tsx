@@ -11,8 +11,9 @@ export function HomeHeroModule() {
     <HomeModule
       id="hero"
       width="full"
-      spacing="hero"
-      spacingEdge="both"
+      padTop="xl"
+      padBottom="m"
+      gap="none"
       className={cn(
         "bg-[var(--toc-hero-bg)] text-[var(--toc-hero-text)]"
       )}

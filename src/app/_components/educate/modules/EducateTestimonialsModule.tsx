@@ -20,8 +20,9 @@ export function EducateTestimonialsModule() {
             width="full"
 
             tone="dark"
-            spacing="standard"
-            spacingEdge="bottom"
+            pad="m"
+            padTop="none"
+            gap="s"
         >
             <TestimonialsSection
                 headingLabel="TESTIMONIALS"
