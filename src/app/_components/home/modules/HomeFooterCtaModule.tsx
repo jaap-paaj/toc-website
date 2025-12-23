@@ -1,6 +1,7 @@
 import { HomeModule } from "../HomeModule";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
+import { typography } from "@/design-system/tokens/typography";
 
 export function HomeFooterCtaModule() {
     return (
@@ -17,11 +18,11 @@ export function HomeFooterCtaModule() {
                             {/* Left: Headline + CTA */}
                             <div className="flex flex-col gap-8">
                                 <div className="flex flex-col gap-4">
-                                    <div className="text-sm md:text-base font-bold uppercase tracking-widest opacity-70">
+                                    <div className={cn(typography.variants.meta.eyebrow, "opacity-70")}>
                                         Ready
                                     </div>
 
-                                    <h2 className="text-display-section">
+                                    <h2 className={typography.variants.display.section}>
                                         READY FOR CHANGE?
                                         <br />
                                         LET&apos;S TALK!
@@ -32,7 +33,7 @@ export function HomeFooterCtaModule() {
                                     <Button
                                         asChild
                                         size="xl"
-                                        className="bg-black text-white hover:bg-black/80 font-bold rounded-full"
+                                        className="bg-black text-white hover:bg-black/80 rounded-full"
                                     >
                                         <a href="mailto:info@theonlyconstant.nl">INFO@THEONLYCONSTANT.NL</a>
                                     </Button>
@@ -41,7 +42,7 @@ export function HomeFooterCtaModule() {
 
                             {/* Right: Footer note */}
                             <div className="flex lg:justify-end">
-                                <div className="text-xs md:text-sm opacity-70 text-center lg:text-right w-full">
+                                <div className={cn(typography.variants.body.sm, "opacity-70 text-center lg:text-right w-full")}>
                                     © The Only Constant 2025
                                 </div>
                             </div>

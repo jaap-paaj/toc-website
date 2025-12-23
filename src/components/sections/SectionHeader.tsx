@@ -2,6 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { SectionEyebrow } from "@/design-system/components/SectionEyebrow";
+import { typography } from "@/design-system/tokens/typography";
 
 export interface SectionHeaderProps {
     eyebrow: string;
@@ -50,12 +51,12 @@ export function SectionHeader({
     if (!isSplit) {
         return (
             <div className={cn(containerClasses, "flex flex-col gap-3 md:gap-4", isCenter && "items-center text-center")}>
-                <SectionEyebrow>{eyebrow}</SectionEyebrow>
+                <SectionEyebrow className={typography.variants.meta.eyebrow}>{eyebrow}</SectionEyebrow>
 
                 {title && (
                     <div className="max-w-4xl">
                         {typeof title === "string" ? (
-                            <Heading level={2} className="text-3xl md:text-4xl lg:text-5xl font-display font-medium tracking-tight">
+                            <Heading level={2} className={typography.variants.display.section}>
                                 {title}
                             </Heading>
                         ) : (
@@ -65,7 +66,7 @@ export function SectionHeader({
                 )}
 
                 {description && (
-                    <Text size="lg" className={cn("max-w-3xl opacity-80", isCenter && "mx-auto")}>
+                    <Text className={cn(typography.variants.body.lg, "max-w-3xl opacity-80", isCenter && "mx-auto")}>
                         {description}
                     </Text>
                 )}
@@ -79,11 +80,15 @@ export function SectionHeader({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 text-left">
                 {/* Left Column: Identity */}
                 <div className="flex flex-col gap-3">
-                    <SectionEyebrow>{eyebrow}</SectionEyebrow>
+                    <SectionEyebrow className={typography.variants.meta.eyebrow}>{eyebrow}</SectionEyebrow>
                     {title && (
                         <div className="max-w-xl">
                             {typeof title === "string" ? (
-                                <Heading level={2} className="text-2xl md:text-3xl font-display font-medium">
+                                <Heading
+                                    level={2}
+                                    size="section"
+                                    className="text-foreground"
+                                >
                                     {title}
                                 </Heading>
                             ) : (
@@ -96,7 +101,7 @@ export function SectionHeader({
                 {/* Right Column: Narrative */}
                 <div className="flex flex-col justify-start md:pt-1">
                     {description && (
-                        <Text size="lg" className="opacity-80 leading-relaxed">
+                        <Text className={cn(typography.variants.body.lg, "opacity-80")}>
                             {description}
                         </Text>
                     )}

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Heading } from "@/design-system/components/Typography";
 
+import { typography } from "@/design-system/tokens/typography";
+
 type WorkflowCardProps = {
     icon: React.ReactNode;
     title: string;
@@ -38,11 +40,11 @@ export function WorkflowCard({
                         {title}
                     </Heading>
 
-                    <p className="font-sans text-sm text-muted-foreground">
+                    <p className={cn("text-muted-foreground", typography.variants.body.sm)}>
                         {description}
                     </p>
 
-                    <div className="mt-auto pt-4 text-primary font-medium text-sm group-hover:underline decoration-2 underline-offset-4">
+                    <div className={cn("mt-auto pt-4 text-primary group-hover:underline decoration-2 underline-offset-4", typography.variants.ui.nav.link)}>
                         {ctaLabel}
                     </div>
                 </div>

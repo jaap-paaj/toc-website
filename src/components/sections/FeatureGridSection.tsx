@@ -6,6 +6,7 @@ import { Surface } from "@/design-system/components/Surfaces";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { Button } from "@/components/ui/Button";
 import { spacing } from "@/design-system/tokens/spacing";
+import { typography } from "@/design-system/tokens/typography";
 
 export type FeatureGridItem = {
     id?: string;
@@ -55,22 +56,24 @@ export function FeatureGridSection({
                             item.href && "group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-lg group-focus:bg-white/10 group-focus:border-white/20 group-focus:shadow-lg"
                         )}
                     >
+
+
                         {item.id ? (
                             // Services / Process Layout (Index + Divider)
                             <>
                                 <div className={cn("flex flex-col gap-3", spacing.component.headerTransition)}>
-                                    <span className="text-sm font-mono text-white/60 transition-colors duration-300 group-hover:text-white/90">
+                                    <span className={cn("text-white/60 transition-colors duration-300 group-hover:text-white/90", typography.variants.meta.code)}>
                                         {item.id}
                                     </span>
                                     <div className="h-px w-full bg-white/15 transition-colors duration-300 group-hover:bg-white/30" />
                                 </div>
 
                                 <div className="flex flex-col flex-1 gap-6">
-                                    <Heading level={3} size="card" className="font-semibold pt-3 md:pt-4">
+                                    <Heading level={3} size="card" className="pt-3 md:pt-4">
                                         {item.title}
                                     </Heading>
 
-                                    <Text className="text-white/75 text-sm leading-relaxed transition-colors duration-300 group-hover:text-white/90">
+                                    <Text className={cn("text-white/75 transition-colors duration-300 group-hover:text-white/90", typography.variants.body.sm)}>
                                         {item.description}
                                     </Text>
 
@@ -92,10 +95,10 @@ export function FeatureGridSection({
                                     </div>
                                 )}
                                 <div className="flex flex-col gap-2">
-                                    <Heading level={3} size="card" className="font-semibold">
+                                    <Heading level={3} size="card">
                                         {item.title}
                                     </Heading>
-                                    <Text className="text-muted-foreground text-sm leading-relaxed">
+                                    <Text className={cn("text-muted-foreground", typography.variants.body.sm)}>
                                         {item.description}
                                     </Text>
                                 </div>

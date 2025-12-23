@@ -12,11 +12,10 @@ export function HomeHeroModule() {
       id="hero"
       width="full"
       padTop="xl"
-      padBottom="m"
+
+
       gap="none"
-      className={cn(
-        "bg-[var(--toc-hero-bg)] text-[var(--toc-hero-text)]"
-      )}
+      tone="brand"
     >
       <div className="container mx-auto">
         {/* Ensure the two columns stretch to the same height so "bottom" is meaningful */}
@@ -29,7 +28,7 @@ export function HomeHeroModule() {
           {/* Right Column: Text top, CTA bottom */}
           <div className="flex h-full flex-col">
             {/* Top content */}
-            <Text size="lg" className="font-medium max-w-lg leading-relaxed">
+            <Text size="lg" className="max-w-lg">
               The Only Constant is a digital transformation and innovation agency built for a faster world. We help
               organizations move from assumptions to proven business results. Fast.
             </Text>
@@ -39,7 +38,7 @@ export function HomeHeroModule() {
               <Link href="#capabilities">
                 <Button
                   size="xl"
-                  className="bg-black text-white hover:bg-black/80 font-bold"
+                  className="bg-black text-white hover:bg-black/80"
                 >
                   EXPLORE OUR CAPABILITIES
                 </Button>

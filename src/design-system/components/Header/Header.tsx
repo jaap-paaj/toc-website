@@ -77,13 +77,20 @@ export function Header({
                     id="mobile-menu"
                     className="fixed inset-0 z-40 bg-background pt-32 px-6 animate-in fade-in slide-in-from-top-10 duration-200"
                 >
+                    import {typography} from "@/design-system/tokens/typography";
+
+                    // ... inside component ...
+
                     {/* TODO: Full mobile menu implementation */}
                     <nav className="flex flex-col gap-6 items-center">
                         {links.map((link) => (
                             <a
                                 key={link.href}
                                 href={link.href}
-                                className="text-2xl font-bold uppercase tracking-wide text-foreground"
+                                className={cn(
+                                    typography.variants.ui.nav.brand,
+                                    "text-foreground"
+                                )}
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {link.label}
@@ -91,7 +98,11 @@ export function Header({
                         ))}
                         <a
                             href={cta.href}
-                            className="mt-4 text-2xl font-bold uppercase tracking-wide text-primary"
+                            className={cn(
+                                "mt-4",
+                                typography.variants.ui.nav.brand,
+                                "text-primary"
+                            )}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             {cta.label}

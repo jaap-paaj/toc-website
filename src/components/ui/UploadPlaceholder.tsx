@@ -77,10 +77,14 @@ export function UploadPlaceholder({
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             />
 
+            import {typography} from "@/design-system/tokens/typography";
+
+            // ... imports ...
+
             {file ? (
                 <div className="flex items-center justify-center gap-3">
                     <ImageIcon className="w-6 h-6 text-primary" />
-                    <span className="text-sm font-medium text-foreground truncate max-w-[200px]">
+                    <span className={cn("text-foreground truncate max-w-[200px]", typography.variants.body.sm)}>
                         {file.name}
                     </span>
                     <Button
@@ -99,11 +103,11 @@ export function UploadPlaceholder({
             ) : (
                 <div className={cn(spacing.stackXs, "items-center pointer-events-none")}>
                     <Upload className="w-8 h-8 text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground">{label}</span> or
+                    <p className={cn("text-muted-foreground", typography.variants.body.sm)}>
+                        <span className="text-foreground">{label}</span> or
                         drag and drop
                     </p>
-                    <p className="text-xs text-muted-foreground uppercase">
+                    <p className={cn("text-muted-foreground", typography.variants.meta.label)}>
                         {accept === "image/*" ? "PNG, JPG" : accept} (MAX. {maxSizeMB}MB)
                     </p>
                 </div>

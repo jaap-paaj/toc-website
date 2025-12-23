@@ -4,6 +4,7 @@ import { Surface } from "@/design-system/components/Surfaces";
 import { SectionHeader } from "./SectionHeader";
 import { Quote } from "lucide-react";
 import { spacing } from "@/design-system/tokens/spacing";
+import { typography } from "@/design-system/tokens/typography";
 
 export interface TestimonialItem {
     quote: string;
@@ -37,8 +38,10 @@ export function TestimonialsSection({
                         >
                             <Quote className="w-8 h-8 text-primary fill-primary/20" />
 
+
+
                             <div className="flex-1">
-                                <Text className="text-lg md:text-xl font-medium leading-relaxed">
+                                <Text className={typography.variants.body.lg}>
                                     &quot;{item.quote}&quot;
                                 </Text>
                             </div>

@@ -3,6 +3,7 @@ import { HomeModule } from "@/app/_components/home/HomeModule";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { innovateContent } from "@/app/_content/innovate";
+import { typography } from "@/design-system/tokens/typography";
 
 export function InnovateHeroModule() {
     const { hero } = innovateContent;
@@ -14,18 +15,18 @@ export function InnovateHeroModule() {
             padTop="xl"
             padBottom="m"
             gap="none"
-            className="bg-[var(--toc-hero-bg)] text-[var(--toc-hero-text)]"
+            tone="brand"
         >
             <div className="container mx-auto">
                 <div className={layoutTokens.splitHero}>
                     {/* Left Column: Headline */}
                     <div className="flex flex-col gap-2">
-                        <span className="text-sm md:text-base font-mono tracking-wider opacity-60">
+                        <span className={cn("opacity-60", typography.variants.meta.code)}>
                             {hero.index}
                         </span>
                         <Heading
                             level={1}
-                            className="text-display-hero font-display xl:text-8xl w-full"
+                            className={cn(typography.variants.display.hero[800], "w-full")}
                         >
                             {hero.title}
                         </Heading>
@@ -35,7 +36,7 @@ export function InnovateHeroModule() {
                     <div className="flex h-full flex-col">
                         <Text
                             size="lg"
-                            className="font-medium max-w-lg leading-relaxed min-h-[var(--toc-page-hero-copy-min-h)]"
+                            className={cn("max-w-lg min-h-[var(--toc-page-hero-copy-min-h)]", typography.variants.body.lg)}
                         >
                             {hero.intro}
                         </Text>

@@ -15,11 +15,16 @@ interface RadioProps {
     className?: string;
 }
 
+import { typography } from "@/design-system/tokens/typography";
+import { cn } from "@/lib/utils";
+
+// ... interfaces ...
+
 export function Radio({ label, options, value, onValueChange, className }: RadioProps) {
     return (
-        <div className={`flex flex-col gap-3 ${className}`}>
+        <div className={cn("flex flex-col gap-3", className)}>
             {label && (
-                <Label className="text-xs font-bold text-muted-foreground uppercase tracking-wider ml-1">
+                <Label className={cn("text-muted-foreground ml-1", typography.variants.meta.label)}>
                     {label}
                 </Label>
             )}
@@ -31,7 +36,7 @@ export function Radio({ label, options, value, onValueChange, className }: Radio
                             id={option.value}
                             className="w-5 h-5"
                         />
-                        <Label htmlFor={option.value} className="text-sm font-medium text-foreground cursor-pointer">
+                        <Label htmlFor={option.value} className={cn("text-foreground cursor-pointer", typography.variants.body.sm)}>
                             {option.label}
                         </Label>
                     </div>

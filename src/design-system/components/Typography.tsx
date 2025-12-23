@@ -1,20 +1,20 @@
 // design-system/components/Typography.tsx
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { typography } from "@/design-system/tokens/typography";
 
-type HeadingSize = "hero" | "page" | "section" | "card" | "xl" | "lg" | "md" | "sm";
+type HeadingSize = "page" | "section" | "card" | "xl" | "lg" | "md" | "sm";
 type TextSize = "lg" | "md" | "sm";
 
 const headingSizes: Record<HeadingSize, string> = {
-    hero: "text-heading-xl",
-    page: "text-heading-lg",
-    section: "text-heading-md",
-    card: "text-heading-sm",
-    // Legacy mapping compatibility
-    xl: "text-heading-xl",
-    lg: "text-heading-lg",
-    md: "text-heading-md",
-    sm: "text-heading-sm",
+    page: typography.variants.heading.page,
+    section: typography.variants.display.section,
+    card: typography.variants.heading.card,
+    // Legacy mapping compatibility (mapped to closest semantic role)
+    xl: typography.variants.heading.page,
+    lg: typography.variants.heading.subsection,
+    md: typography.variants.heading.card,
+    sm: typography.variants.heading.card,
 };
 
 export type HeadingProps = {
@@ -51,7 +51,8 @@ export function SectionTitle({ className, children, ...props }: React.HTMLAttrib
     return (
         <h2
             className={cn(
-                "text-heading-md font-serif tracking-tight text-foreground",
+                typography.variants.heading.subsection,
+                "text-foreground",
                 className
             )}
             {...props}
@@ -64,7 +65,7 @@ export function SectionTitle({ className, children, ...props }: React.HTMLAttrib
 export type TextProps = {
     /**
      * Visual size for body text.
-     * lg => .text-body-lg
+     * lg => typography.variants.body.lg
      * md => .text-base
      * sm => .text-sm
      */
@@ -80,9 +81,9 @@ export type TextProps = {
 };
 
 const textSizeClasses: Record<TextSize, string> = {
-    lg: "text-body-lg",
-    md: "text-base",
-    sm: "text-sm",
+    lg: typography.variants.body.lg,
+    md: typography.variants.body.md,
+    sm: typography.variants.body.sm,
 };
 
 const measureClasses: Record<string, string> = {

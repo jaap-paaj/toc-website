@@ -175,8 +175,27 @@
     /* neutral-800 (High Contrast) */
     --surface-card-muted: #171717;
     /* neutral-900 */
-    --surface-media: #171717;
     /* neutral-900 (Subdued) */
+    --surface-media: #171717;
+  }
+
+  /* Brand Surface Scope (Foreground Only - No Background Paint) */
+  /* Ensures accessibility on Lime backgrounds */
+  .tone-brand {
+    --background: var(--brand-primary);
+    --foreground: theme('colors.neutral.950');
+    --muted-foreground: theme('colors.neutral.600');
+    --border: theme('colors.neutral.200');
+    /* Subtle definition */
+    --input: theme('colors.neutral.800');
+    /* Dark input borders if needed */
+    --ring: theme('colors.neutral.950');
+
+    /* Instrument Layer Override for Brand Surface (White Inputs) */
+    --instrument-input-bg: #FFFFFF;
+    --instrument-input-fg: theme('colors.neutral.950');
+    --instrument-input-placeholder: theme('colors.neutral.500');
+    --instrument-input-border: theme('colors.neutral.200');
   }
 }
 
@@ -241,37 +260,11 @@
 @layer utilities {
 
   /* Headings – TOC scale (All Sans) */
-  /* Hero Display: Massive, uppercase, tight */
-  .text-display-hero {
-    @apply text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black uppercase tracking-tighter leading-[0.85];
-  }
-
-  /* Shared display headline for black sections (About / CTA etc.) */
-  .text-display-section {
-    @apply text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter;
-    line-height: 0.9;
-  }
-
-  .text-heading-xl {
-    @apply text-5xl md:text-6xl lg:text-7xl leading-tight font-bold tracking-tight;
-  }
-
-  .text-heading-lg {
-    @apply text-4xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight;
-  }
-
-  .text-heading-md {
-    @apply text-2xl md:text-3xl lg:text-4xl leading-snug font-semibold tracking-tight;
-  }
-
-  .text-heading-sm {
-    @apply text-xl md:text-2xl leading-snug font-medium tracking-tight;
-  }
+  /* Headings – TOC scale (All Sans) */
+  /* Replaced by typography.variants.heading.* tokens */
 
   /* Body text scale */
-  .text-body-lg {
-    @apply text-lg leading-relaxed;
-  }
+  /* Replaced by typography.variants.body.* tokens */
 
   /* Generic vertical stack utilities */
   .stack-page {

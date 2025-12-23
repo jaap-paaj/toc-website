@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 import { Surface } from "@/design-system/components/Surfaces";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { spacing } from "@/design-system/tokens/spacing";
+import { typography } from "@/design-system/tokens/typography";
 
 export function AutomateReadyToRunModule() {
     const { readyToRun } = automateContent;
@@ -37,12 +38,12 @@ export function AutomateReadyToRunModule() {
                                 variant="catalog"
                                 className="flex flex-col gap-3 p-6 md:p-8"
                             >
-                                <Heading level={3} size="card" className="font-semibold text-primary-foreground">
+                                <Heading level={3} size="card" className="text-primary-foreground">
                                     {item.title}
                                 </Heading>
                                 <Text
                                     as={'div'}
-                                    className="text-primary-foreground/60 text-sm leading-relaxed max-w-prose"
+                                    className={cn("text-primary-foreground/60 max-w-prose", typography.variants.body.sm)}
                                 >
                                     {item.description}
                                 </Text>

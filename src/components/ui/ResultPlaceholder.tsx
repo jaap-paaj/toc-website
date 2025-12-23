@@ -4,6 +4,8 @@ import { Text } from "@/design-system/components/Typography";
 import { cn } from "@/lib/utils";
 
 
+import { typography } from "@/design-system/tokens/typography";
+
 export type ResultPlaceholderProps = {
     title: string;
     description?: string;
@@ -34,11 +36,11 @@ export function ResultPlaceholder({
             )}
 
             <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-medium text-foreground">
+                <h3 className={cn("text-foreground", typography.variants.ui.placeholder.title)}>
                     {title}
                 </h3>
                 {description && (
-                    <Text size="sm" className="text-muted-foreground max-w-sm mx-auto">
+                    <Text className={cn("text-muted-foreground max-w-sm mx-auto", typography.variants.body.sm)}>
                         {description}
                     </Text>
                 )}

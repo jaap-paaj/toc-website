@@ -3,6 +3,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { SectionEyebrow } from "@/design-system/components/SectionEyebrow";
+import { typography } from "@/design-system/tokens/typography";
 import { Surface } from "@/design-system/components/Surfaces";
 import { Button } from "@/components/ui/Button";
 
@@ -34,7 +35,7 @@ export function TrainingCategorySection({
                     <SectionEyebrow className="w-full md:w-1/3 shrink-0">
                         {categoryLabel}
                     </SectionEyebrow>
-                    <Text size="lg" className="text-muted-foreground leading-relaxed md:max-w-2xl">
+                    <Text size="lg" className="text-muted-foreground md:max-w-2xl">
                         {intro}
                     </Text>
                 </div>
@@ -53,10 +54,10 @@ export function TrainingCategorySection({
                             )}
                         >
                             <div className="flex flex-col gap-4 flex-1">
-                                <Heading level={3} size="card" className="font-semibold">
+                                <Heading level={3} size="card">
                                     {item.title}
                                 </Heading>
-                                <Text className="text-muted-foreground text-sm leading-relaxed mb-6">
+                                <Text className={cn("text-muted-foreground mb-6", typography.variants.body.sm)}>
                                     {item.description}
                                 </Text>
                             </div>
@@ -64,7 +65,7 @@ export function TrainingCategorySection({
                             <div className="mt-auto self-start">
                                 <Button
                                     variant="link"
-                                    className="p-0 h-auto text-foreground font-semibold group-hover:translate-x-1 transition-transform"
+                                    className={cn("p-0 h-auto text-foreground group-hover:translate-x-1 transition-transform", typography.variants.ui.nav.link)}
                                 >
                                     View Details <ArrowRight className="ml-2 w-4 h-4" />
                                 </Button>

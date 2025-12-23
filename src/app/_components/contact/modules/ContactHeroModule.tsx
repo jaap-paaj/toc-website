@@ -1,6 +1,8 @@
 import { HomeModule } from "../../home/HomeModule";
-import { Heading } from "@/design-system/components/Typography";
+import { Heading, Text } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
+import { typography } from "@/design-system/tokens/typography";
+import { cn } from "@/lib/utils";
 
 export function ContactHeroModule() {
     return (
@@ -15,11 +17,11 @@ export function ContactHeroModule() {
             <div className="container mx-auto">
                 {/* Canonical Hero Layout Reuse (Educate-style) */}
                 <div className={layoutTokens.splitHero}>
-                    {/* Left Column: Title Only */}
+                    {/* Left Column: Headline */}
                     <div className="flex flex-col gap-2">
                         <Heading
                             level={1}
-                            className="text-display-hero font-display xl:text-8xl w-full"
+                            className={cn(typography.variants.display.hero[700], "w-full")}
                         >
                             CONTACT
                         </Heading>

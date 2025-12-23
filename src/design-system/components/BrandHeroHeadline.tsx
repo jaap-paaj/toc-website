@@ -1,5 +1,6 @@
 import { Heading } from "./Typography";
 import { cn } from "@/lib/utils";
+import { typography } from "@/design-system/tokens/typography";
 
 interface BrandHeroHeadlineProps {
     className?: string;
@@ -10,7 +11,7 @@ export function BrandHeroHeadline({ className }: BrandHeroHeadlineProps) {
         <Heading
             level={1}
             // Reuse system utility for hero display size
-            className={cn("text-display-hero", className)}
+            className={cn(typography.variants.display.hero[900], className)}
         >
             {/* Semantic accessible label */}
             <span className="sr-only">The Only Constant Is Change</span>

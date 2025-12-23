@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { spacing } from "@/design-system/tokens/spacing";
+import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";
 
 export function ContactFormModule() {
@@ -106,7 +107,7 @@ export function ContactFormModule() {
                                         type="submit"
                                         size="lg"
                                         disabled={isLoading}
-                                        className="w-full md:w-auto uppercase"
+                                        className={cn("w-full md:w-auto", typography.variants.ui.button.lg)}
                                     >
                                         {isLoading ? "SENDING..." : "SEND MESSAGE"}
                                     </Button>

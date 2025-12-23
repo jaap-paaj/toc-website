@@ -8,6 +8,9 @@ import {
 } from "@/components/ui/select"
 import { Label } from "@/components/ui/label";
 
+import { typography } from "@/design-system/tokens/typography";
+import { cn } from "@/lib/utils";
+
 interface SelectProps {
     label?: string;
     placeholder?: string;
@@ -21,7 +24,7 @@ export function Select({ label, placeholder, options, value, onChange, className
     return (
         <div className="flex flex-col gap-1.5 w-full">
             {label && (
-                <Label className="text-xs font-bold text-muted-foreground uppercase tracking-wider ml-1">
+                <Label className={cn("text-muted-foreground ml-1", typography.variants.meta.label)}>
                     {label}
                 </Label>
             )}

@@ -9,6 +9,11 @@ interface CheckboxProps {
     id?: string;
 }
 
+import { typography } from "@/design-system/tokens/typography";
+import { cn } from "@/lib/utils";
+
+// ... interfaces ...
+
 export function Checkbox({ label, checked, onCheckedChange, id }: CheckboxProps) {
     // Use label as ID if ID is not provided, for accessibility
     const checkboxId = id || label.replace(/\s+/g, '-').toLowerCase();
@@ -23,7 +28,7 @@ export function Checkbox({ label, checked, onCheckedChange, id }: CheckboxProps)
             />
             <Label
                 htmlFor={checkboxId}
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-foreground"
+                className={cn("peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-foreground", typography.variants.body.sm)}
             >
                 {label}
             </Label>

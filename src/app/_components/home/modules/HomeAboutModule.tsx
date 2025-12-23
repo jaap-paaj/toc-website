@@ -8,6 +8,7 @@ import { Text } from "@/design-system/components/Typography";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { spacing } from "@/design-system/tokens/spacing";
 import { Button } from "@/components/ui/Button";
+import { typography } from "@/design-system/tokens/typography";
 
 export function HomeAboutModule() {
     return (
@@ -23,7 +24,7 @@ export function HomeAboutModule() {
                         variant="stacked"
                         eyebrow="About Us"
                         title={
-                            <h2 className="text-display-section">
+                            <h2 className={typography.variants.display.section}>
                                 DIGITAL INNOVATION
                                 <br />
                                 THAT DELIVERS
@@ -37,14 +38,14 @@ export function HomeAboutModule() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 items-start">
                         {/* Left: copy + CTA */}
                         <div className={cn(spacing.stackLg, "max-w-xl")}>
-                            <Text size="lg" className="leading-relaxed">
+                            <Text size="lg">
                                 We’re a strategy and design partner for teams that need progress
                                 without the noise. We combine business goals, human needs and
                                 emerging tech to create practical concepts, prototypes and
                                 automations built for real-world use.
                             </Text>
 
-                            <Text size="lg" className="leading-relaxed">
+                            <Text size="lg">
                                 We focus on outcomes, not hype. That means clearer decisions,
                                 less manual work, and early proof of what’s worth building — so
                                 you can move faster without guessing.
@@ -53,7 +54,7 @@ export function HomeAboutModule() {
                             <div className="pt-2">
                                 <Button
                                     size="xl"
-                                    className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
+                                    className="bg-primary text-primary-foreground hover:bg-primary/90"
                                 >
                                     MORE ABOUT US
                                 </Button>

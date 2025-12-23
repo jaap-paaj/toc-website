@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
+import { typography } from "@/design-system/tokens/typography";
+
 interface HeaderNavProps {
     links: { label: string; href: string }[];
     className?: string;
@@ -14,7 +16,8 @@ export function HeaderNav({ links, className }: HeaderNavProps) {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                        "relative text-sm font-bold uppercase tracking-wide transition-colors duration-200",
+                        "relative transition-colors duration-200",
+                        typography.variants.ui.nav.link,
                         "text-black/80 hover:text-black",
                         // Subtle underline via pseudo-element
                         "after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full",

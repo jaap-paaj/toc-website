@@ -78,7 +78,7 @@ function getBlockClasses(
     return cn(pt, pb, mt, mb);
 }
 
-type HomeModuleTone = "default" | "light" | "dark" | "muted" | "accent" | "split-light-dark";
+type HomeModuleTone = "default" | "light" | "dark" | "muted" | "accent" | "split-light-dark" | "brand";
 
 const TONE_MAP: Record<HomeModuleTone, string> = {
     default: "", // Transparent / inherited
@@ -87,6 +87,7 @@ const TONE_MAP: Record<HomeModuleTone, string> = {
     muted: "text-muted-foreground", // Legacy
     accent: "text-accent-foreground", // Legacy
     "split-light-dark": "bg-[linear-gradient(to_bottom,theme(colors.zinc.100)_0%,theme(colors.zinc.100)_50%,theme(colors.background)_50%,theme(colors.background)_100%)]",
+    brand: "tone-brand bg-background text-foreground", // Systemic Brand Surface
 };
 
 type HomeModuleProps = {

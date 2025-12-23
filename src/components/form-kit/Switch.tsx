@@ -9,6 +9,11 @@ interface SwitchProps {
     id?: string;
 }
 
+import { typography } from "@/design-system/tokens/typography";
+import { cn } from "@/lib/utils";
+
+// ... interfaces ...
+
 export function Switch({ label, checked, onCheckedChange, id }: SwitchProps) {
     const switchId = id || label.replace(/\s+/g, '-').toLowerCase();
 
@@ -20,7 +25,7 @@ export function Switch({ label, checked, onCheckedChange, id }: SwitchProps) {
                 onCheckedChange={onCheckedChange}
 
             />
-            <Label htmlFor={switchId} className="text-sm font-medium text-foreground">
+            <Label htmlFor={switchId} className={cn("text-foreground", typography.variants.body.sm)}>
                 {label}
             </Label>
         </div>

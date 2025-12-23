@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { typography } from "@/design-system/tokens/typography";
 
 interface SectionEyebrowProps extends React.HTMLAttributes<HTMLHeadingElement> {
     as?: "h2" | "h3" | "h4" | "div";
@@ -16,7 +17,7 @@ export function SectionEyebrow({
                 // Layout & Spacing
                 "mb-4 md:mb-6",
                 // Typography (High Contrast, Bold, Uppercase)
-                "font-sans font-bold text-sm md:text-base uppercase tracking-widest",
+                typography.variants.meta.eyebrow,
                 // "text-foreground", // REMOVED: Allow inheritance from HomeModule tone (fixes Light Mode headers)
                 className
             )}

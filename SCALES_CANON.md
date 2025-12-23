@@ -113,14 +113,26 @@ Components must request a role, not a font-size.
 
 ---
 
+---
+
+---
+
 ### 3) Allowed roles (initial set)
 These are the only allowed public roles for headings/text:
 
 **Headings**
-- `display.hero`
-- `display.section`
+- `display.heroPrimary` (Home - Largest)
+- `display.heroSecondary` (Feature Pages - Medium)
+- `display.heroTertiary` (Contact/About - Smallest)
+- `display.section` (Section Headers)
 - `heading.card`
 - `heading.subsection`
+
+### 3.1 Hero Tier Closure Rule
+- The 3 tiers above (`heroPrimary`, `heroSecondary`, `heroTertiary`) are the **ONLY** allowed hero headline sizes.
+- No additional hero tiers may be introduced.
+- All hero modules must consume exactly one of these roles.
+- No component may define a “hero-like” size outside this system.
 
 **Meta**
 - `eyebrow`
@@ -133,6 +145,26 @@ These are the only allowed public roles for headings/text:
 
 **Utility**
 - `caption`
+
+### 3.2 Breakpoint Semantics (Scale Anchors)
+Typography scales are anchored to **intent**, not just screen width:
+- **Mobile (`base`)** and **Desktop (`xl`)** are the authoritative intent anchors where visual design is explicitly defined (Figma).
+- Intermediate breakpoints (`md`, `lg`) are **interpolations/bridges**, not primary design targets.
+- Only `base` + `xl` values may be calibrated directly to explicit Figma pixel values.
+- `md`/`lg` exist purely for optical continuity between the anchors.
+
+### 3.3 Arbitrary Value Guardrails
+Arbitrary Tailwind values (e.g., `text-[9rem]`) are permitted **ONLY** under these strict constraints:
+1.  **Location**: Allowed ONLY inside token files (`typography.ts`, `spacing.ts`). Never in modules/components.
+2.  **Origin**: Must correspond to an explicit Figma value (e.g., 144px).
+3.  **Format**: Must resolve to a round, human-readable number (e.g., `9rem` for 144px, `5rem` for 80px). No fractional "magic numbers" like `6.75rem` unless mathematically required for a specific ratio.
+4.  **Documentation**: Must be documented inline with the Figma reference.
+
+### 3.4 Brand Foreground Rule (Accessibility)
+If a section uses the Brand Lime background (`tone="brand"`), the foreground MUST be forced to Dark (Neutral-950) for contrast.
+- This is handled systemically via the `.tone-brand` scope in `globals.css`.
+- It does NOT set the background color (the module owns that).
+- It ONLY overrides `--foreground`, `--muted-foreground`, and `--border` to neutral steps.
 
 If you need something else:
 - add a role to `typography.ts` (SSOT)

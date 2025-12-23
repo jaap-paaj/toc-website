@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 import { Surface } from "@/design-system/components/Surfaces";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { spacing } from "@/design-system/tokens/spacing";
+import { typography } from "@/design-system/tokens/typography";
 
 interface ContactItem {
     title: string;
@@ -28,17 +29,17 @@ export function ContactDetailsModule() {
             title: "LEGAL & FINANCE",
             description: (
                 <dl className="grid grid-cols-[min-content_1fr] gap-x-8 gap-y-2">
-                    <dt className="text-primary-foreground/60 font-medium uppercase text-xs tracking-wider pt-1">
+                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
                         KVK
                     </dt>
                     <dd className="font-mono tabular-nums">....</dd>
 
-                    <dt className="text-primary-foreground/60 font-medium uppercase text-xs tracking-wider pt-1">
+                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
                         BTW
                     </dt>
                     <dd className="font-mono tabular-nums">....</dd>
 
-                    <dt className="text-primary-foreground/60 font-medium uppercase text-xs tracking-wider pt-1">
+                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
                         BANK
                     </dt>
                     <dd className="font-mono tabular-nums">....</dd>
@@ -68,14 +69,14 @@ export function ContactDetailsModule() {
                                 <Heading
                                     level={3}
                                     size="card"
-                                    className="font-semibold text-primary-foreground"
+                                    className="text-primary-foreground"
                                 >
                                     {item.title}
                                 </Heading>
 
                                 <Text
                                     as={typeof item.description === "string" ? "p" : "div"}
-                                    className="text-primary-foreground/60 text-sm leading-relaxed max-w-prose"
+                                    className={cn("text-primary-foreground/60 max-w-prose", typography.variants.body.sm)}
                                 >
                                     {item.description}
                                 </Text>
