@@ -20,6 +20,8 @@ export function FormField({
     className,
     children,
 }: FormFieldProps) {
+    const child = React.Children.only(children) as React.ReactElement;
+
     return (
         <div className={cn(spacing.stackSm, className)}>
             <div className="flex flex-col gap-1">
@@ -32,7 +34,7 @@ export function FormField({
                     </p>
                 )}
             </div>
-            {children}
+            {error ? React.cloneElement(child, { "aria-invalid": true }) : child}
             {error && (
                 <p className="text-sm font-medium text-destructive">
                     {error}

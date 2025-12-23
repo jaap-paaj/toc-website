@@ -88,11 +88,6 @@ export function ContactFormModule() {
                                             type="email"
                                             placeholder="jane@example.com"
                                             required
-                                            className={
-                                                errors.email
-                                                    ? "border-destructive focus-visible:ring-destructive"
-                                                    : ""
-                                            }
                                         />
                                     </FormField>
                                 </div>

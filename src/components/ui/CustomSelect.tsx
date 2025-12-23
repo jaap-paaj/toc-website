@@ -27,7 +27,7 @@ export default function CustomSelect({ placeholder, options, value, onChange }: 
                         <SelectItem
                             key={opt}
                             value={opt}
-                            className="focus:bg-teal-50 focus:text-teal-900 cursor-pointer py-3"
+                            className="focus:bg-accent focus:text-accent-foreground cursor-pointer py-3"
                         >
                             {opt}
                         </SelectItem>

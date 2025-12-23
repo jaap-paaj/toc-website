@@ -82,8 +82,8 @@ type HomeModuleTone = "default" | "light" | "dark" | "muted" | "accent" | "split
 
 const TONE_MAP: Record<HomeModuleTone, string> = {
     default: "", // Transparent / inherited
-    light: "bg-zinc-100 text-neutral-950", // Light gray background, dark text
-    dark: "bg-background text-foreground", // Standard dark theme
+    light: "tone-light bg-background text-foreground", // System Logic
+    dark: "tone-dark bg-background text-foreground", // System Logic
     muted: "text-muted-foreground", // Legacy
     accent: "text-accent-foreground", // Legacy
     "split-light-dark": "bg-[linear-gradient(to_bottom,theme(colors.zinc.100)_0%,theme(colors.zinc.100)_50%,theme(colors.background)_50%,theme(colors.background)_100%)]",

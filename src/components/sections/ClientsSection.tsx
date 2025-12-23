@@ -31,7 +31,7 @@ export function ClientsSection({
                     {items.map((item) => (
                         <Surface
                             key={item.name}
-                            variant="card"
+                            variant="media"
                             className={cn(
                                 "flex items-center justify-center",
                                 "h-[120px] md:h-[140px]",

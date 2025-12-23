@@ -15,7 +15,7 @@ export interface FormPanelProps {
  */
 export function FormPanel({ children, className }: FormPanelProps) {
     return (
-        <div className={cn("bg-card rounded-panel p-6 border shadow-panel", spacing.stackXl, className)}>
+        <div className={cn("bg-[var(--surface-panel)] rounded-panel p-6 border shadow-panel", spacing.stackXl, className)}>
             {children}
         </div>
     );

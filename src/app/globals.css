@@ -12,24 +12,47 @@
   /* TOC Brand Colors - Dark Theme Default */
   --brand-primary: #CFFF4C;
   /* Canonical Green */
-  --background: #0A0A0A;
-  --foreground: #EDEDED;
-  --card: #111111;
-  --card-foreground: #EDEDED;
-  --popover: #111111;
-  --popover-foreground: #EDEDED;
+  /* Canonical Green */
+  --background: #0a0a0a;
+  /* neutral-950 */
+  --foreground: #f5f5f5;
+  /* neutral-100 */
+  --card: #171717;
+  /* neutral-900 */
+  --card-foreground: #f5f5f5;
+  /* neutral-100 */
+
+  /* Surface Layer Defaults */
+  --surface-background: #0a0a0a;
+  --surface-panel: #171717;
+  --surface-card: #262626;
+  /* neutral-800 - High Contrast */
+  --surface-card-muted: #171717;
+  --surface-media: #171717;
+
+  --popover: #171717;
+  /* neutral-900 */
+  --popover-foreground: #f5f5f5;
   --primary: var(--brand-primary);
-  --primary-foreground: #0A0A0A;
-  --secondary: #1F1F1F;
-  --secondary-foreground: #EDEDED;
+  --primary-foreground: #0a0a0a;
+  /* neutral-950 */
+  --secondary: #262626;
+  /* neutral-800 */
+  --secondary-foreground: #f5f5f5;
   --muted: #171717;
+  /* neutral-900 */
   --muted-foreground: #737373;
+  /* neutral-500 */
   --accent: var(--brand-primary);
-  --accent-foreground: #0A0A0A;
-  --destructive: #7F1D1D;
+  --accent-foreground: #0a0a0a;
+  /* neutral-950 */
+  --destructive: #7f1d1d;
+  /* red-900 */
   --destructive-foreground: #FFFFFF;
   --border: #262626;
+  /* neutral-800 */
   --input: #262626;
+  /* neutral-800 */
   --ring: var(--brand-primary);
 
   /* Legacy references mapped to new system to prevent breakage */
@@ -53,6 +76,15 @@
   --toc-hero-bg: var(--brand-primary);
   --toc-hero-text: #0A0A0A;
   --toc-page-hero-copy-min-h: 8rem;
+
+  /* Instrument Layer (Affordances - Always White) */
+  --instrument-input-bg: #FFFFFF;
+  --instrument-input-fg: #0A0A0A;
+  --instrument-input-placeholder: rgba(10, 10, 10, 0.5);
+  --instrument-input-border: var(--border);
+  --instrument-input-ring: var(--ring);
+  --instrument-input-border-error: var(--destructive);
+  --instrument-input-ring-error: var(--destructive);
 }
 
 @layer components {
@@ -68,6 +100,83 @@
     background-color: color-mix(in srgb, var(--brand-primary) 95%, transparent) !important;
     backdrop-filter: blur(var(--glass-blur-lg)) !important;
     -webkit-backdrop-filter: blur(var(--glass-blur-lg)) !important;
+  }
+
+  /* ========================================
+     Tone System Scopes (Contrast Hardening)
+     ======================================== */
+
+  .tone-light {
+    --background: #fafafa;
+    /* neutral-50 */
+    --foreground: #0a0a0a;
+    /* neutral-950 */
+    --muted: #f5f5f5;
+    /* neutral-100 */
+    --muted-foreground: #737373;
+    /* neutral-500 */
+    --border: #e5e5e5;
+    /* neutral-200 */
+    --card: #FFFFFF;
+    --card-foreground: #0a0a0a;
+    /* neutral-950 */
+    --ring: var(--brand-primary);
+
+    /* Inputs (Instrument Layer Override) */
+    --instrument-input-bg: #FFFFFF;
+    --instrument-input-fg: #0a0a0a;
+    /* neutral-950 */
+    --instrument-input-placeholder: #737373;
+    /* neutral-500 */
+    --instrument-input-border: var(--border);
+
+    /* Surface Layer */
+    --surface-background: #fafafa;
+    /* neutral-50 */
+    --surface-panel: #f5f5f5;
+    /* neutral-100 */
+    --surface-card: #FFFFFF;
+    /* High Contrast on background */
+    --surface-card-muted: #f5f5f5;
+    /* neutral-100 */
+    --surface-media: #fafafa;
+    /* neutral-50 (Subdued) */
+  }
+
+  .tone-dark {
+    --background: #0a0a0a;
+    /* neutral-950 */
+    --foreground: #f5f5f5;
+    /* neutral-100 */
+    --muted: #171717;
+    /* neutral-900 */
+    --muted-foreground: #a3a3a3;
+    /* neutral-400 */
+    --border: #262626;
+    /* neutral-800 */
+    --card: #171717;
+    /* neutral-900 - Base/Media */
+    --card-foreground: #f5f5f5;
+    /* neutral-100 */
+    --ring: var(--brand-primary);
+
+    /* Inputs (Instrument Layer Override - Forced White) */
+    --instrument-input-bg: #FFFFFF;
+    --instrument-input-fg: #0A0A0A;
+    --instrument-input-placeholder: #737373;
+    --instrument-input-border: var(--border);
+
+    /* Surface Layer (Contrast Hardening) */
+    --surface-background: #0a0a0a;
+    /* neutral-950 */
+    --surface-panel: #171717;
+    /* neutral-900 */
+    --surface-card: #262626;
+    /* neutral-800 (High Contrast) */
+    --surface-card-muted: #171717;
+    /* neutral-900 */
+    --surface-media: #171717;
+    /* neutral-900 (Subdued) */
   }
 }
 
