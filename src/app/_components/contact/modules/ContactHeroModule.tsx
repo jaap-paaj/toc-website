@@ -21,7 +21,7 @@ export function ContactHeroModule() {
                     <div className="flex flex-col gap-2">
                         <Heading
                             level={1}
-                            className={cn(typography.variants.display.hero[700], "w-full")}
+                            className={cn(typography.variants.display.heroTertiary, "w-full")}
                         >
                             CONTACT
                         </Heading>

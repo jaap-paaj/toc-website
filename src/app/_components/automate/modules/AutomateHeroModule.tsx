@@ -26,7 +26,7 @@ export function AutomateHeroModule() {
                         </span>
                         <Heading
                             level={1}
-                            className={cn(typography.variants.display.hero[800], "w-full")}
+                            className={cn(typography.variants.display.heroSecondary, "w-full")}
                         >
                             {hero.title}
                         </Heading>

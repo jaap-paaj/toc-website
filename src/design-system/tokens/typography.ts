@@ -1,3 +1,42 @@
+// Tier-0 Typography Scale (Native Tailwind Steps Only)
+export const scales = {
+    display: {
+        // Primary Hero (Home) - Calibrated: Strong but controlled
+        hero: "leading-[0.85] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-8xl",
+        // Secondary Hero (Feature) - Calibrated: Clear step down
+        heroSecondary: "leading-[0.9] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl",
+        // Tertiary Hero (Contact/About) - Calibrated: Modest
+        heroTertiary: "leading-[0.9] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
+        // Section Headers
+        section: "leading-[0.9] text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl",
+    },
+    heading: {
+        page: "text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
+        subsection: "text-2xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl",
+        card: "text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl",
+    },
+    body: {
+        lg: "text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-xl",
+        md: "text-base sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-base",
+        sm: "text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
+    },
+    meta: {
+        eyebrow: "text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base",
+        code: "text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
+        label: "text-xs sm:text-xs md:text-xs lg:text-xs xl:text-xs 2xl:text-xs",
+        badge: "text-xs sm:text-xs md:text-xs lg:text-xs xl:text-xs 2xl:text-xs",
+    },
+    ui: {
+        brand: "text-2xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl",
+        buttonLg: "text-base sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-base",
+        buttonMd: "text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
+        buttonSm: "text-xs sm:text-xs md:text-xs lg:text-xs xl:text-xs 2xl:text-xs",
+        navLink: "text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
+        input: "text-base sm:text-base md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
+        placeholder: "text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg",
+    }
+} as const;
+
 export const typography = {
     // Scale
     scale: {
@@ -18,61 +57,59 @@ export const typography = {
     // Semantic Roles (Canon v1)
     variants: {
         display: {
-            hero: {
-                900: "font-serif tracking-tight leading-[0.85] text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[7.5rem] xl:text-[9rem] 2xl:text-[9rem] uppercase font-black", // Home
-                800: "font-serif tracking-tight leading-[0.9] text-5xl sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] 2xl:text-[5rem] uppercase font-black", // Feature Pages
-                700: "font-serif tracking-tight leading-[0.9] text-4xl sm:text-[2.5rem] md:text-5xl lg:text-[3.75rem] xl:text-7xl 2xl:text-7xl uppercase font-black", // Contact/About
-            },
-            section: "font-serif tracking-tight leading-[0.9] text-4xl md:text-6xl lg:text-7xl uppercase font-black",
+            // Flattened Hero Roles (No more 900/800/700)
+            hero: `font-serif tracking-tight uppercase font-black ${scales.display.hero}`, // Home
+            heroSecondary: `font-serif tracking-tight uppercase font-black ${scales.display.heroSecondary}`, // Feature Pages
+            heroTertiary: `font-serif tracking-tight uppercase font-black ${scales.display.heroTertiary}`, // Contact/About
+            section: `font-serif tracking-tight uppercase font-black ${scales.display.section}`,
         },
         heading: {
             // Structural Page Headings
-            page: "font-serif tracking-tight leading-tight text-3xl md:text-5xl lg:text-6xl font-black uppercase", // H1 default
-            subsection: "font-serif tracking-tight leading-snug text-2xl md:text-4xl font-black uppercase", // Section H2/H3
-            card: "font-serif tracking-tight leading-snug text-xl md:text-2xl font-bold uppercase", // Card Titles
+            page: `font-serif tracking-tight leading-tight font-black uppercase ${scales.heading.page}`, // H1 default
+            subsection: `font-serif tracking-tight leading-snug font-black uppercase ${scales.heading.subsection}`, // Section H2/H3
+            card: `font-serif tracking-tight leading-snug font-bold uppercase ${scales.heading.card}`, // Card Titles
         },
         body: {
-            lg: "font-sans text-lg md:text-xl leading-relaxed font-normal", // Lead / Intro
-            md: "font-sans text-base leading-relaxed font-normal", // Default prose
-            sm: "font-sans text-sm leading-relaxed font-normal", // Compact prose
+            lg: `font-sans leading-relaxed font-normal ${scales.body.lg}`, // Lead / Intro
+            md: `font-sans leading-relaxed font-normal ${scales.body.md}`, // Default prose
+            sm: `font-sans leading-relaxed font-normal ${scales.body.sm}`, // Compact prose
         },
         meta: {
             // UI Labels & Micro-copy
-            eyebrow: "font-sans text-sm md:text-base font-bold uppercase tracking-widest", // Section Logic
-            label: "font-sans text-xs font-bold uppercase tracking-wider", // Form Labels
-            badge: "font-sans text-xs font-bold uppercase tracking-wide", // Pills / Tags
-            code: "font-mono text-sm", // Feature IDs, technical data
+            eyebrow: `font-sans font-bold uppercase tracking-widest ${scales.meta.eyebrow}`, // Section Logic
+            label: `font-sans font-bold uppercase tracking-wider ${scales.meta.label}`, // Form Labels
+            badge: `font-sans font-bold uppercase tracking-wide ${scales.meta.badge}`, // Pills / Tags
+            code: `font-mono ${scales.meta.code}`, // Feature IDs, technical data
         },
         ui: {
             // Interactive Elements
             button: {
-                lg: "font-sans text-base font-bold tracking-wide uppercase",
-                md: "font-sans text-sm font-bold tracking-wide uppercase",
-                sm: "font-sans text-xs font-bold tracking-wide uppercase",
+                lg: `font-sans font-bold tracking-wide uppercase ${scales.ui.buttonLg}`,
+                md: `font-sans font-bold tracking-wide uppercase ${scales.ui.buttonMd}`,
+                sm: `font-sans font-bold tracking-wide uppercase ${scales.ui.buttonSm}`,
             },
             nav: {
-                link: "font-sans text-sm font-bold uppercase tracking-wide",
-                brand: "font-sans text-2xl font-bold uppercase tracking-wide", // Header Logo
+                link: `font-sans font-bold uppercase tracking-wide ${scales.ui.navLink}`, // Mapping to MD size (sm/sm/sm/sm...) based on prev val
+                brand: `font-sans font-bold uppercase tracking-wide ${scales.ui.brand}`, // Header Logo
             },
-
             input: {
-                value: "font-sans text-base md:text-sm font-medium", // Inputs / Selects
+                value: `font-sans font-medium ${scales.ui.input}`, // Inputs / Selects
             },
             placeholder: {
-                title: "font-sans text-lg font-medium", // Empty states
+                title: `font-sans font-medium ${scales.ui.placeholder}`, // Empty states
             },
         },
         // Legacy/Utility bucket (Deprecated - aim to remove)
         utility: {
-            caption: "font-sans text-sm text-muted-foreground",
+            caption: `font-sans text-muted-foreground ${scales.meta.code}`, // Assuming matches code/body.sm size
         }
     },
 } as const;
 
 export type TypographyRole =
-    | "display.hero.900"
-    | "display.hero.800"
-    | "display.hero.700"
+    | "display.hero"
+    | "display.heroSecondary"
+    | "display.heroTertiary"
     | "display.section"
     | "heading.page"
     | "heading.subsection"
