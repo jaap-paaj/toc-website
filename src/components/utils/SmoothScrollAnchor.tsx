@@ -16,31 +16,9 @@ export function SmoothScrollAnchor() {
         window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }, [pathname]);
 
-    // 2. Handle hash anchors with smooth scroll
-    useEffect(() => {
-        const handleAnchorClick = (e: MouseEvent) => {
-            const target = (e.target as HTMLElement).closest("a");
-            if (!target) return;
+    // 2. Handle hash anchors with native behavior (relies on CSS scroll-margin-top)
+    // Removed active scroll hijacking to prevent layout/header conflicts.
 
-            const href = target.getAttribute("href");
-            if (!href?.startsWith("#") || href === "#") return;
-
-            e.preventDefault();
-            const id = href.substring(1);
-            const element = document.getElementById(id);
-
-            if (element) {
-                element.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                });
-                window.history.pushState(null, "", href);
-            }
-        };
-
-        document.addEventListener("click", handleAnchorClick);
-        return () => document.removeEventListener("click", handleAnchorClick);
-    }, []);
 
     return null;
 }

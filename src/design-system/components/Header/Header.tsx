@@ -44,10 +44,9 @@ export function Header({
         <>
             <header
                 className={cn(
-                    "fixed top-0 left-0 w-full z-50 py-4 transition-all duration-200",
+                    "fixed top-0 inset-x-0 z-50 py-4 transition-all duration-200",
                     "border-0 border-b-0 shadow-none ring-0 outline-none" // Hard constraint: Divider-free root
                 )}
-                style={{ transform: "translateZ(0)" }}
             >
                 <div className="container flex justify-center">
                     <HeaderNavShell>

@@ -69,10 +69,10 @@ export function ContactFormModule() {
                     <div className={spacing.stackXl}>
                         <SectionHeader
                             eyebrow="GET IN TOUCH"
-                            title="SEND US A MESSAGE"
                             description="Fill out the form below and we’ll get back to you shortly."
-                            variant="stacked"
-                            align="left"
+                            variant="split"
+                            divider
+                            className="border-foreground/20"
                         />
 
                         <FormPanel>
