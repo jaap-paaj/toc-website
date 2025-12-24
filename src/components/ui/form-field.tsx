@@ -36,7 +36,7 @@ export function FormField({
                     </p>
                 )}
             </div>
-            {error ? React.cloneElement(child, { "aria-invalid": true }) : child}
+            {error ? React.cloneElement(child, { "aria-invalid": true } as React.Attributes & { "aria-invalid"?: boolean }) : child}
             {error && (
                 <p className={cn("text-destructive", typography.variants.body.sm)}>
                     {error}

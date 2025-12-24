@@ -3,6 +3,7 @@ import { Upload, ImageIcon, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { spacing } from '@/design-system/tokens/spacing';
+import { typography } from "@/design-system/tokens/typography";
 
 export interface UploadPlaceholderProps {
     file: File | null;
@@ -76,8 +77,6 @@ export function UploadPlaceholder({
                 onChange={handleInputChange}
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             />
-
-            import {typography} from "@/design-system/tokens/typography";
 
             // ... imports ...
 

@@ -1,23 +1,29 @@
 // Tier-0 Typography Scale (Native Tailwind Steps Only)
 export const scales = {
     display: {
-        // Primary Hero (Home) - Calibrated: Strong but controlled
-        hero: "leading-[0.85] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-8xl",
-        // Secondary Hero (Feature) - Calibrated: Clear step down
-        heroSecondary: "leading-[0.9] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl",
-        // Tertiary Hero (Contact/About) - Calibrated: Modest
-        heroTertiary: "leading-[0.9] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
-        // Section Headers
-        section: "leading-[0.9] text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl",
+        // Primary Hero (Home) - 48px -> 72px -> 96px
+        hero: "leading-hero-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-8xl",
+        // Secondary Hero (Feature) - 36px -> 60px -> 72px
+        heroSecondary: "leading-section-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl",
+        // Tertiary Hero (Contact/About) - 30px -> 48px -> 60px
+        heroTertiary: "leading-section-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
+        // Section Headers - 36px -> 48px -> 60px
+        section: "leading-section-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
     },
     heading: {
-        page: "text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
-        subsection: "text-2xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl",
+        // Page H1 - 30px -> 36px -> 48px
+        page: "text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl",
+        // Subsection H2/H3 - 24px -> 30px -> 36px
+        subsection: "text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl",
+        // Card/Module Titles - 20px -> 24px
         card: "text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl",
     },
     body: {
+        // Lead - 18px -> 20px
         lg: "text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-xl",
+        // Default - 16px
         md: "text-base sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-base",
+        // Compact - 14px
         sm: "text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
     },
     meta: {
@@ -98,6 +104,8 @@ export const typography = {
             placeholder: {
                 title: `font-sans font-medium ${scales.ui.placeholder}`, // Empty states
             },
+            // Form specific (file inputs)
+            inputFile: `file:font-sans file:font-medium file:text-foreground ${scales.ui.input}`,
         },
         // Legacy/Utility bucket (Deprecated - aim to remove)
         utility: {

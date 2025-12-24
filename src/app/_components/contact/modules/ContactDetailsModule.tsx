@@ -32,17 +32,17 @@ export function ContactDetailsModule() {
                     <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
                         KVK
                     </dt>
-                    <dd className="font-mono tabular-nums">....</dd>
+                    <dd className={cn(typography.variants.meta.code, "tabular-nums")}>....</dd>
 
                     <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
                         BTW
                     </dt>
-                    <dd className="font-mono tabular-nums">....</dd>
+                    <dd className={cn(typography.variants.meta.code, "tabular-nums")}>....</dd>
 
                     <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
                         BANK
                     </dt>
-                    <dd className="font-mono tabular-nums">....</dd>
+                    <dd className={cn(typography.variants.meta.code, "tabular-nums")}>....</dd>
                 </dl>
             ),
         },

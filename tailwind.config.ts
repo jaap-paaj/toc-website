@@ -31,6 +31,16 @@ const config: Config = {
                 "card-hover": "0 8px 30px rgba(0,0,0,0.1)",
             },
 
+            fontSize: {
+                // Explicitly including larger sizes if not default, but standard TW scale usually covers these.
+                // We will stick to standard scale but ensure we have the line-heights we need.
+            },
+
+            lineHeight: {
+                'hero-tight': '0.85',
+                'section-tight': '0.9',
+            },
+
             fontFamily: {
                 sans: "var(--font-sans)",
                 serif: "var(--font-sans)", // Enforce no-font-pairing policy

@@ -8,6 +8,7 @@ import { HeaderCta } from "./HeaderCta";
 import { HeaderMenuToggle } from "./HeaderMenuToggle";
 
 import { HeaderNavShell } from "./HeaderNavShell";
+import { typography } from "@/design-system/tokens/typography";
 
 export interface HeaderProps {
     variant?: "home" | "default";
@@ -77,8 +78,6 @@ export function Header({
                     id="mobile-menu"
                     className="fixed inset-0 z-40 bg-background pt-32 px-6 animate-in fade-in slide-in-from-top-10 duration-200"
                 >
-                    import {typography} from "@/design-system/tokens/typography";
-
                     // ... inside component ...
 
                     {/* TODO: Full mobile menu implementation */}
