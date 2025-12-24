@@ -34,7 +34,7 @@ export function HomeFooterCtaModule() {
                                     <Button
                                         asChild
                                         size="xl"
-                                        className="bg-black text-white hover:bg-black/80 rounded-full"
+                                        className="tone-dark bg-background text-foreground hover:bg-background/80 rounded-full"
                                     >
                                         <a href="mailto:info@theonlyconstant.nl">INFO@THEONLYCONSTANT.NL</a>
                                     </Button>

@@ -17,15 +17,17 @@ interface TestimonialsSectionProps {
     headingLabel: string;
     items: TestimonialItem[];
     className?: string;
+    pad?: "m" | "none";
 }
 
 export function TestimonialsSection({
     headingLabel,
     items,
-    className
+    className,
+    pad = "m"
 }: TestimonialsSectionProps) {
     return (
-        <div className={cn("container mx-auto", spacing.modulePad.m, className)}>
+        <div className={cn("container mx-auto", pad === "m" ? spacing.modulePad.m : undefined, className)}>
             <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
                 <SectionHeader variant="stacked" eyebrow={headingLabel} />
 

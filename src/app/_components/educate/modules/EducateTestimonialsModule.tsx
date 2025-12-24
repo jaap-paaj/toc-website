@@ -27,7 +27,7 @@ export function EducateTestimonialsModule() {
             <TestimonialsSection
                 headingLabel="TESTIMONIALS"
                 items={TESTIMONIALS}
-                className="py-0 md:py-0"
+                pad="none"
             />
         </HomeModule>
     );

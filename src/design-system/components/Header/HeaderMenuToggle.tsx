@@ -11,7 +11,7 @@ export function HeaderMenuToggle({ isOpen, onToggle, className }: HeaderMenuTogg
         <button
             onClick={onToggle}
             className={cn(
-                "relative flex flex-col items-center justify-center gap-1.5 h-8 w-8 rounded-full bg-black transition-transform hover:scale-105 active:scale-95 cursor-pointer",
+                "tone-dark relative flex flex-col items-center justify-center gap-1.5 h-8 w-8 rounded-full bg-background transition-transform hover:scale-105 active:scale-95 cursor-pointer",
                 className
             )}
             aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -21,14 +21,14 @@ export function HeaderMenuToggle({ isOpen, onToggle, className }: HeaderMenuTogg
         >
             <span
                 className={cn(
-                    "h-0.5 w-[18px] bg-white rounded-full transition-all duration-300",
+                    "h-0.5 w-[18px] bg-foreground rounded-full transition-all duration-300",
                     isOpen && "rotate-45 translate-y-1"
                 )}
                 aria-hidden="true"
             />
             <span
                 className={cn(
-                    "h-0.5 w-[18px] bg-white rounded-full transition-all duration-300",
+                    "h-0.5 w-[18px] bg-foreground rounded-full transition-all duration-300",
                     isOpen && "-rotate-45 -translate-y-1"
                 )}
                 aria-hidden="true"

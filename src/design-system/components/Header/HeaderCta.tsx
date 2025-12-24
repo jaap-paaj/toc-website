@@ -12,11 +12,11 @@ export function HeaderCta({ cta, className }: HeaderCtaProps) {
             <Button
                 asChild
                 // "Solid black background, white text"
-                // Using bg-black text-white utility for strict compliance with "Solid black" request
+                // "Solid black background, white text" via tone-dark semantics
                 // instead of semantic tokens if tokens don't map to pure black/white in this context.
                 // However, --background is Deep Black and --foreground is Off-white.
                 // A black button on the green header:
-                className="rounded-full px-6 py-5 bg-black text-white hover:bg-black/80 border-0"
+                className="rounded-full px-6 py-5 tone-dark bg-background text-foreground hover:bg-background/80 border-0"
             >
                 <Link href={cta.href}>{cta.label}</Link>
             </Button>

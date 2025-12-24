@@ -38,7 +38,7 @@ function WhyUsValueProps() {
             <SectionHeader variant="stacked" eyebrow="WHY US?" />
 
             {/* Grid */}
-            <FeatureGridSection items={items} columns={2} className="py-0 md:py-0" />
+            <FeatureGridSection items={items} columns={2} />
         </div>
     );
 }

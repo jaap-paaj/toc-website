@@ -39,7 +39,7 @@ export function HomeHeroModule() {
               <Link href="#capabilities">
                 <Button
                   size="xl"
-                  className="bg-black text-white hover:bg-black/80"
+                  className="tone-dark bg-background text-foreground hover:bg-background/80"
                 >
                   EXPLORE OUR CAPABILITIES
                 </Button>

@@ -53,7 +53,7 @@ export function FeatureGridSection({
                             // If not wrapped, Surface is "group" ONLY if interactive.
                             !item.href && interactive && "group",
                             // Hover styles hook into group-hover/group-focus from parent Link
-                            item.href && "group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-card-hover group-focus:bg-white/10 group-focus:border-white/20 group-focus:shadow-card-hover"
+                            item.href && "group-hover:bg-foreground/10 group-hover:border-foreground/20 group-hover:shadow-card-hover group-focus:bg-foreground/10 group-focus:border-foreground/20 group-focus:shadow-card-hover"
                         )}
                     >
 
@@ -65,7 +65,7 @@ export function FeatureGridSection({
                                     <span className={cn("text-muted-foreground transition-colors duration-300 group-hover:text-foreground", typography.variants.meta.code)}>
                                         {item.id}
                                     </span>
-                                    <div className="h-px w-full bg-white/15 transition-colors duration-300 group-hover:bg-white/30" />
+                                    <div className="h-px w-full bg-foreground/15 transition-colors duration-300 group-hover:bg-foreground/30" />
                                 </div>
 
                                 <div className="flex flex-col flex-1 gap-6">
@@ -79,7 +79,7 @@ export function FeatureGridSection({
 
                                     {item.href && (
                                         <div className="mt-auto self-end pt-6"> {/* lint:allowed */}
-                                            <div className="rounded-full w-10 h-10 flex items-center justify-center border border-white/20 text-white/80 group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-300">
+                                            <div className="rounded-full w-10 h-10 flex items-center justify-center border border-foreground/20 text-foreground/80 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
                                                 <ArrowRight className="w-4 h-4" />
                                             </div>
                                         </div>

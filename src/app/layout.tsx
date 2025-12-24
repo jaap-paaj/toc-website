@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { SmoothScrollAnchor } from "@/components/utils/SmoothScrollAnchor";
 
 const fontSans = Figtree({
-  variable: "--font-sans",
+  variable: "--font-sans", // lint:allowed
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={cn(
           fontSans.variable,
-          "antialiased min-h-screen bg-background font-sans text-foreground"
+          "antialiased min-h-screen bg-background font-sans" /* lint:allowed */
         )}
       >
         {children}

@@ -120,6 +120,15 @@ If a request changes a measurable attribute:
     ```
 4.  No one-off edits.
 
+
+### 6.1 DOM Output vs Source Enforcement
+
+Audits strictly enforce **component source code** compliance.
+*   **Source Code**: Must use tokens (e.g., `typography.variants.meta.eyebrow`).
+*   **Rendered DOM**: Will legitimately contain raw Tailwind classes (e.g., `text-sm uppercase tracking-widest`).
+
+**Rule**: Do not judge compliance by inspecting the DOM. Compliance is determined solely by source-code audits.
+
 ---
 
 ## 7. System Maturity Status

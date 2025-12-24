@@ -45,7 +45,7 @@ export function Header({
         <>
             <header
                 className={cn(
-                    "fixed top-0 inset-x-0 z-50 py-4 transition-all duration-200",
+                    "tone-light fixed top-0 inset-x-0 z-50 py-4 transition-all duration-200",
                     "border-0 border-b-0 shadow-none ring-0 outline-none" // Hard constraint: Divider-free root
                 )}
             >

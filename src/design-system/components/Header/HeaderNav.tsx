@@ -18,10 +18,10 @@ export function HeaderNav({ links, className }: HeaderNavProps) {
                     className={cn(
                         "relative transition-colors duration-200",
                         typography.variants.ui.nav.link,
-                        "text-black/80 hover:text-black",
+                        "text-foreground/80 hover:text-foreground",
                         // Subtle underline via pseudo-element
                         "after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full",
-                        "after:bg-black after:opacity-0 hover:after:opacity-40",
+                        "after:bg-foreground after:opacity-0 hover:after:opacity-40",
                         "after:transition-opacity after:duration-200"
                     )}
                 >
