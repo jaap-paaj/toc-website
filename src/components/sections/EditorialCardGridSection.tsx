@@ -30,7 +30,7 @@ export function EditorialCardGridSection({
         <div className={cn("container mx-auto", className)}>
             {/* Divider Breathing Room Wrapper */}
             <div className={cn(spacing.modulePadTop.l)}>
-                <div className="border-t border-border/40" />
+                <div className="border-t border-border/80" />
                 <div className="pt-6 md:pt-8"> {/* lint:allowed */}
                     <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
                         <SectionHeader

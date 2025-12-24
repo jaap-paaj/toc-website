@@ -1,5 +1,5 @@
 import { HomeModule } from "../../home/HomeModule";
-import { Heading, Text } from "@/design-system/components/Typography";
+import { Heading } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";

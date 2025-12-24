@@ -52,6 +52,7 @@ export function EducateWhyUsModule() {
             tone="dark"
             pad="m"
             padTop="none"
+            padBottom="none"
             gap="none"
         >
             <WhyUsValueProps />

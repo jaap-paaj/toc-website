@@ -78,7 +78,6 @@ export function UploadPlaceholder({
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             />
 
-            // ... imports ...
 
             {file ? (
                 <div className="flex items-center justify-center gap-3">

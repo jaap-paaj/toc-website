@@ -43,7 +43,7 @@ export function SectionHeader({
     // Base container class with optional divider styling
     const containerClasses = cn(
         "w-full",
-        divider && "border-t border-border/40 pt-6 md:pt-8", /* lint:allowed */
+        divider && "border-t border-border/80 pt-6 md:pt-8", /* lint:allowed */
         className
     );
 

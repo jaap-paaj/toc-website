@@ -20,7 +20,7 @@ export function InnovateSolutionsModule() {
         <HomeModule id="solutions" width="full" tone="light" pad="m" padTop="none" gap="none">
             <div className="container mx-auto flex flex-col gap-6 md:gap-8">
                 {/* Divider stays inside the padded content area (HomeModule pad) */}
-                <div className="border-t border-border/40" />
+                <div className="border-t border-border/80" />
 
                 <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
                     <SectionHeader

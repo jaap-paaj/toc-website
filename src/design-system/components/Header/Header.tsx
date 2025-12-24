@@ -78,7 +78,6 @@ export function Header({
                     id="mobile-menu"
                     className="fixed inset-0 z-40 bg-background pt-32 px-6 animate-in fade-in slide-in-from-top-10 duration-200"
                 >
-                    // ... inside component ...
 
                     {/* TODO: Full mobile menu implementation */}
                     <nav className="flex flex-col gap-6 items-center">

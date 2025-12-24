@@ -19,7 +19,7 @@ export function AutomateReadyToRunModule() {
         <HomeModule id="ready-to-run" width="full" tone="light" pad="m" gap="s">
             <div className="container mx-auto flex flex-col gap-6 md:gap-8">
                 {/* Divider stays inside the padded content area (HomeModule pad) */}
-                <div className="border-t border-border/40" />
+                <div className="border-t border-border/80" />
 
                 {/* Content Block */}
                 <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
