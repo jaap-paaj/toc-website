@@ -1,5 +1,6 @@
 import { Text } from "@/design-system/components/Typography";
 import { Button } from "@/components/ui/Button";
+import { spacing } from "@/design-system/tokens/spacing";
 import { HomeModule } from "../HomeModule";
 import { cn } from "@/lib/utils";
 import { layoutTokens } from "@/design-system/tokens/layout";
@@ -34,7 +35,7 @@ export function HomeHeroModule() {
             </Text>
 
             {/* Bottom CTA */}
-            <div className="mt-auto pt-10 md:pt-12">
+            <div className={cn("mt-auto", spacing.section.heroFollower)}>
               <Link href="#capabilities">
                 <Button
                   size="xl"

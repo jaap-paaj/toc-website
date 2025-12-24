@@ -2,8 +2,8 @@ import { cn } from "@/lib/utils";
 import { Text } from "@/design-system/components/Typography";
 import { Surface } from "@/design-system/components/Surfaces";
 import { SectionHeader } from "./SectionHeader";
-import { Quote } from "lucide-react";
 import { spacing } from "@/design-system/tokens/spacing";
+import { Quote } from "lucide-react";
 import { typography } from "@/design-system/tokens/typography";
 
 export interface TestimonialItem {
@@ -25,7 +25,7 @@ export function TestimonialsSection({
     className
 }: TestimonialsSectionProps) {
     return (
-        <div className={cn("container mx-auto py-16 md:py-24", className)}>
+        <div className={cn("container mx-auto", spacing.modulePad.m, className)}>
             <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
                 <SectionHeader variant="stacked" eyebrow={headingLabel} />
 

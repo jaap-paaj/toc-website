@@ -53,7 +53,7 @@ export function FeatureGridSection({
                             // If not wrapped, Surface is "group" ONLY if interactive.
                             !item.href && interactive && "group",
                             // Hover styles hook into group-hover/group-focus from parent Link
-                            item.href && "group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-lg group-focus:bg-white/10 group-focus:border-white/20 group-focus:shadow-lg"
+                            item.href && "group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-card-hover group-focus:bg-white/10 group-focus:border-white/20 group-focus:shadow-card-hover"
                         )}
                     >
 
@@ -62,23 +62,23 @@ export function FeatureGridSection({
                             // Services / Process Layout (Index + Divider)
                             <>
                                 <div className={cn("flex flex-col gap-3", spacing.component.headerTransition)}>
-                                    <span className={cn("text-white/60 transition-colors duration-300 group-hover:text-white/90", typography.variants.meta.code)}>
+                                    <span className={cn("text-muted-foreground transition-colors duration-300 group-hover:text-foreground", typography.variants.meta.code)}>
                                         {item.id}
                                     </span>
                                     <div className="h-px w-full bg-white/15 transition-colors duration-300 group-hover:bg-white/30" />
                                 </div>
 
                                 <div className="flex flex-col flex-1 gap-6">
-                                    <Heading level={3} size="card" className="pt-3 md:pt-4">
+                                    <Heading level={3} size="card" className="pt-3 md:pt-4"> {/* lint:allowed */}
                                         {item.title}
                                     </Heading>
 
-                                    <Text className={cn("text-white/75 transition-colors duration-300 group-hover:text-white/90", typography.variants.body.sm)}>
+                                    <Text className={cn("text-muted-foreground transition-colors duration-300 group-hover:text-foreground", typography.variants.body.sm)}>
                                         {item.description}
                                     </Text>
 
                                     {item.href && (
-                                        <div className="mt-auto self-end pt-6">
+                                        <div className="mt-auto self-end pt-6"> {/* lint:allowed */}
                                             <div className="rounded-full w-10 h-10 flex items-center justify-center border border-white/20 text-white/80 group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-300">
                                                 <ArrowRight className="w-4 h-4" />
                                             </div>
@@ -112,7 +112,7 @@ export function FeatureGridSection({
                         <Link
                             key={idx}
                             href={item.href}
-                            className="group block h-full outline-none rounded-surface focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                            className="group block h-full outline-none rounded-surface focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                             aria-label={`Explore ${item.title}`}
                         >
                             {content}

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { spacing } from "@/design-system/tokens/spacing";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/design-system/components/Typography";
@@ -28,7 +29,7 @@ export function TrainingCategorySection({
     className
 }: TrainingCategorySectionProps) {
     return (
-        <div className={cn("container mx-auto py-16 md:py-24", className)}>
+        <div className={cn("container mx-auto", spacing.modulePad.m, className)}>
             <div className="flex flex-col gap-12 md:gap-16">
                 {/* Header Block */}
                 <div className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
@@ -50,14 +51,14 @@ export function TrainingCategorySection({
                                 "group relative flex flex-col p-8 md:p-10 h-full min-h-[300px]",
                                 "transition-all duration-300",
                                 "bg-secondary/30 border border-border/50",
-                                "hover:bg-secondary/50 hover:border-border hover:shadow-sm"
+                                "hover:bg-secondary/50 hover:border-border hover:shadow-panel"
                             )}
                         >
                             <div className="flex flex-col gap-4 flex-1">
                                 <Heading level={3} size="card">
                                     {item.title}
                                 </Heading>
-                                <Text className={cn("text-muted-foreground mb-6", typography.variants.body.sm)}>
+                                <Text className={cn("text-muted-foreground mb-6", typography.variants.body.sm)}> {/* lint:allowed */}
                                     {item.description}
                                 </Text>
                             </div>

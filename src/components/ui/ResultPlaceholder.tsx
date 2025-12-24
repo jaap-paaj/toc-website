@@ -24,7 +24,7 @@ export function ResultPlaceholder({
     return (
         <div
             className={cn(
-                "bg-muted/50 rounded-2xl flex flex-col items-center justify-center text-center gap-4 p-8 h-full",
+                "bg-muted/50 rounded-surface flex flex-col items-center justify-center text-center gap-4 p-8 h-full",
                 className
             )}
             style={{ minHeight }}

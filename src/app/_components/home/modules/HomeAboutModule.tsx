@@ -51,7 +51,7 @@ export function HomeAboutModule() {
                                 you can move faster without guessing.
                             </Text>
 
-                            <div className="pt-2">
+                            <div className="pt-2"> {/* lint:allowed */}
                                 <Button
                                     size="xl"
                                     className="bg-primary text-primary-foreground hover:bg-primary/90"

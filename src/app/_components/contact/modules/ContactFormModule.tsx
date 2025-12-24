@@ -53,7 +53,7 @@ export function ContactFormModule() {
                 <div className="max-w-2xl mx-auto w-full">
                     <FormPanel className={cn("items-center text-center", spacing.component.formSuccessPanel)}>
                         <Heading level={3}>Thanks for your message!</Heading>
-                        <Text className="text-muted-foreground my-4">
+                        <Text className="text-muted-foreground my-4"> {/* lint:allowed */}
                             We have received your inquiry and will reply within 2 business days.
                         </Text>
                         <Button

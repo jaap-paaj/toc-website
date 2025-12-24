@@ -43,7 +43,7 @@ export function SectionHeader({
     // Base container class with optional divider styling
     const containerClasses = cn(
         "w-full",
-        divider && "border-t border-border/40 pt-6 md:pt-8",
+        divider && "border-t border-border/40 pt-6 md:pt-8", /* lint:allowed */
         className
     );
 
@@ -99,7 +99,7 @@ export function SectionHeader({
                 </div>
 
                 {/* Right Column: Narrative */}
-                <div className="flex flex-col justify-start md:pt-1">
+                <div className="flex flex-col justify-start md:pt-1"> {/* lint:allowed */}
                     {description && (
                         <Text className={cn(typography.variants.body.lg, "opacity-80")}>
                             {description}

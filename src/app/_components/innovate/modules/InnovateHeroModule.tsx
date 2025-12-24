@@ -4,6 +4,7 @@ import { Heading, Text } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { innovateContent } from "@/app/_content/innovate";
 import { typography } from "@/design-system/tokens/typography";
+import { spacing } from "@/design-system/tokens/spacing";
 
 export function InnovateHeroModule() {
     const { hero } = innovateContent;
@@ -41,7 +42,7 @@ export function InnovateHeroModule() {
                             {hero.intro}
                         </Text>
 
-                        <div className="mt-auto pt-10 md:pt-12">
+                        <div className={cn("mt-auto", spacing.section.heroFollower)}>
                             {/* Layout parity spacer */}
                         </div>
                     </div>

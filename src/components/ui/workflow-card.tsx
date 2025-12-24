@@ -32,7 +32,7 @@ export function WorkflowCard({
                 )}
             >
                 <div className="p-8 stack-section items-start text-left h-full">
-                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 [&>svg]:w-8 [&>svg]:h-8 [&>svg]:text-primary">
+                    <div className="w-14 h-14 bg-primary/10 rounded-panel flex items-center justify-center group-hover:scale-105 transition-transform duration-300 [&>svg]:w-8 [&>svg]:h-8 [&>svg]:text-primary">
                         {icon}
                     </div>
 

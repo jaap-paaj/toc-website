@@ -4,6 +4,7 @@ import { Heading, Text } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { automateContent } from "@/app/_content/automate";
 import { typography } from "@/design-system/tokens/typography";
+import { spacing } from "@/design-system/tokens/spacing";
 
 export function AutomateHeroModule() {
     const { hero } = automateContent;
@@ -41,7 +42,7 @@ export function AutomateHeroModule() {
                             {hero.intro}
                         </Text>
 
-                        <div className="mt-auto pt-10 md:pt-12">
+                        <div className={cn("mt-auto", spacing.section.heroFollower)}>
                             {/* No children passed in AutomateHeroModule, but empty div maintained for layout parity */}
                         </div>
                     </div>

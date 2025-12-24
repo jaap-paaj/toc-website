@@ -2,6 +2,7 @@ import { HomeModule } from "@/app/_components/home/HomeModule";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { typography } from "@/design-system/tokens/typography";
+import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 
 export function EducateHeroModule() {
@@ -38,7 +39,7 @@ export function EducateHeroModule() {
                             We empower teams with the knowledge and skills to navigate the AI landscape effectively. Through workshops, training, and strategic guidance, we build the internal capability needed for sustainable innovation.
                         </Text>
 
-                        <div className="mt-auto pt-10 md:pt-12">
+                        <div className={cn("mt-auto", spacing.section.heroFollower)}>
                             {/* Layout parity spacer */}
                         </div>
                     </div>

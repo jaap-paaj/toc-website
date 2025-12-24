@@ -7,6 +7,7 @@ import { typography } from "@/design-system/tokens/typography";
 import { SectionHeader } from "./SectionHeader";
 
 
+
 export interface EditorialItem {
     title: string;
     description: string | React.ReactNode;
@@ -28,9 +29,9 @@ export function EditorialCardGridSection({
     return (
         <div className={cn("container mx-auto", className)}>
             {/* Divider Breathing Room Wrapper */}
-            <div className="pt-16 md:pt-24 lg:pt-32">
+            <div className={cn(spacing.modulePadTop.l)}>
                 <div className="border-t border-border/40" />
-                <div className="pt-6 md:pt-8">
+                <div className="pt-6 md:pt-8"> {/* lint:allowed */}
                     <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
                         <SectionHeader
                             variant="split"

@@ -2,6 +2,7 @@ import { HomeModule } from "../HomeModule";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { typography } from "@/design-system/tokens/typography";
+import { spacing } from "@/design-system/tokens/spacing";
 
 export function HomeFooterCtaModule() {
     return (
@@ -13,7 +14,7 @@ export function HomeFooterCtaModule() {
                         "bg-[var(--toc-hero-bg)] text-[var(--toc-hero-text)]"
                     )}
                 >
-                    <div className="px-6 py-10 md:px-12 md:py-14 lg:px-14 lg:py-16">
+                    <div className={cn("px-6 md:px-12 lg:px-14", spacing.modulePad.s)}>
                         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-12 items-end">
                             {/* Left: Headline + CTA */}
                             <div className="flex flex-col gap-8">

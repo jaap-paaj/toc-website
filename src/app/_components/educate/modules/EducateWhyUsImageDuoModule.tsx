@@ -19,7 +19,7 @@ export function EducateWhyUsImageDuoModule() {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-[0.9fr_1.6fr] gap-4 md:gap-8 items-stretch">
                     <div
-                        className="relative w-full rounded-2xl overflow-hidden"
+                        className="relative w-full rounded-surface overflow-hidden"
                         style={{ aspectRatio: "4 / 3", minHeight: 240 }}
                     >
                         <Image
@@ -33,7 +33,7 @@ export function EducateWhyUsImageDuoModule() {
                     </div>
 
                     <div
-                        className="relative w-full rounded-2xl overflow-hidden"
+                        className="relative w-full rounded-surface overflow-hidden"
                         style={{ aspectRatio: "4 / 3", minHeight: 240 }}
                     >
                         <Image

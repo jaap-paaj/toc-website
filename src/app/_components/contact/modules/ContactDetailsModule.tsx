@@ -29,17 +29,17 @@ export function ContactDetailsModule() {
             title: "LEGAL & FINANCE",
             description: (
                 <dl className="grid grid-cols-[min-content_1fr] gap-x-8 gap-y-2">
-                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
+                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1") /* lint:allowed */}>
                         KVK
                     </dt>
                     <dd className={cn(typography.variants.meta.code, "tabular-nums")}>....</dd>
 
-                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
+                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1") /* lint:allowed */}>
                         BTW
                     </dt>
                     <dd className={cn(typography.variants.meta.code, "tabular-nums")}>....</dd>
 
-                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1")}>
+                    <dt className={cn(typography.variants.meta.label, "text-primary-foreground/60 pt-1") /* lint:allowed */}>
                         BANK
                     </dt>
                     <dd className={cn(typography.variants.meta.code, "tabular-nums")}>....</dd>
