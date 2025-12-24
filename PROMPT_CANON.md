@@ -21,10 +21,8 @@ Before continuing, confirm:
 
 You MUST read and obey these files first:
 - ARCHITECTURE.md
-- FRONTEND_GUIDELINES.md
-- FORM_FOUNDATION.md
+- SCALES_CANON.md
 - BRAND_PROFILE.md
-- PROJECT_SUMMARY.md
 - PROMPT_CANON.md (this file)
 
 If a request conflicts with a contract:
@@ -44,7 +42,7 @@ If a request conflicts with a contract:
   - ❌ No layout/grid/spacing/styling/accessibility patches in `page.tsx`
 
 ### Layering (no inversions)
-Tokens → Primitives → Components → Feature Modules → Pages  
+Tokens → Primitives → Components → Feature Modules → Pages
 Lower layers may not override higher-level decisions.
 
 ---
@@ -143,7 +141,7 @@ Rhythm changes must be systemic, explicit, and reusable.
 
 Before proposing any change:
 1) Identify ownership layer: token / primitive / component / module / page
-2) Reject any solution that violates ARCHITECTURE.md or FRONTEND_GUIDELINES.md
+2) Reject any solution that violates ARCHITECTURE.md or SCALES_CANON.md
 3) Prefer system-level fixes over local patches
 4) Reference relevant MD contracts explicitly (by filename)
 5) Define acceptance criteria (observable)
@@ -232,11 +230,3 @@ If an agent deviates:
 - stop
 - re-paste this canon
 - continue with a narrower prompt
-
----
-
-## 12) Canon References (Mandatory)
-Before making layout or spacing decisions, consult:
-- VERTICAL_RHYTHM_CANON.md — conceptual model
-- GLOBAL_STACKING_RULES.md — enforceable rules
-- VERTICAL_RHYTHM_AUDIT.md — known fixes & precedents

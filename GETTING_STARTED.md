@@ -1,28 +1,71 @@
 # GETTING_STARTED.md
 
-## Quick Start
+## The TOC Documentation System
 
-1. Read `ARCHITECTURE.md` (ownership)
-2. Read `UI_FOUNDATIONS.md` (visual rules)
-3. Read `FORM_FOUNDATION.md` (form contracts)
-4. Build using `FRONTEND_GUIDELINES.md`
-
-If you are adding spacing or layout in a page, you are doing it wrong.
+Welcome to the **TOC AI Content Studio**.
+This project operates on a **Contract-Driven Architecture**. To contribute, you must read the governing contracts.
 
 ---
 
-# PROJECT_SUMMARY.md
+## 📚 The Canon (Read Order)
 
-## TOC Content Studio
+1.  **[ARCHITECTURE.md](./ARCHITECTURE.md)** (The Law)
+    *   **Scope**: Who owns what. Page vs Component rules. Hard prohibitions.
+    *   **Read when**: You are creating a new page or deciding where to put state.
 
-This project uses a **contract-driven design system**.
+2.  **[SCALES_CANON.md](./SCALES_CANON.md)** (The Visual Truth)
+    *   **Scope**: Typography, Spacing, Colors, Radius, Shadows.
+    *   **Read when**: You need to style something or add a new visual variant.
 
-### Key Characteristics
+3.  **[BRAND_PROFILE.md](./BRAND_PROFILE.md)** (The Identity)
+    *   **Scope**: Voice, Tone, Color definitions, Motion philosophy.
+    *   **Read when**: You are writing copy or deciding on brand alignment.
 
-* Thin pages
-* Centralized layout ownership
-* Gap-based spacing only
-* Tiered elevation & radius
-* Enforced via linting and components
+4.  **[PROMPT_CANON.md](./PROMPT_CANON.md)** (The AI Guardrail)
+    *   **Scope**: Instructions for AI coding assistants.
+    *   **Read when**: You are prompting an AI/LLM to help you code.
 
-The system is designed to support **vibecoding without regressions**.
+---
+
+## 🚀 Quick Start for Developers
+
+**1. Development Server**
+```bash
+npm run dev
+```
+
+**2. Linting**
+```bash
+npm run lint             # Code quality
+npm run lint:spacing     # Architecture enforcement (forbidden utilities)
+```
+
+**3. Common Tasks**
+
+*   **Create a new Page**: Copy the "Thin Page" template from `ARCHITECTURE.md`.
+*   **Add a Form**: Use `FormPanel` and `FormSection` (see `ARCHITECTURE.md`).
+*   **Style a Component**: Use tokens from `SCALES_CANON.md`. Do NOT use raw Tailwind values like `text-[13px]`.
+
+---
+
+## 🏗️ Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router (Composition only)
+├── components/
+│   ├── ui/                 # Primitives (Leaf nodes only)
+│   ├── form-kit/           # Form primitives
+│   ├── sections/           # Large composable blocks
+│   └── layout/             # WorkflowShell, etc.
+├── design-system/
+│   ├── tokens/             # The Single Source of Truth
+│   └── components/         # Design System Components (Heading, Surface)
+└── lib/                    # Utilities
+```
+
+---
+
+## 🔐 The "Golden Rule"
+**Frontend work is composition, not layout design.**
+If you find yourself adding spacing, grids, or styling in a page file, stop. You are working at the wrong layer.

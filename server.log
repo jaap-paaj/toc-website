@@ -1,0 +1,18 @@
+
+> toc-content-studio@0.1.0 dev
+> next dev
+
+   ▲ Next.js 16.0.7 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://192.168.68.50:3000
+
+ ✓ Starting...
+ ✓ Ready in 603ms
+ GET /contact 200 in 1620ms (compile: 1382ms, render: 238ms)
+ HEAD / 200 in 271ms (compile: 187ms, render: 84ms)
+ GET / 200 in 150ms (compile: 10ms, render: 140ms)
+ GET /automate 200 in 433ms (compile: 275ms, render: 158ms)
+ GET /contact 200 in 144ms (compile: 13ms, render: 132ms)
+ GET /innovate 200 in 558ms (compile: 354ms, render: 203ms)
+ GET /about 200 in 215ms (compile: 186ms, render: 29ms)
+[?25h

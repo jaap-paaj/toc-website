@@ -1,202 +1,121 @@
-## SCALE CANON — TOKENS, SCALES, ENFORCEMENT (v1)
+# SCALES_CANON.md (Consolidated)
 
-### 1) Why this exists
-AI (and humans) will optimize locally unless we force global constraints.
-Therefore: any “design intent” MUST be expressible as a scale, not as ad-hoc values.
+## Purpose
 
-**Rule of thumb**
-> If it can’t be expressed as a scale step, it’s not allowed in production code.
+Defines the **Visual System**. This is the single source of truth for spacing, typography, colors, shadows, and radius.
+If it can't be expressed as a scale step, it is not allowed in production code.
+
+**This document defines Visual Contracts.**
+For ownership and component usage contracts, see `ARCHITECTURE.md`.
 
 ---
 
-### 2) The Three-Layer Model (Non-negotiable)
+## 1. The Three-Layer Model (Non-negotiable)
+
 We separate concerns into layers with single ownership:
 
-1) **Tone** (context)  
-   Defines semantic color meaning per section (light/dark/etc).
+1.  **Tone** (Context): Defines semantic color meaning per section (light/dark/brand).
+2.  **Surface / Instrument** (Affordances):
+    *   *Surface*: Backgrounds, cards, panels.
+    *   *Instrument*: Inputs, controls, interactivity.
+3.  **Scale** (Measurable): Spacing, typography, radius, shadows.
 
-2) **Surface / Instrument** (affordances)  
-   - Surface: backgrounds/cards/panels/media surfaces
-   - Instrument: inputs/controls/readability affordances
-
-3) **Scale** (spacing/typography/radius/etc)  
-   All measurable choices are made via scales.
-
-No layer may “borrow” responsibilities from another layer.
+No layer may "borrow" responsibilities from another layer.
 
 ---
 
-### 3) Scale Rule (Global)
+## 2. Scale Rule (Global)
+
 For ANY measurable property, only these are allowed:
-- **token references** (semantic variables/classes)
-- **scale steps** (xs/s/m/l/xl, etc)
+*   **Token References** (semantic variables/classes)
+*   **Scale Steps** (xs/s/m/l/xl, etc.)
 
-Disallowed:
-- hardcoded hex values (except in globals.css token definitions)
-- raw Tailwind palette utilities (e.g. bg-teal-50)
-- arbitrary spacing utilities for layout rhythm (pt-*, mb-*, py-*) outside allowed internal-component tokens
-- “just one exception” values in modules
-
----
-
-### 4) Enforcement by Scope
-#### 4.1 Modules (Page stacking / vertical rhythm)
-Modules must use v4.1 Block Model only:
-- `pad`, `padTop`, `padBottom`
-- `gap`, `gapTop`, `gapBottom`
-
-Forbidden inside module roots/wrappers:
-- pt-/pb-/mt-/mb- utilities (unless purely internal layout within the module content, never for inter-module rhythm)
-
-**Same-tone compaction rule**
-- If tone A == tone B (light→light or dark→dark) and you want a seamless block:
-  - set `gap="none"` on module A **and**
-  - set `padTop="none"` on module B
-- Tone switches stay roomy by default (use gap="s" etc).
-
-#### 4.2 Components (internal layout)
-Components may use spacing utilities ONLY if:
-- they are mapped to a semantic token in `spacing.component.*`
-- they do not change module boundary rhythm
-
-Example allowed:
-- `spacing.component.formActions`
-- `spacing.component.sectionHeader`
-
-Example not allowed:
-- random `py-16` on a shared section wrapper (must be a token)
+**Disallowed**:
+*   Hardcoded hex values.
+*   Raw Tailwind palette utilities (e.g., `bg-teal-50`).
+*   Arbitrary spacing utilities (`pt-*`, `mb-*`) outside allowed internal-component tokens.
 
 ---
 
-### 5) “No Scale = No Change” policy
-If a request changes a measurable attribute (spacing, typography, color, radius):
-- You must first identify the correct scale/token.
-- If it does not exist, you must add it to the relevant tokens file as the single source of truth.
-- Only then implement the change.
+## 3. Typography Canon
 
-No one-off edits.
-
----
-
-### 6) Required Audit Ritual (before/after any systemic change)
-Every systemic change must include:
-- where the scale lives (file + key)
-- which components consume it (list)
-- a grep sanity check confirming:
-  - no new raw palette utilities
-  - no new dark: modifiers for color
-  - no new module-root pt/pb/mt/mb leaks
-- minimal diff (no unrelated refactors)
-
----
-
-## TYPOGRAPHY CANON — SCALE & ROLES (v1)
-
-### 1) Problem
-Typography drift happens when headings/body styles are chosen per module.
-We need a strict, role-based typography scale.
-
-**Goal**
-- predictable hierarchy
-- minimal variants
-- no per-module typography inventions
-- easy to tweak globally without cascade bugs
-
----
-
-### 2) Typography is role-based, not component-based
-Typography is defined by:
-- semantic **role** (hero title, section title, eyebrow, body, caption)
-- size step from a **single scale**
-
+Typography is **Role-Based**, not component-based.
 Components must request a role, not a font-size.
 
----
+### 3.1 Allowed Roles (The Public API)
+
+| Role Category | Roles | Usage |
+| :--- | :--- | :--- |
+| **Display** | `display.hero`, `display.heroSecondary`, `display.heroTertiary`, `display.section` | Landing page heroes and section headers. |
+| **Heading** | `heading.page`, `heading.subsection`, `heading.card` | Structural headings (H1-H3). |
+| **Body** | `body.lg` (lead), `body.md` (default), `body.sm` (compact) | Reading text. |
+| **Meta** | `meta.eyebrow`, `meta.label`, `meta.badge`, `meta.code` | UI labels and micro-copy. |
+| **UI** | `ui.button.*`, `ui.nav.*`, `ui.input.value` | Interactive elements. |
+
+### 3.2 Implementation Contract
+*   Single Source of Truth: `src/design-system/tokens/typography.ts`
+*   Tailwind Config: `tailwind.config.ts` extends theme to map tokens.
+*   **Rule**: No raw typography scale utilities in modules.
+    *   Forbidden: `text-{size}`, `font-{weight}`, `leading-*`, `tracking-*`, `uppercase`, `lowercase`, `capitalize`.
+    *   Allowed: `text-{color}` and `text-{alignment}` (covered by other audits).
 
 ---
 
----
+## 4. Spacing System
 
-### 3) Allowed roles (initial set)
-These are the only allowed public roles for headings/text:
+All vertical spacing is handled through **Gap-based Stacks**.
 
-**Headings**
-- `display.heroPrimary` (Home - Largest)
-- `display.heroSecondary` (Feature Pages - Medium)
-- `display.heroTertiary` (Contact/About - Smallest)
-- `display.section` (Section Headers)
-- `heading.card`
-- `heading.subsection`
+### 4.1 Stack Tokens
+We define semantic stack tokens to enforce consistent rhythm.
 
-### 3.1 Hero Tier Closure Rule
-- The 3 tiers above (`heroPrimary`, `heroSecondary`, `heroTertiary`) are the **ONLY** allowed hero headline sizes.
-- No additional hero tiers may be introduced.
-- All hero modules must consume exactly one of these roles.
-- No component may define a “hero-like” size outside this system.
+| Token | Class | Usage |
+| :--- | :--- | :--- |
+| `stackXs` | `flex flex-col gap-2` | Tight grouping (Title + Desc). |
+| `stackSm` | `flex flex-col gap-3` | UI lists. |
+| `stackMd` | `flex flex-col gap-4` | Default component rhythm. |
+| `stackLg` | `flex flex-col gap-6` | Section internals. |
+| `stackXl` | `flex flex-col gap-8` | Major section divisions. |
+| `stackPage` | `flex flex-col gap-12` | Page-level module stacking. |
 
-**Meta**
-- `eyebrow`
-- `label`
+### 4.2 Module Rhythm (Block Model)
+Every module owns:
+1.  **Internal Padding** (`pad`): Controls internal vertical space.
+2.  **External Bottom Gap** (`gap`): Controls exclusive bottom margin.
 
-**Body**
-- `body.lg`
-- `body.md` (default)
-- `body.sm`
-
-**Utility**
-- `caption`
-
-### 3.2 Breakpoint Semantics (Scale Anchors)
-Typography scales are anchored to **intent**, not just screen width:
-- **Mobile (`base`)** and **Desktop (`xl`)** are the authoritative intent anchors where visual design is explicitly defined (Figma).
-- Intermediate breakpoints (`md`, `lg`) are **interpolations/bridges**, not primary design targets.
-- Only `base` + `xl` values may be calibrated directly to explicit Figma pixel values.
-- `md`/`lg` exist purely for optical continuity between the anchors.
-
-### 3.3 Arbitrary Value Guardrails
-Arbitrary Tailwind values (e.g., `text-[9rem]`) are permitted **ONLY** under these strict constraints:
-1.  **Location**: Allowed ONLY inside token files (`typography.ts`, `spacing.ts`). Never in modules/components.
-2.  **Origin**: Must correspond to an explicit Figma value (e.g., 144px).
-3.  **Format**: Must resolve to a round, human-readable number (e.g., `9rem` for 144px, `5rem` for 80px). No fractional "magic numbers" like `6.75rem` unless mathematically required for a specific ratio.
-4.  **Documentation**: Must be documented inline with the Figma reference.
-
-### 3.4 Brand Foreground Rule (Accessibility)
-If a section uses the Brand Lime background (`tone="brand"`), the foreground MUST be forced to Dark (Neutral-950) for contrast.
-- This is handled systemically via the `.tone-brand` scope in `globals.css`.
-- It does NOT set the background color (the module owns that).
-- It ONLY overrides `--foreground`, `--muted-foreground`, and `--border` to neutral steps.
-
-If you need something else:
-- add a role to `typography.ts` (SSOT)
-- do not inline a custom class
+**Prohibition**: No `mt-*` on modules. Modules always stack.
 
 ---
 
-### 4) Implementation contract
-Single source of truth:
-- `src/design-system/tokens/typography.ts`
+## 5. Elevation & Radius Tiers
 
-Usage contract:
-- Heading/Text primitives must map roles → classes
-- Modules must use Heading/Text/SectionHeader with roles/variants
-- No raw `text-[size]`, `leading-*`, `tracking-*` scattered in modules unless part of a defined token/role.
+### 5.1 Elevation (Shadows)
+| Tier | Class | Usage |
+| :--- | :--- | :--- |
+| **Tier 1** | `shadow-panel` | Forms, controls, dropdowns. |
+| **Tier 2** | `shadow-surface` | Cards, previews, page containers. |
+| **Tier 3** | `shadow-card-hover` | Interactive lift states. |
 
-Allowed exception (internal micro-layout):
-- rare `tracking-widest` for a label IF it’s part of a tokenized role (e.g. eyebrow)
-
----
-
-### 5) Minimal enforcement step (non-destructive)
-We do NOT refactor everything at once.
-We introduce:
-- roles in typography tokens
-- a lint-ish grep checklist for new code
-- then migrate “hot paths” opportunistically (hero + section headers first)
+### 5.2 Radius
+| Tier | Class | Usage |
+| :--- | :--- | :--- |
+| **Tier 1** | `rounded-panel` | Buttons, inputs, standard components. |
+| **Tier 2** | `rounded-surface` | Large containers, cards, modals. |
 
 ---
 
-### 6) Typography audit grep checks
-Must be true after hardening:
-- No new `text-\[` or `text-\d` ad-hoc sizes in modules
-- No module introduces new heading styles outside primitives
-- SectionHeader variants map to roles, not custom classes
+## 6. Audit Ritual
+If a request changes a measurable attribute:
+1.  Identify the scale/token.
+2.  If missing, add it to the Token file.
+3.  Audit for leaks (grep check).
+
+    **Typography Scale Audit (Strict):**
+    ```bash
+    rg -n --hidden \
+      --glob '!**/.next/**' \
+      --glob '!**/node_modules/**' \
+      --glob '!src/design-system/tokens/typography.ts' \
+      '(\btext-(2?xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)\b|\bfont-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)\b|\bleading-|\btracking-|\buppercase\b|\blowercase\b|\bcapitalize\b)' \
+      src
+    ```
+4.  No one-off edits.

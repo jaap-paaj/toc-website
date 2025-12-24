@@ -49,7 +49,7 @@ This is an agency showcase. The brand should feel:
   - spacing
 - Not through font changes
 
-⚠️ Typography must be applied via design tokens only.  
+⚠️ Typography must be applied via design tokens only.
 No component-level font overrides are allowed.
 
 ---
@@ -76,7 +76,7 @@ Color philosophy:
 - Few colors
 - Strong restraint
 
-⚠️ All colors must be defined as CSS variables and consumed via Tailwind tokens.  
+⚠️ All colors must be defined as CSS variables and consumed via Tailwind tokens.
 Hex values must not appear in components.
 
 ---
@@ -159,7 +159,6 @@ This profile does NOT:
 
 Those are governed by:
 - ARCHITECTURE.md
-- FRONTEND_GUIDELINES.md
 - PROMPT_CANON.md
 
 ---
