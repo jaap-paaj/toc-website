@@ -4,6 +4,7 @@ import { layoutTokens } from "@/design-system/tokens/layout";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
+import { educateContent } from "../educate.content";
 
 export function EducateHeroModule() {
     return (
@@ -20,13 +21,13 @@ export function EducateHeroModule() {
                     {/* Left Column: Headline */}
                     <div className="flex flex-col gap-2">
                         <span className={cn("opacity-60", typography.variants.meta.code)}>
-                            01
+                            {educateContent.hero.eyebrow}
                         </span>
                         <Heading
                             level={1}
                             className={cn(typography.variants.display.heroSecondary, "w-full")}
                         >
-                            EDUCATE
+                            {educateContent.hero.title}
                         </Heading>
                     </div>
 
@@ -36,7 +37,7 @@ export function EducateHeroModule() {
                             size="lg"
                             className={cn("max-w-lg min-h-[var(--toc-page-hero-copy-min-h)]", typography.variants.body.lg)}
                         >
-                            We empower teams with the knowledge and skills to navigate the AI landscape effectively. Through workshops, training, and strategic guidance, we build the internal capability needed for sustainable innovation.
+                            {educateContent.hero.description}
                         </Text>
 
                         <div className={cn("mt-auto", spacing.section.heroFollower)}>

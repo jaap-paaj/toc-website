@@ -14,15 +14,15 @@ export interface EditorialItem {
 }
 
 interface EditorialCardGridSectionProps {
-    categoryLabel: string;
-    intro: string;
+    eyebrow: string;
+    description: string;
     items: EditorialItem[];
     className?: string;
 }
 
 export function EditorialCardGridSection({
-    categoryLabel,
-    intro,
+    eyebrow,
+    description,
     items,
     className
 }: EditorialCardGridSectionProps) {
@@ -36,8 +36,8 @@ export function EditorialCardGridSection({
                         <SectionHeader
                             variant="split"
                             divider={false}
-                            eyebrow={categoryLabel}
-                            description={intro}
+                            eyebrow={eyebrow}
+                            description={description}
                         />
 
 

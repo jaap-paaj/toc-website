@@ -14,14 +14,14 @@ export interface TestimonialItem {
 }
 
 interface TestimonialsSectionProps {
-    headingLabel: string;
+    eyebrow: string;
     items: TestimonialItem[];
     className?: string;
     pad?: "m" | "none";
 }
 
 export function TestimonialsSection({
-    headingLabel,
+    eyebrow,
     items,
     className,
     pad = "m"
@@ -29,7 +29,7 @@ export function TestimonialsSection({
     return (
         <div className={cn("container mx-auto", pad === "m" ? spacing.modulePad.m : undefined, className)}>
             <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
-                <SectionHeader variant="stacked" eyebrow={headingLabel} />
+                <SectionHeader variant="stacked" eyebrow={eyebrow} />
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                     {items.map((item, idx) => (

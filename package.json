@@ -18,7 +18,8 @@
     "audit:color": "npm run audit:color:hex && npm run audit:color:palette",
     "audit:theme": "! rg -n --hidden --glob '!**/.next/**' --glob '!**/node_modules/**' '(^|\\s)dark:' src | grep -v 'lint:allowed'",
     "audit:pages": "! rg -n --hidden --glob '!**/.next/**' --glob '!**/node_modules/**' '(\\bgrid-cols-\\d+\\b|\\bcol-span-\\d+\\b|\\bcol-start-\\d+\\b|\\bcol-end-\\d+\\b)' src/app/**/page.tsx",
-    "audit:all": "npm run audit:typography && npm run audit:surfaces && npm run audit:spacing && npm run audit:states && npm run audit:color && npm run audit:theme && npm run audit:pages"
+    "audit:content-shape": "! rg -n --hidden --glob '!**/.next/**' --glob '!**/node_modules/**' '(headingLabel|categoryLabel|ctaLabel|ctaHref|linkText|linkHref|headerConfig|contentConfig|copyStyle)\\b' src",
+    "audit:all": "npm run audit:typography && npm run audit:surfaces && npm run audit:spacing && npm run audit:states && npm run audit:color && npm run audit:theme && npm run audit:pages && npm run audit:content-shape"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.3",

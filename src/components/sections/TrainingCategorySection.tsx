@@ -16,17 +16,22 @@ export interface TrainingItem {
 }
 
 interface TrainingCategorySectionProps {
-    categoryLabel: string;
-    intro: string;
+    eyebrow: string;
+    description: string;
     items: TrainingItem[];
     className?: string;
+    cta: {
+        label: string;
+        href?: string;
+    };
 }
 
 export function TrainingCategorySection({
-    categoryLabel,
-    intro,
+    eyebrow,
+    description,
     items,
-    className
+    className,
+    cta
 }: TrainingCategorySectionProps) {
     return (
         <div className={cn("container mx-auto", spacing.modulePad.m, className)}>
@@ -34,10 +39,10 @@ export function TrainingCategorySection({
                 {/* Header Block */}
                 <div className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
                     <SectionEyebrow className="w-full md:w-1/3 shrink-0">
-                        {categoryLabel}
+                        {eyebrow}
                     </SectionEyebrow>
                     <Text size="lg" className="text-muted-foreground md:max-w-2xl">
-                        {intro}
+                        {description}
                     </Text>
                 </div>
 
@@ -68,7 +73,7 @@ export function TrainingCategorySection({
                                     variant="link"
                                     className={cn("p-0 h-auto text-foreground group-hover:translate-x-1 transition-transform", typography.variants.ui.nav.link)}
                                 >
-                                    View Details <ArrowRight className="ml-2 w-4 h-4" />
+                                    {cta.label} <ArrowRight className="ml-2 w-4 h-4" />
                                 </Button>
                             </div>
 
@@ -76,7 +81,7 @@ export function TrainingCategorySection({
                                 <Link
                                     href={item.href}
                                     className="absolute inset-0 z-10"
-                                    aria-label={`View details for ${item.title}`}
+                                    aria-label={`${cta.label} for ${item.title}`}
                                 />
                             )}
                         </Surface>

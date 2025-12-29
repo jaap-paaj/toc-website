@@ -11,21 +11,20 @@ type ClientLogo = {
 };
 
 type ClientsSectionProps = {
-    headingLabel?: string;
+    eyebrow: string;
     items: ClientLogo[];
     className?: string;
-    spacingPreset?: "default" | "tight";
 };
 
 export function ClientsSection({
-    headingLabel = "Clients",
+    eyebrow,
     items,
     className,
 }: ClientsSectionProps) {
     return (
         <div className={cn("container mx-auto", className)}>
             <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
-                <SectionHeader variant="stacked" eyebrow={headingLabel} />
+                <SectionHeader variant="stacked" eyebrow={eyebrow} />
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
                     {items.map((item) => (

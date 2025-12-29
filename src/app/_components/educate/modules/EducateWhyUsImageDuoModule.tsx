@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { HomeModule } from "../../home/HomeModule";
-
-// Left: Audience (narrow)
-// Right: Presentation (wide)
-const LEFT_IMAGE = "/images/educate/why-us-ai-training-presentation.png";
-const RIGHT_IMAGE = "/images/educate/why-us-workshop-audience.png";
+import { educateContent } from "../educate.content";
 
 export function EducateWhyUsImageDuoModule() {
     return (
@@ -23,8 +19,8 @@ export function EducateWhyUsImageDuoModule() {
                         style={{ aspectRatio: "4 / 3", minHeight: 240 }}
                     >
                         <Image
-                            src={LEFT_IMAGE}
-                            alt="Workshop audience"
+                            src={educateContent.whyUs.images.left}
+                            alt={educateContent.whyUs.images.altLeft}
                             fill
                             className="object-cover"
                             sizes="(min-width: 768px) 40vw, 100vw"
@@ -37,8 +33,8 @@ export function EducateWhyUsImageDuoModule() {
                         style={{ aspectRatio: "4 / 3", minHeight: 240 }}
                     >
                         <Image
-                            src={RIGHT_IMAGE}
-                            alt="AI Training presentation"
+                            src={educateContent.whyUs.images.right}
+                            alt={educateContent.whyUs.images.altRight}
                             fill
                             className="object-cover"
                             sizes="(min-width: 768px) 60vw, 100vw"

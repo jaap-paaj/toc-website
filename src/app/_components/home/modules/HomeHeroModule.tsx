@@ -7,6 +7,8 @@ import { layoutTokens } from "@/design-system/tokens/layout";
 import { BrandHeroHeadline } from "@/design-system/components/BrandHeroHeadline";
 import Link from "next/link";
 
+import { homeContent } from "../home.content";
+
 export function HomeHeroModule() {
   return (
     <HomeModule
@@ -30,18 +32,17 @@ export function HomeHeroModule() {
           <div className="flex h-full flex-col">
             {/* Top content */}
             <Text size="lg" className="max-w-lg">
-              The Only Constant is a digital transformation and innovation agency built for a faster world. We help
-              organizations move from assumptions to proven business results. Fast.
+              {homeContent.hero.description}
             </Text>
 
             {/* Bottom CTA */}
             <div className={cn("mt-auto", spacing.section.heroFollower)}>
-              <Link href="#capabilities">
+              <Link href={homeContent.hero.cta.href}>
                 <Button
                   size="xl"
                   className="tone-dark bg-background text-foreground hover:bg-background/80"
                 >
-                  EXPLORE OUR CAPABILITIES
+                  {homeContent.hero.cta.label}
                 </Button>
               </Link>
             </div>

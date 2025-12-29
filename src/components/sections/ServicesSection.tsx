@@ -11,29 +11,26 @@ interface ServiceItem {
 }
 
 interface ServicesSectionProps {
-    headingLabel: string;
+    eyebrow: string;
     items: ServiceItem[];
     className?: string;
-    spacingPreset?: "default" | "heroFollower";
 }
 
+
 export function ServicesSection({
-    headingLabel,
+    eyebrow,
     items,
     className,
-    spacingPreset = "default",
 }: ServicesSectionProps) {
     return (
         <div
             className={cn(
                 "container mx-auto",
-                // Optional: only adds TOP padding to follow a hero (no bottom spacing leaks)
-                spacingPreset === "heroFollower" && spacing.section.heroFollower,
                 className
             )}
         >
             <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
-                <SectionHeader variant="stacked" eyebrow={headingLabel} />
+                <SectionHeader variant="stacked" eyebrow={eyebrow} />
                 <FeatureGridSection items={items} columns={3} />
             </div>
         </div>

@@ -137,6 +137,6 @@ Current enforcement level of each system.
 
 | Status | Definition | Systems |
 | :--- | :--- | :--- |
-| **LOCKED** | CI-gated. Violations fail build. | Typography, Radius/Shadows, Module Vertical Rhythm, States, Color, Dark/Light Mode, Page Grids. |
+| **LOCKED** | CI-gated. Violations fail build. | Typography, Radius/Shadows, Module Vertical Rhythm, States, Color, Dark/Light Mode, Page Grids, Content Shape. |
 | **VALIDATED** | Semantic requirement. No strict gate yet. | Motion, Iconography. |
 | **IMPLICIT** | Convention-based. No explicit canon. | Grids (Module-owned contexts). |

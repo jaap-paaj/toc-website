@@ -10,8 +10,10 @@ type WorkflowCardProps = {
     icon: React.ReactNode;
     title: string;
     description: string;
-    href: string;
-    ctaLabel: string;
+    cta: {
+        label: string;
+        href: string;
+    };
     className?: string;
 };
 
@@ -19,12 +21,11 @@ export function WorkflowCard({
     icon,
     title,
     description,
-    href,
-    ctaLabel,
+    cta,
     className,
 }: WorkflowCardProps) {
     return (
-        <Link href={href} scroll={true} className="group block h-full">
+        <Link href={cta.href} scroll={true} className="group block h-full">
             <div
                 className={cn(
                     "bg-[var(--surface-card)] text-card-foreground flex flex-col gap-6 rounded-surface border border-border/50 py-6 shadow-surface h-full hover:shadow-surface-hover transition-all duration-300 group-hover:border-primary/20",
@@ -45,7 +46,7 @@ export function WorkflowCard({
                     </p>
 
                     <div className={cn("mt-auto pt-4 text-primary group-hover:underline decoration-2 underline-offset-4", typography.variants.ui.nav.link)}>
-                        {ctaLabel}
+                        {cta.label}
                     </div>
                 </div>
             </div>
