@@ -3,6 +3,7 @@ import { Heading } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";
+import { contactContent } from "../contact.content";
 
 export function ContactHeroModule() {
     return (
@@ -23,7 +24,7 @@ export function ContactHeroModule() {
                             level={1}
                             className={cn(typography.variants.display.heroTertiary, "w-full")}
                         >
-                            CONTACT
+                            {contactContent.hero.title}
                         </Heading>
                     </div>
                     {/* Right Column: Omitted (Functional Header) */}

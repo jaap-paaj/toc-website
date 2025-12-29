@@ -12,6 +12,7 @@ import { Heading, Text } from "@/design-system/components/Typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";
+import { contactContent } from "../contact.content";
 
 export function ContactFormModule() {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -28,7 +29,7 @@ export function ContactFormModule() {
 
         // Basic validation
         if (!email || !email.includes("@")) {
-            setErrors({ email: "Please enter a valid email address." });
+            setErrors({ email: contactContent.form.fields.email.error });
             setIsLoading(false);
             return;
         }
@@ -52,16 +53,16 @@ export function ContactFormModule() {
             {isSubmitted ? (
                 <div className="max-w-2xl mx-auto w-full">
                     <FormPanel className={cn("items-center text-center", spacing.component.formSuccessPanel)}>
-                        <Heading level={3}>Thanks for your message!</Heading>
+                        <Heading level={3}>{contactContent.form.success.title}</Heading>
                         <Text className="text-muted-foreground my-4"> {/* lint:allowed */}
-                            We have received your inquiry and will reply within 2 business days.
+                            {contactContent.form.success.message}
                         </Text>
                         <Button
                             variant="outline"
                             onClick={() => setIsSubmitted(false)}
                             className={spacing.component.formSuccessCta}
                         >
-                            Send another message
+                            {contactContent.form.success.resetLabel}
                         </Button>
                     </FormPanel>
                 </div>
@@ -69,8 +70,8 @@ export function ContactFormModule() {
                 <div className="container mx-auto w-full">
                     <div className={spacing.stackXl}>
                         <SectionHeader
-                            eyebrow="GET IN TOUCH"
-                            description="Fill out the form below and we’ll get back to you shortly."
+                            eyebrow={contactContent.form.eyebrow}
+                            description={contactContent.form.description}
                             variant="split"
                             divider
                             className="border-foreground/20"
@@ -79,24 +80,24 @@ export function ContactFormModule() {
                         <FormPanel>
                             <form onSubmit={handleSubmit} className={spacing.stackLg}>
                                 <div className="grid md:grid-cols-2 gap-6">
-                                    <FormField label="Name">
-                                        <Input name="name" placeholder="Jane Doe" required />
+                                    <FormField label={contactContent.form.fields.name.label}>
+                                        <Input name="name" placeholder={contactContent.form.fields.name.placeholder} required />
                                     </FormField>
 
-                                    <FormField label="Email" error={errors.email}>
+                                    <FormField label={contactContent.form.fields.email.label} error={errors.email}>
                                         <Input
                                             name="email"
                                             type="email"
-                                            placeholder="jane@example.com"
+                                            placeholder={contactContent.form.fields.email.placeholder}
                                             required
                                         />
                                     </FormField>
                                 </div>
 
-                                <FormField label="Message">
+                                <FormField label={contactContent.form.fields.message.label}>
                                     <Textarea
                                         name="message"
-                                        placeholder="Tell us about your project..."
+                                        placeholder={contactContent.form.fields.message.placeholder}
                                         required
                                         className="min-h-[160px]"
                                     />
@@ -109,7 +110,7 @@ export function ContactFormModule() {
                                         disabled={isLoading}
                                         className={cn("w-full md:w-auto", typography.variants.ui.button.lg)}
                                     >
-                                        {isLoading ? "SENDING..." : "SEND MESSAGE"}
+                                        {isLoading ? contactContent.form.submit.loading : contactContent.form.submit.label}
                                     </Button>
                                 </div>
                             </form>
