@@ -26,7 +26,8 @@ export function HomeAboutModule() {
                         lines={homeContent.about.statementLines}
                     />
 
-                    {/* 50/50 content */}
+                    {/* Content Grid */}
+                    {/* NOTE: module-owned layout (unique to Home). If reused elsewhere, extract to a Section (Split/Editorial pattern). */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 items-start">
                         {/* Left: copy + CTA */}
                         <div className={cn(spacing.stackLg, "max-w-xl")}>

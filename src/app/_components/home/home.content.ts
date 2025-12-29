@@ -31,19 +31,28 @@ export const homeContent = {
                 id: "01",
                 title: "EDUCATE",
                 description: "Build practical AI and innovation skills fast through hands-on workshops using your team’s real challenges.",
-                href: "/educate",
+                cta: {
+                    label: "Explore Educate",
+                    href: "/educate",
+                }
             },
             {
                 id: "02",
                 title: "AUTOMATE",
                 description: "Free your team from repetitive tasks with proven AI solutions that deliver measurable ROI.",
-                href: "/automate",
+                cta: {
+                    label: "Explore Automate",
+                    href: "/automate",
+                }
             },
             {
                 id: "03",
                 title: "INNOVATE",
                 description: "Accelerate innovation with AI-driven sprints that deliver validated, ready-to-build solutions fast.",
-                href: "/innovate",
+                cta: {
+                    label: "Explore Innovate",
+                    href: "/innovate",
+                }
             },
         ],
     },

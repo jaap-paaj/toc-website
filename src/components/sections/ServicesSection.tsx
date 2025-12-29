@@ -17,6 +17,7 @@ interface ServicesSectionProps {
 }
 
 
+/** @deprecated Use CapabilityCardsSection instead. Kept temporarily for reference. */
 export function ServicesSection({
     eyebrow,
     items,
