@@ -66,7 +66,7 @@ export function SectionHeader({
                 )}
 
                 {description && (
-                    <Text className={cn(typography.variants.body.lg, "max-w-3xl opacity-80", isCenter && "mx-auto")}>
+                    <Text className={cn(typography.variants.body.md, "max-w-3xl opacity-80", isCenter && "mx-auto")}>
                         {description}
                     </Text>
                 )}
@@ -101,7 +101,7 @@ export function SectionHeader({
                 {/* Right Column: Narrative */}
                 <div className="flex flex-col justify-start md:pt-1"> {/* lint:allowed */}
                     {description && (
-                        <Text className={cn(typography.variants.body.lg, "opacity-80")}>
+                        <Text className={cn(typography.variants.body.md, "opacity-80")}>
                             {description}
                         </Text>
                     )}

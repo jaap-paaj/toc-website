@@ -32,7 +32,7 @@ export function HomeAboutModule() {
                         {/* Left: copy + CTA */}
                         <div className={cn(spacing.stackLg, "max-w-xl")}>
                             {homeContent.about.description.map((desc: string, i: number) => (
-                                <Text key={i} size="lg">
+                                <Text key={i} size="md">
                                     {desc}
                                 </Text>
                             ))}

@@ -23,8 +23,8 @@ export const scales = {
     body: {
         // Lead - 18px -> 20px
         lg: "text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-xl",
-        // Default - 16px
-        md: "text-base sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-base",
+        // Default - 14px (Mobile) -> 16px (Desktop)
+        md: "text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base",
         // Compact - 14px
         sm: "text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
     },

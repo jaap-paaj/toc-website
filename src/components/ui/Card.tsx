@@ -52,7 +52,7 @@ const CardDescription = React.forwardRef<
   <div
     ref={ref}
     data-slot="card-description"
-    className={cn("text-muted-foreground", typography.variants.body.sm, className)}
+    className={cn("text-muted-foreground", typography.variants.body.md, className)}
     {...props}
   />
 ))

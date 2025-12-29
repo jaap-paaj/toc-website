@@ -51,7 +51,7 @@ export function CatalogGridSection({
                             </Heading>
                             <Text
                                 as={typeof item.description === 'string' ? "p" : "div"}
-                                className={cn("text-primary-foreground/60 max-w-prose", typography.variants.body.sm)}
+                                className={cn("text-primary-foreground/60 max-w-prose", typography.variants.body.md)}
                             >
                                 {item.description}
                             </Text>

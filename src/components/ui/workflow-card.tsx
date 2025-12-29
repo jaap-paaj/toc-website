@@ -41,7 +41,7 @@ export function WorkflowCard({
                         {title}
                     </Heading>
 
-                    <p className={cn("text-muted-foreground", typography.variants.body.sm)}>
+                    <p className={cn("text-muted-foreground", typography.variants.body.md)}>
                         {description}
                     </p>
 

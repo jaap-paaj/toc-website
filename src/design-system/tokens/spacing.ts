@@ -88,4 +88,9 @@ export const spacing = {
         l: "mt-20 md:mt-20 lg:mt-16",
         xl: "mt-32 md:mt-32 lg:mt-20",
     },
+    // Module Breaks (Semantic Separation)
+    moduleBreak: {
+        soft: "pt-12 md:pt-16 lg:pt-24", // Standard section break
+        hard: "pt-20 md:pt-24 lg:pt-32", // Major chapter change
+    },
 } as const;

@@ -46,7 +46,7 @@ export function CapabilityCard({ item }: CapabilityCardProps) {
                         {item.title}
                     </Heading>
 
-                    <Text className={cn("text-muted-foreground transition-colors duration-300 group-hover:text-foreground", spacing.component.cardText, typography.variants.body.sm)}>
+                    <Text className={cn("text-muted-foreground transition-colors duration-300 group-hover:text-foreground", spacing.component.cardText, typography.variants.body.md)}>
                         {item.description}
                     </Text>
 

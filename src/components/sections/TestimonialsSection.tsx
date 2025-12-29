@@ -43,7 +43,7 @@ export function TestimonialsSection({
 
 
                             <div className="flex-1">
-                                <Text className={typography.variants.body.lg}>
+                                <Text className={typography.variants.body.md}>
                                     &quot;{item.quote}&quot;
                                 </Text>
                             </div>

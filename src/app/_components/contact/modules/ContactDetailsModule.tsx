@@ -26,7 +26,7 @@ export function ContactDetailsModule() {
                             <Heading level={3} size="card" className="text-primary-foreground">
                                 {contactContent.details.visit.title}
                             </Heading>
-                            <div className={cn("text-primary-foreground/60 max-w-prose flex flex-col gap-1", typography.variants.body.sm)}>
+                            <div className={cn("text-primary-foreground/60 max-w-prose flex flex-col gap-1", typography.variants.body.md)}>
                                 {contactContent.details.visit.lines.map((line, i) => (
                                     <span key={i}>{line}</span>
                                 ))}
@@ -38,7 +38,7 @@ export function ContactDetailsModule() {
                             <Heading level={3} size="card" className="text-primary-foreground">
                                 {contactContent.details.legal.title}
                             </Heading>
-                            <dl className={cn("grid grid-cols-[min-content_1fr] gap-x-8 gap-y-2 text-primary-foreground/60 max-w-prose", typography.variants.body.sm)}>
+                            <dl className={cn("grid grid-cols-[min-content_1fr] gap-x-8 gap-y-2 text-primary-foreground/60 max-w-prose", typography.variants.body.md)}>
                                 {contactContent.details.legal.items.map((item, i) => (
                                     <React.Fragment key={i}>
                                         <dt className={cn(typography.variants.meta.label, "pt-1") /* lint:allowed */}>

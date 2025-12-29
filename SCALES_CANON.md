@@ -48,9 +48,13 @@ Components must request a role, not a font-size.
 | :--- | :--- | :--- |
 | **Display** | `display.hero`, `display.heroSecondary`, `display.heroTertiary`, `display.section` | Landing page heroes and section headers. |
 | **Heading** | `heading.page`, `heading.subsection`, `heading.card` | Structural headings (H1-H3). |
-| **Body** | `body.lg` (lead), `body.md` (default), `body.sm` (compact) | Reading text. |
+| **Body** | `body.lg` (Hero Intro ONLY), `body.md` (Default), `body.sm` (Compact) | Reading text. |
 | **Meta** | `meta.eyebrow`, `meta.label`, `meta.badge`, `meta.code` | UI labels and micro-copy. |
 | **UI** | `ui.button.*`, `ui.nav.*`, `ui.input.value` | Interactive elements. |
+
+**Paragraph Role Canon (Strict):**
+*   `body.lg`: Only allowed for the single lead paragraph in a Hero Section.
+*   `body.md`: Must be used for all other paragraphs and section descriptions.
 
 ### 3.2 Implementation Contract
 *   Single Source of Truth: `src/design-system/tokens/typography.ts`

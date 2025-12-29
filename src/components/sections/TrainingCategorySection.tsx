@@ -63,7 +63,7 @@ export function TrainingCategorySection({
                                 <Heading level={3} size="card">
                                     {item.title}
                                 </Heading>
-                                <Text className={cn("text-muted-foreground", spacing.component.cardText, typography.variants.body.sm)}>
+                                <Text className={cn("text-muted-foreground", spacing.component.cardText, typography.variants.body.md)}>
                                     {item.description}
                                 </Text>
                             </div>

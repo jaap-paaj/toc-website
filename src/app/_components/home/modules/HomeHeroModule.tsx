@@ -31,6 +31,7 @@ export function HomeHeroModule() {
           {/* Right Column: Text top, CTA bottom */}
           <div className="flex h-full flex-col">
             {/* Top content */}
+            {/* Canon: body.lg allowed here (Hero intro only) */}
             <Text size="lg" className="max-w-lg">
               {homeContent.hero.description}
             </Text>

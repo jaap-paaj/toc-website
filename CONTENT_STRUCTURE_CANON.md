@@ -48,6 +48,11 @@ We use a fixed set of structural primitives. New props must map to these concept
 
 ## 4. Content vs. Configuration Rule
 
+**Canon: Paragraph Roles**
+*   **Hero Intro**: Only the lead paragraph of a Hero Section uses `body.lg`.
+*   **Default Body**: All other section content must use `body.md`.
+*   *Paragraph sizing is not configurable by content.*
+
 There is a hard boundary between **Content** (meaning) and **Configuration** (presentation).
 
 *   **Content**: Words, images, data, links.

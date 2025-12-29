@@ -35,6 +35,7 @@ export function CapabilityHeroSection({
                 <div className="flex h-full flex-col">
                     <Text
                         size="lg"
+                        // Canon: body.lg allowed here (Hero intro only)
                         className={cn("max-w-lg min-h-[var(--toc-page-hero-copy-min-h)]", typography.variants.body.lg)}
                     >
                         {description}

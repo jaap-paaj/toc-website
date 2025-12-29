@@ -73,7 +73,7 @@ export function FeatureGridSection({
                                         {item.title}
                                     </Heading>
 
-                                    <Text className={cn("text-muted-foreground transition-colors duration-300 group-hover:text-foreground", typography.variants.body.sm)}>
+                                    <Text className={cn("text-muted-foreground transition-colors duration-300 group-hover:text-foreground", typography.variants.body.md)}>
                                         {item.description}
                                     </Text>
 
@@ -98,7 +98,7 @@ export function FeatureGridSection({
                                     <Heading level={3} size="card">
                                         {item.title}
                                     </Heading>
-                                    <Text className={cn("text-muted-foreground", typography.variants.body.sm)}>
+                                    <Text className={cn("text-muted-foreground", typography.variants.body.md)}>
                                         {item.description}
                                     </Text>
                                 </div>
@@ -123,6 +123,7 @@ export function FeatureGridSection({
                 // Non-clickable surface needed a key wrapper if map returns list
                 return <React.Fragment key={idx}>{content}</React.Fragment>;
             })}
+
         </div>
     );
 }

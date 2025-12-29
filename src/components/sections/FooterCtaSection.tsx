@@ -58,7 +58,7 @@ export function FooterCtaSection({
 
                         {/* Right: Footer note */}
                         <div className="flex lg:justify-end">
-                            <div className={cn(typography.variants.body.sm, "opacity-70 text-center lg:text-right w-full")}>
+                            <div className={cn(typography.variants.body.md, "opacity-70 text-center lg:text-right w-full")}>
                                 {copyright}
                             </div>
                         </div>
