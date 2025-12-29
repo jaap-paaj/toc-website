@@ -69,7 +69,7 @@ export function FeatureGridSection({
                                 </div>
 
                                 <div className="flex flex-col flex-1 gap-6">
-                                    <Heading level={3} size="card" className="pt-3 md:pt-4"> {/* lint:allowed */}
+                                    <Heading level={3} size="card" className={spacing.component.cardTitle}>
                                         {item.title}
                                     </Heading>
 
@@ -78,7 +78,7 @@ export function FeatureGridSection({
                                     </Text>
 
                                     {item.href && (
-                                        <div className="mt-auto self-end pt-6"> {/* lint:allowed */}
+                                        <div className={cn("mt-auto self-end", spacing.component.cardCta)}>
                                             <div className="rounded-full w-10 h-10 flex items-center justify-center border border-foreground/20 text-foreground/80 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
                                                 <ArrowRight className="w-4 h-4" />
                                             </div>

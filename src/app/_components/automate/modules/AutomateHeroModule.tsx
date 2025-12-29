@@ -22,7 +22,7 @@ export function AutomateHeroModule() {
                 <div className={layoutTokens.splitHero}>
                     {/* Left Column: Headline */}
                     <div className="flex flex-col gap-2">
-                        <span className={cn("opacity-60", typography.variants.meta.code)}>
+                        <span className={cn("opacity-60", typography.variants.meta.step)}>
                             {hero.index}
                         </span>
                         <Heading

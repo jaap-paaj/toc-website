@@ -9,6 +9,8 @@ export const scales = {
         heroTertiary: "leading-section-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
         // Section Headers - 36px -> 48px -> 60px
         section: "leading-section-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
+        // Editorial Statement - 36px -> 48px -> 60px (Iconic Display)
+        editorialStatement: "leading-none text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
     },
     heading: {
         // Page H1 - 30px -> 36px -> 48px
@@ -29,6 +31,7 @@ export const scales = {
     meta: {
         eyebrow: "text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base",
         code: "text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
+        step: "text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm",
         label: "text-xs sm:text-xs md:text-xs lg:text-xs xl:text-xs 2xl:text-xs",
         badge: "text-xs sm:text-xs md:text-xs lg:text-xs xl:text-xs 2xl:text-xs",
     },
@@ -68,6 +71,7 @@ export const typography = {
             heroSecondary: `font-serif tracking-tight uppercase font-black ${scales.display.heroSecondary}`, // Feature Pages
             heroTertiary: `font-serif tracking-tight uppercase font-black ${scales.display.heroTertiary}`, // Contact/About
             section: `font-serif tracking-tight uppercase font-black ${scales.display.section}`,
+            editorialStatement: `font-serif tracking-tight uppercase font-black ${scales.display.editorialStatement}`,
         },
         heading: {
             // Structural Page Headings
@@ -85,6 +89,7 @@ export const typography = {
             eyebrow: `font-sans font-bold uppercase tracking-widest ${scales.meta.eyebrow}`, // Section Logic
             label: `font-sans font-bold uppercase tracking-wider ${scales.meta.label}`, // Form Labels
             badge: `font-sans font-bold uppercase tracking-wide ${scales.meta.badge}`, // Pills / Tags
+            step: `font-sans font-bold tracking-wide ${scales.meta.step}`, // Hero Index (01/02)
             code: `font-mono ${scales.meta.code}`, // Feature IDs, technical data
         },
         ui: {
@@ -119,11 +124,12 @@ export type TypographyRole =
     | "display.heroSecondary"
     | "display.heroTertiary"
     | "display.section"
+    | "display.editorialStatement"
     | "heading.page"
     | "heading.subsection"
     | "heading.card"
     | "body.lg" | "body.md" | "body.sm"
-    | "meta.eyebrow" | "meta.label" | "meta.badge" | "meta.code"
+    | "meta.eyebrow" | "meta.label" | "meta.badge" | "meta.code" | "meta.step"
     | "ui.button.lg" | "ui.button.md" | "ui.button.sm"
     | "ui.nav.link" | "ui.nav.brand" | "ui.input.value"
     | "ui.placeholder.title"

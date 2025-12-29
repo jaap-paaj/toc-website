@@ -10,15 +10,11 @@ export const homeContent = {
     },
     about: {
         eyebrow: "About Us",
-        title: React.createElement(
-            React.Fragment,
-            null,
+        statementLines: [
             "DIGITAL INNOVATION",
-            React.createElement("br"),
             "THAT DELIVERS",
-            React.createElement("br"),
-            React.createElement("span", { className: "text-primary" }, "PROVEN IMPACT")
-        ),
+            "PROVEN IMPACT"
+        ],
         description: [
             "We’re a strategy and design partner for teams that need progress without the noise. We combine business goals, human needs and emerging tech to create practical concepts, prototypes and automations built for real-world use.",
             "We focus on outcomes, not hype. That means clearer decisions, less manual work, and early proof of what’s worth building — so you can move faster without guessing."

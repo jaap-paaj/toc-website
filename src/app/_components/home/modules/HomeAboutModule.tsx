@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { HomeModule } from "../HomeModule";
 
 import { Text } from "@/design-system/components/Typography";
-import { SectionHeader } from "@/components/sections/SectionHeader";
+import { EditorialStatementSection } from "@/components/sections/EditorialStatementSection";
 import { spacing } from "@/design-system/tokens/spacing";
 import { Button } from "@/components/ui/Button";
 
@@ -21,10 +21,9 @@ export function HomeAboutModule() {
             >
                 <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
                     {/* Section header */}
-                    <SectionHeader
-                        variant="stacked"
+                    <EditorialStatementSection
                         eyebrow={homeContent.about.eyebrow}
-                        title={homeContent.about.title}
+                        lines={homeContent.about.statementLines}
                     />
 
                     {/* 50/50 content */}

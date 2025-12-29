@@ -34,6 +34,10 @@ export const spacing = {
         formSuccessPanel: "py-20 px-8",
         formSuccessCta: "mt-4",
         formActions: "pt-2",
+        cardTitle: "pt-3 md:pt-4",
+        cardCta: "pt-6",
+        cardText: "mb-6",
+        editorialGrid: "pt-6 md:pt-8",
     },
 
     // --------------------------------------------------
