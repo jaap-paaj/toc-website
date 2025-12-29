@@ -1,0 +1,30 @@
+[
+    {
+        "path": "src/components/sections/CatalogGridSection.tsx",
+        "rule": "raw-min-height",
+        "rationale": "Explicit CSS grid reset ([&>*]:min-h-0) required to opt-out of default grid stretch behavior for Utility use case.",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
+    },
+    {
+        "path": "src/components/sections/CapabilityHeroSection.tsx",
+        "rule": "raw-min-height",
+        "rationale": "Hero copy minimum height for visual balance (Typography/Layout domain, not Card).",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
+    },
+    {
+        "path": "src/components/sections/ImageDuoSection.tsx",
+        "rule": "raw-min-height",
+        "rationale": "Media locking (minHeight: 240) to enforce aspect ratio on images (Media domain, not Card).",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
+    },
+    {
+        "path": "src/app/_components/contact/modules/ContactFormModule.tsx",
+        "rule": "raw-min-height",
+        "rationale": "Textarea input min-height (Form domain, not Card).",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
+    }
+]

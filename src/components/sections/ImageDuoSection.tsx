@@ -62,7 +62,7 @@ export function ImageDuoSection({
                 {/* Right Image */}
                 <div
                     className="relative w-full rounded-surface overflow-hidden"
-                    style={{ aspectRatio: "4 / 3", minHeight: 240 }}
+                    style={{ aspectRatio: "4 / 3", minHeight: 240 }} /* lint:allowed */
                 >
                     <Image
                         src={rightItem.src}

@@ -36,6 +36,7 @@ export function TestimonialsSection({
                         <Surface
                             key={idx}
                             variant="card"
+                            cardHeight="standard"
                             className="flex flex-col p-8 gap-6 h-full"
                         >
                             <Quote className="w-8 h-8 text-primary fill-primary/20" />

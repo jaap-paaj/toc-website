@@ -52,8 +52,9 @@ export function TrainingCategorySection({
                         <Surface
                             key={idx}
                             variant="card"
+                            cardHeight="tall"
                             className={cn(
-                                "group relative flex flex-col p-8 md:p-10 h-full min-h-[300px]",
+                                "group relative flex flex-col p-8 md:p-10 h-full",
                                 "transition-all duration-300",
                                 "bg-secondary/30 border border-border/50",
                                 "hover:bg-secondary/50 hover:border-border hover:shadow-panel"

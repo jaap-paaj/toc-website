@@ -29,6 +29,7 @@ export function CapabilityCard({ item }: CapabilityCardProps) {
         >
             <Surface
                 variant="card"
+                cardHeight="standard"
                 className={cn(
                     "relative flex flex-col p-6 md:p-8 h-full transition-all duration-300 ease-out",
                     "group-hover:bg-foreground/10 group-hover:border-foreground/20 group-hover:shadow-card-hover group-focus:bg-foreground/10 group-focus:border-foreground/20 group-focus:shadow-card-hover"

@@ -47,6 +47,7 @@ export function FeatureGridSection({
                 const content = (
                     <Surface
                         variant="card"
+                        cardHeight="standard"
                         className={cn(
                             "relative flex flex-col p-6 md:p-8 h-full transition-all duration-300 ease-out",
                             // If wrapped in Link (href exists), the Link has "group". 

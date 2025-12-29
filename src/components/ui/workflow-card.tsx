@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Heading } from "@/design-system/components/Typography";
+import { Surface } from "@/design-system/components/Surfaces";
+
 
 import { typography } from "@/design-system/tokens/typography";
 
@@ -26,9 +28,11 @@ export function WorkflowCard({
 }: WorkflowCardProps) {
     return (
         <Link href={cta.href} scroll={true} className="group block h-full">
-            <div
+            <Surface
+                variant="card"
+                cardHeight="standard"
                 className={cn(
-                    "bg-[var(--surface-card)] text-card-foreground flex flex-col gap-6 rounded-surface border border-border/50 py-6 shadow-surface h-full hover:shadow-surface-hover transition-all duration-300 group-hover:border-primary/20",
+                    "flex flex-col gap-6 rounded-surface border border-border/50 py-6 shadow-surface h-full hover:shadow-surface-hover transition-all duration-300 group-hover:border-primary/20",
                     className
                 )}
             >
@@ -49,7 +53,7 @@ export function WorkflowCard({
                         {cta.label}
                     </div>
                 </div>
-            </div>
+            </Surface>
         </Link>
     );
 }
