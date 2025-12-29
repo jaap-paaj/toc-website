@@ -65,9 +65,9 @@ export const educateContent = {
             }
         ],
         images: {
-            left: "/images/educate/why-us-ai-training-presentation.png",
+            left: "/images/educate/why-us-workshop-audience.png",
             altLeft: "Workshop audience",
-            right: "/images/educate/why-us-workshop-audience.png",
+            right: "/images/educate/why-us-ai-training-presentation.png",
             altRight: "AI Training presentation"
         }
     },
