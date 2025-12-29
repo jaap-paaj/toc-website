@@ -3,6 +3,8 @@ import { CapabilityHeroSection } from "@/components/sections/CapabilityHeroSecti
 import { educateContent } from "../educate.content";
 
 export function EducateHeroModule() {
+    const { hero } = educateContent;
+
     return (
         <HomeModule
             id="hero"
@@ -13,9 +15,9 @@ export function EducateHeroModule() {
             tone="brand"
         >
             <CapabilityHeroSection
-                index={educateContent.hero.eyebrow}
-                title={educateContent.hero.title}
-                description={educateContent.hero.description}
+                index={hero.eyebrow}
+                title={hero.title}
+                description={hero.description}
             />
         </HomeModule>
     );

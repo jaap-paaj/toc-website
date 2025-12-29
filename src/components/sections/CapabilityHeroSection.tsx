@@ -17,7 +17,7 @@ export function CapabilityHeroSection({
 }: CapabilityHeroSectionProps) {
     return (
         <div className="container mx-auto">
-            <div className={layoutTokens.splitHero}>
+            <div className={layoutTokens.capabilityHeroGrid}>
                 {/* Left Column: Headline */}
                 <div className="flex flex-col gap-2">
                     <span className={cn("opacity-60", typography.variants.meta.step)}>
