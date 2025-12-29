@@ -28,6 +28,14 @@ export const spacing = {
         heroFollower: "pt-10 md:pt-16 lg:pt-24",
     },
 
+    sectionStack: {
+        gap: {
+            s: "gap-8 md:gap-10 lg:gap-12",
+            m: "gap-12 md:gap-16 lg:gap-24", // Tuned to match moduleBreak.soft + internal rhythm
+            l: "gap-20 md:gap-24 lg:gap-32",
+        },
+    },
+
     component: {
         headerTransition: "mb-10 md:mb-12",
         sectionHeader: "gap-6 md:gap-8",
@@ -92,5 +100,12 @@ export const spacing = {
     moduleBreak: {
         soft: "pt-12 md:pt-16 lg:pt-24", // Standard section break
         hard: "pt-20 md:pt-24 lg:pt-32", // Major chapter change
+    },
+    // Card Min-Heights (Desktop Only, Fluid Mobile)
+    cardMinHeight: {
+        auto: "",
+        compact: "md:min-h-[200px]",
+        standard: "md:min-h-[240px]",
+        tall: "md:min-h-[300px]",
     },
 } as const;

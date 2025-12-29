@@ -1,0 +1,98 @@
+[
+    {
+        "path": "src/app/_components/innovate/modules/InnovateSolutionsModule.tsx",
+        "rule": "double-container",
+        "rationale": "Legacy module structure. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/innovate/modules/InnovatePropositionsModule.tsx",
+        "rule": "double-container",
+        "rationale": "Legacy module structure. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/home/modules/HomeHeroModule.tsx",
+        "rule": "double-container",
+        "rationale": "Legacy module structure. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/home/modules/HomeAboutModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Legacy spacing overrides. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/contact/modules/ContactHeroModule.tsx",
+        "rule": "double-container",
+        "rationale": "Legacy module structure. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/contact/modules/ContactHeroModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Legacy spacing overrides. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/contact/modules/ContactFormModule.tsx",
+        "rule": "double-container",
+        "rationale": "Legacy module structure. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/contact/modules/ContactFormModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Legacy spacing overrides. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/contact/modules/ContactDetailsModule.tsx",
+        "rule": "double-container",
+        "rationale": "Legacy module structure. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/contact/modules/ContactDetailsModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Legacy spacing overrides. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/automate/modules/AutomateReadyToRunModule.tsx",
+        "rule": "double-container",
+        "rationale": "Legacy module structure. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/educate/modules/EducateTrainingCatalogModule.tsx",
+        "rule": "double-container",
+        "rationale": "Matching Automate baseline legacy structure. To be refactored.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
+    }
+]

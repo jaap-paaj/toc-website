@@ -28,8 +28,8 @@ export function EditorialCardGridSection({
 }: EditorialCardGridSectionProps) {
     return (
         <div className={cn("container mx-auto", className)}>
-            {/* Divider Breathing Room Wrapper */}
-            <div className={cn(spacing.modulePadTop.l)}>
+            {/* Divider Breathing Room Wrapper (Removed explicit padTop leak, delegated to HomeModule) */}
+            <div>
                 <div className="border-t border-border/80" />
                 <div className={spacing.component.editorialGrid}>
                     <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
@@ -47,7 +47,8 @@ export function EditorialCardGridSection({
                                 <Surface
                                     key={idx}
                                     variant="catalog"
-                                    className="flex flex-col gap-3 p-6 md:p-8"
+                                    cardHeight="standard"
+                                    className="flex flex-col gap-3 p-6 md:p-8 h-full"
                                 >
                                     <Heading level={3} size="card" className="text-primary-foreground">
                                         {item.title}
