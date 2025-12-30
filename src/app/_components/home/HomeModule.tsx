@@ -109,6 +109,12 @@ type HomeModuleProps = {
     padBottom?: HomeModuleScale | "none";
     gapTop?: HomeModuleScale | "none";
     gapBottom?: HomeModuleScale | "none";
+
+    /**
+     * Opt-in for an inner container wrapper.
+     * Use this when module width is "full" (e.g. for background) but content needs "container".
+     */
+    containsContent?: boolean;
 };
 
 export function HomeModule({
@@ -129,10 +135,17 @@ export function HomeModule({
     padTop,
     padBottom,
     gapTop,
-    gapBottom
+    gapBottom,
+    containsContent
 }: HomeModuleProps) {
     // Determine Mode: If any Block prop is explicit, use Block Mode.
     const isBlockMode = pad !== undefined || gap !== undefined || padTop !== undefined || padBottom !== undefined || gapTop !== undefined || gapBottom !== undefined;
+
+    const content = containsContent ? (
+        <div className="container mx-auto">
+            {children}
+        </div>
+    ) : children;
 
     return (
         <section
@@ -152,7 +165,7 @@ export function HomeModule({
                 className
             )}
         >
-            {children}
+            {content}
         </section>
     );
 }

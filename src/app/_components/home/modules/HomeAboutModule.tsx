@@ -53,7 +53,7 @@ export function HomeAboutModule() {
                                 {/* Put your image here (recommended path: /public/images/about/about.png) */}
                                 <div className="relative w-full aspect-[16/10]">
                                     <Image
-                                        src="/images/about/about.png"
+                                        src="/images/home/about.png"
                                         alt="Workshop session with a presentation on AI agents"
                                         fill
                                         className="object-cover"

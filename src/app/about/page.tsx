@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { PageLayout } from "@/design-system/components/Layout";
-import { Heading, Text } from "@/design-system/components/Typography";
-import { typography } from "@/design-system/tokens/typography";
+import { HomeModule } from "@/app/_components/home/HomeModule";
+import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
+import { AboutHeroModule } from "@/app/_components/about/modules/AboutHeroModule";
 
 export const metadata: Metadata = {
     title: 'About Us | The Only Constant',
@@ -10,17 +11,23 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <PageLayout variant="landing">
-            <div className="container mx-auto pt-32 md:pt-48 pb-16 md:pb-24 px-6 md:px-8">
-                <div className="flex flex-col gap-6 md:gap-8 max-w-4xl">
-                    <Heading level={1} className={typography.variants.display.section}>
-                        About Us
-                    </Heading>
-                    <Text size="lg" className="text-muted-foreground">
-                        The Only Constant is a digital transformation agency built for a faster world.
-                        We believe that in an era of rapid change, the ability to adapt is the ultimate competitive advantage.
-                    </Text>
-                </div>
+            <AboutHeroModule />
+
+            {/* Scaffold Area: Minimal placeholder matching instruction */}
+            <div className="min-h-[50vh] flex items-center justify-center">
+                {/* Intentionally empty for now, or minimal loader if required later */}
             </div>
+
+            <HomeModule
+                id="about-cta-seam"
+                width="full"
+                tone="dark"
+                pad="none"
+                padTop="m"
+                gap="none"
+            >
+                <HomeFooterCtaModule />
+            </HomeModule>
         </PageLayout>
     );
 }

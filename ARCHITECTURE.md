@@ -146,4 +146,16 @@ When an Antigravity change produces unexpected results (visual or structural):
 
 ---
 
+## 7. Image Semantics (Decision)
+
+- `public/images/about/` is currently used for conceptual "About the company" imagery,
+  regardless of whether it appears on the Home page or the About page.
+- This is acceptable until a dedicated About page is implemented.
+- No renaming or migration is required at this stage.
+
+- `public/images/clients/` is reserved for entity-level reusable assets.
+- `public/images/brand/` is reserved for system-wide brand assets.
+
+---
+
 Architecture is considered locked when these rules are met.
