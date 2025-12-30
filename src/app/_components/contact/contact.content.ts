@@ -23,22 +23,33 @@ export const contactContent = {
     details: {
         eyebrow: "COMPANY INFORMATION",
         description: "Here you can find our visiting address and administrative details.",
-        visit: {
-            title: "VISIT US",
-            lines: [
-                "The Only Constant B.V.",
-                "Surinameplein 1 HS",
-                "1058 GL Amsterdam",
-                "The Netherlands"
-            ]
-        },
-        legal: {
-            title: "LEGAL & FINANCE",
-            items: [
-                { label: "KVK", value: "...." },
-                { label: "BTW", value: "...." },
-                { label: "BANK", value: "...." },
-            ]
-        }
-    }
+        cards: [
+            {
+                title: "VISIT US",
+                lines: [
+                    "Kon. Wilhelminalaan 21",
+                    "3818 HN Amersfoort",
+                    "The Netherlands",
+                ],
+                mapLink: {
+                    label: "View on Google Maps",
+                    href: "https://www.google.com/maps/search/?api=1&query=Kon.+Wilhelminalaan+21,+3818+HN+Amersfoort",
+                },
+            },
+            {
+                title: "REGISTERED ADDRESS",
+                lines: [
+                    "The Only Constant B.V.",
+                    "Surinameplein 1 HS",
+                    "1058 GL Amsterdam",
+                    "The Netherlands",
+                ],
+                items: [
+                    { label: "Chamber of Commerce (KvK)", value: "91800528" },
+                    { label: "VAT (BTW)", value: "NL865775230B01" },
+                    { label: "IBAN", value: "NL52 BUNQ 2100 3024 93" },
+                ],
+            },
+        ],
+    },
 } as const;
