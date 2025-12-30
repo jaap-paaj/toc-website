@@ -94,5 +94,13 @@
         "linkedCanon": "ARCHITECTURE.md",
         "status": "temporary",
         "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/innovate/modules/InnovateWhyUsModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Internal card grid layout logic requires spacing overrides. To be refactored into primitive.",
+        "linkedCanon": "ARCHITECTURE.md",
+        "status": "temporary",
+        "expires": "2026-01-01"
     }
 ]

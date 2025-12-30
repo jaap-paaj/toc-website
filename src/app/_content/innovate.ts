@@ -24,6 +24,17 @@ export interface InnovateContent {
     };
     whyUs: {
         eyebrow: string;
+        variant?: "grid" | "comparison";
+        comparison?: {
+            left: {
+                title: string;
+                bullets: { tone: "positive" | "negative"; text: string }[];
+            };
+            right: {
+                title: string;
+                bullets: { tone: "positive" | "negative"; text: string }[];
+            };
+        };
         items: {
             title: string;
             body: string;
@@ -71,6 +82,31 @@ export const innovateContent: InnovateContent = {
     },
     whyUs: {
         eyebrow: "WHY US?",
+        variant: "comparison",
+        comparison: {
+            left: {
+                title: "TRADITIONAL APPROACH",
+                bullets: [
+                    { tone: "negative", text: "Takes months" },
+                    { tone: "negative", text: "High & unpredictable investment" },
+                    { tone: "negative", text: "Theoretical analysis & testing after launch" },
+                    { tone: "negative", text: "Endless meetings & siloed teams" },
+                    { tone: "negative", text: "Reports, presentations, estimations, guess-work" },
+                    { tone: "negative", text: "70–90% of all digital innovations fail" }
+                ]
+            },
+            right: {
+                title: "OUR INNOVATION SPRINTS",
+                bullets: [
+                    { tone: "positive", text: "Takes 5–10 days" },
+                    { tone: "positive", text: "Low & predictable investment" },
+                    { tone: "positive", text: "Real customer input & early testing" },
+                    { tone: "positive", text: "Cross-functional collaboration" },
+                    { tone: "positive", text: "Working prototype or Proof of Concept" },
+                    { tone: "positive", text: "70–90% success rate with consistent use" }
+                ]
+            }
+        },
         items: [
             {
                 title: "Fast Validation",
