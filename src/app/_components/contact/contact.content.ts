@@ -35,6 +35,11 @@ export const contactContent = {
                     label: "View on Google Maps",
                     href: "https://www.google.com/maps/search/?api=1&query=Kon.+Wilhelminalaan+21,+3818+HN+Amersfoort",
                 },
+                media: {
+                    type: "embed",
+                    title: "Map",
+                    src: "https://www.google.com/maps?&q=Kon.+Wilhelminalaan+21,+3818+HN+Amersfoort,+The+Netherlands&output=embed",
+                },
             },
             {
                 title: "REGISTERED ADDRESS",

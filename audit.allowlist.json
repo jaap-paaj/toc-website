@@ -26,5 +26,12 @@
         "rationale": "Textarea input min-height (Form domain, not Card).",
         "linkedCanon": "CARD_CANON.md",
         "status": "accepted"
+    },
+    {
+        "path": "src/app/_components/contact/modules/ContactDetailsModule.tsx",
+        "rule": "raw-min-height",
+        "rationale": "Media embed locking (minHeight: 200) to ensure map visibility in split layout.",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
     }
 ]
