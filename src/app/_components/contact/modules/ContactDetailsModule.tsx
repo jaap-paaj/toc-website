@@ -15,7 +15,7 @@ export function ContactDetailsModule() {
                 <div className={cn("flex flex-col", spacing.component.sectionHeader)}>
                     <SectionHeader
                         variant="split"
-                        divider={false}
+                        divider={true}
                         eyebrow={contactContent.details.eyebrow}
                         description={contactContent.details.description}
                     />
