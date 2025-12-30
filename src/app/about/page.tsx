@@ -3,6 +3,7 @@ import { PageLayout } from "@/design-system/components/Layout";
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
 import { AboutHeroModule } from "@/app/_components/about/modules/AboutHeroModule";
+import { AboutTeamModule } from "@/app/_components/about/modules/AboutTeamModule";
 
 export const metadata: Metadata = {
     title: 'About Us | The Only Constant',
@@ -12,11 +13,7 @@ export default function AboutPage() {
     return (
         <PageLayout variant="landing">
             <AboutHeroModule />
-
-            {/* Scaffold Area: Minimal placeholder matching instruction */}
-            <div className="min-h-[50vh] flex items-center justify-center">
-                {/* Intentionally empty for now, or minimal loader if required later */}
-            </div>
+            <AboutTeamModule />
 
             <HomeModule
                 id="about-cta-seam"

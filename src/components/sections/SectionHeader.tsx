@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { SectionEyebrow } from "@/design-system/components/SectionEyebrow";
 import { typography } from "@/design-system/tokens/typography";
+import { layoutTokens } from "@/design-system/tokens/layout";
 
 export interface SectionHeaderProps {
     eyebrow: string;
@@ -25,6 +26,12 @@ export interface SectionHeaderProps {
      * Useful for separating distinct content blocks vertically.
      */
     divider?: boolean;
+    /**
+     * Split ratio for "split" variant.
+     * - balanced: 50/50 (default)
+     * - asymmetric: 33/67 (Sidebar/Main)
+     */
+    ratio?: "balanced" | "asymmetric";
     className?: string;
 }
 
@@ -35,6 +42,7 @@ export function SectionHeader({
     variant = "stacked",
     align = "left",
     divider = false,
+    ratio = "balanced",
     className,
 }: SectionHeaderProps) {
     const isSplit = variant === "split";
@@ -75,9 +83,14 @@ export function SectionHeader({
     }
 
     // Split Layout (Canonical "Editorial/Educate" 50/50 pattern)
+    // If ratio is asymmetric, use token. If balanced, use legacy manual class for strict compat.
+    const splitClass = ratio === "asymmetric"
+        ? layoutTokens.splitAsymmetric
+        : "grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 text-left";
+
     return (
         <div className={containerClasses}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 text-left">
+            <div className={splitClass}>
                 {/* Left Column: Identity */}
                 <div className="flex flex-col gap-3">
                     <SectionEyebrow className={typography.variants.meta.eyebrow}>{eyebrow}</SectionEyebrow>
