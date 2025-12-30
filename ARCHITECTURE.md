@@ -127,4 +127,23 @@ If a design requires a layout not supported by `WorkflowShell`:
 
 ---
 
+## 6. Workflow Governance (Antigravity)
+
+### 6.1 Source of Truth
+- **Decisions are made from the repository**, not the rendered DOM.
+- The **repo structure + tokens + canons** are the system truth.
+- DOM inspection is allowed only for *verification*, not for deriving architecture or ownership rules.
+
+### 6.2 Rollback-First Policy
+When an Antigravity change produces unexpected results (visual or structural):
+1. **Revert to the last known green state** (tests + audits passing + visually acceptable).
+2. Only after reverting, issue a new prompt with a corrected approach.
+3. Never “stack fixes” on top of a suspected wrong change. That creates compounding debt and unclear ownership.
+
+### 6.3 Commit Discipline
+- If `npm run audit:all`, `lint`, or `build` is not green: **do not commit**.
+- If a change is green but visually wrong: **revert** and retry with a different plan.
+
+---
+
 Architecture is considered locked when these rules are met.
