@@ -8,6 +8,7 @@ It also includes operational guidelines for creating standardized pages and form
 
 **This document defines Usage Contracts.**
 For visual contracts (spacing, colors, tokens), see `SCALES_CANON.md`.
+For meta and labeling contracts, see `META_CANON.md`.
 
 ---
 

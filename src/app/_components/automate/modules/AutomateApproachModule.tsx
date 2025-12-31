@@ -1,6 +1,6 @@
 import { HomeModule } from "../../home/HomeModule";
 import { SectionHeader } from "@/components/sections/SectionHeader";
-import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { CatalogGridSection } from "@/components/sections/CatalogGridSection";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { automateContent } from "@/app/_content/automate";
@@ -11,16 +11,24 @@ export function AutomateApproachModule() {
     // Map content to FeatureGridItem
     // Bullets are joined into a single description string
     const items = approach.items.map(item => ({
-        id: item.badge,
+        // Map badge (Week X) to meta pill instead of ID
+        meta: item.badge,
         title: item.title,
-        description: item.bullets.map(b => `• ${b}`).join("\n")
+        // Pass bullets directly as string[] for CatalogGridSection list rendering
+        description: item.bullets
     }));
 
     return (
         <HomeModule id="approach" width="full" tone="dark" pad="m" gap="none">
             <div className={cn("container mx-auto flex flex-col", spacing.component.sectionHeader)}>
                 <SectionHeader variant="stacked" eyebrow={approach.eyebrow} />
-                <FeatureGridSection items={items} columns={3} />
+                <CatalogGridSection
+                    items={items}
+                    columns={3}
+                    eyebrow=""
+                    description=""
+                    surfaceVariant="card"
+                />
             </div>
         </HomeModule>
     );

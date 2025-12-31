@@ -6,7 +6,8 @@ export function InnovateSolutionsModule() {
     const { solutions } = innovateContent;
 
     const items = solutions.items.map(item => ({
-        title: `${item.title} (${item.meta})`,
+        title: item.title,
+        meta: item.meta,
         description: item.body
     }));
 
