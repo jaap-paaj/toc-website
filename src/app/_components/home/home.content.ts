@@ -78,8 +78,8 @@ export const homeContent = {
             "LET'S TALK!"
         ),
         cta: {
-            label: "INFO@THEONLYCONSTANT.NL",
-            href: "mailto:info@theonlyconstant.nl"
+            label: "CONTACT",
+            href: "/contact"
         },
         copyright: "© The Only Constant 2025"
     }
