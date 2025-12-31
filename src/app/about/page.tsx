@@ -3,6 +3,7 @@ import { PageLayout } from "@/design-system/components/Layout";
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
 import { AboutHeroModule } from "@/app/_components/about/modules/AboutHeroModule";
+import { AboutApproachModule } from "@/app/_components/about/modules/AboutApproachModule";
 import { AboutTeamModule } from "@/app/_components/about/modules/AboutTeamModule";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export default function AboutPage() {
     return (
         <PageLayout variant="landing">
             <AboutHeroModule />
+            <AboutApproachModule />
             <AboutTeamModule />
 
             <HomeModule

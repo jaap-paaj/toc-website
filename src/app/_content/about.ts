@@ -2,6 +2,14 @@ export const aboutContent = {
     hero: {
         title: "ABOUT US",
     },
+    approach: {
+        eyebrow: "OUR APPROACH",
+        title: "We believe in practical AI.",
+        description: [
+            "We don't sell hype. We build systems that work today. Our approach is grounded in engineering reality, not theoretical possibilities.",
+            "From day one, we focus on deployment. We prototype fast, validate with real users, and scale what works."
+        ]
+    },
     team: {
         eyebrow: "OUR TEAM",
         title: "",

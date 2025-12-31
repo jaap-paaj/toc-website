@@ -8,7 +8,7 @@ import { layoutTokens } from "@/design-system/tokens/layout";
 export interface SectionHeaderProps {
     eyebrow: string;
     title?: string | React.ReactNode;
-    description?: string | React.ReactNode;
+    description?: string | string[] | React.ReactNode;
     /**
      * Layout variant:
      * - stacked: Vertical stack (default). Best for simple labels or center alignment.
@@ -74,9 +74,19 @@ export function SectionHeader({
                 )}
 
                 {description && (
-                    <Text className={cn(typography.variants.body.md, "max-w-3xl opacity-80", isCenter && "mx-auto")}>
-                        {description}
-                    </Text>
+                    Array.isArray(description) ? (
+                        <div className="flex flex-col gap-3 md:gap-4 max-w-3xl opacity-80">
+                            {description.map((paragraph, i) => (
+                                <Text key={i} className={cn(typography.variants.body.md, isCenter && "mx-auto")}>
+                                    {paragraph}
+                                </Text>
+                            ))}
+                        </div>
+                    ) : (
+                        <Text className={cn(typography.variants.body.md, "max-w-3xl opacity-80", isCenter && "mx-auto")}>
+                            {description}
+                        </Text>
+                    )
                 )}
             </div>
         );
@@ -114,9 +124,19 @@ export function SectionHeader({
                 {/* Right Column: Narrative */}
                 <div className="flex flex-col justify-start md:pt-1"> {/* lint:allowed */}
                     {description && (
-                        <Text className={cn(typography.variants.body.md, "opacity-80")}>
-                            {description}
-                        </Text>
+                        Array.isArray(description) ? (
+                            <div className="flex flex-col gap-3 md:gap-4 opacity-80 max-w-prose">
+                                {description.map((paragraph, i) => (
+                                    <Text key={i} className={typography.variants.body.md}>
+                                        {paragraph}
+                                    </Text>
+                                ))}
+                            </div>
+                        ) : (
+                            <Text className={cn(typography.variants.body.md, "opacity-80")}>
+                                {description}
+                            </Text>
+                        )
                     )}
                 </div>
             </div>

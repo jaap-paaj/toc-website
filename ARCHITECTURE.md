@@ -160,3 +160,36 @@ When an Antigravity change produces unexpected results (visual or structural):
 ---
 
 Architecture is considered locked when these rules are met.
+
+---
+
+## 8. Narrative Sections (Content Pattern)
+
+### Definition
+Narrative Sections provide editorial context between major sections.
+They are not heroes, not grids, and not CTAs.
+
+### Characteristics
+-   **Optional eyebrow**
+-   **Optional title**
+-   **One or more paragraphs** of body text
+-   **No cards**, no lists, no actions (except simple links)
+
+### Typography
+-   **Title**: Heading (contextual, not display)
+-   **Body**: `typography.variants.body.md` (Standard reading size)
+
+### Layout
+-   Stack or split layouts are allowed.
+-   Layout is owned by the **Section**, not the Page.
+
+### Usage Rules
+1.  Pages may only consume Narrative Sections via Modules.
+2.  Modules may not hand-roll grids for narrative text (unless prototyping a new Section).
+3.  Narrative Sections must source copy from content files (Arrays of strings supported).
+
+### Differentiation
+Narrative Sections are distinct from:
+-   **Hero Sections**: Which use larger typography (`body.lg`) and sit at the top.
+-   **CTA Sections**: Which focus on a Button/Action.
+-   **Feature/Grid Sections**: Which focus on structured items/cards.
