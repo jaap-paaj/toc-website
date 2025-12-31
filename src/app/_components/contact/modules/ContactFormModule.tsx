@@ -74,7 +74,6 @@ export function ContactFormModule() {
                             description={contactContent.form.description}
                             variant="split"
                             divider
-                            className="border-foreground/20"
                         />
 
                         <FormPanel>
