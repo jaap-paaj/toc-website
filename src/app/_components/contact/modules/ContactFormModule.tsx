@@ -45,9 +45,9 @@ export function ContactFormModule() {
         <HomeModule
             id="contact-form"
             width="full"
-            tone="default"
+            tone="light"
             pad="m"
-            padTop="none"
+            padBottom="none" // Flush for Seam Ownership (Next module has divider)
             gap="none"
         >
             {isSubmitted ? (
