@@ -74,6 +74,13 @@ Forms must be built using specific primitives to enforce layout and consistency.
 *   No spacing utilities in pages.
 *   No manual headers inside form sections.
 
+### 3.3 Seam Ownership (Vertical Rhythm)
+When two adjacent modules share the same tone/background, **only one module owns the seam spacing**.
+
+*   **Standard**: The first module ends with its default bottom padding; the second starts with its default top padding (spacing is shared).
+*   **Divider Rule**: If the second module starts with a divider (explicit visual boundary), the first module **must end flush** (`padBottom="none"`). The divider module owns the seam.
+*   **Implied**: Never stack `mb-*` (gap) on top of `pt-*` (pad) in the same visual context.
+
 ---
 
 ## 4. Standard Implementations
