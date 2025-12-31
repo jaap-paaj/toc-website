@@ -65,13 +65,13 @@ export function ContactDetailsModule() {
                                                 )}
                                             </div>
                                             {card.items && (
-                                                <dl className={cn("grid grid-cols-[min-content_1fr] gap-x-8 gap-y-2 text-primary-foreground/60 max-w-prose pt-2", typography.variants.body.md) /* lint:allowed */}>
+                                                <dl className={cn("grid grid-cols-1 sm:grid-cols-[min-content_1fr] gap-y-2 sm:gap-x-8 text-primary-foreground/60 max-w-prose pt-2", typography.variants.body.md) /* lint:allowed */}>
                                                     {card.items.map((item, i) => (
                                                         <React.Fragment key={i}>
                                                             <dt className={cn(typography.variants.meta.label, "pt-1 whitespace-nowrap") /* lint:allowed */}>
                                                                 {item.label}
                                                             </dt>
-                                                            <dd className={cn(typography.variants.body.sm, "tabular-nums")}>
+                                                            <dd className={cn(typography.variants.body.sm, "tabular-nums break-words")}>
                                                                 {item.value}
                                                             </dd>
                                                         </React.Fragment>
@@ -112,13 +112,13 @@ export function ContactDetailsModule() {
                                             )}
                                         </div>
                                         {card.items && (
-                                            <dl className={cn("grid grid-cols-[min-content_1fr] gap-x-8 gap-y-2 text-primary-foreground/60 max-w-prose pt-2", typography.variants.body.md) /* lint:allowed */}>
+                                            <dl className={cn("grid grid-cols-1 sm:grid-cols-[min-content_1fr] gap-y-2 sm:gap-x-8 text-primary-foreground/60 max-w-prose pt-2", typography.variants.body.md) /* lint:allowed */}>
                                                 {card.items.map((item, i) => (
                                                     <React.Fragment key={i}>
                                                         <dt className={cn(typography.variants.meta.label, "pt-1 whitespace-nowrap") /* lint:allowed */}>
                                                             {item.label}
                                                         </dt>
-                                                        <dd className={cn(typography.variants.body.sm, "tabular-nums")}>
+                                                        <dd className={cn(typography.variants.body.sm, "tabular-nums break-words")}>
                                                             {item.value}
                                                         </dd>
                                                     </React.Fragment>
