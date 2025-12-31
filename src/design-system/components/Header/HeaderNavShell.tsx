@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import { surfaces } from "@/design-system/tokens/surfaces";
 
 interface HeaderNavShellProps {
     children: React.ReactNode;
@@ -25,7 +26,7 @@ export function HeaderNavShell({ children, className }: HeaderNavShellProps) {
         >
             {/* Underlay Glass Layer (System Tokenized) */}
             <div
-                className="absolute inset-0 pointer-events-none surface-glass-header"
+                className={cn("absolute inset-0 pointer-events-none", surfaces.header)}
                 aria-hidden="true"
             />
 

@@ -95,12 +95,7 @@
     box-shadow: var(--toc-nav-shadow);
   }
 
-  /* Glass Effect Layer (Underlay) - Now Solid */
-  .surface-glass-header {
-    background-color: color-mix(in srgb, var(--brand-primary) 95%, transparent) !important;
-    backdrop-filter: blur(var(--glass-blur-lg)) !important;
-    -webkit-backdrop-filter: blur(var(--glass-blur-lg)) !important;
-  }
+
 
   /* ========================================
      Tone System Scopes (Contrast Hardening)

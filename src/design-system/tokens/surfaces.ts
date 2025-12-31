@@ -11,6 +11,9 @@ export const surfaces = {
         "bg-white text-primary-foreground rounded-surface shadow-surface h-full flex flex-col",
     // Clean media surface without border
     mediaFrameless: "bg-[var(--surface-media)] rounded-surface border-none shadow-surface",
+
+    // Safari-compatible Glass Token: Brand Green (Lime) transparency + Blur
+    header: "bg-[rgba(207,255,76,0.85)] [backdrop-filter:blur(16px)] [-webkit-backdrop-filter:blur(16px)] rounded-full border border-[var(--toc-nav-border)] shadow-[var(--toc-nav-shadow)]",
 } as const;
 
 export type SurfaceVariant = keyof typeof surfaces;
