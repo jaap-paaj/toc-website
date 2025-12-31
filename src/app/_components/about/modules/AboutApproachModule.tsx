@@ -12,6 +12,7 @@ export function AboutApproachModule() {
             <div className={cn("container mx-auto flex flex-col", spacing.component.sectionHeader)}>
                 <SectionHeader
                     variant="split"
+                    divider
                     eyebrow={approach.eyebrow}
                     title={approach.title}
                     description={approach.description}
