@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -12,6 +12,29 @@ const fontSans = Figtree({
 export const metadata: Metadata = {
   title: "The Only Constant",
   description: "Bold, strategic, minimal agency showcase.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "96x96",
+        url: "/favicon-96x96.png",
+      },
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        url: "/favicon.svg",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#CFFF4C",
 };
 
 export default function RootLayout({
