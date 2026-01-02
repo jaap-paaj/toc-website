@@ -110,6 +110,10 @@ export default function Page() {
 *   **Yes**: UI logic is reused, layout styling must be enforced, or behavior is non-trivial.
 *   **No**: Just to add spacing, work around a layout issue, or bypass an existing contract.
 
+### 4.3 Functional Contracts
+For specific feature implementation rules, see:
+*   [Contact Form Canon](CONTACT_FORM_CANON.md)
+
 ---
 
 ## 5. Enforcement

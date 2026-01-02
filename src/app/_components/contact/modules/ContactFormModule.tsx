@@ -12,33 +12,56 @@ import { Heading, Text } from "@/design-system/components/Typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";
-import { contactContent } from "../contact.content";
+import { submitContactForm } from "@/actions/contact";
+import { contactSchema } from "@/lib/validation/contact";
 
 export function ContactFormModule() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const [errors, setErrors] = useState<{ email?: string }>({});
+    const [fieldErrors, setFieldErrors] = useState<{ [key: string]: string[] | undefined }>({});
+    const [formError, setFormError] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
-        setErrors({});
+        setFieldErrors({});
+        setFormError(null);
 
         const formData = new FormData(e.currentTarget);
-        const email = formData.get("email") as string;
+        const rawData = {
+            name: formData.get("name") as string,
+            email: formData.get("email") as string,
+            message: formData.get("message") as string,
+            _gotcha: formData.get("_gotcha") as string,
+        };
 
-        // Basic validation
-        if (!email || !email.includes("@")) {
-            setErrors({ email: contactContent.form.fields.email.error });
+        // 1. Client-Side Pre-Validation (UX Only - Server is Authoritative)
+        const validated = contactSchema.safeParse(rawData);
+        if (!validated.success) {
+            setFieldErrors(validated.error.flatten().fieldErrors);
             setIsLoading(false);
             return;
         }
 
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        // 2. Server Action
+        try {
+            const result = await submitContactForm({ success: false }, formData);
 
-        setIsLoading(false);
-        setIsSubmitted(true);
+            if (result.success) {
+                setIsSubmitted(true);
+            } else {
+                if (result.errors) {
+                    setFieldErrors(result.errors);
+                }
+                if (result.message) {
+                    setFormError(result.message);
+                }
+            }
+        } catch (_) {
+            setFormError("Communication failed. Please check your connection.");
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -53,16 +76,16 @@ export function ContactFormModule() {
             {isSubmitted ? (
                 <div className="max-w-2xl mx-auto w-full">
                     <FormPanel className={cn("items-center text-center", spacing.component.formSuccessPanel)}>
-                        <Heading level={3}>{contactContent.form.success.title}</Heading>
+                        <Heading level={3}>Message Received</Heading>
                         <Text className="text-muted-foreground my-4"> {/* lint:allowed */}
-                            {contactContent.form.success.message}
+                            Thank you for reaching out. We will review your inquiry and get back to you shortly.
                         </Text>
                         <Button
                             variant="outline"
                             onClick={() => setIsSubmitted(false)}
                             className={spacing.component.formSuccessCta}
                         >
-                            {contactContent.form.success.resetLabel}
+                            Send Another Message
                         </Button>
                     </FormPanel>
                 </div>
@@ -70,35 +93,69 @@ export function ContactFormModule() {
                 <div className="container mx-auto w-full">
                     <div className={spacing.stackXl}>
                         <SectionHeader
-                            eyebrow={contactContent.form.eyebrow}
-                            description={contactContent.form.description}
+                            eyebrow="TOC Studio"
+                            description="Ready to transform your content operations? Tell us about your goals."
                             variant="split"
                             divider
                         />
 
                         <FormPanel>
+                            {formError && (
+                                <div className={cn("bg-destructive/10 text-destructive p-4 rounded-panel", typography.variants.body.sm)}>
+                                    {formError}
+                                </div>
+                            )}
+
                             <form onSubmit={handleSubmit} className={spacing.stackLg}>
+                                {/* Honeypot - Hidden from users */}
+                                <input
+                                    type="text"
+                                    name="_gotcha"
+                                    tabIndex={-1}
+                                    className="hidden"
+                                    autoComplete="off"
+                                />
+
                                 <div className="grid md:grid-cols-2 gap-6">
-                                    <FormField label={contactContent.form.fields.name.label}>
-                                        <Input name="name" placeholder={contactContent.form.fields.name.placeholder} required />
+                                    <FormField
+                                        label="Name"
+                                        error={fieldErrors.name?.[0]}
+                                    >
+                                        <Input
+                                            name="name"
+                                            placeholder="Your full name"
+                                            required
+                                            disabled={isLoading}
+                                            aria-invalid={!!fieldErrors.name}
+                                        />
                                     </FormField>
 
-                                    <FormField label={contactContent.form.fields.email.label} error={errors.email}>
+                                    <FormField
+                                        label="Email"
+                                        error={fieldErrors.email?.[0]}
+                                    >
                                         <Input
                                             name="email"
                                             type="email"
-                                            placeholder={contactContent.form.fields.email.placeholder}
+                                            placeholder="you@company.com"
                                             required
+                                            disabled={isLoading}
+                                            aria-invalid={!!fieldErrors.email}
                                         />
                                     </FormField>
                                 </div>
 
-                                <FormField label={contactContent.form.fields.message.label}>
+                                <FormField
+                                    label="Message"
+                                    error={fieldErrors.message?.[0]}
+                                >
                                     <Textarea
                                         name="message"
-                                        placeholder={contactContent.form.fields.message.placeholder}
+                                        placeholder="How can we help you automate or scale your content?"
                                         required
+                                        disabled={isLoading}
                                         className="min-h-[160px]"
+                                        aria-invalid={!!fieldErrors.message}
                                     />
                                 </FormField>
 
@@ -109,7 +166,7 @@ export function ContactFormModule() {
                                         disabled={isLoading}
                                         className={cn("w-full md:w-auto", typography.variants.ui.button.lg)}
                                     >
-                                        {isLoading ? contactContent.form.submit.loading : contactContent.form.submit.label}
+                                        {isLoading ? "Sending..." : "Send Message"}
                                     </Button>
                                 </div>
                             </form>
