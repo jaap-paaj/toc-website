@@ -5,7 +5,6 @@ import { HomeModule } from "../HomeModule";
 import { cn } from "@/lib/utils";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { BrandHeroHeadline } from "@/design-system/components/BrandHeroHeadline";
-import Link from "next/link";
 
 import { homeContent } from "../home.content";
 
@@ -38,14 +37,15 @@ export function HomeHeroModule() {
 
             {/* Bottom CTA */}
             <div className={cn("mt-auto", spacing.section.heroFollower)}>
-              <Link href={homeContent.hero.cta.href}>
-                <Button
-                  size="xl"
-                  className="tone-dark bg-background text-foreground hover:bg-background/80"
-                >
+              <Button
+                asChild
+                size="xl"
+                className="tone-dark bg-background text-foreground hover:bg-background/80"
+              >
+                <a href={homeContent.hero.cta.href}>
                   {homeContent.hero.cta.label}
-                </Button>
-              </Link>
+                </a>
+              </Button>
             </div>
           </div>
         </div>
