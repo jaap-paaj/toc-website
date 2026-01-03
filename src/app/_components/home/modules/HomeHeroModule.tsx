@@ -1,3 +1,5 @@
+"use client";
+
 import { Text } from "@/design-system/components/Typography";
 import { Button } from "@/components/ui/Button";
 import { spacing } from "@/design-system/tokens/spacing";
@@ -7,6 +9,7 @@ import { layoutTokens } from "@/design-system/tokens/layout";
 import { BrandHeroHeadline } from "@/design-system/components/BrandHeroHeadline";
 
 import { homeContent } from "../home.content";
+import { trackEvent } from "@/lib/analytics/ga";
 
 export function HomeHeroModule() {
   return (
@@ -41,6 +44,12 @@ export function HomeHeroModule() {
                 asChild
                 size="xl"
                 className="tone-dark bg-background text-foreground hover:bg-background/80"
+                onClick={() =>
+                  trackEvent("cta_click", {
+                    cta_label: homeContent.hero.cta.label,
+                    cta_location: "hero",
+                  })
+                }
               >
                 <a href={homeContent.hero.cta.href}>
                   {homeContent.hero.cta.label}

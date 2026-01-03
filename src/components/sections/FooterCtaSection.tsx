@@ -1,5 +1,8 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
+import { trackEvent } from "@/lib/analytics/ga";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 
@@ -50,6 +53,12 @@ export function FooterCtaSection({
                                     asChild
                                     size="xl"
                                     className="tone-dark bg-background text-foreground hover:bg-background/80 rounded-full"
+                                    onClick={() =>
+                                        trackEvent("cta_click", {
+                                            cta_label: cta.label,
+                                            cta_location: "footer",
+                                        })
+                                    }
                                 >
                                     <a href={cta.href}>{cta.label}</a>
                                 </Button>

@@ -14,6 +14,7 @@ import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";
 import { submitContactForm } from "@/actions/contact";
 import { contactSchema } from "@/lib/validation/contact";
+import { trackEvent } from "@/lib/analytics/ga";
 
 export function ContactFormModule() {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -49,6 +50,9 @@ export function ContactFormModule() {
 
             if (result.success) {
                 setIsSubmitted(true);
+                trackEvent("contact_submit", {
+                    source: "contact_form",
+                });
             } else {
                 if (result.errors) {
                     setFieldErrors(result.errors);

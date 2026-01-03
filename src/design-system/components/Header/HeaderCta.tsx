@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { trackEvent } from "@/lib/analytics/ga";
 
 interface HeaderCtaProps {
     cta: { label: string; href: string };
@@ -17,6 +20,12 @@ export function HeaderCta({ cta, className }: HeaderCtaProps) {
                 // However, --background is Deep Black and --foreground is Off-white.
                 // A black button on the green header:
                 className="rounded-full px-6 py-5 tone-dark bg-background text-foreground hover:bg-background/80 border-0"
+                onClick={() =>
+                    trackEvent("cta_click", {
+                        cta_label: cta.label,
+                        cta_location: "header",
+                    })
+                }
             >
                 <Link href={cta.href}>{cta.label}</Link>
             </Button>
