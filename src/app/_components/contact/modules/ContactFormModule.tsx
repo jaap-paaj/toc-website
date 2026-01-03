@@ -58,7 +58,7 @@ export function ContactFormModule() {
                 }
             }
         } catch (_) {
-            setFormError("Communication failed. Please check your connection.");
+            setFormError("Something went wrong. Please try again.");
         } finally {
             setIsLoading(false);
         }
@@ -76,9 +76,9 @@ export function ContactFormModule() {
             {isSubmitted ? (
                 <div className="max-w-2xl mx-auto w-full">
                     <FormPanel className={cn("items-center text-center", spacing.component.formSuccessPanel)}>
-                        <Heading level={3}>Message Received</Heading>
+                        <Heading level={3}>Thanks for reaching out</Heading>
                         <Text className="text-muted-foreground my-4"> {/* lint:allowed */}
-                            Thank you for reaching out. We will review your inquiry and get back to you shortly.
+                            We’ve received your message and will be in touch soon.
                         </Text>
                         <Button
                             variant="outline"
@@ -93,8 +93,8 @@ export function ContactFormModule() {
                 <div className="container mx-auto w-full">
                     <div className={spacing.stackXl}>
                         <SectionHeader
-                            eyebrow="TOC Studio"
-                            description="Ready to transform your content operations? Tell us about your goals."
+                            eyebrow="Contact us"
+                            description="You don't need a clear plan to reach out. Start the conversation here."
                             variant="split"
                             divider
                         />
@@ -151,7 +151,7 @@ export function ContactFormModule() {
                                 >
                                     <Textarea
                                         name="message"
-                                        placeholder="How can we help you automate or scale your content?"
+                                        placeholder="Tell us a bit about what you’re looking for..."
                                         required
                                         disabled={isLoading}
                                         className="min-h-[160px]"
