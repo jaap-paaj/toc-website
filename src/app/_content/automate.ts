@@ -97,20 +97,20 @@ export const automateContent: AutomateContent = {
         eyebrow: "WHY US?",
         items: [
             {
-                title: "Practical, Not Theoretical",
-                body: "We don't just advise; we build. You get working software, not just a slide deck."
+                title: "FAST, MEASURABLE ROI",
+                body: "Our automations typically pay for themselves within 3–6 months, driven by 40–70% reductions in manual workload."
             },
             {
-                title: "Human-in-the-Loop",
-                body: "Our agents efficiently hand off to humans when needed. Automation enhances your team, it doesn't replace them."
+                title: "AUTOMATE WHAT MATTERS MOST",
+                body: "We prioritise the processes with the highest impact, avoiding the waste that sinks most automation projects."
             },
             {
-                title: "Security First",
-                body: "Enterprise-grade data protection. We ensure your proprietary data remains yours and stays secure."
+                title: "LOW-RISK, PREDICTABLE DELIVERY",
+                body: "Clear scoping, iterative validation and predictable costs prevent surprises and overruns."
             },
             {
-                title: "Platform Agnostic",
-                body: "We build on the best tools for your stack, whether that's OpenAI, Azure, or open-source models."
+                title: "DESIGNED TO FIT YOUR WORKFLOW",
+                body: "We design around how your team actually works, so the automation lands smoothly and gets adopted."
             }
         ]
     }

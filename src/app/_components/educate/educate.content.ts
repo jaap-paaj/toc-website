@@ -48,20 +48,20 @@ export const educateContent = {
         },
         items: [
             {
-                title: "Expert-Led",
-                description: "Learn directly from practitioners who are deploying AI solutions in the field every day, not just theorists."
+                title: "RAPID CAPABILITY BUILDING",
+                description: "Sessions are packed with practical insights and tools, giving participants a lot of useful knowledge in just a few hours."
             },
             {
-                title: "Practical Focus",
-                description: "We skip the academic theory and focus on actionable skills and workflows that can be applied immediately."
+                title: "DIRECT IMPACT ON REAL WORK",
+                description: "We use your actual context and challenges so learning directly improves current work."
             },
             {
-                title: "Tailored Content",
-                description: "Every workshop is customized to your industry, your tools, and your specific business challenges."
+                title: "LED BY REAL PRACTITIONERS",
+                description: "Training is led by experienced AI specialists and innovation leads who apply these methods in real client projects."
             },
             {
-                title: "Immediate Impact",
-                description: "Walk away with working prototypes, refined prompts, and a clear roadmap for next steps."
+                title: "FASTER, MORE ALIGNED TEAMWORK",
+                description: "Teams leave with shared tools and methods that help them work faster and more effectively."
             }
         ],
         images: {
