@@ -53,7 +53,7 @@ export const educateContent = {
             },
             {
                 title: "Practical Focus",
-                description: "We skip the academic theory and focus on actionable skills and workflows you allow teams to apply immediately."
+                description: "We skip the academic theory and focus on actionable skills and workflows that can be applied immediately."
             },
             {
                 title: "Tailored Content",
