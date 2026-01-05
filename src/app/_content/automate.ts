@@ -40,24 +40,24 @@ export const automateContent: AutomateContent = {
         description: "Proven modules we can deploy in days, not months.",
         items: [
             {
-                title: "CUSTOMER SERVICE AGENT",
-                body: "Handle 24/7 support inquiries with human-like empathy and accuracy. Escalates complex issues seamlessly."
+                title: "DAILY INSIGHT REPORTS",
+                body: "AI scans your data and flags trends, anomalies, and opportunities. Ideal for leaders and analysts looking to reduce time spent on reporting."
             },
             {
-                title: "HR ONBOARDING ASSISTANT",
-                body: "Guide new hires through paperwork, policies, and setup automatically. Reduces HR workload by 80%."
+                title: "CONTENT GENERATION SYSTEMS",
+                body: "Automatically turns product specs into marketing-ready copy. Built for e-commerce, marketing, and product teams needing speed and scale."
             },
             {
-                title: "LEAD QUALIFICATION BOT",
-                body: "Engage website visitors instantly, qualify intent, and book meetings for your sales team."
+                title: "SOCIAL MEDIA ASSISTANTS",
+                body: "Creates, posts, and analyzes consistent, on-brand content. Great for marketing teams and agencies looking to grow without extra hires."
             },
             {
-                title: "DOCUMENT PROCESSING",
-                body: "Extract data from invoices, contracts, and forms automatically. Syncs directly to your ERP/CRM."
+                title: "CUSTOMER SERVICE AUTOMATION",
+                body: "Smart triage and automated replies for faster resolutions and happier customers. Best for support-heavy and service-driven businesses."
             },
             {
-                title: "SOCIAL MEDIA MANAGER",
-                body: "Plan, draft, and schedule content based on your brand voice. Monitors engagement and suggests replies."
+                title: "PROCESS OPTIMIZATION ANALYSIS",
+                body: "AI maps out inefficiencies in your workflows and suggests improvements. Perfect for operations teams focused on performance gains."
             }
         ]
     },
