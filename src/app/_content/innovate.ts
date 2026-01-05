@@ -103,7 +103,7 @@ export const innovateContent: InnovateContent = {
                     { tone: "positive", text: "Real customer input & early testing" },
                     { tone: "positive", text: "Cross-functional collaboration" },
                     { tone: "positive", text: "Working prototype or Proof of Concept" },
-                    { tone: "positive", text: "70–90% success rate with consistent use" }
+                    { tone: "positive", text: "Consistently strong outcomes with repeated use" }
                 ]
             }
         },
