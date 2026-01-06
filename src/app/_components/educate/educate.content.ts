@@ -2,7 +2,7 @@ export const educateContent = {
     hero: {
         eyebrow: "01",
         title: "EDUCATE",
-        description: "We help teams build practical AI capability through hands-on training based on real work. No hype, no theory-first. People leave with reusable workflows, working examples, and clear next steps."
+        description: "We help teams build practical AI capability through hands-on training based on real work. No hype, no theory-first. Expect doing, not listening: practical exercises, workflow mapping, and concrete outputs that make AI usable in daily work. Shared confidence grows around safe and responsible use, including the basics teams need to navigate the EU AI Act. People leave with reusable workflows, working examples, and clear next steps."
     },
     trainingCatalog: {
         aiTraining: {
