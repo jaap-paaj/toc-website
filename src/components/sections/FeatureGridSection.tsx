@@ -17,7 +17,7 @@ export type FeatureGridItem = {
 };
 
 export type FeatureGridSectionProps = {
-    items: FeatureGridItem[];
+    items: FeatureGridItem[] | readonly FeatureGridItem[];
     /**
      * Number of columns on desktop (md+).
      * defaults to 2.
