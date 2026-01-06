@@ -15,24 +15,7 @@ import { colors } from "@/design-system/tokens/colors";
 export const metadata: Metadata = {
   title: "TOC | The Only Constant",
   description: "AI that helps you understand, not just generate.",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    other: [
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "96x96",
-        url: "/favicon-96x96.png",
-      },
-      {
-        rel: "icon",
-        type: "image/svg+xml",
-        url: "/favicon.svg",
-      },
-    ],
-  },
+
   manifest: "/site.webmanifest",
 };
 
