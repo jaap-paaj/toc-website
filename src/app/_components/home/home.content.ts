@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export const homeContent = {
     hero: {
@@ -70,13 +70,10 @@ export const homeContent = {
         ],
     },
     footerCta: {
-        title: React.createElement(
-            React.Fragment,
-            null,
+        title: [
             "READY FOR CHANGE?",
-            React.createElement("br"),
             "LET'S TALK!"
-        ),
+        ],
         cta: {
             label: "CONTACT",
             href: "/contact"

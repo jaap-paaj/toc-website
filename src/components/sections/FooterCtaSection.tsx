@@ -8,7 +8,7 @@ import { spacing } from "@/design-system/tokens/spacing";
 
 export interface FooterCtaSectionProps {
     eyebrow?: string;
-    title: React.ReactNode;
+    title: string | string[] | readonly string[];
     cta: {
         label: string;
         href: string;
@@ -44,7 +44,16 @@ export function FooterCtaSection({
                                 )}
 
                                 <h2 className={typography.variants.display.section}>
-                                    {title}
+                                    {Array.isArray(title) ? (
+                                        title.map((line, i) => (
+                                            <span key={i}>
+                                                {line}
+                                                {i < title.length - 1 && <br />}
+                                            </span>
+                                        ))
+                                    ) : (
+                                        title
+                                    )}
                                 </h2>
                             </div>
 
