@@ -6,7 +6,6 @@ export function HomeFooterCtaModule() {
     return (
         <HomeModule id="cta" width="full" pad="m" padTop="none" gap="s">
             <FooterCtaSection
-                eyebrow={homeContent.footerCta.eyebrow}
                 title={homeContent.footerCta.title}
                 cta={homeContent.footerCta.cta}
                 copyright={homeContent.footerCta.copyright}

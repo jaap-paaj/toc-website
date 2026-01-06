@@ -6,14 +6,13 @@ export const aboutContent = {
         eyebrow: "OUR APPROACH",
         title: "We believe in practical AI.",
         description: [
-            "We don't sell hype. We build systems that work today. Our approach is grounded in engineering reality, not theoretical possibilities.",
-            "From day one, we focus on deployment. We prototype fast, validate with real users, and scale what works."
+            "We believe in practical change. AI is a tool to build and test ideas fast, not to produce more slides. Strategy should be proven through making, with prototypes, Proofs of Concept, and automations that create clarity. We work within real constraints, learn fast with real users and operations, and scale what earns its place.",
         ]
     },
     team: {
         eyebrow: "OUR TEAM",
         title: "",
-        description: "We’re a senior core team, supported by trusted specialists when needed. The founders stay hands-on throughout, and we bring in extra expertise only when it makes the work better.",
+        description: "We are a senior core team, supported by trusted specialist network when it improves the work. The founders stay hands-on throughout. We scale expertise up or down based on the challenge, so you get depth without unnecessary overhead.",
         members: [
             {
                 name: "Maarten Mantje",

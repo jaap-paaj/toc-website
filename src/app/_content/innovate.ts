@@ -46,7 +46,7 @@ export const innovateContent: InnovateContent = {
     hero: {
         index: "03",
         title: "INNOVATE",
-        intro: "Our AI-powered sprints combine human creativity with machine intelligence to rapidly turn bold ideas into working prototypes with proven business cases."
+        intro: "Strategic decisions are harder than ever before. They need proof over assumptions. Innovate is for proving what to build or change next, before you commit time, budget, and teams.We do this through an AI-supported sprints, using AI to build understanding faster, generate stronger options, and validate earlier through a prototype or Proof of Concept. The result is decision-grade evidence: what to pursue, what to drop, and what to scale."
     },
     propositions: {
         eyebrow: "NEW PROPOSITIONS & PRODUCTS",

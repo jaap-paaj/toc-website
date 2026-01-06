@@ -33,11 +33,11 @@ export const automateContent: AutomateContent = {
     hero: {
         index: "02",
         title: "AUTOMATE",
-        intro: "We build and deploy AI agents that do the work. From customer service to internal operations, we automate the repetitive so your team can focus on the exceptional."
+        intro: "What to automate is the decision that makes or breaks ROI. Our projects start with an opportunity scan: together with your team we map automation candidates across workflows, plot them on a value versus effort matrix, and turn the outcome into a practical roadmap. We also agree how each automation should work in your context, so the build fits your ways of working. Then we design and build the first automation, prove value fast, and scale what works."
     },
     readyToRun: {
         eyebrow: "READY-TO-RUN AI SOLUTIONS",
-        description: "Proven modules we can deploy in days, not months.",
+        description: "Modular solutions we adapt to your context. First value in days, production-ready in mere weeks.",
         items: [
             {
                 title: "DAILY INSIGHT REPORTS",
@@ -77,7 +77,7 @@ export const automateContent: AutomateContent = {
                 badge: "WEEK 2",
                 title: "BUILD & TRAIN",
                 bullets: [
-                    "Configure agent behaviors",
+                    "Build automation",
                     "Integrate with tools",
                     "Rigorous testing/refinement"
                 ]
@@ -110,7 +110,7 @@ export const automateContent: AutomateContent = {
             },
             {
                 title: "DESIGNED TO FIT YOUR WORKFLOW",
-                body: "We design around how your team actually works, so the automation lands smoothly and gets adopted."
+                body: "Fit beats fancy. We use our AI capability cards to shape workflows together, from inputs and decisions to checks, exceptions, and escalations, so automations fit the organisation, not the other way around."
             }
         ]
     }

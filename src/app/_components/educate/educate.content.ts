@@ -2,7 +2,7 @@ export const educateContent = {
     hero: {
         eyebrow: "01",
         title: "EDUCATE",
-        description: "We empower teams with the knowledge and skills to navigate the AI landscape effectively. Through workshops, training, and strategic guidance, we build the internal capability needed for sustainable innovation."
+        description: "We help teams build practical AI capability through hands-on training based on real work. No hype, no theory-first. People leave with reusable workflows, working examples, and clear next steps."
     },
     trainingCatalog: {
         aiTraining: {

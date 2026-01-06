@@ -2,7 +2,7 @@ import React from "react";
 
 export const homeContent = {
     hero: {
-        description: "The Only Constant is a digital transformation and innovation agency built for a faster world. We help organizations move from assumptions to proven business results. Fast.",
+        description: "We are a strategy and design partner that helps teams move from assumptions to proven business results by making. We build prototypes, Proofs of Concept, and automations that create clarity fast.",
         cta: {
             label: "EXPLORE OUR CAPABILITIES",
             href: "#capabilities",
@@ -70,7 +70,6 @@ export const homeContent = {
         ],
     },
     footerCta: {
-        eyebrow: "Ready",
         title: React.createElement(
             React.Fragment,
             null,
