@@ -10,9 +10,11 @@ const fontSans = Figtree({
   subsets: ["latin"],
 });
 
+import { colors } from "@/design-system/tokens/colors";
+
 export const metadata: Metadata = {
-  title: "The Only Constant",
-  description: "Bold, strategic, minimal agency showcase.",
+  title: "TOC | The Only Constant",
+  description: "AI that helps you understand, not just generate.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#CFFF4C",
+  themeColor: colors.brand.primary,
 };
 
 export default function RootLayout({
