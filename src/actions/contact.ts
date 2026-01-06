@@ -12,6 +12,7 @@ const RATE_LIMIT_MAX = 3;
 // Allowed Origins for CSRF protection
 const ALLOWED_ORIGINS = new Set([
     "https://theonlyconstant.nl",
+    "https://www.theonlyconstant.nl",
     "https://preview.theonlyconstant.nl",
     "http://localhost:3000",
     "http://localhost:3001",
