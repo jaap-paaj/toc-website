@@ -8,6 +8,8 @@ export function HomeFooterCtaModule() {
             <FooterCtaSection
                 title={homeContent.footerCta.title}
                 cta={homeContent.footerCta.cta}
+                panelTitle={homeContent.footerCta.panelTitle}
+                panelBody={homeContent.footerCta.panelBody}
                 copyright={homeContent.footerCta.copyright}
             />
         </HomeModule>

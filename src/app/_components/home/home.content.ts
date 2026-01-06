@@ -78,6 +78,8 @@ export const homeContent = {
             label: "CONTACT",
             href: "/contact"
         },
+        panelTitle: "WHAT HAPPENS NEXT",
+        panelBody: "You will leave with experience, not just inspiration. You will understand what AI is and what it will change in your organisation, and you will know what is worth doing next. You will get ready-to-use prompts, templates, and practical workflows you can start using immediately. Then you are ready for the next step: automate, innovate, or both.",
         copyright: "© The Only Constant 2025"
     }
 } as const;
