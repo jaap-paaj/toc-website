@@ -36,6 +36,30 @@ export const scanContent = {
             href: "/ai-opportunity-scan/book"
         }
     },
+    howItWorks: {
+        eyebrow: "Process",
+        title: "Three steps to certainty.",
+        steps: [
+            {
+                step: "01",
+                duration: "20 minutes",
+                title: "Quick intake",
+                description: "We align on goals, define scope and prepare tailored sector insights."
+            },
+            {
+                step: "02",
+                duration: "Half a day",
+                title: "Opportunity session",
+                description: "We map where value is created or lost, identify high-impact AI opportunities, prioritise use cases, and redesign one process so a PoC can start immediately."
+            },
+            {
+                step: "03",
+                duration: "Same day",
+                title: "Delivery",
+                description: "You leave with a prioritised list, an impact/feasibility matrix, a 90-day roadmap, and one process documented and PoC-ready."
+            }
+        ]
+    },
     features: {
         items: [
             {
