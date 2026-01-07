@@ -2,6 +2,7 @@ import { PageLayout } from "@/design-system/components/Layout";
 import { ScanLandingHeroModule } from "@/app/_components/ai-opportunity-scan/modules/ScanLandingHeroModule";
 import { ScanStatementModule } from "@/app/_components/ai-opportunity-scan/modules/ScanStatementModule";
 import { ScanHowItWorksModule } from "@/app/_components/ai-opportunity-scan/modules/ScanHowItWorksModule";
+import { ScanWhatYouGetModule } from "@/app/_components/ai-opportunity-scan/modules/ScanWhatYouGetModule";
 import { ScanFeaturesModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFeaturesModule";
 import { ScanFooterCtaModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFooterCtaModule";
 import { Metadata } from "next";
@@ -17,6 +18,7 @@ export default function Page() {
             <ScanLandingHeroModule />
             <ScanStatementModule />
             <ScanHowItWorksModule />
+            <ScanWhatYouGetModule />
             <ScanFeaturesModule />
             <ScanFooterCtaModule />
         </PageLayout>

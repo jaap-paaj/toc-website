@@ -60,6 +60,19 @@ export const scanContent = {
             }
         ]
     },
+    whatYouGet: {
+        eyebrow: "What you get",
+        title: "Clear outcomes, not experiments.",
+        description: [
+            "A shared understanding of where AI should — and should not — change how work gets done.",
+            "A prioritised list of 3–7 AI opportunities with owners and expected impact.",
+            "An impact and feasibility matrix to speed decision-making.",
+            "A 90-day roadmap with next steps, owners and KPIs.",
+            "One process redesigned and documented, PoC-ready with acceptance criteria.",
+            "Sector benchmarks and cross-industry examples you can import.",
+            "Practical do’s and don’ts: technical notes, privacy and governance guidance."
+        ]
+    },
     features: {
         items: [
             {
