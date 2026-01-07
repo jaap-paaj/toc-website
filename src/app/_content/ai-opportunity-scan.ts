@@ -99,6 +99,23 @@ export const scanContent = {
             }
         ]
     },
+    introCall: {
+        eyebrow: "Intro call",
+        title: "The 20-minute intro call",
+        body: "Book 20 minutes. You'll get a sector analysis report and a clear next step - even if you don't continue.",
+        card: {
+            title: "What happens:",
+            bullets: [
+                "Quick context: your goals and situation (5 min)",
+                "We share what we see in your sector and two tailored AI ideas you could test quickly (10 min)",
+                "We agree on next steps: scan, scan + build, or something else (5 min)"
+            ],
+            cta: {
+                label: "Plan 20 minutes",
+                href: "/ai-opportunity-scan/book"
+            }
+        }
+    },
     faq: {
         eyebrow: "FAQ",
         title: "Frequently asked questions",

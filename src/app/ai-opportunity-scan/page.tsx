@@ -5,6 +5,7 @@ import { ScanHowItWorksModule } from "@/app/_components/ai-opportunity-scan/modu
 import { ScanWhatYouGetModule } from "@/app/_components/ai-opportunity-scan/modules/ScanWhatYouGetModule";
 import { ScanWhoThisIsForModule } from "@/app/_components/ai-opportunity-scan/modules/ScanWhoThisIsForModule";
 import { ScanPricingModule } from "@/app/_components/ai-opportunity-scan/modules/ScanPricingModule";
+import { ScanIntroCallModule } from "@/app/_components/ai-opportunity-scan/modules/ScanIntroCallModule";
 import { ScanFaqModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFaqModule";
 import { ScanFooterCtaModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFooterCtaModule";
 import { Metadata } from "next";
@@ -23,6 +24,7 @@ export default function Page() {
             <ScanWhatYouGetModule />
             <ScanWhoThisIsForModule />
             <ScanPricingModule />
+            <ScanIntroCallModule />
             <ScanFaqModule />
             <ScanFooterCtaModule />
         </PageLayout>

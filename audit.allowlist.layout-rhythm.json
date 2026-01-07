@@ -118,5 +118,13 @@
         "linkedCanon": "CARD_CANON.md",
         "status": "long-term",
         "expires": "2026-12-31"
+    },
+    {
+        "path": "src/app/_components/ai-opportunity-scan/modules/ScanIntroCallModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "CTA button requires py-2 override for multiline height support.",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "long-term",
+        "expires": "2026-12-31"
     }
 ]
