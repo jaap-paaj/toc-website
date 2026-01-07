@@ -31,13 +31,22 @@ export function ScanBookingModule() {
                         </Button>
                     </div>
 
-                    {/* Center: Title */}
-                    <Heading level={1} size="page" className="text-center shrink-0">
+                    {/* Center: Title (can wrap now) */}
+                    <Heading level={1} size="page" className="text-center">
                         {scanContent.booking.title}
                     </Heading>
 
-                    {/* Right: Spacer for optical centering */}
-                    <div className="flex-1" aria-hidden="true" />
+                    {/* Right: Invisible clone for perfect mechanical centering */}
+                    <div className="flex-1 flex justify-end" aria-hidden="true">
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="invisible pointer-events-none"
+                            tabIndex={-1}
+                        >
+                            <ArrowLeft />
+                        </Button>
+                    </div>
                 </div>
 
                 <div className="w-full">
