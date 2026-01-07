@@ -3,7 +3,7 @@ import { ScanLandingHeroModule } from "@/app/_components/ai-opportunity-scan/mod
 import { ScanStatementModule } from "@/app/_components/ai-opportunity-scan/modules/ScanStatementModule";
 import { ScanHowItWorksModule } from "@/app/_components/ai-opportunity-scan/modules/ScanHowItWorksModule";
 import { ScanWhatYouGetModule } from "@/app/_components/ai-opportunity-scan/modules/ScanWhatYouGetModule";
-import { ScanFeaturesModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFeaturesModule";
+import { ScanWhoThisIsForModule } from "@/app/_components/ai-opportunity-scan/modules/ScanWhoThisIsForModule";
 import { ScanFooterCtaModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFooterCtaModule";
 import { Metadata } from "next";
 
@@ -19,7 +19,7 @@ export default function Page() {
             <ScanStatementModule />
             <ScanHowItWorksModule />
             <ScanWhatYouGetModule />
-            <ScanFeaturesModule />
+            <ScanWhoThisIsForModule />
             <ScanFooterCtaModule />
         </PageLayout>
     );

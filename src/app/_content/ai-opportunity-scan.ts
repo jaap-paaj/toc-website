@@ -73,6 +73,16 @@ export const scanContent = {
             "Practical do’s and don’ts: technical notes, privacy and governance guidance."
         ]
     },
+    whoThisIsFor: {
+        eyebrow: "Who this is for",
+        title: "This scan is for",
+        subtitle: "heads of operations, marketing, sales or product at organisations that:",
+        items: [
+            "Have 30+ employees or several repeatable processes",
+            "Already expect to use AI — or are under pressure to adopt it — but don't yet know where",
+            "Want decisions and measurable progress, not just experiments"
+        ]
+    },
     features: {
         items: [
             {
