@@ -21,8 +21,8 @@ export function ScanIntroCallModule() {
                 {/* Canonical Divider Wrapper (Manual implementation to match SectionHeader divider={true}) */}
                 <div className={cn("w-full border-t border-border/80 pt-6 md:pt-8", /* lint:allowed - Divider manual spacing */)}>
 
-                    {/* Canonical Split Layout Pattern (referencing layoutTokens.splitBalanced from ScanStatementModule) */}
-                    <div className={cn(layoutTokens.splitHero)}>
+                    {/* Canonical Split Layout Pattern (referencing layoutTokens.splitBalanced for 50/50) */}
+                    <div className={cn(layoutTokens.splitBalanced)}>
 
                         {/* Left Column: Narrative Stack */}
                         <div className={cn(spacing.stackLg, "min-w-0")}>
