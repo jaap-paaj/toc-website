@@ -102,5 +102,21 @@
         "linkedCanon": "ARCHITECTURE.md",
         "status": "temporary",
         "expires": "2026-01-01"
+    },
+    {
+        "path": "src/app/_components/ai-opportunity-scan/modules/ScanLandingHeroModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Internal logo rail spacing requires specific gap not covered by stack tokens.",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "temporary",
+        "expires": "2026-04-01"
+    },
+    {
+        "path": "src/app/_components/ai-opportunity-scan/modules/ScanStatementModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "CTA button requires py-2 override for multiline height support.",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "long-term",
+        "expires": "2026-12-31"
     }
 ]

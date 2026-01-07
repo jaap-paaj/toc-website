@@ -8,7 +8,7 @@ import { spacing } from "@/design-system/tokens/spacing";
 
 export function ScanFeaturesModule() {
     return (
-        <section className={spacing.modulePad.m}>
+        <section className={cn(spacing.modulePad.m, "tone-light bg-background text-foreground")}>
             <div className={cn("container mx-auto")}>
                 <FeatureGridSection
                     items={scanContent.features.items}

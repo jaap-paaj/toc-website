@@ -11,13 +11,30 @@ export const scanContent = {
             href: "/ai-opportunity-scan/book"
         }
     },
-    statement: {
-        eyebrow: "The Opportunity",
-        // Using string array for multi-line emphasis in EditorialStatementSection
-        lines: [
-            "CLARITY IN",
-            "A NOISY WORLD"
+    trust: {
+        label: "Trusted by the best",
+        logos: [
+            { name: "Randstad", src: "/images/clients/randstad_logo.png" },
+            { name: "AkzoNobel", src: "/images/clients/akzo_logo.png" },
+            { name: "Eneco", src: "/images/clients/eneco_logo.png" }
         ]
+    },
+    statement: {
+        eyebrow: "Why now",
+        title: "Every month without clarity is a month your competitors use to ship.",
+        body: [
+            "AI is everywhere, but choosing what to do with it is hard. Most organisations end up testing tools or running pilots that don't change who does what. Your best people stay stuck in low-value work. Experiments lead nowhere.",
+            "This scan is the opposite of tool shopping. We map where AI makes sense for your organisation and deliver a build-ready plan – so experiments lead to decisions, not theatre."
+        ],
+        interrupt: "There is no such thing as a last mover advantage",
+        goal: {
+            title: "One clear goal:",
+            description: "Use AI where it actually delivers ROI and shifts human time to higher-value work."
+        },
+        cta: {
+            label: "Plan 20 minutes",
+            href: "/ai-opportunity-scan/book"
+        }
     },
     features: {
         items: [
