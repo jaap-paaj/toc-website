@@ -83,6 +83,22 @@ export const scanContent = {
             "Want decisions and measurable progress, not just experiments"
         ]
     },
+    pricing: {
+        eyebrow: "PRICING",
+        title: "Simple, fixed pricing.",
+        items: [
+            {
+                title: "AI Opportunity Scan",
+                price: "€2,500",
+                description: "On-site, half a day",
+            },
+            {
+                title: "Scan + First Automation",
+                price: "€6,000",
+                description: "Scan followed by a production sprint that delivers your first working automation",
+            }
+        ]
+    },
     features: {
         items: [
             {
