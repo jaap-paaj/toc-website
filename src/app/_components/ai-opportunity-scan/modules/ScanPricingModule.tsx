@@ -18,6 +18,7 @@ export function ScanPricingModule() {
                     eyebrow={scanContent.pricing.eyebrow}
                     title={scanContent.pricing.title}
                     variant="stacked"
+                    divider={true}
                 />
 
                 {/* Pricing Grid: 2-column adapted from Process 3-column */}

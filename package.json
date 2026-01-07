@@ -25,6 +25,7 @@
     "audit:all": "npm run audit:typography && npm run audit:surfaces && npm run audit:spacing && npm run audit:states && npm run audit:color && npm run audit:theme && npm run audit:pages && npm run audit:content-shape && npm run audit:card-canon && npm run audit:legacy-heights && npm run audit:layout-rhythm"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-checkbox": "^1.3.3",
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-radio-group": "^1.3.8",

@@ -99,6 +99,24 @@ export const scanContent = {
             }
         ]
     },
+    faq: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        items: [
+            {
+                question: "Who needs to be involved in the scan?",
+                answer: "We recommend involving a key decision-maker (COO, Head of Product, or Transformation Lead) and 1-2 subject matter experts who understand the day-to-day operations. The commitment is minimal: 20 minutes for intake and a half-day workshop."
+            },
+            {
+                question: "Do I need to have a technical team?",
+                answer: "No. The output of the scan is designed to be actionable whether you have an in-house team or generic IT support. We provide a build-ready plan that can be handed to developers or implemented with low-code tools."
+            },
+            {
+                question: "What happens after the scan?",
+                answer: "You walk away with a roadmap and a fully documented process ready for a Proof of Concept (PoC). You can choose to implement this yourself, or partner with us to build the PoC. There is no obligation to continue."
+            }
+        ]
+    },
     features: {
         items: [
             {
