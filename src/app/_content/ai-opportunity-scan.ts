@@ -1,10 +1,13 @@
 
 export const scanContent = {
     hero: {
-        title: "Unlock Your AI Potential",
-        description: "Join us for a focused 45-minute Opportunity Scan to identify where AI can deliver the most immediate value to your organization.",
+        title: "AI Opportunity Scan: priorities, roadmap and one PoC-ready process in half a day",
+        subtitle: "Know where AI pays off. Get a build-ready plan, not a slide deck.",
+        outcomes: [
+            "Typical outcome 3 prioritised use cases · 1 process mapped for PoC · 90-day roadmap · concrete owners and next steps"
+        ],
         cta: {
-            label: "Book Your Scan",
+            label: "Plan 20 minutes",
             href: "/ai-opportunity-scan/book"
         }
     },
