@@ -12,7 +12,7 @@ export const scanContent = {
         }
     },
     trust: {
-        label: "Trusted by the best",
+        label: "Trusted by",
         logos: [
             { name: "Randstad", src: "/images/clients/randstad_logo.png" },
             { name: "AkzoNobel", src: "/images/clients/akzo_logo.png" },
