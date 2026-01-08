@@ -46,7 +46,7 @@ export function ScanPricingModule() {
                                 </div>
                             </CardHeader>
 
-                            <CardContent className={cn(spacing.stackMd, "pb-6")}> {/* lint:allowed - primitive fix for bottom padding */}
+                            <CardContent className={cn(spacing.stackMd)}>
                                 <Text size="md" className="text-muted-foreground">
                                     {item.description}
                                 </Text>

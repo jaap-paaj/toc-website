@@ -81,7 +81,7 @@ const CardContent = React.forwardRef<
   <div
     ref={ref}
     data-slot="card-content"
-    className={cn("px-6", className)}
+    className={cn("px-6 pb-6", className)} /* lint:allowed - fix missing bottom padding in primitive */
     {...props}
   />
 ))

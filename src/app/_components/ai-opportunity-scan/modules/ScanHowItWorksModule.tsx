@@ -49,7 +49,7 @@ export function ScanHowItWorksModule() {
                                 </div>
                             </CardHeader>
 
-                            <CardContent className={cn(spacing.stackMd, "pb-6")}> {/* lint:allowed - primitive fix for bottom padding */}
+                            <CardContent>
                                 <Text size="md" className="text-muted-foreground">
                                     {step.description}
                                 </Text>

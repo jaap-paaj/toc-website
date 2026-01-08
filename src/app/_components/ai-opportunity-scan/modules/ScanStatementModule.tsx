@@ -53,7 +53,7 @@ export function ScanStatementModule() {
 
                         {/* Content: Goal + CTA (px-6 canonical) */}
                         {/* Task B: Natural flow, no flex-1/justify-end */}
-                        <CardContent className={cn("flex flex-col pb-6", spacing.stackLg)}> {/* lint:allowed - pb-6 missing from primitive */}
+                        <CardContent className={cn("flex flex-col", spacing.stackLg)}>
                             {/* Divider-like separation via stack */}
                             <div className={spacing.stackXs}>
                                 <SectionEyebrow className={typography.variants.meta.label}>

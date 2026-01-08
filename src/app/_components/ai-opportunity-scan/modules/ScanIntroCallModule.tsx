@@ -47,7 +47,7 @@ export function ScanIntroCallModule() {
                             </CardHeader>
 
                             {/* Content: Bullets + CTA */}
-                            <CardContent className={cn("flex flex-col pb-6", spacing.stackLg)}> {/* lint:allowed - pb-6 missing from primitive */}
+                            <CardContent className={cn("flex flex-col", spacing.stackLg)}>
                                 <ul className={spacing.stackSm}>
                                     {scanContent.introCall.card.bullets.map((item, i) => (
                                         <li key={i} className={cn("flex items-start gap-3")}> {/* lint:allowed - Checklist row gap */}

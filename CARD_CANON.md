@@ -51,7 +51,16 @@ All existing card components are mapped as follows. This mapping is **LOCKED**.
 
 ---
 
-## 4. Prohibited Patterns (Strict)
+## 4. Primitive Spacing Defaults (Canonical)
+
+The base `Card` primitives enforce the following default spacing structure to guarantee visual balance without overrides:
+- **`CardHeader`**: `p-6` (24px all sides)
+- **`CardContent`**: `px-6 pb-6` (24px side/bottom)
+- **`CardFooter`**: `px-6` (24px side, auto vertical)
+
+ Deviating from these defaults requires a new `variant` or specific exemption.
+
+## 5. Prohibited Patterns (Strict)
 
 The following patterns are **VIOLATIONS** of this canon:
 
