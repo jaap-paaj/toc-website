@@ -121,16 +121,28 @@ export const scanContent = {
         title: "Frequently asked questions",
         items: [
             {
-                question: "Who needs to be involved in the scan?",
-                answer: "We recommend involving a key decision-maker (COO, Head of Product, or Transformation Lead) and 1-2 subject matter experts who understand the day-to-day operations. The commitment is minimal: 20 minutes for intake and a half-day workshop."
+                question: "Is this a full implementation?",
+                answer: "No. The scan is a focused workshop that produces a build-ready plan. High-value, low-effort ideas can usually move to PoC within weeks."
             },
             {
-                question: "Do I need to have a technical team?",
-                answer: "No. The output of the scan is designed to be actionable whether you have an in-house team or generic IT support. We provide a build-ready plan that can be handed to developers or implemented with low-code tools."
+                question: "How long does the session take?",
+                answer: "About 3.5 to 4 hours on-site."
             },
             {
-                question: "What happens after the scan?",
-                answer: "You walk away with a roadmap and a fully documented process ready for a Proof of Concept (PoC). You can choose to implement this yourself, or partner with us to build the PoC. There is no obligation to continue."
+                question: "Who should attend?",
+                answer: "4–6 decision-makers and domain experts. We need people who can decide or commit resources."
+            },
+            {
+                question: "What if we don’t continue after the scan?",
+                answer: "The deliverables are yours. No strings attached."
+            },
+            {
+                question: "Do you handle data and privacy?",
+                answer: "Yes. Deliverables include governance and privacy guidance. We follow GDPR and current AI governance principles."
+            },
+            {
+                question: "How quickly can we start?",
+                answer: "We usually schedule the intake within a week and the on-site scan shortly after."
             }
         ]
     },
