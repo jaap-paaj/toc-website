@@ -40,7 +40,7 @@ export function ScanStatementModule() {
 
                     {/* Right Column: Focus Card (1/3 width) */}
                     {/* Task A: Added min-w-0 to prevent grid blowout */}
-                    <Surface variant="card" className="flex flex-col min-w-0 md:self-center"> {/* Task C: No h-full */}
+                    <Surface variant="card" className={cn("flex flex-col min-w-0 sticky self-start", spacing.layout.stickyHeaderOffset)}> {/* Task C: Sticky behavior */}
                         {/* Header: Quote + Interrupt (p-6 canonical) */}
                         <CardHeader>
                             <div className={spacing.stackMd}>

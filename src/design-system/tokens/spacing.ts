@@ -28,6 +28,10 @@ export const spacing = {
         heroFollower: "pt-10 md:pt-16 lg:pt-24",
     },
 
+    layout: {
+        stickyHeaderOffset: "top-24",
+    },
+
     sectionStack: {
         gap: {
             s: "gap-8 md:gap-10 lg:gap-12",
