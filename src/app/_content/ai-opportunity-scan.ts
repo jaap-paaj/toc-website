@@ -21,7 +21,7 @@ export const scanContent = {
     },
     statement: {
         eyebrow: "Why now",
-        title: "Every month without clarity is a month your competitors use to ship.",
+        title: "Every month without clarity is a month your competitors use to ship",
         body: [
             "AI is everywhere, but choosing what to do with it is hard. Most organisations end up testing tools or running pilots that don't change who does what. Your best people stay stuck in low-value work. Experiments lead nowhere.",
             "This scan is the opposite of tool shopping. We map where AI makes sense for your organisation and deliver a build-ready plan – so experiments lead to decisions, not theatre."
@@ -38,7 +38,7 @@ export const scanContent = {
     },
     howItWorks: {
         eyebrow: "Process",
-        title: "Three steps to certainty.",
+        title: "Three steps to certainty",
         steps: [
             {
                 step: "01",
@@ -62,7 +62,7 @@ export const scanContent = {
     },
     whatYouGet: {
         eyebrow: "What you get",
-        title: "Clear outcomes, not experiments.",
+        title: "Clear outcomes, not experiments",
         description: [
             "A shared understanding of where AI should — and should not — change how work gets done.",
             "A prioritised list of 3–7 AI opportunities with owners and expected impact.",
@@ -85,7 +85,7 @@ export const scanContent = {
     },
     pricing: {
         eyebrow: "PRICING",
-        title: "Simple, fixed pricing.",
+        title: "Simple, fixed pricing",
         items: [
             {
                 title: "AI Opportunity Scan",

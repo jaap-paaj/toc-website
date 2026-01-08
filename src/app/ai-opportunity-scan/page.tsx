@@ -12,7 +12,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "AI Opportunity Scan | The Only Constant",
-    description: "Identify high-value AI opportunities in your business with a focused 45-minute strategy session.",
+    description: "Get clarity on where AI creates value. A half-day AI Opportunity Scan delivering priorities, a roadmap, and one PoC-ready process.",
 };
 
 export default function Page() {
