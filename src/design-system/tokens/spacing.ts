@@ -46,6 +46,7 @@ export const spacing = {
         cardCta: "pt-6",
         cardText: "mb-6",
         editorialGrid: "pt-6 md:pt-8",
+        contentCard: "p-6 md:p-8 gap-3 flex flex-col", // Canonical ContentCard rhythm
     },
 
     // --------------------------------------------------
