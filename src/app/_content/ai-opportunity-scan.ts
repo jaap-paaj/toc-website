@@ -23,13 +23,12 @@ export const scanContent = {
         eyebrow: "Why now",
         title: "Every month without clarity is a month your competitors use to ship",
         body: [
-            "AI is everywhere, but choosing what to do with it is hard. Most organisations end up testing tools or running pilots that don't change who does what. Your best people stay stuck in low-value work. Experiments lead nowhere.",
-            "This scan is the opposite of tool shopping. We map where AI makes sense for your organisation and deliver a build-ready plan – so experiments lead to decisions, not theatre."
+            "AI is everywhere, but choosing what to do with it is hard. Most organisations end up shopping tools or running pilots that do not change who does what. That keeps your best people on low-value work and prevents AI from delivering lasting value.",
         ],
         interrupt: "There is no such thing as a last mover advantage",
         goal: {
             title: "One clear goal:",
-            description: "Use AI where it actually delivers ROI and shifts human time to higher-value work."
+            description: "We show where AI should be used, then help you build it."
         },
         cta: {
             label: "Plan 20 minutes",
@@ -44,19 +43,19 @@ export const scanContent = {
                 step: "01",
                 duration: "20 minutes",
                 title: "Quick intake",
-                description: "We align on goals, define scope and prepare tailored sector insights."
+                description: "Align goals, scope and outcomes. We prepare sector insights so the session is already tailored."
             },
             {
                 step: "02",
                 duration: "Half a day",
                 title: "Opportunity session",
-                description: "We map where value is created or lost, identify high-impact AI opportunities, prioritise use cases, and redesign one process so a PoC can start immediately."
+                description: "We map where revenue is created, where value leaks, and where future value will come from. We collect use cases, detail them with our AI capability cards, score them on value and effort, and research sector and cross-sector examples. We pick the top bets and map one process into PoC-ready format."
             },
             {
                 step: "03",
                 duration: "Same day",
                 title: "Delivery",
-                description: "You leave with a prioritised list, an impact/feasibility matrix, a 90-day roadmap, and one process documented and PoC-ready."
+                description: "A prioritised list, an impact and feasibility matrix, a 90-day roadmap, and one process redesigned and documented ready for PoC."
             }
         ]
     },
@@ -64,13 +63,12 @@ export const scanContent = {
         eyebrow: "What you get",
         title: "Clear outcomes, not experiments",
         description: [
-            "A shared understanding of where AI should — and should not — change how work gets done.",
-            "A prioritised list of 3–7 AI opportunities with owners and expected impact.",
-            "An impact and feasibility matrix to speed decision-making.",
-            "A 90-day roadmap with next steps, owners and KPIs.",
-            "One process redesigned and documented, PoC-ready with acceptance criteria.",
-            "Sector benchmarks and cross-industry examples you can import.",
-            "Practical do’s and don’ts: technical notes, privacy and governance guidance."
+            "Shared understanding of where AI should and should not be used",
+            "3 to 7 prioritised use cases with named owners and expected impact",
+            "Impact and feasibility matrix to speed decision making",
+            "90-day roadmap with owners and KPIs",
+            "One process redesigned and PoC-ready, with acceptance criteria and a test data plan",
+            "Practical do's and don'ts including technical notes, privacy and governance guidance"
         ]
     },
     whoThisIsFor: {
@@ -90,12 +88,12 @@ export const scanContent = {
             {
                 title: "AI Opportunity Scan",
                 price: "€2,500",
-                description: "On-site, half a day",
+                description: "On-site, half a day. Priorities, roadmap, and one PoC-ready process.",
             },
             {
                 title: "Scan + First Automation",
                 price: "€6,000",
-                description: "Scan followed by a production sprint that delivers your first working automation",
+                description: "Scan followed by a production sprint that delivers your first working automation.",
             }
         ]
     },
@@ -106,9 +104,9 @@ export const scanContent = {
         card: {
             title: "What happens:",
             bullets: [
-                "Quick context: your goals and situation (5 min)",
-                "We share what we see in your sector and two tailored AI ideas you could test quickly (10 min)",
-                "We agree on next steps: scan, scan + build, or something else (5 min)"
+                "Quick context and goals (5 minutes)",
+                "We share sector context and two tailored ideas you can test quickly (10 minutes)",
+                "Agree the next step: on-site scan, scan plus build, or PoC (5 minutes)"
             ],
             cta: {
                 label: "Plan 20 minutes",
