@@ -6,7 +6,12 @@ import { scanContent } from "@/app/_content/ai-opportunity-scan";
 import { trackEvent } from "@/lib/analytics/ga";
 import { TextStack } from "../primitives/TextStack";
 
-export function ScanLandingHeroModule() {
+interface ScanLandingHeroModuleProps {
+    title?: string;
+    subtitle?: string;
+}
+
+export function ScanLandingHeroModule({ title, subtitle }: ScanLandingHeroModuleProps) {
     const handleCtaClick = () => {
         trackEvent("cta_click", {
             cta_label: scanContent.hero.cta.label,
@@ -17,8 +22,8 @@ export function ScanLandingHeroModule() {
     return (
         <section className={cn("w-full", spacing.modulePad.l, spacing.modulePadTop.xl)}>
             <TextStack
-                title={scanContent.hero.title}
-                subtitle={scanContent.hero.subtitle}
+                title={title || scanContent.hero.title}
+                subtitle={subtitle || scanContent.hero.subtitle}
                 outcomes={scanContent.hero.outcomes}
                 cta={scanContent.hero.cta}
                 trust={scanContent.trust}

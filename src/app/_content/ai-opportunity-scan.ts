@@ -193,3 +193,27 @@ export const scanContent = {
         }
     }
 } as const;
+
+export type HeroVariant = {
+    title: string;
+    subtitle: string;
+};
+
+export const scanHeroVariants: Record<string, HeroVariant> = {
+    "v-human-time": {
+        title: "AI Opportunity Scan: HUMAN TIME IS THE BOTTLENECK",
+        subtitle: "Your best people are stuck in work they should not do. We find the AI priorities that free your team and give you a build-ready 90-day roadmap."
+    },
+    "v-theatre": {
+        title: "AI Opportunity Scan: EXPERIMENTS WITHOUT PLANS ARE JUST THEATRE",
+        subtitle: "Pilots that don’t tie to decisions waste time and budget. We turn experiments into decision-making workstreams and PoC-ready processes."
+    },
+    "v-right-things": {
+        title: "AI Opportunity Scan: DOING THE RIGHT THINGS vs DOING THINGS RIGHT",
+        subtitle: "Most AI projects make the wrong work faster. We show where AI creates business outcomes and shift human time to higher-value work."
+    },
+    "v-arriving-late": {
+        title: "AI Opportunity Scan: THE REAL COST IS ARRIVING LATE",
+        subtitle: "While you calculate, competitors ship. We map the opportunities you should act on now and deliver a build-ready plan."
+    }
+} as const;
