@@ -3,7 +3,7 @@ import { Heading } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";
-import { contactContent } from "../contact.content";
+import { contactContent } from "@/app/_content/contact";
 
 export function ContactHeroModule() {
     return (

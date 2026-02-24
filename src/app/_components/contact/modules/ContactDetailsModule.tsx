@@ -1,6 +1,6 @@
 import { HomeModule } from "../../home/HomeModule";
 import React from "react";
-import { contactContent } from "../contact.content";
+import { contactContent } from "@/app/_content/contact";
 import { cn } from "@/lib/utils";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { Surface } from "@/design-system/components/Surfaces";
