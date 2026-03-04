@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { BrandHeroHeadline } from "@/design-system/components/BrandHeroHeadline";
 
-import { homeContent } from "../home.content";
+import { homeContent } from "@/app/_content/home";
 import { trackEvent } from "@/lib/analytics/ga";
 
 export function HomeHeroModule() {

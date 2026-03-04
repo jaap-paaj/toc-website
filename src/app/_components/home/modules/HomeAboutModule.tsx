@@ -5,7 +5,7 @@ import { Heading, Text as Paragraph } from "@/design-system/components/Typograph
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 
-import { homeContent } from "../home.content";
+import { homeContent } from "@/app/_content/home";
 
 export function HomeAboutModule() {
     return (

@@ -1,5 +1,6 @@
 
 
+
 export const homeContent = {
     hero: {
         description: "We are a strategy and design partner that helps teams move from assumptions to proven business results by making. We build prototypes, Proofs of Concept, and automations that create clarity fast.",
@@ -17,8 +18,8 @@ export const homeContent = {
         ],
         imageSrc: "/images/home/about.png",
         description: [
-            "We’re a strategy and design partner for teams that need progress without the noise. We combine business goals, human needs and emerging tech to create practical concepts, prototypes and automations built for real-world use.",
-            "We focus on outcomes, not hype. That means clearer decisions, less manual work, and early proof of what’s worth building — so you can move faster without guessing."
+            "We're a strategy and design partner for teams that need progress without the noise. We combine business goals, human needs and emerging tech to create practical concepts, prototypes and automations built for real-world use.",
+            "We focus on outcomes, not hype. That means clearer decisions, less manual work, and early proof of what's worth building — so you can move faster without guessing."
         ],
         cta: {
             label: "MORE ABOUT US",
@@ -31,7 +32,7 @@ export const homeContent = {
             {
                 id: "01",
                 title: "EDUCATE",
-                description: "Build practical AI and innovation skills fast through hands-on workshops using your team’s real challenges.",
+                description: "Build practical AI and innovation skills fast through hands-on workshops using your team's real challenges.",
                 cta: {
                     label: "Explore Educate",
                     href: "/educate",

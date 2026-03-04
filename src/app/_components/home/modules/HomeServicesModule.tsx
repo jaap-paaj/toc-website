@@ -1,6 +1,6 @@
 import { CapabilityCardsSection } from "@/components/sections/CapabilityCardsSection";
 import { HomeModule } from "../HomeModule";
-import { homeContent } from "../home.content";
+import { homeContent } from "@/app/_content/home";
 
 export function HomeServicesModule() {
     return (
