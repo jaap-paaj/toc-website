@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { spacing } from "@/design-system/tokens/spacing";
 
-import { educateContent } from "../educate.content";
+import { educateContent } from "@/app/_content/educate";
 
 // --- Sub-Module: Value Props ---
 

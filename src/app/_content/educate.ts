@@ -23,7 +23,7 @@ export const educateContent = {
                 },
                 {
                     title: "EXECUTIVE AI STRATEGY",
-                    description: "Discover AI’s potential for innovation and growth. This training provides executives with the strategic insights to drive smarter decisions and lead change.",
+                    description: "Discover AI's potential for innovation and growth. This training provides executives with the strategic insights to drive smarter decisions and lead change.",
                 }
             ]
         },
@@ -33,11 +33,11 @@ export const educateContent = {
             items: [
                 {
                     title: "INNOVATION BY DESIGN",
-                    description: "Master creative problem-solving with a human-centered approach. This training helps you understand users, reframe challenges, and design solutions that create real impact. You’ll learn practical methods you can apply immediately to any project or team.",
+                    description: "Master creative problem-solving with a human-centered approach. This training helps you understand users, reframe challenges, and design solutions that create real impact. You'll learn practical methods you can apply immediately to any project or team.",
                 },
                 {
                     title: "EXPERIENCE MAPPING",
-                    description: "Learn how to create customer journey maps and service blueprints that reveal how people interact with your product or service. You’ll uncover pain points, spot opportunities and turn insights into practical improvements.",
+                    description: "Learn how to create customer journey maps and service blueprints that reveal how people interact with your product or service. You'll uncover pain points, spot opportunities and turn insights into practical improvements.",
                 }
             ]
         }

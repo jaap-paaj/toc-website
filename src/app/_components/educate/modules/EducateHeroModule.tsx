@@ -1,6 +1,6 @@
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { CapabilityHeroSection } from "@/components/sections/CapabilityHeroSection";
-import { educateContent } from "../educate.content";
+import { educateContent } from "@/app/_content/educate";
 
 export function EducateHeroModule() {
     const { hero } = educateContent;

@@ -1,6 +1,6 @@
 import { ImageDuoSection } from "@/components/sections/ImageDuoSection";
 import { HomeModule } from "../../home/HomeModule";
-import { educateContent } from "../educate.content";
+import { educateContent } from "@/app/_content/educate";
 
 export function EducateWhyUsImageDuoModule() {
     return (

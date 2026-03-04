@@ -1,6 +1,6 @@
 import { HomeModule } from "../../home/HomeModule";
 import { TestimonialsSection, TestimonialItem } from "@/components/sections/TestimonialsSection";
-import { educateContent } from "../educate.content";
+import { educateContent } from "@/app/_content/educate";
 
 export function EducateTestimonialsModule() {
     return (

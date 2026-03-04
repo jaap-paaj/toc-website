@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { HomeModule } from "../../home/HomeModule";
 import { StackedEditorialSection } from "@/components/sections/StackedEditorialSection";
-import { educateContent } from "../educate.content";
+import { educateContent } from "@/app/_content/educate";
 
 export function EducateTrainingCatalogModule() {
     return (
