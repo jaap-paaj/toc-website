@@ -2,7 +2,7 @@
 
 import { HomeModule } from "../../home/HomeModule";
 import { ImageDuoSection } from "@/components/sections/ImageDuoSection";
-import { innovateContent } from "../innovate.content";
+import { innovateContent } from "@/app/_content/innovate";
 
 export function InnovateImageDuoModule() {
     return (

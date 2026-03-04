@@ -40,6 +40,12 @@ export interface InnovateContent {
             body: string;
         }[];
     };
+    imageDuo: {
+        left: string;
+        altLeft: string;
+        right: string;
+        altRight: string;
+    };
 }
 
 export const innovateContent: InnovateContent = {
@@ -125,5 +131,11 @@ export const innovateContent: InnovateContent = {
                 body: "Every sprint ends with production-ready insights."
             }
         ]
+    },
+    imageDuo: {
+        left: "/images/innovate/innovate-workshop-mapping.png",
+        altLeft: "Innovate workshop mapping",
+        right: "/images/innovate/innovate-ideation-sketch.png",
+        altRight: "Innovate ideation sketch"
     }
 };
