@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { Heading } from "@/design-system/components/Typography";
 import { Surface } from "@/design-system/components/Surfaces";
 
-
 import { typography } from "@/design-system/tokens/typography";
 
 type WorkflowCardProps = {
@@ -41,7 +40,7 @@ export function WorkflowCard({
                         {icon}
                     </div>
 
-                    <Heading level={3} size="sm" className="group-hover:text-primary transition-colors">
+                    <Heading level={3} size="sm" className="underline underline-offset-4 decoration-transparent group-hover:decoration-current transition-colors duration-200">
                         {title}
                     </Heading>
 

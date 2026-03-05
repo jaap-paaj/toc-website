@@ -58,7 +58,7 @@ export function ContactDetailsModule() {
                                                         href={card.mapLink.href}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="underline hover:text-primary-foreground pt-1" /* lint:allowed */
+                                                        className="underline underline-offset-4 decoration-transparent hover:decoration-current transition-colors duration-200 pt-1" /* lint:allowed */
                                                     >
                                                         {card.mapLink.label}
                                                     </a>
@@ -105,7 +105,7 @@ export function ContactDetailsModule() {
                                                     href={card.mapLink.href}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="underline hover:text-primary-foreground pt-1" /* lint:allowed */
+                                                    className="underline underline-offset-4 decoration-transparent hover:decoration-current transition-colors duration-200 pt-1" /* lint:allowed */
                                                 >
                                                     {card.mapLink.label}
                                                 </a>
