@@ -19,6 +19,13 @@ function formatDate(dateStr: string): string {
     });
 }
 
+function isRecent(dateStr: string, days = 30): boolean {
+    const postDate = new Date(dateStr);
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - days);
+    return postDate >= cutoff;
+}
+
 export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSectionProps) {
     if (posts.length === 0) return null;
 
@@ -36,7 +43,7 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
                 >
                     {/* Meta row: NEW badge + date */}
                     <div className="flex items-center justify-center gap-[var(--space-xs)]">
-                        {i === 0 && (
+                        {isRecent(post.date) && (
                             <span
                                 className={cn(
                                     typography.variants.meta.badge,
