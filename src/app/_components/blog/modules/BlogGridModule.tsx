@@ -22,22 +22,17 @@ export function BlogGridSection({ posts }: BlogGridSectionProps) {
     if (posts.length === 0) return null;
 
     return (
-        <div className={cn("container mx-auto flex flex-col", spacing.stackLg)}>
-            <div className="border-t border-border/80" />
+        <div className={cn("max-w-4xl mx-auto w-full px-6 flex flex-col", spacing.stackLg)}>
             <span className={typography.variants.meta.eyebrow}>
                 More from The Only Constant
             </span>
 
-            <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8")}>
+            <div className={cn("flex flex-col", spacing.sectionStack.gap.s)}>
                 {posts.map((post) => (
                     <Link
                         key={post.slug}
                         href={`/blog/${post.slug}`}
-                        className={cn(
-                            spacing.stackSm,
-                            "group border border-border rounded-surface bg-card shadow-surface hover:border-primary hover:shadow-card-hover transition-all",
-                            spacing.component.contentCard
-                        )}
+                        className={cn(spacing.stackXs, "group")}
                     >
                         {/* Date */}
                         <time
@@ -60,7 +55,7 @@ export function BlogGridSection({ posts }: BlogGridSectionProps) {
                         </Heading>
 
                         {/* Intro */}
-                        <Text size="sm" className="line-clamp-3">
+                        <Text size="md" className="text-muted-foreground line-clamp-3">
                             {post.intro}
                         </Text>
 
