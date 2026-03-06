@@ -14,6 +14,8 @@ tags:
 
 Long-term strategic planning... Does that still cut it when the next quarter feels like a distant future? It certainly makes talking about three-year plans seem quaint. We think it is time to make strategy more agile!
 
+![Project triangle: cheap, fast, good](/images/blog/pick-three-triangle.png)
+
 ## The age of Synthetic User Data and AI
 
 What's synthetic user data, you ask? It's data that's artificially generated, yet mirrors real-world respondents so accurately that can be used to support big decisions. Recent research shows that it's perfectly capable of simulating respondents for marketing use cases. Understanding prospects, customers, or users? No problem. Validating a new strategy, new product line or concept? Let's test and find out. Synthetic user data and AI allow you to test basically anything reliable, fast and way cheaper than any panel ever could.

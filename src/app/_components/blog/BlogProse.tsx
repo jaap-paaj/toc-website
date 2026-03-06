@@ -33,11 +33,16 @@ export function BlogProse({ content }: BlogProseProps) {
                             {children}
                         </Heading>
                     ),
-                    p: ({ children }) => (
-                        <Text size="lg" measure="2xl">
-                            {children}
-                        </Text>
-                    ),
+                    p: ({ children, node }) => {
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        const hasImg = node?.children?.some((child: any) => child.tagName === "img");
+                        if (hasImg) return <div className="pb-4">{children}</div>;
+                        return (
+                            <Text size="lg" measure="2xl">
+                                {children}
+                            </Text>
+                        );
+                    },
                     a: ({ href, children }) => (
                         <a
                             href={href}
@@ -86,6 +91,13 @@ export function BlogProse({ content }: BlogProseProps) {
                             </code>
                         );
                     },
+                    img: ({ src, alt }) => (
+                        <img
+                            src={src}
+                            alt={alt || ""}
+                            className="w-full max-w-md rounded-surface border border-border mb-6"
+                        />
+                    ),
                     pre: ({ children }) => (
                         <pre className="bg-muted p-4 rounded-panel overflow-x-auto">
                             {children}
