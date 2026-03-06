@@ -29,9 +29,9 @@ export function BlogProse({ content }: BlogProseProps) {
                         </Heading>
                     ),
                     h3: ({ children }) => (
-                        <h3 className="font-serif tracking-tight leading-snug font-bold uppercase text-lg sm:text-lg md:text-xl mt-2 text-balance max-w-2xl">
+                        <Heading level={3} size="card" className="mt-2">
                             {children}
-                        </h3>
+                        </Heading>
                     ),
                     p: ({ children }) => (
                         <Text size="md" measure="2xl">

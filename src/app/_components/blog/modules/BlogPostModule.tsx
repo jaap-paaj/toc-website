@@ -29,7 +29,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                 {/* Post header */}
                 <header className="flex flex-col items-center text-center gap-6 md:gap-8 max-w-4xl px-4 md:px-0">
                     {/* Title */}
-                    <Heading level={1} size="page" className="max-w-4xl text-balance">
+                    <Heading level={1} size="section" className="max-w-4xl text-balance">
                         {post.title}
                     </Heading>
 
@@ -45,7 +45,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                         <div className={cn(typography.variants.meta.label, "text-muted-foreground flex flex-wrap items-center justify-center gap-2")}>
                             {post.author && (
                                 <>
-                                    <span className="font-semibold">By</span> {post.author}
+                                    <span>By</span> {post.author}
                                     <span>&bull;</span>
                                 </>
                             )}
@@ -62,7 +62,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                                         key={tag}
                                         className={cn(
                                             typography.variants.meta.badge,
-                                            "bg-muted text-muted-foreground px-2 py-0.5 rounded-full"
+                                            "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full"
                                         )}
                                     >
                                         {tag}
@@ -86,9 +86,9 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
 
                     {/* Right: Sidebar */}
                     <aside className="hidden lg:flex flex-col items-start gap-8 sticky top-24 pl-8 border-l border-border/40">
-                        <Heading level={3} size="sm">
+                        <span className={cn(typography.variants.meta.eyebrow, "text-muted-foreground")}>
                             Latest Posts
-                        </Heading>
+                        </span>
                         <div className="flex flex-col gap-6">
                             {latestPosts.map((latest) => (
                                 <Link
@@ -99,7 +99,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                                     <span
                                         className={cn(
                                             typography.variants.body.md,
-                                            "font-semibold underline underline-offset-4 decoration-transparent group-hover:decoration-current transition-colors duration-200 line-clamp-2"
+                                            "underline underline-offset-4 decoration-transparent group-hover:decoration-current transition-colors duration-200 line-clamp-2"
                                         )}
                                     >
                                         {latest.title}
@@ -118,7 +118,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                         </Link>
                     </aside>
                 </div>
-            </div>
-        </HomeModule>
+            </div >
+        </HomeModule >
     );
 }

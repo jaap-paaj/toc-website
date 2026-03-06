@@ -71,7 +71,7 @@ export function BlogGridSection({ posts }: BlogGridSectionProps) {
                                     "text-muted-foreground"
                                 )}
                             >
-                                <span className="font-semibold">By</span> {post.author}
+                                <span>By</span> {post.author}
                             </span>
                         )}
                     </Link>

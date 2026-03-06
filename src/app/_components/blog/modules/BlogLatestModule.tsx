@@ -8,6 +8,7 @@ import type { BlogPostMeta } from "@/lib/blog/types";
 
 interface BlogLatestSectionProps {
     posts: BlogPostMeta[];
+    showBottomBorder?: boolean;
 }
 
 function formatDate(dateStr: string): string {
@@ -18,7 +19,7 @@ function formatDate(dateStr: string): string {
     });
 }
 
-export function BlogLatestSection({ posts }: BlogLatestSectionProps) {
+export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSectionProps) {
     if (posts.length === 0) return null;
 
     return (
@@ -29,7 +30,7 @@ export function BlogLatestSection({ posts }: BlogLatestSectionProps) {
                     className={cn(
                         spacing.stackMd,
                         "text-center max-w-4xl self-center w-full",
-                        i < posts.length - 1 &&
+                        (i < posts.length - 1 || showBottomBorder) &&
                         `border-b border-border ${spacing.modulePadBottom.xs}`
                     )}
                 >
@@ -71,9 +72,8 @@ export function BlogLatestSection({ posts }: BlogLatestSectionProps) {
                         {post.intro}
                     </Text>
 
-                    {/* Author */}
                     <div className={cn(typography.variants.meta.label, "text-muted-foreground")}>
-                        <span className="font-semibold">By</span> The Only Constant
+                        <span>By</span> The Only Constant
                     </div>
                 </article>
             ))}

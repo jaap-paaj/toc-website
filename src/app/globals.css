@@ -229,7 +229,13 @@
   --font-sans: var(--font-sans);
   --font-serif: var(--font-sans);
   /* Force serif to sans (Figtree) */
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-mono: ui-monospace,
+    SFMono-Regular,
+    "SF Mono",
+    Menlo,
+    Consolas,
+    "Liberation Mono",
+    monospace;
 
   /* Vertical spacing scale (page rhythm) */
   --space-xs: 0.5rem;
