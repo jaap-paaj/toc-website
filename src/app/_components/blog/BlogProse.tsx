@@ -34,7 +34,7 @@ export function BlogProse({ content }: BlogProseProps) {
                         </Heading>
                     ),
                     p: ({ children }) => (
-                        <Text size="md" measure="2xl">
+                        <Text size="lg" measure="2xl">
                             {children}
                         </Text>
                     ),
@@ -57,7 +57,7 @@ export function BlogProse({ content }: BlogProseProps) {
                         </ol>
                     ),
                     li: ({ children }) => (
-                        <li className={typography.variants.body.md}>{children}</li>
+                        <li className={typography.variants.body.lg}>{children}</li>
                     ),
                     blockquote: ({ children }) => (
                         <blockquote className="border-l-4 border-primary pl-6 italic">

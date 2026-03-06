@@ -112,7 +112,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                         </div>
                         <Link
                             href="/blog"
-                            className={cn(typography.variants.meta.label, "mt-4 underline underline-offset-4 decoration-border hover:decoration-current transition-colors")}
+                            className={cn(typography.variants.meta.label, "underline underline-offset-4 decoration-border hover:decoration-current transition-colors")}
                         >
                             View all blogs &rarr;
                         </Link>

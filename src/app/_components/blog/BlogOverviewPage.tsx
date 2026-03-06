@@ -1,9 +1,9 @@
 import { PageLayout } from "@/design-system/components/Layout";
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
-import { BlogHeroModule } from "./modules/BlogHeroModule";
 import { BlogLatestSection } from "./modules/BlogLatestModule";
 import { BlogGridSection } from "./modules/BlogGridModule";
+import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import type { BlogPostMeta } from "@/lib/blog/types";
@@ -19,13 +19,21 @@ export function BlogOverviewPage({ posts }: BlogOverviewPageProps) {
 
     return (
         <PageLayout variant="landing">
-            <BlogHeroModule />
-            <HomeModule id="blog-content" width="full" pad="m" gap="s" tone="light">
-                <div className={cn("flex flex-col w-full items-center", spacing.sectionStack.gap.m)}>
-                    <BlogLatestSection posts={latestPosts} />
-                    {olderPosts.length > 0 && <BlogGridSection posts={olderPosts} />}
+            <HomeModule id="blog-latest" width="full" padTop="xl" padBottom="m" gap="none" tone="light">
+                <div className="w-full flex flex-col items-center">
+                    <div className={cn("w-full flex flex-col items-center", spacing.sectionStack.gap.s)}>
+                        <h1 className={cn(typography.variants.meta.eyebrow, "text-secondary text-center")}>
+                            A blog by the only constant
+                        </h1>
+                        <BlogLatestSection posts={latestPosts} />
+                    </div>
                 </div>
             </HomeModule>
+            {olderPosts.length > 0 && (
+                <HomeModule id="blog-grid" width="full" tone="light" pad="m" padTop="none" gap="none">
+                    <BlogGridSection posts={olderPosts} />
+                </HomeModule>
+            )}
             <HomeModule
                 id="blog-cta-seam"
                 width="full"

@@ -23,6 +23,7 @@ export function BlogGridSection({ posts }: BlogGridSectionProps) {
 
     return (
         <div className={cn("container mx-auto flex flex-col", spacing.stackLg)}>
+            <div className="border-t border-border/80" />
             <span className={typography.variants.meta.eyebrow}>
                 More from The Only Constant
             </span>
@@ -34,7 +35,7 @@ export function BlogGridSection({ posts }: BlogGridSectionProps) {
                         href={`/blog/${post.slug}`}
                         className={cn(
                             spacing.stackSm,
-                            "group border border-border rounded-surface bg-card shadow-surface hover:border-primary hover:shadow-lg transition-all",
+                            "group border border-border rounded-surface bg-card shadow-surface hover:border-primary hover:shadow-card-hover transition-all",
                             spacing.component.contentCard
                         )}
                     >
