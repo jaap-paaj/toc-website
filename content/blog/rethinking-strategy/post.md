@@ -14,7 +14,7 @@ tags:
 
 Long-term strategic planning... Does that still cut it when the next quarter feels like a distant future? It certainly makes talking about three-year plans seem quaint. We think it is time to make strategy more agile!
 
-![Project triangle: cheap, fast, good](/images/blog/pick-three-triangle.png)
+![The Iron Triangle of Quality](/images/blog/pick-three-triangle.png)
 
 ## The age of Synthetic User Data and AI
 
