@@ -3,8 +3,6 @@ import { HomeModule } from "../HomeModule";
 import { cn } from "@/lib/utils";
 import { Heading, Text as Paragraph } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
-import { spacing } from "@/design-system/tokens/spacing";
-
 import { homeContent } from "@/app/_content/home";
 
 export function HomeAboutModule() {
