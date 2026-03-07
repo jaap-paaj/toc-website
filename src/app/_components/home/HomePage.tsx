@@ -4,6 +4,7 @@ import { HomeHeroModule } from "./modules/HomeHeroModule";
 import { HomeServicesModule } from "./modules/HomeServicesModule";
 import { HomeClientsModule } from "./modules/HomeClientsModule";
 import { HomeAboutModule } from "./modules/HomeAboutModule";
+import { HomeInsightsModule } from "./modules/HomeInsightsModule";
 import { HomeFooterCtaModule } from "./modules/HomeFooterCtaModule";
 
 export function HomePage() {
@@ -12,6 +13,7 @@ export function HomePage() {
             <HomeHeroModule />
             <HomeServicesModule />
             <HomeClientsModule />
+            <HomeInsightsModule />
             <HomeAboutModule />
             <HomeFooterCtaModule />
         </PageLayout>

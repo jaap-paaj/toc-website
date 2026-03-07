@@ -7,7 +7,7 @@ import { homeContent } from "@/app/_content/home";
 
 export function HomeAboutModule() {
     return (
-        <HomeModule id="about" width="full" pad="m" padTop="none" gap="s" containsContent>
+        <HomeModule id="about" width="full" pad="m" gap="s" containsContent>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                 {/* Left Column: Narrative */}
                 <div className="flex flex-col gap-6 md:gap-8">
