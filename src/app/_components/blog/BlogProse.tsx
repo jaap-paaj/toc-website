@@ -45,7 +45,7 @@ export function BlogProse({ content }: BlogProseProps) {
                     a: ({ href, children }) => (
                         <a
                             href={href}
-                            className="underline underline-offset-4 decoration-transparent hover:decoration-current transition-colors duration-200"
+                            className="underline underline-offset-4 decoration-foreground/30 hover:decoration-current transition-colors duration-200"
                         >
                             {children}
                         </a>
