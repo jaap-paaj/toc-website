@@ -22,7 +22,7 @@ function isRecent(dateStr: string, days = 30): boolean {
 }
 
 export function HomeInsightsModule() {
-    const posts = getAllPosts().slice(0, 4);
+    const posts = getAllPosts().slice(0, 3);
     if (posts.length === 0) return null;
 
     const [featured, ...rest] = posts;
