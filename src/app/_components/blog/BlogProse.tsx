@@ -20,7 +20,6 @@ export function BlogProse({ content }: BlogProseProps) {
     return (
         <article className="flex flex-col gap-[var(--space-md)]">
             <ReactMarkdown
-                children={content}
                 remarkPlugins={[remarkGfm]}
                 components={{
                     h2: ({ children }) => (
@@ -111,7 +110,9 @@ export function BlogProse({ content }: BlogProseProps) {
                         </pre>
                     ),
                 }}
-            />
+            >
+                {content}
+            </ReactMarkdown>
         </article>
     );
 }

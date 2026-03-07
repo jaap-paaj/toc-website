@@ -1,7 +1,5 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-
 import { FooterCtaSection } from "@/components/sections/FooterCtaSection";
 import { scanContent } from "@/app/_content/ai-opportunity-scan";
 import { spacing } from "@/design-system/tokens/spacing";

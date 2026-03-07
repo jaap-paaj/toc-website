@@ -7,8 +7,6 @@ import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { BlogProse } from "@/app/_components/blog/BlogProse";
 import type { BlogPost, BlogPostMeta } from "@/lib/blog/types";
-import { layoutTokens } from "@/design-system/tokens/layout";
-
 interface BlogPostModuleProps {
     post: BlogPost;
     latestPosts: BlogPostMeta[];

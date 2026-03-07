@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils";
 import { spacing } from "@/design-system/tokens/spacing";
 import { typography } from "@/design-system/tokens/typography";
-import { Surface } from "@/design-system/components/Surfaces";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { ContentCard } from "@/components/ui/ContentCard";

@@ -61,7 +61,7 @@ export function ContactFormModule() {
                     setFormError(result.message);
                 }
             }
-        } catch (_) {
+        } catch {
             setFormError("Something went wrong. Please try again.");
         } finally {
             setIsLoading(false);
