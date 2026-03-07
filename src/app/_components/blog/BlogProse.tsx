@@ -92,11 +92,18 @@ export function BlogProse({ content }: BlogProseProps) {
                         );
                     },
                     img: ({ src, alt }) => (
-                        <img
-                            src={src}
-                            alt={alt || ""}
-                            className="w-full max-w-md rounded-surface border border-border mb-6"
-                        />
+                        <figure className="flex flex-col items-center gap-[var(--space-sm)] w-full py-[var(--space-lg)]">
+                            <img
+                                src={src}
+                                alt={alt || ""}
+                                className="w-full max-w-md rounded-surface border border-border"
+                            />
+                            {alt && (
+                                <figcaption className={cn(typography.variants.meta.label, "text-muted-foreground text-center")}>
+                                    {alt}
+                                </figcaption>
+                            )}
+                        </figure>
                     ),
                     pre: ({ children }) => (
                         <pre className="bg-muted p-4 rounded-panel overflow-x-auto">
