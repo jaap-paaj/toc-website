@@ -23,7 +23,7 @@ export function BlogOverviewPage({ posts }: BlogOverviewPageProps) {
                 <div className="w-full flex flex-col items-center">
                     <div className={cn("w-full flex flex-col items-center", spacing.sectionStack.gap.s)}>
                         <h1 className={cn(typography.variants.meta.eyebrow, "text-secondary text-center")}>
-                            A blog by the only constant
+                            Latest Thinking
                         </h1>
                         <BlogLatestSection posts={latestPosts} />
                     </div>
