@@ -24,7 +24,7 @@ export function BlogGridSection({ posts }: BlogGridSectionProps) {
     return (
         <div className={cn("max-w-4xl mx-auto w-full px-6 flex flex-col", spacing.stackLg)}>
             <span className={typography.variants.meta.eyebrow}>
-                More from The Only Constant
+                More Thinking
             </span>
 
             <div className={cn("flex flex-col", spacing.sectionStack.gap.s)}>
@@ -59,17 +59,6 @@ export function BlogGridSection({ posts }: BlogGridSectionProps) {
                             {post.intro}
                         </Text>
 
-                        {/* Author */}
-                        {post.author && (
-                            <span
-                                className={cn(
-                                    typography.variants.meta.label,
-                                    "text-muted-foreground"
-                                )}
-                            >
-                                <span>By</span> {post.author}
-                            </span>
-                        )}
                     </Link>
                 ))}
             </div>

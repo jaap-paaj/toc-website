@@ -79,9 +79,6 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
                         {post.intro}
                     </Text>
 
-                    <div className={cn(typography.variants.meta.label, "text-muted-foreground")}>
-                        <span>By</span> The Only Constant
-                    </div>
                 </article>
             ))}
         </div>
