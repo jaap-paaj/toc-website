@@ -32,7 +32,7 @@ Understanding the core capabilities of AI will help you build enough intuition t
 
 ## Without both, you are not deciding, you are guessing
 
-Without process understanding, you do not know what to automate. Without technology understanding, you do not know how. From that comes the risk of solutioneering: starting with the tool instead of the problem. We've done that forever, and it seldom led to a happy place. So before you approve the next AI initiative, ask two things. Can we explain what this process does and where it breaks? And do we understand the technology well enough to judge whether this solution fits?
+Without process understanding, you do not know what to automate. Without technology understanding, you do not know how. From that comes the risk of solutioneering: starting with the tool instead of the problem. We have done that for decades. It rarely ends well. So before you approve the next AI initiative, ask two things. Can we explain what this process does and where it breaks? And do we understand the technology well enough to judge whether this solution fits?
 
 If you do not have answers to both, it is not a reason to delay.
 
