@@ -25,7 +25,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
         <HomeModule id="blog-post" width="full" tone="light" pad="m" padTop="xl" gap="s" containsContent>
             <div className={cn("w-full flex flex-col items-center", spacing.stackXl)}>
                 {/* Post header */}
-                <header className="flex flex-col items-center text-center gap-6 md:gap-8 max-w-4xl px-4 md:px-0">
+                <header className={cn("flex flex-col items-center text-center max-w-4xl", spacing.component.sectionHeader, "px-[var(--space-sm)] md:px-0")}>
                     {/* Title */}
                     <Heading level={1} size="section" className="max-w-4xl text-balance">
                         {post.title}
@@ -39,7 +39,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                     )}
 
                     {/* Author & Date */}
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col items-center gap-[var(--space-sm)]">
                         <div className={cn(typography.variants.meta.label, "text-muted-foreground flex flex-wrap items-center justify-center gap-2")}>
                             {post.author && (
                                 <>
@@ -54,7 +54,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
 
                         {/* Tags */}
                         {post.tags && post.tags.length > 0 && (
-                            <div className="flex items-center justify-center flex-wrap gap-2">
+                            <div className="flex items-center justify-center flex-wrap gap-[var(--space-xs)]">
                                 {post.tags.map((tag) => (
                                     <span
                                         key={tag}
@@ -75,7 +75,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                 <hr className="w-full max-w-5xl border-border" />
 
                 {/* Content Split: Prose + Sidebar */}
-                <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 lg:gap-16 items-start">
+                <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-[var(--space-xl)] lg:gap-[var(--space-xxl)] items-start">
 
                     {/* Left: Prose */}
                     <div className="flex flex-col w-full">
@@ -83,11 +83,11 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                     </div>
 
                     {/* Right: Sidebar */}
-                    <aside className="hidden lg:flex flex-col items-start gap-8 sticky top-24 pl-8 border-l border-border/40">
+                    <aside className="hidden lg:flex flex-col items-start gap-[var(--space-lg)] sticky top-24 pl-[var(--space-lg)] border-l border-border/40">
                         <span className={cn(typography.variants.meta.eyebrow, "text-muted-foreground")}>
                             Latest Posts
                         </span>
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col gap-[var(--space-md)]">
                             {latestPosts.map((latest) => (
                                 <Link
                                     key={latest.slug}

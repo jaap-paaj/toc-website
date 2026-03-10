@@ -62,7 +62,7 @@ export function HomeInsightsModule() {
 
 function FeaturedPost({ post }: { post: BlogPostMeta }) {
     return (
-        <Link href={`/blog/${post.slug}`} className="group flex flex-col gap-4 border-t border-border py-[var(--space-lg)]">
+        <Link href={`/blog/${post.slug}`} className="group flex flex-col gap-[var(--space-sm)] border-t border-border py-[var(--space-lg)]">
             <div className="flex items-center gap-[var(--space-xs)]">
                 {isRecent(post.date) && (
                     <span className={cn(typography.variants.meta.badge, "bg-primary text-primary-foreground px-2 py-0.5 rounded-full")}>
@@ -89,7 +89,7 @@ function FeaturedPost({ post }: { post: BlogPostMeta }) {
 
 function CompactPost({ post }: { post: BlogPostMeta }) {
     return (
-        <Link href={`/blog/${post.slug}`} className="group flex flex-col gap-2 border-t border-border py-[var(--space-lg)]">
+        <Link href={`/blog/${post.slug}`} className="group flex flex-col gap-[var(--space-xs)] border-t border-border py-[var(--space-lg)]">
             <div className="flex items-center gap-[var(--space-xs)]">
                 {isRecent(post.date) && (
                     <span className={cn(typography.variants.meta.badge, "bg-primary text-primary-foreground px-2 py-0.5 rounded-full")}>
