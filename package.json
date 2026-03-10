@@ -22,7 +22,8 @@
     "audit:card-canon": "node scripts/audit-card-canon.js",
     "audit:legacy-heights": "node scripts/audit-legacy-heights.js",
     "audit:layout-rhythm": "node scripts/audit-layout-rhythm.js",
-    "audit:all": "npm run audit:typography && npm run audit:surfaces && npm run audit:spacing && npm run audit:states && npm run audit:color && npm run audit:theme && npm run audit:pages && npm run audit:content-shape && npm run audit:card-canon && npm run audit:legacy-heights && npm run audit:layout-rhythm"
+    "audit:all": "npm run audit:typography && npm run audit:surfaces && npm run audit:spacing && npm run audit:states && npm run audit:color && npm run audit:theme && npm run audit:pages && npm run audit:content-shape && npm run audit:card-canon && npm run audit:legacy-heights && npm run audit:layout-rhythm",
+    "validate": "npm run lint && npx tsc --noEmit && npm run audit:all"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
