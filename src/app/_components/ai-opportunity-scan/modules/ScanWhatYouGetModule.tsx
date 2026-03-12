@@ -7,8 +7,10 @@ import { scanContent } from "@/app/_content/ai-opportunity-scan";
 import { SectionEyebrow } from "@/design-system/components/SectionEyebrow";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { CheckIcon } from "lucide-react";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanWhatYouGetModule() {
+    const lang = useLocale();
     return (
         <section className={cn("w-full tone-light bg-background text-foreground", spacing.modulePadBottom.m)}>
             <div className={cn("container mx-auto")}>
@@ -20,21 +22,21 @@ export function ScanWhatYouGetModule() {
                     {/* Left Column: Identity */}
                     <div className={spacing.stackSm}>
                         <SectionEyebrow className={typography.variants.meta.eyebrow}>
-                            {scanContent.whatYouGet.eyebrow}
+                            {scanContent[lang].whatYouGet.eyebrow}
                         </SectionEyebrow>
                         <Heading
                             level={2}
                             size="section"
                             className={cn("text-foreground max-w-xl")}
                         >
-                            {scanContent.whatYouGet.title}
+                            {scanContent[lang].whatYouGet.title}
                         </Heading>
                     </div>
 
                     {/* Right Column: Narrative (Checklist) */}
                     <div className={cn("flex flex-col justify-start md:pt-1")}> {/* lint:allowed - Optical alignment matching SectionHeader */}
                         <ul className={spacing.stackSm}>
-                            {scanContent.whatYouGet.description.map((item, i) => (
+                            {scanContent[lang].whatYouGet.description.map((item, i) => (
                                 <li key={i} className={cn("flex items-start gap-3")}> {/* lint:allowed - Checklist row gap */}
                                     <CheckIcon className={cn("w-5 h-5 text-foreground shrink-0 mt-0.5")} /* lint:allowed - light variant checklist */ />
                                     <Text className={typography.variants.body.md}>

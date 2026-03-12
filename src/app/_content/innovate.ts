@@ -1,54 +1,6 @@
-export interface InnovateContent {
-    hero: {
-        index: string;
-        title: string;
-        intro: string;
-    };
-    propositions: {
-        eyebrow: string;
-        description: string;
-        items: {
-            title: string;
-            meta: string;
-            body: string;
-        }[];
-    };
-    solutions: {
-        eyebrow: string;
-        description: string;
-        items: {
-            title: string;
-            meta: string;
-            body: string;
-        }[];
-    };
-    whyUs: {
-        eyebrow: string;
-        variant?: "grid" | "comparison";
-        comparison?: {
-            left: {
-                title: string;
-                bullets: { tone: "positive" | "negative"; text: string }[];
-            };
-            right: {
-                title: string;
-                bullets: { tone: "positive" | "negative"; text: string }[];
-            };
-        };
-        items: {
-            title: string;
-            body: string;
-        }[];
-    };
-    imageDuo: {
-        left: string;
-        altLeft: string;
-        right: string;
-        altRight: string;
-    };
-}
+import type { Locale } from "@/lib/i18n/config";
 
-export const innovateContent: InnovateContent = {
+const en = {
     hero: {
         index: "03",
         title: "INNOVATE",
@@ -77,7 +29,7 @@ export const innovateContent: InnovateContent = {
             {
                 title: "AI Exploration Sprint",
                 meta: "5 days",
-                body: "A deep dive into your organization’s AI readiness and opportunities, including feasibility analysis, roadmap, and ROI insights."
+                body: "A deep dive into your organization's AI readiness and opportunities, including feasibility analysis, roadmap, and ROI insights."
             },
             {
                 title: "AI Build Sprint",
@@ -88,28 +40,28 @@ export const innovateContent: InnovateContent = {
     },
     whyUs: {
         eyebrow: "WHY US?",
-        variant: "comparison",
+        variant: "comparison" as const,
         comparison: {
             left: {
                 title: "TRADITIONAL APPROACH",
                 bullets: [
-                    { tone: "negative", text: "Takes months" },
-                    { tone: "negative", text: "High & unpredictable investment" },
-                    { tone: "negative", text: "Theoretical analysis & testing after launch" },
-                    { tone: "negative", text: "Endless meetings & siloed teams" },
-                    { tone: "negative", text: "Reports, presentations, estimations, guess-work" },
-                    { tone: "negative", text: "70–90% of all digital innovations fail" }
+                    { tone: "negative" as const, text: "Takes months" },
+                    { tone: "negative" as const, text: "High & unpredictable investment" },
+                    { tone: "negative" as const, text: "Theoretical analysis & testing after launch" },
+                    { tone: "negative" as const, text: "Endless meetings & siloed teams" },
+                    { tone: "negative" as const, text: "Reports, presentations, estimations, guess-work" },
+                    { tone: "negative" as const, text: "70–90% of all digital innovations fail" }
                 ]
             },
             right: {
                 title: "OUR INNOVATION SPRINTS",
                 bullets: [
-                    { tone: "positive", text: "Takes 5–10 days" },
-                    { tone: "positive", text: "Low & predictable investment" },
-                    { tone: "positive", text: "Real customer input & early testing" },
-                    { tone: "positive", text: "Cross-functional collaboration" },
-                    { tone: "positive", text: "Working prototype or Proof of Concept" },
-                    { tone: "positive", text: "Consistently strong outcomes with repeated use" }
+                    { tone: "positive" as const, text: "Takes 5–10 days" },
+                    { tone: "positive" as const, text: "Low & predictable investment" },
+                    { tone: "positive" as const, text: "Real customer input & early testing" },
+                    { tone: "positive" as const, text: "Cross-functional collaboration" },
+                    { tone: "positive" as const, text: "Working prototype or Proof of Concept" },
+                    { tone: "positive" as const, text: "Consistently strong outcomes with repeated use" }
                 ]
             }
         },
@@ -139,3 +91,97 @@ export const innovateContent: InnovateContent = {
         altRight: "Innovate ideation sketch"
     }
 };
+
+const nl: typeof en = {
+    hero: {
+        index: "03",
+        title: "INNOVATE",
+        intro: "Strategische beslissingen zijn moeilijker dan ooit. Ze vragen om bewijs in plaats van aannames. Innovate is bedoeld om te bewijzen wat je als volgende moet bouwen of veranderen, voordat je tijd, budget en teams inzet. Dit doen we via AI-ondersteunde sprints, waarbij AI wordt ingezet om sneller inzicht op te bouwen, sterkere opties te genereren en eerder te valideren met een prototype of Proof of Concept. Het resultaat is beslissingsrijp bewijs: wat door te zetten, wat te laten vallen en wat op te schalen."
+    },
+    propositions: {
+        eyebrow: "NIEUWE PROPOSITIES & PRODUCTEN",
+        description: "",
+        items: [
+            {
+                title: "Opportunity Sprint",
+                meta: "5 dagen",
+                body: "AI-ondersteund onderzoek om nieuwe marktkansen te ontdekken en te valideren. Eindigt met een routekaart en prioritering van waardevolle ideeën."
+            },
+            {
+                title: "Design Sprint",
+                meta: "5 dagen",
+                body: "Van probleem naar getest prototype in vijf dagen. Versneld met AI ter ondersteuning van ideeontwikkeling, prototyping en gebruikerstests. Eindigt met een gevalideerd concept klaar voor ontwikkeling."
+            }
+        ]
+    },
+    solutions: {
+        eyebrow: "AI-GEDREVEN OPLOSSINGEN",
+        description: "",
+        items: [
+            {
+                title: "AI Exploration Sprint",
+                meta: "5 dagen",
+                body: "Een diepgaande verkenning van de AI-gereedheid en kansen binnen jouw organisatie, inclusief haalbaarheidsanalyse, routekaart en ROI-inzichten."
+            },
+            {
+                title: "AI Build Sprint",
+                meta: "10 dagen",
+                body: "Ontwerp en lever een werkende AI-oplossing vanaf scratch. Inclusief ontwikkeling, testing, training en een plan voor opschaling."
+            }
+        ]
+    },
+    whyUs: {
+        eyebrow: "WAAROM WIJ?",
+        variant: "comparison",
+        comparison: {
+            left: {
+                title: "TRADITIONELE AANPAK",
+                bullets: [
+                    { tone: "negative", text: "Duurt maanden" },
+                    { tone: "negative", text: "Hoge & onvoorspelbare investering" },
+                    { tone: "negative", text: "Theoretische analyse & testen na lancering" },
+                    { tone: "negative", text: "Eindeloze vergaderingen & gescheiden teams" },
+                    { tone: "negative", text: "Rapporten, presentaties, schattingen, giswerk" },
+                    { tone: "negative", text: "70–90% van alle digitale innovaties mislukt" }
+                ]
+            },
+            right: {
+                title: "ONZE INNOVATIE SPRINTS",
+                bullets: [
+                    { tone: "positive", text: "Duurt 5–10 dagen" },
+                    { tone: "positive", text: "Lage & voorspelbare investering" },
+                    { tone: "positive", text: "Echte klantinput & vroege tests" },
+                    { tone: "positive", text: "Cross-functionele samenwerking" },
+                    { tone: "positive", text: "Werkend prototype of Proof of Concept" },
+                    { tone: "positive", text: "Consistent sterke resultaten bij herhaald gebruik" }
+                ]
+            }
+        },
+        items: [
+            {
+                title: "Snelle Validatie",
+                body: "Test echte ideeën met echte gebruikers in dagen, niet maanden."
+            },
+            {
+                title: "Laag Risico",
+                body: "Kleine, voorspelbare investeringen met duidelijke resultaten."
+            },
+            {
+                title: "Mens + AI",
+                body: "Creativiteit versterkt door AI — niet vervangen."
+            },
+            {
+                title: "Gebouwd om te Schalen",
+                body: "Elke sprint eindigt met productieklare inzichten."
+            }
+        ]
+    },
+    imageDuo: {
+        left: "/images/innovate/innovate-workshop-mapping.png",
+        altLeft: "Innovate workshop mapping sessie",
+        right: "/images/innovate/innovate-ideation-sketch.png",
+        altRight: "Innovate ideatie schets"
+    }
+};
+
+export const innovateContent: Record<Locale, typeof en> = { en, nl };

@@ -7,22 +7,24 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { scanContent } from "@/app/_content/ai-opportunity-scan";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanPricingModule() {
+    const lang = useLocale();
     return (
         <section className={cn("w-full tone-light bg-background text-foreground", spacing.modulePadBottom.m)}>
             <div className={cn("container mx-auto", spacing.stackLg)}>
                 {/* Header: Stacked left-aligned by default (SectionHeader default) */}
                 <SectionHeader
-                    eyebrow={scanContent.pricing.eyebrow}
-                    title={scanContent.pricing.title}
+                    eyebrow={scanContent[lang].pricing.eyebrow}
+                    title={scanContent[lang].pricing.title}
                     variant="stacked"
                     divider={true}
                 />
 
                 {/* Pricing Grid: 2-column adapted from Process 3-column */}
                 <div className={cn("grid grid-cols-1 md:grid-cols-2 items-start", "gap-6 lg:gap-8")}> {/* lint:allowed - matching FeatureGridSection canon */}
-                    {scanContent.pricing.items.map((item, idx) => (
+                    {scanContent[lang].pricing.items.map((item, idx) => (
                         <ContentCard
                             key={idx}
                             variant="card"

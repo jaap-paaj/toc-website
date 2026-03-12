@@ -11,10 +11,12 @@ import { layoutTokens } from "@/design-system/tokens/layout";
 import { typography } from "@/design-system/tokens/typography";
 import { scanContent } from "@/app/_content/ai-opportunity-scan";
 import { trackEvent } from "@/lib/analytics/ga";
-import Link from "next/link";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { CardContent, CardHeader } from "@/components/ui/Card";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanStatementModule() {
+    const lang = useLocale();
     return (
         <section className={cn("w-full tone-light bg-background text-foreground", spacing.modulePad.m)}>
             {/* Canonical Page Wrapper: container mx-auto wrapped in cn() matches other modules and passes audit */}
@@ -25,12 +27,12 @@ export function ScanStatementModule() {
 
                     {/* Left Column: Narrative Stack */}
                     <div className={cn(spacing.stackLg, "min-w-0")}>
-                        <SectionEyebrow>{scanContent.statement.eyebrow}</SectionEyebrow>
+                        <SectionEyebrow>{scanContent[lang].statement.eyebrow}</SectionEyebrow>
                         <Heading level={2} size="section" className="text-balance">
-                            {scanContent.statement.title}
+                            {scanContent[lang].statement.title}
                         </Heading>
                         <div className={cn("text-muted-foreground", spacing.stackMd)}>
-                            {scanContent.statement.body.map((paragraph, idx) => (
+                            {scanContent[lang].statement.body.map((paragraph, idx) => (
                                 <Text key={idx} size="lg">
                                     {paragraph}
                                 </Text>
@@ -46,7 +48,7 @@ export function ScanStatementModule() {
                             <div className={spacing.stackMd}>
                                 <Quote className="w-10 h-10 text-primary" />
                                 <Heading level={3} size="card" className="text-balance">
-                                    {scanContent.statement.interrupt}
+                                    {scanContent[lang].statement.interrupt}
                                 </Heading>
                             </div>
                         </CardHeader>
@@ -57,10 +59,10 @@ export function ScanStatementModule() {
                             {/* Divider-like separation via stack */}
                             <div className={spacing.stackXs}>
                                 <SectionEyebrow className={typography.variants.meta.label}>
-                                    {scanContent.statement.goal.title}
+                                    {scanContent[lang].statement.goal.title}
                                 </SectionEyebrow>
                                 <Text size="md" className="text-balance text-muted-foreground">
-                                    {scanContent.statement.goal.description}
+                                    {scanContent[lang].statement.goal.description}
                                 </Text>
                             </div>
 
@@ -71,13 +73,13 @@ export function ScanStatementModule() {
                                 className="w-full sm:w-auto self-start max-w-full h-auto whitespace-normal text-left py-2" // lint:allowed - CTA multiline support
                                 onClick={() =>
                                     trackEvent("cta_click", {
-                                        cta_label: scanContent.statement.cta.label,
+                                        cta_label: scanContent[lang].statement.cta.label,
                                         cta_location: "statement_why_now",
                                     })
                                 }
                             >
-                                <Link href={scanContent.statement.cta.href}>
-                                    {scanContent.statement.cta.label}
+                                <Link href={scanContent[lang].statement.cta.href}>
+                                    {scanContent[lang].statement.cta.label}
                                 </Link>
                             </Button>
                         </CardContent>

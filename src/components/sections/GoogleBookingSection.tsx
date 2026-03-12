@@ -5,6 +5,7 @@ import { Surface } from "@/design-system/components/Surfaces";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { Button } from "@/components/ui/Button";
 import { useState } from "react";
+import { useLocale, localizeHref } from "@/lib/i18n/useLocale";
 
 interface GoogleBookingSectionProps {
     title?: string;
@@ -35,6 +36,7 @@ export function GoogleBookingSection({
     loadingText,
 }: GoogleBookingSectionProps) {
     const [isLoading, setIsLoading] = useState(true);
+    const lang = useLocale();
 
     return (
         <div className={cn(enableContainer && "container mx-auto", className)}>
@@ -88,7 +90,7 @@ export function GoogleBookingSection({
                         </Button>
                         <Text size="sm" className="text-muted-foreground">
                             {fallback.text}{" "}
-                            <a href={fallback.contactLink.href} className="underline hover:text-foreground transition-colors">
+                            <a href={localizeHref(fallback.contactLink.href, lang)} className="underline hover:text-foreground transition-colors">
                                 {fallback.contactLink.label}
                             </a>
                         </Text>

@@ -1,9 +1,13 @@
+"use client";
+
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { automateContent } from "@/app/_content/automate";
 import { CapabilityHeroSection } from "@/components/sections/CapabilityHeroSection";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function AutomateHeroModule() {
-    const { hero } = automateContent;
+    const lang = useLocale();
+    const { hero } = automateContent[lang];
 
     return (
         <HomeModule

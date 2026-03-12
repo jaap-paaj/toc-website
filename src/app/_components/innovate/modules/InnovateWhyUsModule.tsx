@@ -1,3 +1,4 @@
+"use client";
 
 import { HomeModule } from "../../home/HomeModule";
 import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
@@ -9,9 +10,11 @@ import { cn } from "@/lib/utils";
 import { innovateContent } from "@/app/_content/innovate";
 import { CheckIcon, XIcon } from "lucide-react";
 import React from "react";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function InnovateWhyUsModule() {
-    const { whyUs } = innovateContent;
+    const lang = useLocale();
+    const { whyUs } = innovateContent[lang];
     const { variant, comparison } = whyUs;
 
     const items = whyUs.items.map((item, idx) => ({

@@ -1,8 +1,13 @@
+"use client";
+
 import { ImageDuoSection } from "@/components/sections/ImageDuoSection";
 import { HomeModule } from "../../home/HomeModule";
 import { educateContent } from "@/app/_content/educate";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function EducateWhyUsImageDuoModule() {
+    const lang = useLocale();
+
     return (
         <HomeModule
             id="educate-image-duo"
@@ -14,8 +19,8 @@ export function EducateWhyUsImageDuoModule() {
         >
             <ImageDuoSection
                 items={[
-                    { src: educateContent.whyUs.images.left, alt: educateContent.whyUs.images.altLeft },
-                    { src: educateContent.whyUs.images.right, alt: educateContent.whyUs.images.altRight }
+                    { src: educateContent[lang].whyUs.images.left, alt: educateContent[lang].whyUs.images.altLeft },
+                    { src: educateContent[lang].whyUs.images.right, alt: educateContent[lang].whyUs.images.altRight }
                 ]}
                 dominant="right"
             />

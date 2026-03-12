@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { EducatePage } from "../_components/educate/EducatePage";
+import { EducatePage } from "@/app/_components/educate/EducatePage";
 
 export const metadata: Metadata = {
     title: 'Educate | The Only Constant',

@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { spacing } from "@/design-system/tokens/spacing";
-import Link from "next/link";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { SectionEyebrow } from "@/design-system/components/SectionEyebrow";

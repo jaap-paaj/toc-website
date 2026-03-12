@@ -10,8 +10,10 @@ import { BrandHeroHeadline } from "@/design-system/components/BrandHeroHeadline"
 
 import { homeContent } from "@/app/_content/home";
 import { trackEvent } from "@/lib/analytics/ga";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function HomeHeroModule() {
+  const lang = useLocale();
   return (
     <HomeModule
       id="hero"
@@ -35,7 +37,7 @@ export function HomeHeroModule() {
             {/* Top content */}
             {/* Canon: body.lg allowed here (Hero intro only) */}
             <Text size="lg" className="max-w-lg">
-              {homeContent.hero.description}
+              {homeContent[lang].hero.description}
             </Text>
 
             {/* Bottom CTA */}
@@ -46,13 +48,13 @@ export function HomeHeroModule() {
                 className="tone-dark bg-background text-foreground hover:bg-background/80"
                 onClick={() =>
                   trackEvent("cta_click", {
-                    cta_label: homeContent.hero.cta.label,
+                    cta_label: homeContent[lang].hero.cta.label,
                     cta_location: "hero",
                   })
                 }
               >
-                <a href={homeContent.hero.cta.href}>
-                  {homeContent.hero.cta.label}
+                <a href={homeContent[lang].hero.cta.href}>
+                  {homeContent[lang].hero.cta.label}
                 </a>
               </Button>
             </div>

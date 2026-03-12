@@ -1,5 +1,6 @@
+import type { Locale } from "@/lib/i18n/config";
 
-export const scanContent = {
+const en = {
     hero: {
         title: "AI Opportunity Scan: priorities, roadmap and one PoC-ready process in half a day",
         subtitle: "Know where AI pays off. Get a build-ready plan, not a slide deck.",
@@ -131,7 +132,7 @@ export const scanContent = {
                 answer: "4–6 decision-makers and domain experts. We need people who can decide or commit resources."
             },
             {
-                question: "What if we don’t continue after the scan?",
+                question: "What if we don't continue after the scan?",
                 answer: "The deliverables are yours. No strings attached."
             },
             {
@@ -177,7 +178,7 @@ export const scanContent = {
         title: "Schedule Your Scan",
         embedUrl: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2HBfcp_-gZwOEdeN0WlCgjHeHP1-V8ULrVsEeCpzyluEmmjB9E4HTc5sUbdtiiD6-BEmMdgmLb?gv=true",
         fallback: {
-            text: "If booking doesn’t work, use our contact page.",
+            text: "If booking doesn't work, use our contact page.",
             cta: {
                 label: "Open booking in a new tab",
             },
@@ -192,7 +193,204 @@ export const scanContent = {
             href: "/ai-opportunity-scan"
         }
     }
-} as const;
+};
+
+const nl: typeof en = {
+    hero: {
+        title: "AI Opportunity Scan: prioriteiten, roadmap en één PoC-klaar proces in een halve dag",
+        subtitle: "Weet waar AI zich terugverdient. Krijg een bouwklaar plan, geen slideshow.",
+        outcomes: [
+            "Typisch resultaat 3 geprioriteerde use cases · 1 proces uitgewerkt voor PoC · 90-dagen-roadmap · concrete eigenaren en vervolgstappen"
+        ],
+        cta: {
+            label: "Plan 20 minuten",
+            href: "/ai-opportunity-scan/book"
+        }
+    },
+    trust: {
+        label: "Vertrouwd door",
+        logos: [
+            { name: "Randstad", src: "/images/clients/randstad_logo.png" },
+            { name: "AkzoNobel", src: "/images/clients/akzo_logo.png" },
+            { name: "Eneco", src: "/images/clients/eneco_logo.png" }
+        ]
+    },
+    statement: {
+        eyebrow: "Waarom nu",
+        title: "Elke maand zonder duidelijkheid is een maand die je concurrenten gebruiken om te leveren",
+        body: [
+            "AI is overal, maar kiezen wat je ermee doet is lastig. De meeste organisaties blijven tools vergelijken of pilots draaien die niets veranderen aan wie wat doet. Dat houdt je beste mensen op laagwaardig werk en voorkomt dat AI blijvende waarde oplevert.",
+        ],
+        interrupt: "Een last mover advantage bestaat niet",
+        goal: {
+            title: "Eén helder doel:",
+            description: "We laten zien waar AI ingezet moet worden en helpen je het te bouwen."
+        },
+        cta: {
+            label: "Plan 20 minuten",
+            href: "/ai-opportunity-scan/book"
+        }
+    },
+    howItWorks: {
+        eyebrow: "Proces",
+        title: "Drie stappen naar zekerheid",
+        steps: [
+            {
+                step: "01",
+                duration: "20 minuten",
+                title: "Korte intake",
+                description: "Doelen, scope en gewenste resultaten afstemmen. Wij bereiden sectorinzichten voor zodat de sessie direct op maat is."
+            },
+            {
+                step: "02",
+                duration: "Halve dag",
+                title: "Opportunity sessie",
+                description: "We brengen in kaart waar omzet ontstaat, waar waarde weglekt en waar toekomstige waarde vandaan komt. We verzamelen use cases, detailleren ze met onze AI-capability-cards, scoren ze op waarde en inspanning en onderzoeken sector- en cross-sectorvoorbeelden. We kiezen de beste kansen en werken één proces uit in PoC-klaar formaat."
+            },
+            {
+                step: "03",
+                duration: "Dezelfde dag",
+                title: "Oplevering",
+                description: "Een geprioriteerde lijst, een impact- en haalbaarheidsmatrix, een 90-dagen-roadmap en één proces herontworpen en gedocumenteerd, klaar voor PoC."
+            }
+        ]
+    },
+    whatYouGet: {
+        eyebrow: "Wat je krijgt",
+        title: "Concrete resultaten, geen experimenten",
+        description: [
+            "Gedeeld begrip van waar AI wel en niet ingezet moet worden",
+            "3 tot 7 geprioriteerde use cases met eigenaren en verwachte impact",
+            "Impact- en haalbaarheidsmatrix om besluitvorming te versnellen",
+            "90-dagen-roadmap met eigenaren en KPI's",
+            "Eén proces herontworpen en PoC-klaar, met acceptatiecriteria en een testdataplan",
+            "Praktische do's en don'ts inclusief technische notities, privacy- en governance-richtlijnen"
+        ]
+    },
+    whoThisIsFor: {
+        eyebrow: "Voor wie",
+        title: "Deze scan is voor",
+        subtitle: "hoofden operations, marketing, sales of product bij organisaties die:",
+        items: [
+            "30+ medewerkers of meerdere herhaalbare processen hebben",
+            "Al verwachten AI te gebruiken — of onder druk staan om het te adopteren — maar nog niet weten waar",
+            "Besluiten en meetbare voortgang willen, niet alleen experimenten"
+        ]
+    },
+    pricing: {
+        eyebrow: "PRIJZEN",
+        title: "Eenvoudige, vaste prijzen",
+        items: [
+            {
+                title: "AI Opportunity Scan",
+                price: "€2,500",
+                description: "Op locatie, halve dag. Prioriteiten, roadmap en één PoC-klaar proces.",
+            },
+            {
+                title: "Scan + Eerste Automatisering",
+                price: "€6,000",
+                description: "Scan gevolgd door een productiesprint die je eerste werkende automatisering oplevert.",
+            }
+        ]
+    },
+    introCall: {
+        eyebrow: "Kennismakingsgesprek",
+        title: "Het kennismakingsgesprek van 20 minuten",
+        body: "Plan 20 minuten. Je ontvangt een sectoranalyse en een duidelijke vervolgstap — ook als je niet verdergaat.",
+        card: {
+            title: "Wat er gebeurt:",
+            bullets: [
+                "Korte context en doelen (5 minuten)",
+                "We delen sectorcontext en twee ideeën op maat die je snel kunt testen (10 minuten)",
+                "Vervolgstap afspreken: scan op locatie, scan plus bouw, of PoC (5 minuten)"
+            ],
+            cta: {
+                label: "Plan 20 minuten",
+                href: "/ai-opportunity-scan/book"
+            }
+        }
+    },
+    faq: {
+        eyebrow: "FAQ",
+        title: "Veelgestelde vragen",
+        items: [
+            {
+                question: "Is dit een volledige implementatie?",
+                answer: "Nee. De scan is een gerichte workshop die een bouwklaar plan oplevert. Kansrijke ideeën met lage inspanning kunnen meestal binnen weken naar een PoC."
+            },
+            {
+                question: "Hoe lang duurt de sessie?",
+                answer: "Ongeveer 3,5 tot 4 uur op locatie."
+            },
+            {
+                question: "Wie moeten er bij zijn?",
+                answer: "4–6 beslissers en domeinexperts. We hebben mensen nodig die kunnen beslissen of middelen kunnen toewijzen."
+            },
+            {
+                question: "Wat als we na de scan niet verdergaan?",
+                answer: "De oplevering is van jou. Zonder verplichtingen."
+            },
+            {
+                question: "Hoe gaan jullie om met data en privacy?",
+                answer: "De oplevering bevat governance- en privacyrichtlijnen. We volgen de AVG en actuele AI-governance-principes."
+            },
+            {
+                question: "Hoe snel kunnen we starten?",
+                answer: "De intake plannen we meestal binnen een week, de sessie op locatie kort daarna."
+            }
+        ]
+    },
+    features: {
+        items: [
+            {
+                title: "Strategische Analyse",
+                description: "We analyseren je huidige werkprocessen en identificeren gebieden met hoge impact voor AI-integratie."
+            },
+            {
+                title: "Bewezen Use Cases",
+                description: "Bekijk voorbeelden van hoe vergelijkbare organisaties al waarde creëren met AI."
+            },
+            {
+                title: "Actiegerichte Roadmap",
+                description: "Ga naar huis met een geprioriteerde lijst vervolgstappen om je AI-reis te starten."
+            }
+        ]
+    },
+    footerCta: {
+        title: [
+            "KLAAR OM TE BEGINNEN?",
+            "BOEK NU"
+        ],
+        cta: {
+            label: "SESSIE PLANNEN",
+            href: "/ai-opportunity-scan/book"
+        },
+        panelTitle: "VOLGENDE STAPPEN",
+        panelBody: "Kies een moment dat je uitkomt. Je ontvangt een bevestigingsmail met een Google Meet-link en een korte vragenlijst zodat wij ons kunnen voorbereiden.",
+        copyright: "© The Only Constant 2025"
+    },
+    booking: {
+        title: "Plan je Scan",
+        embedUrl: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2HBfcp_-gZwOEdeN0WlCgjHeHP1-V8ULrVsEeCpzyluEmmjB9E4HTc5sUbdtiiD6-BEmMdgmLb?gv=true",
+        fallback: {
+            text: "Lukt het boeken niet? Gebruik onze contactpagina.",
+            cta: {
+                label: "Open boeking in een nieuw tabblad",
+            },
+            contactLink: {
+                label: "Contactpagina",
+                href: "/contact"
+            }
+        },
+        loadingText: "Beschikbare tijdsloten laden...",
+        backLink: {
+            label: "Terug naar AI Opportunity Scan",
+            href: "/ai-opportunity-scan"
+        }
+    }
+};
+
+export const scanContent: Record<Locale, typeof en> = { en, nl };
 
 export type HeroVariant = {
     title: string;
@@ -206,7 +404,7 @@ export const scanHeroVariants: Record<string, HeroVariant> = {
     },
     "v-theatre": {
         title: "AI Opportunity Scan: EXPERIMENTS WITHOUT PLANS ARE JUST THEATRE",
-        subtitle: "Pilots that don’t tie to decisions waste time and budget. We turn experiments into decision-making workstreams and PoC-ready processes."
+        subtitle: "Pilots that don't tie to decisions waste time and budget. We turn experiments into decision-making workstreams and PoC-ready processes."
     },
     "v-right-things": {
         title: "AI Opportunity Scan: DOING THE RIGHT THINGS vs DOING THINGS RIGHT",
@@ -216,4 +414,4 @@ export const scanHeroVariants: Record<string, HeroVariant> = {
         title: "AI Opportunity Scan: THE REAL COST IS ARRIVING LATE",
         subtitle: "While you calculate, competitors ship. We map the opportunities you should act on now and deliver a build-ready plan."
     }
-} as const;
+};

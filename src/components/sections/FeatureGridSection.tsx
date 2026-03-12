@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Surface } from "@/design-system/components/Surfaces";

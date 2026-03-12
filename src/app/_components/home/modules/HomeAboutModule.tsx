@@ -1,11 +1,15 @@
+"use client";
+
 import { HomeModule } from "../HomeModule";
 
 import { cn } from "@/lib/utils";
 import { Heading, Text as Paragraph } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
 import { homeContent } from "@/app/_content/home";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function HomeAboutModule() {
+    const lang = useLocale();
     return (
         <HomeModule id="about" width="full" pad="m" gap="s" containsContent>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
@@ -14,11 +18,11 @@ export function HomeAboutModule() {
                     {/* Header Group */}
                     <div className="flex flex-col gap-4">
                         <Paragraph className={typography.variants.meta.eyebrow}>
-                            {homeContent.about.eyebrow}
+                            {homeContent[lang].about.eyebrow}
                         </Paragraph>
 
                         <div className="flex flex-col">
-                            {homeContent.about.statementLines.map((line, index) => (
+                            {homeContent[lang].about.statementLines.map((line, index) => (
                                 <Heading
                                     key={index}
                                     level={2}
@@ -35,7 +39,7 @@ export function HomeAboutModule() {
 
                     {/* Description */}
                     <div className="flex flex-col gap-4 opacity-80 max-w-prose">
-                        {homeContent.about.description.map((paragraph, i) => (
+                        {homeContent[lang].about.description.map((paragraph, i) => (
                             <Paragraph key={i} className={typography.variants.body.md}>
                                 {paragraph}
                             </Paragraph>
@@ -44,10 +48,10 @@ export function HomeAboutModule() {
                 </div>
 
                 {/* Right Column: Visual */}
-                {homeContent.about.imageSrc && (
+                {homeContent[lang].about.imageSrc && (
                     <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square rounded-surface overflow-hidden bg-muted">
                         <img
-                            src={homeContent.about.imageSrc}
+                            src={homeContent[lang].about.imageSrc}
                             alt=""
                             className="absolute inset-0 w-full h-full object-cover"
                             loading="lazy"

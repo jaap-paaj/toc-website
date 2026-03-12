@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { Heading } from "@/design-system/components/Typography";
 import { Text } from "@/design-system/components/Typography";
@@ -7,13 +9,16 @@ import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { BlogProse } from "@/app/_components/blog/BlogProse";
 import type { BlogPost, BlogPostMeta } from "@/lib/blog/types";
+import { blogContent } from "@/app/_content/blog";
+import { useLocale } from "@/lib/i18n/useLocale";
+
 interface BlogPostModuleProps {
     post: BlogPost;
     latestPosts: BlogPostMeta[];
 }
 
-function formatDate(dateStr: string): string {
-    return new Date(dateStr).toLocaleDateString("en-GB", {
+function formatDate(dateStr: string, lang: string): string {
+    return new Date(dateStr).toLocaleDateString(lang === "nl" ? "nl-NL" : "en-GB", {
         year: "numeric",
         month: "long",
         day: "numeric",
@@ -21,6 +26,8 @@ function formatDate(dateStr: string): string {
 }
 
 export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
+    const lang = useLocale();
+    const content = blogContent[lang].sidebar;
     return (
         <HomeModule id="blog-post" width="full" tone="light" pad="m" padTop="xl" gap="s" containsContent>
             <div className={cn("w-full flex flex-col items-center", spacing.stackXl)}>
@@ -43,12 +50,12 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                         <div className={cn(typography.variants.meta.label, "text-muted-foreground flex flex-wrap items-center justify-center gap-2")}>
                             {post.author && (
                                 <>
-                                    <span>By</span> {post.author}
+                                    <span>{lang === "nl" ? "Door" : "By"}</span> {post.author}
                                     <span>&bull;</span>
                                 </>
                             )}
                             <time dateTime={post.date}>
-                                {formatDate(post.date)}
+                                {formatDate(post.date, lang)}
                             </time>
                         </div>
 
@@ -85,7 +92,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                     {/* Right: Sidebar */}
                     <aside className="hidden lg:flex flex-col items-start gap-[var(--space-lg)] sticky top-24 pl-[var(--space-lg)] border-l border-border/40">
                         <span className={cn(typography.variants.meta.eyebrow, "text-muted-foreground")}>
-                            Latest Posts
+                            {content.latestPosts}
                         </span>
                         <div className="flex flex-col gap-[var(--space-md)]">
                             {latestPosts.map((latest) => (
@@ -103,7 +110,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                                         {latest.title}
                                     </span>
                                     <span className={cn(typography.variants.meta.label, "text-muted-foreground")}>
-                                        {formatDate(latest.date)}
+                                        {formatDate(latest.date, lang)}
                                     </span>
                                 </Link>
                             ))}
@@ -112,7 +119,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                             href="/blog"
                             className={cn(typography.variants.meta.label, "underline underline-offset-4 decoration-border hover:decoration-current transition-colors")}
                         >
-                            View all blogs &rarr;
+                            {content.viewAll} &rarr;
                         </Link>
                     </aside>
                 </div>

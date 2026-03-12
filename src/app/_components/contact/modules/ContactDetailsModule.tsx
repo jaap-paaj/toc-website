@@ -1,3 +1,5 @@
+"use client";
+
 import { HomeModule } from "../../home/HomeModule";
 import React from "react";
 import { contactContent } from "@/app/_content/contact";
@@ -7,6 +9,7 @@ import { Surface } from "@/design-system/components/Surfaces";
 import { Heading } from "@/design-system/components/Typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { typography } from "@/design-system/tokens/typography";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 type AddressCard = {
     title: string;
@@ -27,7 +30,8 @@ type AddressCard = {
 };
 
 export function ContactDetailsModule() {
-    const cards = contactContent.details.cards as readonly AddressCard[];
+    const lang = useLocale();
+    const cards = contactContent[lang].details.cards as readonly AddressCard[];
 
     return (
         <HomeModule id="contact-details" width="full" tone="light" pad="m" gap="none">
@@ -36,8 +40,8 @@ export function ContactDetailsModule() {
                     <SectionHeader
                         variant="split"
                         divider={true}
-                        eyebrow={contactContent.details.eyebrow}
-                        description={contactContent.details.description}
+                        eyebrow={contactContent[lang].details.eyebrow}
+                        description={contactContent[lang].details.description}
                     />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 [&_.grid]:items-start">

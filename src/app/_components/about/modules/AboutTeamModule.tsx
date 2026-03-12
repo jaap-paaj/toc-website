@@ -1,8 +1,12 @@
+"use client";
+
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { TeamGridSection } from "@/components/sections/TeamGridSection";
 import { aboutContent } from "@/app/_content/about";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function AboutTeamModule() {
+    const lang = useLocale();
     return (
         <HomeModule
             id="about-team"
@@ -13,10 +17,10 @@ export function AboutTeamModule() {
             containsContent // Canonical: Delegate container ownership to Section (HomeModule)
         >
             <TeamGridSection
-                eyebrow={aboutContent.team.eyebrow}
-                title={aboutContent.team.title}
-                description={aboutContent.team.description}
-                members={aboutContent.team.members}
+                eyebrow={aboutContent[lang].team.eyebrow}
+                title={aboutContent[lang].team.title}
+                description={aboutContent[lang].team.description}
+                members={aboutContent[lang].team.members}
             />
         </HomeModule>
     );

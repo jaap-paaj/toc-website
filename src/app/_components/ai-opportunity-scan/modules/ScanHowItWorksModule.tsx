@@ -7,21 +7,23 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { scanContent } from "@/app/_content/ai-opportunity-scan";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanHowItWorksModule() {
+    const lang = useLocale();
     return (
         <section className={cn("w-full tone-light bg-background text-foreground", spacing.modulePadBottom.m)}>
             <div className={cn("container mx-auto", spacing.stackLg)}>
                 {/* Header: Stacked left-aligned by default (SectionHeader default) */}
                 <SectionHeader
-                    eyebrow={scanContent.howItWorks.eyebrow}
-                    title={scanContent.howItWorks.title}
+                    eyebrow={scanContent[lang].howItWorks.eyebrow}
+                    title={scanContent[lang].howItWorks.title}
                     variant="stacked"
                 />
 
                 {/* Steps Grid: 3-column standard */}
                 <div className={cn("grid grid-cols-1 md:grid-cols-3 items-start", "gap-6 lg:gap-8")}> {/* lint:allowed - matching FeatureGridSection canon */}
-                    {scanContent.howItWorks.steps.map((step, idx) => (
+                    {scanContent[lang].howItWorks.steps.map((step, idx) => (
                         <ContentCard
                             key={idx}
                             variant="card"
