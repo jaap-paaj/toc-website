@@ -15,8 +15,12 @@ import { cn } from "@/lib/utils";
 import { submitContactForm } from "@/actions/contact";
 import { contactSchema } from "@/lib/validation/contact";
 import { trackEvent } from "@/lib/analytics/ga";
+import { contactContent } from "@/app/_content/contact";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ContactFormModule() {
+    const lang = useLocale();
+    const content = contactContent[lang].form;
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [fieldErrors, setFieldErrors] = useState<{ [key: string]: string[] | undefined }>({});
@@ -80,16 +84,16 @@ export function ContactFormModule() {
             {isSubmitted ? (
                 <div className="max-w-2xl mx-auto w-full">
                     <FormPanel className={cn("items-center text-center", spacing.component.formSuccessPanel)}>
-                        <Heading level={3}>Thanks for reaching out</Heading>
+                        <Heading level={3}>{content.success.title}</Heading>
                         <Text className="text-muted-foreground my-4"> {/* lint:allowed */}
-                            We’ve received your message and will be in touch soon.
+                            {content.success.message}
                         </Text>
                         <Button
                             variant="outline"
                             onClick={() => setIsSubmitted(false)}
                             className={spacing.component.formSuccessCta}
                         >
-                            Send Another Message
+                            {content.success.resetLabel}
                         </Button>
                     </FormPanel>
                 </div>
@@ -97,8 +101,8 @@ export function ContactFormModule() {
                 <div className="container mx-auto w-full">
                     <div className={spacing.stackXl}>
                         <SectionHeader
-                            eyebrow="Contact us"
-                            description="You don't need a clear plan to reach out. Start the conversation here."
+                            eyebrow={content.eyebrow}
+                            description={content.description}
                             variant="split"
                             divider
                         />
@@ -122,12 +126,12 @@ export function ContactFormModule() {
 
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <FormField
-                                        label="Name"
+                                        label={content.fields.name.label}
                                         error={fieldErrors.name?.[0]}
                                     >
                                         <Input
                                             name="name"
-                                            placeholder="Your full name"
+                                            placeholder={content.fields.name.placeholder}
                                             required
                                             disabled={isLoading}
                                             aria-invalid={!!fieldErrors.name}
@@ -135,13 +139,13 @@ export function ContactFormModule() {
                                     </FormField>
 
                                     <FormField
-                                        label="Email"
+                                        label={content.fields.email.label}
                                         error={fieldErrors.email?.[0]}
                                     >
                                         <Input
                                             name="email"
                                             type="email"
-                                            placeholder="you@company.com"
+                                            placeholder={content.fields.email.placeholder}
                                             required
                                             disabled={isLoading}
                                             aria-invalid={!!fieldErrors.email}
@@ -150,12 +154,12 @@ export function ContactFormModule() {
                                 </div>
 
                                 <FormField
-                                    label="Message"
+                                    label={content.fields.message.label}
                                     error={fieldErrors.message?.[0]}
                                 >
                                     <Textarea
                                         name="message"
-                                        placeholder="Tell us a bit about what you’re looking for..."
+                                        placeholder={content.fields.message.placeholder}
                                         required
                                         disabled={isLoading}
                                         className="min-h-[160px]"
@@ -170,7 +174,7 @@ export function ContactFormModule() {
                                         disabled={isLoading}
                                         className={cn("w-full md:w-auto", typography.variants.ui.button.lg)}
                                     >
-                                        {isLoading ? "Sending..." : "Send Message"}
+                                        {isLoading ? content.submit.loading : content.submit.label}
                                     </Button>
                                 </div>
                             </form>

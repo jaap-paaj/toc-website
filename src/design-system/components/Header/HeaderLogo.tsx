@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 interface HeaderLogoProps {
     className?: string;
@@ -11,7 +12,8 @@ interface HeaderLogoProps {
 
 export function HeaderLogo({ className }: HeaderLogoProps) {
     const pathname = usePathname();
-    const isHome = pathname === "/";
+    const lang = useLocale();
+    const isHome = pathname === `/${lang}` || pathname === `/${lang}/`;
 
     const commonClasses = cn("flex items-center gap-2 z-50 hover:opacity-80 transition-opacity", className);
 
@@ -36,7 +38,7 @@ export function HeaderLogo({ className }: HeaderLogoProps) {
 
     return (
         <Link
-            href="/"
+            href={`/${lang}`}
             className={commonClasses}
             aria-label="Back to homepage"
         >

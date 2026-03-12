@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { Heading } from "@/design-system/components/Typography";
 import { Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";

@@ -6,6 +6,7 @@ import { trackEvent } from "@/lib/analytics/ga";
 import { Surface } from "@/design-system/components/Surfaces";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
+import { useLocale, localizeHref } from "@/lib/i18n/useLocale";
 
 export interface FooterCtaSectionProps {
     title: string | string[] | readonly string[];
@@ -27,6 +28,7 @@ export function FooterCtaSection({
     copyright,
     className
 }: FooterCtaSectionProps) {
+    const lang = useLocale();
     return (
         <div className={cn("container mx-auto", className)}>
             <Surface
@@ -68,7 +70,7 @@ export function FooterCtaSection({
                                             })
                                         }
                                     >
-                                        <a href={cta.href}>{cta.label}</a>
+                                        <a href={localizeHref(cta.href, lang)}>{cta.label}</a>
                                     </Button>
                                 </div>
                                 <div className={cn(typography.variants.body.sm, "opacity-50")}>

@@ -16,6 +16,7 @@ export function HeaderNav({ links, className }: HeaderNavProps) {
     return (
         <nav className={cn("hidden lg:flex items-center gap-8", className)}>
             {links.map((link) => {
+                // Links are already localized (e.g. /nl/educate), so direct comparison works
                 const isActive = pathname === link.href || pathname.startsWith(`${link.href}/`);
 
                 return (

@@ -8,9 +8,11 @@ import { spacing } from "@/design-system/tokens/spacing";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/design-system/components/Typography";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanBookingModule() {
+    const lang = useLocale();
     return (
         <section className={spacing.modulePad.m}>
             <div className={cn("container mx-auto max-w-4xl", spacing.stackLg)}>
@@ -23,9 +25,9 @@ export function ScanBookingModule() {
                             size="icon"
                             asChild
                             className="rounded-full bg-foreground text-background hover:bg-foreground/90 hover:text-background"
-                            aria-label={scanContent.booking.backLink.label}
+                            aria-label={scanContent[lang].booking.backLink.label}
                         >
-                            <Link href={scanContent.booking.backLink.href}>
+                            <Link href={scanContent[lang].booking.backLink.href}>
                                 <ArrowLeft />
                             </Link>
                         </Button>
@@ -33,7 +35,7 @@ export function ScanBookingModule() {
 
                     {/* Center: Title (can wrap now) */}
                     <Heading level={1} size="page" className="text-center">
-                        {scanContent.booking.title}
+                        {scanContent[lang].booking.title}
                     </Heading>
 
                     {/* Right: Invisible clone for perfect mechanical centering */}
@@ -53,11 +55,11 @@ export function ScanBookingModule() {
                     <GoogleBookingSection
                         // Title is now rendered above
                         title={undefined}
-                        embedUrl={scanContent.booking.embedUrl}
-                        fallback={scanContent.booking.fallback}
+                        embedUrl={scanContent[lang].booking.embedUrl}
+                        fallback={scanContent[lang].booking.fallback}
                         className="w-full"
                         enableContainer={false}
-                        loadingText={scanContent.booking.loadingText}
+                        loadingText={scanContent[lang].booking.loadingText}
                     />
                 </div>
             </div>

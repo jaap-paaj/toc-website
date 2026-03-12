@@ -1,10 +1,13 @@
-
+"use client";
 
 import { HomeModule } from "../../home/HomeModule";
 import { ImageDuoSection } from "@/components/sections/ImageDuoSection";
 import { innovateContent } from "@/app/_content/innovate";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function InnovateImageDuoModule() {
+    const lang = useLocale();
+
     return (
         <HomeModule
             id="innovate-image-duo"
@@ -16,8 +19,8 @@ export function InnovateImageDuoModule() {
         >
             <ImageDuoSection
                 items={[
-                    { src: innovateContent.imageDuo.left, alt: innovateContent.imageDuo.altLeft },
-                    { src: innovateContent.imageDuo.right, alt: innovateContent.imageDuo.altRight }
+                    { src: innovateContent[lang].imageDuo.left, alt: innovateContent[lang].imageDuo.altLeft },
+                    { src: innovateContent[lang].imageDuo.right, alt: innovateContent[lang].imageDuo.altRight }
                 ]}
                 dominant="left"
             />

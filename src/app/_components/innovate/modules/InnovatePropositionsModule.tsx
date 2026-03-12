@@ -1,9 +1,13 @@
+"use client";
+
 import { HomeModule } from "../../home/HomeModule";
 import { innovateContent } from "@/app/_content/innovate";
 import { CatalogGridSection } from "@/components/sections/CatalogGridSection";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function InnovatePropositionsModule() {
-    const { propositions } = innovateContent;
+    const lang = useLocale();
+    const { propositions } = innovateContent[lang];
 
     const items = propositions.items.map(item => ({
         title: item.title,

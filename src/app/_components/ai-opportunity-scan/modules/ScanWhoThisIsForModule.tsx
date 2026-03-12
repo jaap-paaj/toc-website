@@ -7,8 +7,10 @@ import { scanContent } from "@/app/_content/ai-opportunity-scan";
 import { SectionEyebrow } from "@/design-system/components/SectionEyebrow";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { CheckIcon } from "lucide-react";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanWhoThisIsForModule() {
+    const lang = useLocale();
     return (
         <section className={cn("w-full tone-light bg-background text-foreground", spacing.modulePadBottom.m)}>
             <div className={cn("container mx-auto")}>
@@ -20,14 +22,14 @@ export function ScanWhoThisIsForModule() {
                     {/* Left Column: Identity */}
                     <div className={spacing.stackSm}>
                         <SectionEyebrow className={typography.variants.meta.eyebrow}>
-                            {scanContent.whoThisIsFor.eyebrow}
+                            {scanContent[lang].whoThisIsFor.eyebrow}
                         </SectionEyebrow>
                         <Heading
                             level={2}
                             size="section"
                             className={cn("text-foreground max-w-xl")}
                         >
-                            {scanContent.whoThisIsFor.title}
+                            {scanContent[lang].whoThisIsFor.title}
                         </Heading>
                     </div>
 
@@ -35,10 +37,10 @@ export function ScanWhoThisIsForModule() {
                     <div className={cn("flex flex-col justify-start md:pt-1")}> {/* lint:allowed - Optical alignment matching SectionHeader */}
                         <div className={spacing.stackMd}>
                             <h3 className={cn(typography.variants.meta.eyebrow, "opacity-70", "text-foreground")}>
-                                {scanContent.whoThisIsFor.subtitle}
+                                {scanContent[lang].whoThisIsFor.subtitle}
                             </h3>
                             <ul className={spacing.stackSm}>
-                                {scanContent.whoThisIsFor.items.map((item, i) => (
+                                {scanContent[lang].whoThisIsFor.items.map((item, i) => (
                                     <li key={i} className={cn("flex items-start gap-3")}> {/* lint:allowed - Checklist row gap */}
                                         <CheckIcon className={cn("w-5 h-5 text-foreground shrink-0 mt-0.5")} /* lint:allowed - light variant checklist */ />
                                         <Text className={typography.variants.body.md}>

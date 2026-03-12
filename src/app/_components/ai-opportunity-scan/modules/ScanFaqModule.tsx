@@ -11,15 +11,17 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanFaqModule() {
+    const lang = useLocale();
     return (
         <section className={cn(spacing.modulePadBottom.m, "tone-light bg-background text-foreground")}>
             <div className={cn("container mx-auto", spacing.stackLg)}>
                 {/* Header */}
                 <SectionHeader
-                    eyebrow={scanContent.faq.eyebrow}
-                    title={scanContent.faq.title}
+                    eyebrow={scanContent[lang].faq.eyebrow}
+                    title={scanContent[lang].faq.title}
                     variant="stacked"
                     divider={true}
                 />
@@ -27,7 +29,7 @@ export function ScanFaqModule() {
                 {/* FAQ List */}
                 <div className="w-full max-w-3xl mx-auto"> {/* lint:allowed - optical vertical rhythm */}
                     <Accordion type="single" collapsible className="w-full">
-                        {scanContent.faq.items.map((item, index) => (
+                        {scanContent[lang].faq.items.map((item, index) => (
                             <AccordionItem key={index} value={`item-${index}`}>
                                 <AccordionTrigger
                                     className={cn(

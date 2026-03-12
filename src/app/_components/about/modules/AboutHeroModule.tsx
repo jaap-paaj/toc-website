@@ -1,3 +1,5 @@
+"use client";
+
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { Heading } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
@@ -5,8 +7,10 @@ import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { aboutContent } from "@/app/_content/about";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function AboutHeroModule() {
+    const lang = useLocale();
     return (
         <HomeModule
             id="about-hero"
@@ -25,7 +29,7 @@ export function AboutHeroModule() {
                         level={1}
                         className={cn(typography.variants.display.heroTertiary, "w-full")}
                     >
-                        {aboutContent.hero.title}
+                        {aboutContent[lang].hero.title}
                     </Heading>
                 </div>
             </div>

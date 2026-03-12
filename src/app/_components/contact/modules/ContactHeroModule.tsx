@@ -1,11 +1,15 @@
+"use client";
+
 import { HomeModule } from "../../home/HomeModule";
 import { Heading } from "@/design-system/components/Typography";
 import { layoutTokens } from "@/design-system/tokens/layout";
 import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";
 import { contactContent } from "@/app/_content/contact";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ContactHeroModule() {
+    const lang = useLocale();
     return (
         <HomeModule
             id="contact-hero"
@@ -24,7 +28,7 @@ export function ContactHeroModule() {
                             level={1}
                             className={cn(typography.variants.display.heroTertiary, "w-full")}
                         >
-                            {contactContent.hero.title}
+                            {contactContent[lang].hero.title}
                         </Heading>
                     </div>
                     {/* Right Column: Omitted (Functional Header) */}

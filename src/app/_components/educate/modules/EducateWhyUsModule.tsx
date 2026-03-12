@@ -1,3 +1,5 @@
+"use client";
+
 import { HomeModule } from "../../home/HomeModule";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
@@ -6,11 +8,13 @@ import { cn } from "@/lib/utils";
 import { spacing } from "@/design-system/tokens/spacing";
 
 import { educateContent } from "@/app/_content/educate";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 // --- Sub-Module: Value Props ---
 
 function WhyUsValueProps() {
-    const items = educateContent.whyUs.items.map((item) => ({
+    const lang = useLocale();
+    const items = educateContent[lang].whyUs.items.map((item) => ({
         ...item,
         icon: <CheckCircle2 className="w-6 h-6 relative top-1" />
     }));
@@ -18,7 +22,7 @@ function WhyUsValueProps() {
     return (
         <div className={cn("container mx-auto flex flex-col", spacing.component.sectionHeader)}>
             {/* Header: Matches Home "CLIENTS" pattern exactly (using sectionHeader component token) */}
-            <SectionHeader variant="stacked" eyebrow={educateContent.whyUs.header.eyebrow} />
+            <SectionHeader variant="stacked" eyebrow={educateContent[lang].whyUs.header.eyebrow} />
 
             {/* Grid */}
             <FeatureGridSection items={items} columns={2} />
