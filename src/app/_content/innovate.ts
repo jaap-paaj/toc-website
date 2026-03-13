@@ -96,7 +96,7 @@ const nl: typeof en = {
     hero: {
         index: "03",
         title: "INNOVATE",
-        intro: "Strategische beslissingen zijn moeilijker dan ooit. Ze vragen om bewijs in plaats van aannames. Innovate is bedoeld om te bewijzen wat je als volgende moet bouwen of veranderen, voordat je tijd, budget en teams inzet. Dit doen we via AI-ondersteunde sprints, waarbij AI wordt ingezet om sneller inzicht op te bouwen, sterkere opties te genereren en eerder te valideren met een prototype of Proof of Concept. Het resultaat is beslissingsrijp bewijs: wat door te zetten, wat te laten vallen en wat op te schalen."
+        intro: "Strategische beslissingen zijn moeilijker dan ooit. Ze vragen om bewijs in plaats van aannames. Innovate helpt je bewijzen wat je als volgende moet bouwen of veranderen, voordat je tijd, budget en teams inzet. Dit doen we via AI-ondersteunde sprints, waarbij AI wordt ingezet om sneller inzicht op te bouwen, sterkere opties te genereren en eerder te valideren met een prototype of Proof of Concept. Het resultaat is bewijs waarop je kunt besluiten: wat door te zetten, wat te laten vallen en wat op te schalen."
     },
     propositions: {
         eyebrow: "NIEUWE PROPOSITIES & PRODUCTEN",
@@ -121,12 +121,12 @@ const nl: typeof en = {
             {
                 title: "AI Exploration Sprint",
                 meta: "5 dagen",
-                body: "Een diepgaande verkenning van de AI-gereedheid en kansen binnen jouw organisatie, inclusief haalbaarheidsanalyse, routekaart en ROI-inzichten."
+                body: "Een diepgaande verkenning van de AI-volwassenheid en kansen binnen jouw organisatie, inclusief haalbaarheidsanalyse, routekaart en ROI-inzichten."
             },
             {
                 title: "AI Build Sprint",
                 meta: "10 dagen",
-                body: "Ontwerp en lever een werkende AI-oplossing vanaf scratch. Inclusief ontwikkeling, testing, training en een plan voor opschaling."
+                body: "Ontwerp en lever een werkende AI-oplossing vanaf nul. Inclusief ontwikkeling, testing, training en een plan voor opschaling."
             }
         ]
     },
@@ -138,9 +138,9 @@ const nl: typeof en = {
                 title: "TRADITIONELE AANPAK",
                 bullets: [
                     { tone: "negative", text: "Duurt maanden" },
-                    { tone: "negative", text: "Hoge & onvoorspelbare investering" },
-                    { tone: "negative", text: "Theoretische analyse & testen na lancering" },
-                    { tone: "negative", text: "Eindeloze vergaderingen & gescheiden teams" },
+                    { tone: "negative", text: "Hoge en onvoorspelbare investering" },
+                    { tone: "negative", text: "Theoretische analyse en testen na lancering" },
+                    { tone: "negative", text: "Eindeloze vergaderingen en gescheiden teams" },
                     { tone: "negative", text: "Rapporten, presentaties, schattingen, giswerk" },
                     { tone: "negative", text: "70–90% van alle digitale innovaties mislukt" }
                 ]
@@ -149,11 +149,11 @@ const nl: typeof en = {
                 title: "ONZE INNOVATIE SPRINTS",
                 bullets: [
                     { tone: "positive", text: "Duurt 5–10 dagen" },
-                    { tone: "positive", text: "Lage & voorspelbare investering" },
-                    { tone: "positive", text: "Echte klantinput & vroege tests" },
+                    { tone: "positive", text: "Lage en voorspelbare investering" },
+                    { tone: "positive", text: "Echte klantinput en vroege tests" },
                     { tone: "positive", text: "Cross-functionele samenwerking" },
                     { tone: "positive", text: "Werkend prototype of Proof of Concept" },
-                    { tone: "positive", text: "Consistent sterke resultaten bij herhaald gebruik" }
+                    { tone: "positive", text: "Herhaalbare aanpak met consistent sterke resultaten" }
                 ]
             }
         },

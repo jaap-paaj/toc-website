@@ -20,11 +20,11 @@ const nl: typeof en = {
         title: "BLOG",
     },
     sidebar: {
-        latestPosts: "Laatste Blogs",
+        latestPosts: "Laatste inzichten",
         viewAll: "Bekijk alle blogs",
     },
     detail: {
-        moreFrom: "Meer van The Only Constant",
+        moreFrom: "Meer inzichten van The Only Constant",
         viewAll: "Bekijk alle blogs",
         newBadge: "Nieuw",
     },

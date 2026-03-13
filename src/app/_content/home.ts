@@ -91,7 +91,7 @@ const en = {
 
 const nl: typeof en = {
     hero: {
-        description: "Wij zijn een strategie- en designpartner die teams helpt om van aannames naar bewezen bedrijfsresultaten te gaan door te maken. We bouwen prototypes, Proofs of Concept en automatiseringen die snel duidelijkheid creëren.",
+        description: "Wij zijn een strategie- en designpartner die teams helpt aannames om te zetten in bewezen bedrijfsresultaten door te maken. We bouwen prototypes, Proofs of Concept en automatiseringen die snel duidelijk maken wat werkt.",
         cta: {
             label: "ONTDEK ONZE DIENSTEN",
             href: "#capabilities",
@@ -107,7 +107,7 @@ const nl: typeof en = {
         imageSrc: "/images/home/about.png",
         description: [
             "We zijn een strategie- en designpartner voor teams die vooruitgang nodig hebben zonder ruis. We combineren bedrijfsdoelen, menselijke behoeften en opkomende technologie om praktische concepten, prototypes en automatiseringen te bouwen voor dagelijks gebruik.",
-            "We focussen op resultaten, niet op hype. Dat betekent duidelijkere beslissingen, minder handmatig werk en vroeg bewijs van wat de moeite waard is zodat je sneller kunt bewegen zonder te gokken."
+            "We richten ons op resultaat, niet op hype. Dat betekent duidelijkere beslissingen, minder handmatig werk en vroeg bewijs van wat de moeite waard is zodat je sneller kunt handelen zonder te gokken."
         ],
         cta: {
             label: "MEER OVER ONS",
@@ -173,7 +173,7 @@ const nl: typeof en = {
             href: "/contact"
         },
         panelTitle: "WAT GEBEURT ER DAARNA",
-        panelBody: "Je vertrekt met ervaring, niet alleen inspiratie. Je begrijpt wat AI is en wat het verandert in je organisatie, en je weet wat de moeite waard is om als volgende te doen. Je krijgt kant-en-klare prompts, templates en praktische workflows die je meteen kunt gebruiken. Daarna ben je klaar voor de volgende stap: automatiseren, innoveren, of allebei.",
+        panelBody: "Je vertrekt met ervaring, niet alleen inspiratie. Je begrijpt wat AI is en wat het in je organisatie verandert, en je weet wat de moeite waard is om als volgende te doen. Je krijgt kant-en-klare prompts, templates en praktische workflows die je meteen kunt gebruiken. Daarna ben je klaar voor de volgende stap: automatiseren, innoveren, of allebei.",
         copyright: "© The Only Constant 2025"
     }
 };

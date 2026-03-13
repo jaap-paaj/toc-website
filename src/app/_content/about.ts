@@ -49,7 +49,7 @@ const nl: typeof en = {
         eyebrow: "ONZE AANPAK",
         title: "Wij geloven in praktische AI.",
         description: [
-            "Wij geloven in praktische verandering. AI is een middel om ideeën snel te bouwen en te testen, niet om meer slides te produceren. Strategie moet bewezen worden door te maken, met prototypes, Proofs of Concept en automatiseringen die helderheid creëren. We werken binnen echte randvoorwaarden, leren snel met echte gebruikers en operaties, en schalen wat zijn plek verdient.",
+            "Wij geloven in praktische verandering. AI is een middel om ideeën snel te bouwen en te testen, niet om meer slides te produceren. Strategie moet je bewijzen door te bouwen, met prototypes, Proofs of Concept en automatiseringen die helderheid creëren. We werken binnen de echte beperkingen van organisaties, leren snel met echte gebruikers en operaties, en schalen op wat in de praktijk werkt.",
         ]
     },
     team: {

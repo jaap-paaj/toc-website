@@ -91,7 +91,7 @@ const nl: typeof en = {
     hero: {
         index: "02",
         title: "AUTOMATE",
-        intro: "Wat je automatiseert is de beslissing die het rendement maakt of breekt. Onze projecten beginnen met een opportunity scan: samen met jouw team brengen we automatiseringskansen in kaart, plotten ze op een waarde-versus-inspanningsmatrix en vertalen de uitkomst naar een praktische roadmap. We stemmen ook af hoe elke automatisering in jouw context moet werken, zodat de oplossing past bij jullie manier van werken. Vervolgens ontwerpen en bouwen we de eerste automatisering, bewijzen snel waarde en schalen op wat werkt."
+        intro: "Wat je automatiseert bepaalt of je rendement haalt. Onze projecten beginnen met een opportunity scan: samen met jouw team brengen we automatiseringskansen in kaart, plaatsen ze op een waarde-versus-inspanningsmatrix en vertalen de uitkomst naar een praktische roadmap. We bepalen ook hoe elke automatisering in jouw context moet werken, zodat de oplossing past bij jullie manier van werken. Vervolgens ontwerpen en bouwen we de eerste automatisering, bewijzen snel waarde en schalen op wat werkt."
     },
     readyToRun: {
         eyebrow: "KANT-EN-KLARE AI-OPLOSSINGEN",
@@ -107,11 +107,11 @@ const nl: typeof en = {
             },
             {
                 title: "SOCIAL MEDIA ASSISTENT",
-                body: "Creëert, plaatst en analyseert consistente, merkgebonden content op al je kanalen. Ideaal voor marketingteams en bureaus die willen groeien zonder extra personeel aan te nemen."
+                body: "Creëert, plaatst en analyseert consistente content in jouw merkstijl op al je kanalen. Ideaal voor marketingteams en bureaus die willen groeien zonder extra personeel aan te nemen."
             },
             {
                 title: "SERVICE-AUTOMATISERING",
-                body: "Slimme triage en automatische antwoorden voor snellere oplossingen en tevredenere klanten. Het beste voor servicegerichte en supportintensieve organisaties."
+                body: "Slimme triage en automatische antwoorden voor snellere oplossingen en tevredenere klanten. Het beste voor servicegerichte organisaties met veel supportvragen."
             },
             {
                 title: "PROCESOPTIMALISATIE",
@@ -142,7 +142,7 @@ const nl: typeof en = {
             },
             {
                 badge: "WEEK 3",
-                title: "UITROL & SCHAAL",
+                title: "UITROL & OPSCHALING",
                 bullets: [
                     "Live-deployment",
                     "Teamtraining",
@@ -159,7 +159,7 @@ const nl: typeof en = {
                 body: "Onze automatiseringen verdienen zichzelf doorgaans binnen 3–6 maanden terug, dankzij 40–70% minder handmatig werk."
             },
             {
-                title: "AUTOMATISEER WAT ER HET MEEST TOE DOET",
+                title: "AUTOMATISEER WAT DE GROOTSTE IMPACT HEEFT",
                 body: "We prioriteren de processen met de grootste impact en vermijden de verspilling waar de meeste automatiseringsprojecten op stranden."
             },
             {
@@ -168,7 +168,7 @@ const nl: typeof en = {
             },
             {
                 title: "ONTWORPEN VOOR JOUW WERKWIJZE",
-                body: "Passendheid boven fraaiheid. We gebruiken onze AI-capabilitykaarten om workflows samen vorm te geven, van inputs en beslissingen tot controles, uitzonderingen en escalaties, zodat automatiseringen passen bij de organisatie en niet andersom."
+                body: "Werkbaar is belangrijker dan mooi. We gebruiken onze AI-capabilitykaarten om workflows samen vorm te geven, van inputs en beslissingen tot controles, uitzonderingen en escalaties, zodat automatiseringen passen bij de organisatie en niet andersom."
             }
         ]
     }

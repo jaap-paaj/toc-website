@@ -93,7 +93,7 @@ const nl: typeof en = {
     hero: {
         eyebrow: "01",
         title: "EDUCATE",
-        description: "Wij helpen teams praktische AI-vaardigheden opbouwen door middel van hands-on training op basis van echt werk. Geen hype, geen theorie voorop. Verwacht doen, niet luisteren: praktische oefeningen, workflow mapping en concrete resultaten die AI bruikbaar maken in het dagelijks werk. Gedeeld vertrouwen groeit rond veilig en verantwoord gebruik, inclusief de basis die teams nodig hebben om de EU AI Act te navigeren. Deelnemers vertrekken met herbruikbare workflows, werkende voorbeelden en duidelijke vervolgstappen."
+        description: "Wij helpen teams praktische AI-vaardigheden ontwikkelen door middel van hands-on training op basis van echt werk. Geen hype, geen theoretisch verhaal. Verwacht meedoen, niet alleen luisteren: praktische oefeningen, workflow mapping en concrete resultaten die AI bruikbaar maken in het dagelijks werk. Gedeeld vertrouwen groeit rond veilig en verantwoord gebruik, inclusief de basis die teams nodig hebben om verantwoord te werken binnen de EU AI Act. Deelnemers vertrekken met herbruikbare workflows, werkende voorbeelden en duidelijke vervolgstappen."
     },
     trainingCatalog: {
         aiTraining: {
@@ -139,7 +139,7 @@ const nl: typeof en = {
         },
         items: [
             {
-                title: "SNEL VAARDIGHEDEN OPBOUWEN",
+                title: "SNEL VAARDIGHEDEN ONTWIKKELEN",
                 description: "Sessies zitten vol praktische inzichten en tools, waardoor deelnemers in slechts een paar uur veel bruikbare kennis opdoen."
             },
             {
@@ -147,8 +147,8 @@ const nl: typeof en = {
                 description: "We gebruiken jullie eigen context en uitdagingen, zodat het geleerde direct het huidige werk verbetert."
             },
             {
-                title: "GELEID DOOR ECHTE PRAKTIJKMENSEN",
-                description: "Training wordt gegeven door ervaren AI-specialisten en innovatieleiders die deze methoden toepassen in echte klantprojecten."
+                title: "BEGELEID DOOR ERVAREN PROFESSIONALS",
+                description: "De trainingen worden gegeven door ervaren AI-specialisten en innovatieleiders die deze methoden toepassen in echte klantprojecten."
             },
             {
                 title: "SNELLER, BETER AFGESTEMD TEAMWORK",

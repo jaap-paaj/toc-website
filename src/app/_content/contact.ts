@@ -85,7 +85,7 @@ const nl: typeof en = {
     },
     details: {
         eyebrow: "BEDRIJFSGEGEVENS",
-        description: "Hier vind je ons bezoekadres en bedrijfsgegevens.",
+        description: "Hier vind je ons bezoekadres en onze bedrijfsgegevens.",
         cards: [
             {
                 title: "BEZOEK ONS",
@@ -114,7 +114,7 @@ const nl: typeof en = {
                 ],
                 items: [
                     { label: "Kamer van Koophandel (KvK)", value: "91800528" },
-                    { label: "VAT (BTW)", value: "NL865775230B01" },
+                    { label: "Btw-nummer", value: "NL865775230B01" },
                     { label: "IBAN", value: "NL52 BUNQ 2100 3024 93" },
                 ],
             },
