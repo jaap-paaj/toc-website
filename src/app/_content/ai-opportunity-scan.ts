@@ -1,6 +1,10 @@
 import type { Locale } from "@/lib/i18n/config";
 
 const en = {
+    meta: {
+        title: "AI Opportunity Scan | The Only Constant",
+        description: "Get clarity on where AI creates value. A half-day AI Opportunity Scan delivering priorities, a roadmap, and one PoC-ready process.",
+    },
     hero: {
         title: "AI Opportunity Scan: priorities, roadmap and one PoC-ready process in half a day",
         subtitle: "Know where AI pays off. Get a build-ready plan, not a slide deck.",
@@ -196,6 +200,10 @@ const en = {
 };
 
 const nl: typeof en = {
+    meta: {
+        title: "AI Opportunity Scan | The Only Constant",
+        description: "Duidelijkheid over waar AI waarde creëert. Een halve dag AI Opportunity Scan met prioriteiten, roadmap en één PoC-klaar proces.",
+    },
     hero: {
         title: "AI Opportunity Scan: prioriteiten, roadmap en één PoC-klaar proces in een halve dag",
         subtitle: "Weet waar AI zich terugverdient. Krijg een bouwklaar plan, geen slideshow.",
@@ -217,14 +225,14 @@ const nl: typeof en = {
     },
     statement: {
         eyebrow: "Waarom nu",
-        title: "Elke maand zonder duidelijkheid is een maand die je concurrenten gebruiken om te leveren",
+        title: "Elke maand zonder duidelijkheid is een maand voorsprong voor je concurrenten",
         body: [
-            "AI is overal, maar kiezen wat je ermee doet is lastig. De meeste organisaties blijven tools vergelijken of pilots draaien die niets veranderen aan wie wat doet. Dat houdt je beste mensen op laagwaardig werk en voorkomt dat AI blijvende waarde oplevert.",
+            "AI is overal, maar kiezen wat je ermee doet is lastig. De meeste organisaties blijven tools vergelijken of pilots draaien die niets veranderen aan processen, rollen of verantwoordelijkheden. Dat houdt je beste mensen op laagwaardig werk en voorkomt dat AI blijvende waarde oplevert.",
         ],
         interrupt: "Een last mover advantage bestaat niet",
         goal: {
             title: "Eén helder doel:",
-            description: "We laten zien waar AI ingezet moet worden en helpen je het te bouwen."
+            description: "We laten zien waar AI waarde toevoegt en helpen je de juiste oplossing te bouwen."
         },
         cta: {
             label: "Plan 20 minuten",
@@ -245,13 +253,13 @@ const nl: typeof en = {
                 step: "02",
                 duration: "Halve dag",
                 title: "Opportunity sessie",
-                description: "We brengen in kaart waar omzet ontstaat, waar waarde weglekt en waar toekomstige waarde vandaan komt. We verzamelen use cases, detailleren ze met onze AI-capability-cards, scoren ze op waarde en inspanning en onderzoeken sector- en cross-sectorvoorbeelden. We kiezen de beste kansen en werken één proces uit in PoC-klaar formaat."
+                description: "We brengen in kaart waar omzet ontstaat, waar waarde weglekt en waar toekomstige waarde vandaan komt. We verzamelen use cases, detailleren ze met onze AI-capability-cards, scoren ze op waarde en inspanning en onderzoeken voorbeelden uit je sector en daarbuiten. We kiezen de beste kansen en werken één proces uit in PoC-klaar formaat."
             },
             {
                 step: "03",
                 duration: "Dezelfde dag",
                 title: "Oplevering",
-                description: "Een geprioriteerde lijst, een impact- en haalbaarheidsmatrix, een 90-dagen-roadmap en één proces herontworpen en gedocumenteerd, klaar voor PoC."
+                description: "Een geprioriteerde lijst, een impact- en haalbaarheidsmatrix, een 90-dagen-roadmap en één herontworpen, gedocumenteerd proces dat klaar is voor een PoC."
             }
         ]
     },
@@ -261,19 +269,19 @@ const nl: typeof en = {
         description: [
             "Gedeeld begrip van waar AI wel en niet ingezet moet worden",
             "3 tot 7 geprioriteerde use cases met eigenaren en verwachte impact",
-            "Impact- en haalbaarheidsmatrix om besluitvorming te versnellen",
+            "Een impact- en haalbaarheidsmatrix om besluitvorming te versnellen",
             "90-dagen-roadmap met eigenaren en KPI's",
             "Eén proces herontworpen en PoC-klaar, met acceptatiecriteria en een testdataplan",
-            "Praktische do's en don'ts inclusief technische notities, privacy- en governance-richtlijnen"
+            "Praktische do's en don'ts, inclusief technische notities en richtlijnen voor privacy en governance"
         ]
     },
     whoThisIsFor: {
         eyebrow: "Voor wie",
         title: "Deze scan is voor",
-        subtitle: "hoofden operations, marketing, sales of product bij organisaties die:",
+        subtitle: "Hoofden van operations, marketing, sales of product bij organisaties die:",
         items: [
             "30+ medewerkers of meerdere herhaalbare processen hebben",
-            "Al verwachten AI te gebruiken — of onder druk staan om het te adopteren — maar nog niet weten waar",
+            "AI willen inzetten — of onder druk staan om ermee aan de slag te gaan — maar nog niet weten waar te beginnen",
             "Besluiten en meetbare voortgang willen, niet alleen experimenten"
         ]
     },
@@ -289,7 +297,7 @@ const nl: typeof en = {
             {
                 title: "Scan + Eerste Automatisering",
                 price: "€6,000",
-                description: "Scan gevolgd door een productiesprint die je eerste werkende automatisering oplevert.",
+                description: "Een scan, gevolgd door een productiesprint die je eerste werkende automatisering oplevert.",
             }
         ]
     },
@@ -397,21 +405,41 @@ export type HeroVariant = {
     subtitle: string;
 };
 
-export const scanHeroVariants: Record<string, HeroVariant> = {
-    "v-human-time": {
-        title: "AI Opportunity Scan: HUMAN TIME IS THE BOTTLENECK",
-        subtitle: "Your best people are stuck in work they should not do. We find the AI priorities that free your team and give you a build-ready 90-day roadmap."
+export const scanHeroVariants: Record<Locale, Record<string, HeroVariant>> = {
+    en: {
+        "v-human-time": {
+            title: "AI Opportunity Scan: HUMAN TIME IS THE BOTTLENECK",
+            subtitle: "Your best people are stuck in work they should not do. We find the AI priorities that free your team and give you a build-ready 90-day roadmap."
+        },
+        "v-theatre": {
+            title: "AI Opportunity Scan: EXPERIMENTS WITHOUT PLANS ARE JUST THEATRE",
+            subtitle: "Pilots that don't tie to decisions waste time and budget. We turn experiments into decision-making workstreams and PoC-ready processes."
+        },
+        "v-right-things": {
+            title: "AI Opportunity Scan: DOING THE RIGHT THINGS vs DOING THINGS RIGHT",
+            subtitle: "Most AI projects make the wrong work faster. We show where AI creates business outcomes and shift human time to higher-value work."
+        },
+        "v-arriving-late": {
+            title: "AI Opportunity Scan: THE REAL COST IS ARRIVING LATE",
+            subtitle: "While you calculate, competitors ship. We map the opportunities you should act on now and deliver a build-ready plan."
+        }
     },
-    "v-theatre": {
-        title: "AI Opportunity Scan: EXPERIMENTS WITHOUT PLANS ARE JUST THEATRE",
-        subtitle: "Pilots that don't tie to decisions waste time and budget. We turn experiments into decision-making workstreams and PoC-ready processes."
-    },
-    "v-right-things": {
-        title: "AI Opportunity Scan: DOING THE RIGHT THINGS vs DOING THINGS RIGHT",
-        subtitle: "Most AI projects make the wrong work faster. We show where AI creates business outcomes and shift human time to higher-value work."
-    },
-    "v-arriving-late": {
-        title: "AI Opportunity Scan: THE REAL COST IS ARRIVING LATE",
-        subtitle: "While you calculate, competitors ship. We map the opportunities you should act on now and deliver a build-ready plan."
+    nl: {
+        "v-human-time": {
+            title: "AI Opportunity Scan: JE BESTE MENSEN ZITTEN VAST IN HET VERKEERDE WERK",
+            subtitle: "Je beste mensen besteden hun tijd aan werk dat niet bij hen hoort. Wij brengen in kaart waar AI echt waarde toevoegt, maken de juiste prioriteiten scherp en vertalen die naar een bouwklare roadmap voor de komende 90 dagen."
+        },
+        "v-theatre": {
+            title: "AI Opportunity Scan: ZONDER PLAN WORDT AI AL SNEL THEATER",
+            subtitle: "Pilots die niet leiden tot echte keuzes kosten tijd en budget. Wij vertalen experimenten naar concrete beslissingen, duidelijke werkstromen en processen die klaar zijn voor een PoC."
+        },
+        "v-right-things": {
+            title: "AI Opportunity Scan: AI MAAKT HET VERKEERDE WERK OOK ALLEEN MAAR SNELLER",
+            subtitle: "De meeste AI-projecten versnellen vooral werk dat weinig oplevert. Wij laten zien waar AI echt bedrijfswaarde creëert en verschuiven tijd van mensen naar werk met meer impact."
+        },
+        "v-arriving-late": {
+            title: "AI Opportunity Scan: DE ECHTE KOSTEN ZITTEN IN TE LANG WACHTEN",
+            subtitle: "Terwijl jij nog afweegt, zetten concurrenten al stappen. Wij maken zichtbaar waar je nu moet handelen en leveren een bouwklaar plan om door te pakken."
+        }
     }
 };
