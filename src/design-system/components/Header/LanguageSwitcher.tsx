@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -16,7 +17,7 @@ const labels: Record<Locale, string> = {
   en: "EN",
 };
 
-export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
+function LanguageSwitcherInner({ className }: LanguageSwitcherProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentLocale = useLocale();
@@ -66,5 +67,13 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         </span>
       ))}
     </div>
+  );
+}
+
+export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
+  return (
+    <Suspense>
+      <LanguageSwitcherInner className={className} />
+    </Suspense>
   );
 }
