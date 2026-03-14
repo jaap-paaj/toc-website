@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog/loader";
 import { BlogDetailPage } from "@/app/_components/blog/BlogDetailPage";
+import { StructuredData } from "@/components/seo/StructuredData";
 import type { Locale } from "@/lib/i18n/config";
+
+const SITE_URL = "https://theonlyconstant.nl";
 
 interface BlogPostPageProps {
     params: Promise<{ lang: string; slug: string }>;
@@ -48,5 +51,61 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         .filter((p) => p.slug !== slug)
         .slice(0, 5);
 
-    return <BlogDetailPage post={fullPost} latestPosts={latestPosts} />;
+    const pageUrl = `${SITE_URL}/${locale}/blog/${slug}`;
+
+    return (
+        <>
+            <StructuredData
+                data={{
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    headline: fullPost.title,
+                    description: fullPost.intro,
+                    datePublished: fullPost.date,
+                    ...(fullPost.author && {
+                        author: {
+                            "@type": "Person",
+                            name: fullPost.author,
+                        },
+                    }),
+                    publisher: {
+                        "@type": "Organization",
+                        name: "The Only Constant",
+                        logo: {
+                            "@type": "ImageObject",
+                            url: `${SITE_URL}/images/brand/toc/TOC_Logo_black.svg`,
+                        },
+                    },
+                    mainEntityOfPage: pageUrl,
+                    inLanguage: locale,
+                }}
+            />
+            <StructuredData
+                data={{
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    itemListElement: [
+                        {
+                            "@type": "ListItem",
+                            position: 1,
+                            name: "Home",
+                            item: `${SITE_URL}/${locale}`,
+                        },
+                        {
+                            "@type": "ListItem",
+                            position: 2,
+                            name: "Blog",
+                            item: `${SITE_URL}/${locale}/blog`,
+                        },
+                        {
+                            "@type": "ListItem",
+                            position: 3,
+                            name: fullPost.title,
+                        },
+                    ],
+                }}
+            />
+            <BlogDetailPage post={fullPost} latestPosts={latestPosts} />
+        </>
+    );
 }
