@@ -1,9 +1,13 @@
+"use client";
+
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { innovateContent } from "@/app/_content/innovate";
 import { CapabilityHeroSection } from "@/components/sections/CapabilityHeroSection";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function InnovateHeroModule() {
-    const { hero } = innovateContent;
+    const lang = useLocale();
+    const { hero } = innovateContent[lang];
 
     return (
         <HomeModule

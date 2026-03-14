@@ -6,9 +6,12 @@ import { HeaderLogo } from "./HeaderLogo";
 import { HeaderNav } from "./HeaderNav";
 import { HeaderCta } from "./HeaderCta";
 import { HeaderMenuToggle } from "./HeaderMenuToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 import { HeaderNavShell } from "./HeaderNavShell";
 import { typography } from "@/design-system/tokens/typography";
+import { useLocale, localizeHref } from "@/lib/i18n/useLocale";
+import type { Locale } from "@/lib/i18n/config";
 
 export interface HeaderProps {
     variant?: "home" | "default";
@@ -17,23 +20,35 @@ export interface HeaderProps {
     showBackButton?: boolean; // Legacy prop support
 }
 
-const DEFAULT_LINKS = [
-    { label: "Educate", href: "/educate" },
-    { label: "Automate", href: "/automate" },
-    { label: "Innovate", href: "/innovate" },
-    { label: "About us", href: "/about" },
-];
+const DEFAULT_LINKS: Record<Locale, { label: string; href: string }[]> = {
+    en: [
+        { label: "Educate", href: "/educate" },
+        { label: "Automate", href: "/automate" },
+        { label: "Innovate", href: "/innovate" },
+        { label: "About us", href: "/about" },
+    ],
+    nl: [
+        { label: "Educate", href: "/educate" },
+        { label: "Automate", href: "/automate" },
+        { label: "Innovate", href: "/innovate" },
+        { label: "Over ons", href: "/about" },
+    ],
+};
 
 const DEFAULT_CTA = { label: "Contact", href: "/contact" };
 
 export function Header({
-    links = DEFAULT_LINKS,
+    links,
     cta = DEFAULT_CTA,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     variant = "default",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     showBackButton: _showBackButton
 }: HeaderProps) {
+    const lang = useLocale();
+    const resolvedLinks = links ?? DEFAULT_LINKS[lang];
+    const localizedLinks = resolvedLinks.map((l) => ({ ...l, href: localizeHref(l.href, lang) }));
+    const localizedCta = { ...cta, href: localizeHref(cta.href, lang) };
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     // const _isHome = variant === "home"; // Unused currently as header look is consistent
 
@@ -59,8 +74,9 @@ export function Header({
 
                         {/* Right: Nav + CTA + Mobile Toggle */}
                         <div className="flex items-center gap-6 md:gap-8 ml-auto">
-                            <HeaderNav links={links} />
-                            <HeaderCta cta={cta} className="hidden lg:block" />
+                            <HeaderNav links={localizedLinks} />
+                            <LanguageSwitcher className="hidden lg:flex" />
+                            <HeaderCta cta={localizedCta} className="hidden lg:block" />
                             <HeaderMenuToggle
                                 isOpen={isMenuOpen}
                                 onToggle={toggleMenu}
@@ -81,7 +97,7 @@ export function Header({
 
                     {/* TODO: Full mobile menu implementation */}
                     <nav className="flex flex-col gap-6 items-center">
-                        {links.map((link) => (
+                        {localizedLinks.map((link) => (
                             <a
                                 key={link.href}
                                 href={link.href}
@@ -95,7 +111,7 @@ export function Header({
                             </a>
                         ))}
                         <a
-                            href={cta.href}
+                            href={localizedCta.href}
                             className={cn(
                                 "mt-4",
                                 typography.variants.ui.nav.brand,
@@ -103,8 +119,9 @@ export function Header({
                             )}
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            {cta.label}
+                            {localizedCta.label}
                         </a>
+                        <LanguageSwitcher className="mt-6" />
                     </nav>
                 </div>
             )}

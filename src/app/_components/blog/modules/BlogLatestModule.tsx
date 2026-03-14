@@ -1,18 +1,22 @@
-import Link from "next/link";
+"use client";
+
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { Heading } from "@/design-system/components/Typography";
 import { Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import type { BlogPostMeta } from "@/lib/blog/types";
+import { blogContent } from "@/app/_content/blog";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 interface BlogLatestSectionProps {
     posts: BlogPostMeta[];
     showBottomBorder?: boolean;
 }
 
-function formatDate(dateStr: string): string {
-    return new Date(dateStr).toLocaleDateString("en-GB", {
+function formatDate(dateStr: string, lang: string): string {
+    return new Date(dateStr).toLocaleDateString(lang === "nl" ? "nl-NL" : "en-GB", {
         year: "numeric",
         month: "long",
         day: "numeric",
@@ -27,6 +31,9 @@ function isRecent(dateStr: string, days = 30): boolean {
 }
 
 export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSectionProps) {
+    const lang = useLocale();
+    const content = blogContent[lang].detail;
+
     if (posts.length === 0) return null;
 
     return (
@@ -50,7 +57,7 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
                                     "bg-primary text-primary-foreground px-2 py-0.5 rounded-full"
                                 )}
                             >
-                                New
+                                {content.newBadge}
                             </span>
                         )}
                         <time
@@ -60,7 +67,7 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
                                 "text-muted-foreground"
                             )}
                         >
-                            {formatDate(post.date)}
+                            {formatDate(post.date, lang)}
                         </time>
                     </div>
 

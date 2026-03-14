@@ -3,7 +3,7 @@ import { Heading, Text } from "@/design-system/components/Typography";
 import { Button } from "@/components/ui/Button";
 import { spacing } from "@/design-system/tokens/spacing";
 import { typography } from "@/design-system/tokens/typography";
-import Link from "next/link";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import Image from "next/image";
 
 interface TextStackProps {

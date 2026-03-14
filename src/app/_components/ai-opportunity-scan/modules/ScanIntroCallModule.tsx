@@ -10,11 +10,13 @@ import { layoutTokens } from "@/design-system/tokens/layout";
 import { typography } from "@/design-system/tokens/typography";
 import { scanContent } from "@/app/_content/ai-opportunity-scan";
 import { trackEvent } from "@/lib/analytics/ga";
-import Link from "next/link";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { CardContent, CardHeader } from "@/components/ui/Card";
 import { CheckIcon } from "lucide-react";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanIntroCallModule() {
+    const lang = useLocale();
     return (
         <section className={cn("w-full tone-light bg-background text-foreground", spacing.modulePadBottom.m)}>
             <div className={cn("container mx-auto")}>
@@ -26,12 +28,12 @@ export function ScanIntroCallModule() {
 
                         {/* Left Column: Narrative Stack */}
                         <div className={cn(spacing.stackLg, "min-w-0")}>
-                            <SectionEyebrow>{scanContent.introCall.eyebrow}</SectionEyebrow>
+                            <SectionEyebrow>{scanContent[lang].introCall.eyebrow}</SectionEyebrow>
                             <Heading level={2} size="section" className="text-balance">
-                                {scanContent.introCall.title}
+                                {scanContent[lang].introCall.title}
                             </Heading>
                             <Text size="lg" className="text-muted-foreground">
-                                {scanContent.introCall.body}
+                                {scanContent[lang].introCall.body}
                             </Text>
                         </div>
 
@@ -41,7 +43,7 @@ export function ScanIntroCallModule() {
                             <CardHeader>
                                 <div className={spacing.stackXs}>
                                     <SectionEyebrow className={typography.variants.meta.label}>
-                                        {scanContent.introCall.card.title}
+                                        {scanContent[lang].introCall.card.title}
                                     </SectionEyebrow>
                                 </div>
                             </CardHeader>
@@ -49,7 +51,7 @@ export function ScanIntroCallModule() {
                             {/* Content: Bullets + CTA */}
                             <CardContent className={cn("flex flex-col", spacing.stackLg)}>
                                 <ul className={spacing.stackSm}>
-                                    {scanContent.introCall.card.bullets.map((item, i) => (
+                                    {scanContent[lang].introCall.card.bullets.map((item, i) => (
                                         <li key={i} className={cn("flex items-start gap-3")}> {/* lint:allowed - Checklist row gap */}
                                             <CheckIcon className={cn("w-5 h-5 text-foreground shrink-0 mt-0.5")} /* lint:allowed - light variant checklist */ />
                                             <Text className={typography.variants.body.md}>
@@ -65,13 +67,13 @@ export function ScanIntroCallModule() {
                                     className="w-full sm:w-auto self-start max-w-full h-auto whitespace-normal text-left py-2" /* lint:allowed - CTA multiline support */
                                     onClick={() =>
                                         trackEvent("cta_click", {
-                                            cta_label: scanContent.introCall.card.cta.label,
+                                            cta_label: scanContent[lang].introCall.card.cta.label,
                                             cta_location: "intro_call",
                                         })
                                     }
                                 >
-                                    <Link href={scanContent.introCall.card.cta.href}>
-                                        {scanContent.introCall.card.cta.label}
+                                    <Link href={scanContent[lang].introCall.card.cta.href}>
+                                        {scanContent[lang].introCall.card.cta.label}
                                     </Link>
                                 </Button>
                             </CardContent>

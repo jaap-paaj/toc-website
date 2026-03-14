@@ -1,35 +1,6 @@
-export interface AutomateContent {
-    hero: {
-        index: string;
-        title: string;
-        intro: string;
-    };
-    readyToRun: {
-        eyebrow: string;
-        description: string;
-        items: {
-            title: string;
-            body: string;
-        }[];
-    };
-    approach: {
-        eyebrow: string;
-        items: {
-            badge: string;
-            title: string;
-            bullets: string[];
-        }[];
-    };
-    whyUs: {
-        eyebrow: string;
-        items: {
-            title: string;
-            body: string;
-        }[];
-    };
-}
+import type { Locale } from "@/lib/i18n/config";
 
-export const automateContent: AutomateContent = {
+const en = {
     hero: {
         index: "02",
         title: "AUTOMATE",
@@ -115,3 +86,92 @@ export const automateContent: AutomateContent = {
         ]
     }
 };
+
+const nl: typeof en = {
+    hero: {
+        index: "02",
+        title: "AUTOMATE",
+        intro: "Wat je automatiseert bepaalt of je rendement haalt. Onze projecten beginnen met een opportunity scan: samen met jouw team brengen we automatiseringskansen in kaart, plaatsen ze op een waarde-versus-inspanningsmatrix en vertalen de uitkomst naar een praktische roadmap. We bepalen ook hoe elke automatisering in jouw context moet werken, zodat de oplossing past bij jullie manier van werken. Vervolgens ontwerpen en bouwen we de eerste automatisering, bewijzen snel waarde en schalen op wat werkt."
+    },
+    readyToRun: {
+        eyebrow: "KANT-EN-KLARE AI-OPLOSSINGEN",
+        description: "Modulaire oplossingen die we aanpassen aan jouw context. Eerste waarde binnen dagen, productierijp in enkele weken.",
+        items: [
+            {
+                title: "DAGELIJKSE INZICHTEN",
+                body: "AI scant je data en signaleert trends, afwijkingen en kansen. Ideaal voor leidinggevenden en analisten die minder tijd willen besteden aan rapportages."
+            },
+            {
+                title: "CONTENTGENERATIE",
+                body: "Zet productspecificaties automatisch om in marketingklare teksten. Gebouwd voor e-commerce-, marketing- en productteams die snelheid en schaalbaarheid nodig hebben."
+            },
+            {
+                title: "SOCIAL MEDIA ASSISTENT",
+                body: "Creëert, plaatst en analyseert consistente content in jouw merkstijl op al je kanalen. Ideaal voor marketingteams en bureaus die willen groeien zonder extra personeel aan te nemen."
+            },
+            {
+                title: "SERVICE-AUTOMATISERING",
+                body: "Slimme triage en automatische antwoorden voor snellere oplossingen en tevredenere klanten. Het beste voor servicegerichte organisaties met veel supportvragen."
+            },
+            {
+                title: "PROCESOPTIMALISATIE",
+                body: "AI brengt inefficiënties in je workflows in kaart en doet verbetervoorstellen. Perfect voor operationele teams die gericht zijn op prestatieverbetering."
+            }
+        ]
+    },
+    approach: {
+        eyebrow: "AANPAK",
+        items: [
+            {
+                badge: "WEEK 1",
+                title: "AUDIT & ONTWERP",
+                bullets: [
+                    "Huidige workflows analyseren",
+                    "High-impact doelen identificeren",
+                    "Agent-architectuur ontwerpen"
+                ]
+            },
+            {
+                badge: "WEEK 2",
+                title: "BOUWEN & TRAINEN",
+                bullets: [
+                    "Automatisering bouwen",
+                    "Integreren met tools",
+                    "Grondig testen en verfijnen"
+                ]
+            },
+            {
+                badge: "WEEK 3",
+                title: "UITROL & OPSCHALING",
+                bullets: [
+                    "Live-deployment",
+                    "Teamtraining",
+                    "Prestatiemonitoring"
+                ]
+            }
+        ]
+    },
+    whyUs: {
+        eyebrow: "WAAROM WIJ?",
+        items: [
+            {
+                title: "SNEL, MEETBAAR RENDEMENT",
+                body: "Onze automatiseringen verdienen zichzelf doorgaans binnen 3–6 maanden terug, dankzij 40–70% minder handmatig werk."
+            },
+            {
+                title: "AUTOMATISEER WAT DE GROOTSTE IMPACT HEEFT",
+                body: "We prioriteren de processen met de grootste impact en vermijden de verspilling waar de meeste automatiseringsprojecten op stranden."
+            },
+            {
+                title: "LAAG RISICO, VOORSPELBARE OPLEVERING",
+                body: "Heldere scoping, iteratieve validatie en voorspelbare kosten voorkomen verrassingen en overschrijdingen."
+            },
+            {
+                title: "ONTWORPEN VOOR JOUW WERKWIJZE",
+                body: "Werkbaar is belangrijker dan mooi. We gebruiken onze AI-capabilitykaarten om workflows samen vorm te geven, van inputs en beslissingen tot controles, uitzonderingen en escalaties, zodat automatiseringen passen bij de organisatie en niet andersom."
+            }
+        ]
+    }
+};
+
+export const automateContent: Record<Locale, typeof en> = { en, nl };

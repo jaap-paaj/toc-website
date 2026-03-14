@@ -1,9 +1,13 @@
+"use client";
+
 import { HomeModule } from "../../home/HomeModule";
 import { automateContent } from "@/app/_content/automate";
 import { CatalogGridSection } from "@/components/sections/CatalogGridSection";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function AutomateReadyToRunModule() {
-    const { readyToRun } = automateContent;
+    const lang = useLocale();
+    const { readyToRun } = automateContent[lang];
 
     const items = readyToRun.items.map(item => ({
         title: item.title,

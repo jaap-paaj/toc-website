@@ -2,21 +2,26 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog/loader";
 import { BlogDetailPage } from "@/app/_components/blog/BlogDetailPage";
+import type { Locale } from "@/lib/i18n/config";
 
 interface BlogPostPageProps {
-    params: Promise<{ slug: string }>;
+    params: Promise<{ lang: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-    const posts = getAllPosts();
+    // Generate slug params for all locales — the loader falls back to "en"
+    // so the same slugs work for both /nl/blog/... and /en/blog/...
+    const posts = getAllPosts("en");
     return posts.map((post) => ({ slug: post.slug }));
 }
+
+export const dynamicParams = true;
 
 export async function generateMetadata({
     params,
 }: BlogPostPageProps): Promise<Metadata> {
-    const { slug } = await params;
-    const post = getPostBySlug(slug);
+    const { lang, slug } = await params;
+    const post = getPostBySlug(slug, lang as Locale);
     if (!post) return { title: "Post Not Found" };
 
     return {
@@ -26,15 +31,16 @@ export async function generateMetadata({
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-    const { slug } = await params;
-    const allPosts = getAllPosts();
+    const { lang, slug } = await params;
+    const locale = lang as Locale;
+    const allPosts = getAllPosts(locale);
 
     // Find active post
     const post = allPosts.find((p) => p.slug === slug);
     if (!post) notFound();
 
     // Fetch full post content
-    const fullPost = getPostBySlug(slug);
+    const fullPost = getPostBySlug(slug, locale);
     if (!fullPost) notFound();
 
     // Get strictly 5 latest posts (excluding active)

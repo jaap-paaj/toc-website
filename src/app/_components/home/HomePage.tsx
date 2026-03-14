@@ -1,4 +1,5 @@
 import { PageLayout } from "@/design-system/components/Layout";
+import type { Locale } from "@/lib/i18n/config";
 
 import { HomeHeroModule } from "./modules/HomeHeroModule";
 import { HomeServicesModule } from "./modules/HomeServicesModule";
@@ -7,13 +8,17 @@ import { HomeAboutModule } from "./modules/HomeAboutModule";
 import { HomeInsightsModule } from "./modules/HomeInsightsModule";
 import { HomeFooterCtaModule } from "./modules/HomeFooterCtaModule";
 
-export function HomePage() {
+interface HomePageProps {
+    lang: Locale;
+}
+
+export function HomePage({ lang }: HomePageProps) {
     return (
         <PageLayout variant="landing">
             <HomeHeroModule />
             <HomeServicesModule />
             <HomeClientsModule />
-            <HomeInsightsModule />
+            <HomeInsightsModule lang={lang} />
             <HomeAboutModule />
             <HomeFooterCtaModule />
         </PageLayout>

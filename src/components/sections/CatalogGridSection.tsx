@@ -54,7 +54,7 @@ export function CatalogGridSection({
             {/* We need to ensure spacing is correct. CatalogGridSection usually has gap-6/8. */}
 
             <div className={cn(
-                "grid grid-cols-1 gap-6 lg:gap-8 items-start [&>*]:h-auto [&>*]:min-h-0",
+                "grid grid-cols-1 gap-6 lg:gap-8",
                 columns === 2 && "md:grid-cols-2",
                 columns === 3 && "md:grid-cols-3"
             )}>

@@ -1,30 +1,34 @@
-import Link from "next/link";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { Heading } from "@/design-system/components/Typography";
 import { Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
+import { blogContent } from "@/app/_content/blog";
 import type { BlogPostMeta } from "@/lib/blog/types";
+import type { Locale } from "@/lib/i18n/config";
 
 interface BlogGridSectionProps {
     posts: BlogPostMeta[];
+    lang: Locale;
 }
 
-function formatDate(dateStr: string): string {
-    return new Date(dateStr).toLocaleDateString("en-GB", {
+function formatDate(dateStr: string, locale: Locale): string {
+    return new Date(dateStr).toLocaleDateString(locale === "nl" ? "nl-NL" : "en-GB", {
         year: "numeric",
         month: "long",
         day: "numeric",
     });
 }
 
-export function BlogGridSection({ posts }: BlogGridSectionProps) {
+export function BlogGridSection({ posts, lang }: BlogGridSectionProps) {
+    const { overview } = blogContent[lang];
     if (posts.length === 0) return null;
 
     return (
         <div className={cn("max-w-4xl mx-auto w-full px-6 flex flex-col", spacing.stackLg)}>
             <span className={typography.variants.meta.eyebrow}>
-                More Thinking
+                {overview.moreTitle}
             </span>
 
             <div className={cn("flex flex-col", spacing.sectionStack.gap.s)}>
@@ -42,7 +46,7 @@ export function BlogGridSection({ posts }: BlogGridSectionProps) {
                                 "text-muted-foreground"
                             )}
                         >
-                            {formatDate(post.date)}
+                            {formatDate(post.date, lang)}
                         </time>
 
                         {/* Title */}

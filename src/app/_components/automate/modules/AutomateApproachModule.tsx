@@ -1,12 +1,16 @@
+"use client";
+
 import { HomeModule } from "../../home/HomeModule";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { CatalogGridSection } from "@/components/sections/CatalogGridSection";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { automateContent } from "@/app/_content/automate";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function AutomateApproachModule() {
-    const { approach } = automateContent;
+    const lang = useLocale();
+    const { approach } = automateContent[lang];
 
     // Map content to FeatureGridItem
     // Bullets are joined into a single description string

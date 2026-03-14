@@ -1,3 +1,5 @@
+"use client";
+
 import { HomeModule } from "../../home/HomeModule";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
@@ -5,9 +7,11 @@ import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { automateContent } from "@/app/_content/automate";
 import { CheckCircle2 } from "lucide-react";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export function AutomateWhyUsModule() {
-    const { whyUs } = automateContent;
+    const lang = useLocale();
+    const { whyUs } = automateContent[lang];
 
     const items = whyUs.items.map(item => ({
         title: item.title,
