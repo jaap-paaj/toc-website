@@ -9,20 +9,28 @@ import { ScanIntroCallModule } from "@/app/_components/ai-opportunity-scan/modul
 import { ScanFaqModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFaqModule";
 import { ScanFooterCtaModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFooterCtaModule";
 import { Metadata } from "next";
-import { scanHeroVariants } from "@/app/_content/ai-opportunity-scan";
-
-export const metadata: Metadata = {
-    title: "AI Opportunity Scan | The Only Constant",
-    description: "Get clarity on where AI creates value. A half-day AI Opportunity Scan delivering priorities, a roadmap, and one PoC-ready process.",
-};
+import { scanHeroVariants, scanContent } from "@/app/_content/ai-opportunity-scan";
+import type { Locale } from "@/lib/i18n/config";
 
 interface PageProps {
+    params: Promise<{ lang: string }>;
     searchParams: Promise<{ v?: string }>;
 }
 
-export default async function Page({ searchParams }: PageProps) {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { lang } = await params;
+    const { meta } = scanContent[lang as Locale];
+    return {
+        title: meta.title,
+        description: meta.description,
+    };
+}
+
+export default async function Page({ params, searchParams }: PageProps) {
+    const { lang } = await params;
     const { v } = await searchParams;
-    const variant = v && v in scanHeroVariants ? scanHeroVariants[v as keyof typeof scanHeroVariants] : undefined;
+    const localeVariants = scanHeroVariants[lang as Locale];
+    const variant = v && v in localeVariants ? localeVariants[v] : undefined;
 
     return (
         <PageLayout variant="landing">
