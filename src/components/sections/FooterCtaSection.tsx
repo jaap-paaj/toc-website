@@ -30,7 +30,7 @@ export function FooterCtaSection({
 }: FooterCtaSectionProps) {
     const lang = useLocale();
     return (
-        <div className={cn("container mx-auto", className)}>
+        <footer className={cn("container mx-auto", className)}>
             <Surface
                 variant="card"
                 className={cn(
@@ -97,6 +97,6 @@ export function FooterCtaSection({
                     </div>
                 </div>
             </Surface>
-        </div>
+        </footer>
     );
 }

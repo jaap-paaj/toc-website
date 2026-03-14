@@ -23,9 +23,15 @@ export function PageLayout({ children, variant = "default" }: PageLayoutProps) {
 
     return (
         <>
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-surface focus:bg-background focus:px-4 focus:py-2 focus:shadow-surface focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+                Skip to content
+            </a>
             <Header showBackButton={showBackButton} />
             {/* Main is always full-width, no horizontal constraints here */}
-            <main className="w-full min-h-screen bg-background">
+            <main id="main-content" className="w-full min-h-screen bg-background">
                 {isLanding ? (
                     children
                 ) : (

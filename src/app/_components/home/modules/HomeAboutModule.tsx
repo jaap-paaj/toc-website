@@ -21,20 +21,19 @@ export function HomeAboutModule() {
                             {homeContent[lang].about.eyebrow}
                         </Paragraph>
 
-                        <div className="flex flex-col">
+                        <Heading level={2} className={typography.variants.display.editorialStatement}>
                             {homeContent[lang].about.statementLines.map((line, index) => (
-                                <Heading
+                                <span
                                     key={index}
-                                    level={2}
                                     className={cn(
-                                        typography.variants.display.editorialStatement,
+                                        "block",
                                         index === 2 ? "text-primary" : "text-foreground"
                                     )}
                                 >
                                     {line}
-                                </Heading>
+                                </span>
                             ))}
-                        </div>
+                        </Heading>
                     </div>
 
                     {/* Description */}

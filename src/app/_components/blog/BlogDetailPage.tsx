@@ -28,9 +28,9 @@ export function BlogDetailPage({ post, latestPosts }: BlogDetailPageProps) {
                 <div className="w-full flex flex-col items-center">
                     <hr className={cn("w-full max-w-5xl border-border", spacing.modulePadBottom.m)} />
                     <div className={cn("w-full flex flex-col items-center", spacing.stackLg)}>
-                        <span className={cn(typography.variants.meta.eyebrow, "text-secondary text-center")}>
+                        <h2 className={cn(typography.variants.meta.eyebrow, "text-secondary text-center")}>
                             {content.moreFrom}
-                        </span>
+                        </h2>
                         <BlogLatestSection posts={latestPosts} showBottomBorder />
                         <Link
                             href="/blog"

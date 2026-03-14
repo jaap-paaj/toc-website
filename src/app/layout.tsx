@@ -6,6 +6,9 @@ import { cn } from "@/lib/utils";
 import { SmoothScrollAnchor } from "@/components/utils/SmoothScrollAnchor";
 import { HtmlLangSync } from "@/components/i18n/HtmlLangSync";
 import { colors } from "@/design-system/tokens/colors";
+import { StructuredData } from "@/components/seo/StructuredData";
+
+const SITE_URL = "https://theonlyconstant.nl";
 
 const fontSans = Figtree({
   variable: "--font-sans", // lint:allowed
@@ -36,6 +39,26 @@ export default function RootLayout({
           "antialiased min-h-screen bg-background font-sans" /* lint:allowed */
         )}
       >
+        <StructuredData
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "The Only Constant",
+            url: SITE_URL,
+            logo: `${SITE_URL}/images/brand/toc/TOC_Logo_black.svg`,
+            description:
+              "Strategy and design partner for AI, automation and innovation.",
+          }}
+        />
+        <StructuredData
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "The Only Constant",
+            url: SITE_URL,
+            inLanguage: ["nl", "en"],
+          }}
+        />
         <HtmlLangSync />
         <GoogleAnalytics />
         {children}

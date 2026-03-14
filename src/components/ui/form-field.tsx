@@ -22,12 +22,20 @@ export function FormField({
     className,
     children,
 }: FormFieldProps) {
+    const id = React.useId();
+    const errorId = `${id}-error`;
     const child = React.Children.only(children) as React.ReactElement;
+
+    const extraProps: Record<string, unknown> = { id };
+    if (error) {
+        extraProps["aria-invalid"] = true;
+        extraProps["aria-describedby"] = errorId;
+    }
 
     return (
         <div className={cn(spacing.stackSm, className)}>
             <div className="flex flex-col gap-1">
-                <Label className={cn("text-foreground", typography.variants.meta.label)}>
+                <Label htmlFor={id} className={cn("text-foreground", typography.variants.meta.label)}>
                     {label}
                 </Label>
                 {description && (
@@ -36,9 +44,9 @@ export function FormField({
                     </p>
                 )}
             </div>
-            {error ? React.cloneElement(child, { "aria-invalid": true } as React.Attributes & { "aria-invalid"?: boolean }) : child}
+            {React.cloneElement(child, extraProps as React.Attributes)}
             {error && (
-                <p className={cn("text-destructive", typography.variants.body.sm)}>
+                <p id={errorId} role="alert" className={cn("text-destructive", typography.variants.body.sm)}>
                     {error}
                 </p>
             )}
