@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { useLocale } from "@/lib/i18n/useLocale";
@@ -18,6 +18,7 @@ const labels: Record<Locale, string> = {
 
 export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const currentLocale = useLocale();
 
   function getLocalizedPath(locale: Locale): string {
@@ -26,7 +27,9 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
     if (i18n.locales.includes(segments[1] as Locale)) {
       segments[1] = locale;
     }
-    return segments.join("/") || `/${locale}`;
+    const path = segments.join("/") || `/${locale}`;
+    const qs = searchParams.toString();
+    return qs ? `${path}?${qs}` : path;
   }
 
   return (
