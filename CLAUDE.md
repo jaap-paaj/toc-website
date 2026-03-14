@@ -71,9 +71,13 @@ Content files export `Record<Locale, { ... }>` objects with sections. Modules im
 ### i18n pattern
 
 - Default locale: `nl`
-- All content in `src/app/_content/*.ts` as `{ nl: {...}, en: {...} }`
-- Modules call `useLocale()` and index into content: `const { hero } = homeContent[lang]`
-- Blog falls back to English if locale version missing
+- All content in `src/app/_content/*.ts` as `Record<Locale, { ... }>` with `en` and `nl` branches
+- Blog posts in `content/blog/{en,nl}/{slug}/post.md` — both locales have full translations; falls back to English if NL version missing
+- **Server components** receive `lang` as prop from the page (`params.lang`) and index into content: `featureContent[lang].section`
+- **Client components** use `useLocale()` hook — **never use `useLocale()` in server components**
+- Page metadata: use `generateMetadata()` with `params.lang` for localized `<title>` (see `about/page.tsx`)
+- `LocalizedLink` auto-prefixes hrefs with current locale
+- Date formatting: `toLocaleDateString()` with `nl-NL` or `en-GB` based on locale
 
 ## Validation
 
