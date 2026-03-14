@@ -1,6 +1,9 @@
 import type { Locale } from "@/lib/i18n/config";
 
 const en = {
+    meta: {
+        title: "About Us | The Only Constant",
+    },
     hero: {
         title: "ABOUT US",
     },
@@ -42,6 +45,9 @@ const en = {
 };
 
 const nl: typeof en = {
+    meta: {
+        title: "Over ons | The Only Constant",
+    },
     hero: {
         title: "OVER ONS",
     },

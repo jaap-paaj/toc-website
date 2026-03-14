@@ -36,6 +36,6 @@ De betere zet is om je Superhelden te vinden en samen te brengen. Niet om ze te 
 
 Dat gesprek legt meestal meer bloot over het echte AI-potentieel van je organisatie dan welk consultancyrapport ook. Deze mensen begrijpen al waar de wrijving zit. Ze hebben al getest wat werkt. Ze hebben alleen een structuur nodig die individueel initiatief omzet in gedeeld vermogen.
 
-De ingrediënten zijn simpel: geef mensen toestemming om openlijk te experimenteren, creëer een plek om te delen wat ze leren, en verbind hun inspanningen aan de problemen die de organisatie echt moet oplossen. Zo wordt verspreide innovatie gerichte beweging.
+De ingrediënten zijn simpel: geef mensen toestemming om openlijk te experimenteren, creëer een plek om te delen wat ze leren, en verbind hun inspanningen aan de problemen die de organisatie echt moet oplossen. Zo krijgt verspreide innovatie richting.
 
 Je Superhelden zijn er al. Misschien wordt het tijd om ze in de spotlight te zetten.

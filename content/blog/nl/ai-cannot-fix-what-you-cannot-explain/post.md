@@ -12,7 +12,7 @@ tags:
 ---
 
 
-In het Griekse theater bestond er een beproefde truc: als het verhaal te ingewikkeld werd, liet men een god uit het plafond zakken om de boel op te lossen. Het publiek was tevreden, de werkelijkheid was weer overzichtelijk. Veel organisaties kijken zo naar AI, als een hogere macht die het wel uitzoekt. Het verschil met theater: daar werd het probleem tenminste echt opgelost.
+In het Griekse theater bestond er een beproefde truc: als het verhaal te ingewikkeld werd, liet men een god uit het plafond zakken om de boel op te lossen. Het publiek was tevreden, de werkelijkheid was weer overzichtelijk. Veel organisaties zien AI als een hogere macht die het wel uitzoekt. Het verschil met theater: daar werd het probleem tenminste echt opgelost.
 
 AI is geen god. Het is een buitengewoon krachtig gereedschap. En zoals elk gereedschap werkt het alleen als je weet wat je ermee wilt bereiken en kunt beoordelen of het resultaat klopt. Dat vereist twee dingen die de meeste organisaties overslaan: je eigen processen begrijpen en de technologie begrijpen.
 

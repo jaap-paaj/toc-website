@@ -25,11 +25,11 @@ Het probleem is niet plannen op zich. Het probleem is dat de meeste strategische
 
 Er is een groeiend vakgebied rond synthetische gebruikersdata: data gegenereerd door AI-modellen die getraind zijn op de patronen, voorkeuren en gedragingen die al aanwezig zijn op het open internet. De logica is eenvoudig: het open web bevat meer signaal over hoe mensen denken, kiezen en reageren dan welke vijf interviews ook. AI kan dat signaal bundelen tot gesimuleerde respondenten die echte houdingen met verrassende nauwkeurigheid weerspiegelen.
 
-Dit vervangt het gesprek met echte mensen niet. Maar het is een manier om een idee te toetsen voordat je er budget en reputatie aan verbindt. Wil je weten hoe een nieuwe positionering landt bij CFO's in het middensegment? Je kunt binnen uren een richtinggevend antwoord hebben, niet weken.
+Dit vervangt het gesprek met echte mensen niet. Maar het is een manier om een idee te toetsen voordat je er budget en reputatie aan verbindt. Wil je weten hoe een nieuwe positionering landt bij CFO's in het middensegment? Je kunt binnen enkele uren al een bruikbaar antwoord hebben, niet weken.
 
 ## Van grote gokken naar kleine experimenten
 
-De verschuiving die dit mogelijk maakt is fundamenteel. In plaats van één grote strategische cyclus per jaar kun je tientallen kleinere tests draaien. Valideer een nieuw productconcept voordat je het deck bouwt. Stresstest een prijswijziging voordat het bestuursvergadering is. Check of je boodschap resoneert voordat de campagne live gaat.
+De verschuiving die dit mogelijk maakt is fundamenteel. In plaats van één grote strategische cyclus per jaar kun je tientallen kleinere tests draaien. Valideer een nieuw productconcept voordat je het deck bouwt. Stresstest een prijswijziging vóór de bestuursvergadering. Check of je boodschap resoneert voordat de campagne live gaat.
 
 Zie het als microstrategie: kleine, snelle, toetsbare stappen die verbonden blijven aan een bredere visie. Elke stap leert je iets. Elke stap verlaagt de kosten van ongelijk hebben.
 

@@ -4,6 +4,10 @@ const en = {
     hero: {
         title: "BLOG",
     },
+    overview: {
+        latestTitle: "Latest Thinking",
+        moreTitle: "More Thinking",
+    },
     sidebar: {
         latestPosts: "Latest Posts",
         viewAll: "View all blogs",
@@ -18,6 +22,10 @@ const en = {
 const nl: typeof en = {
     hero: {
         title: "BLOG",
+    },
+    overview: {
+        latestTitle: "Laatste inzichten",
+        moreTitle: "Meer inzichten",
     },
     sidebar: {
         latestPosts: "Laatste inzichten",

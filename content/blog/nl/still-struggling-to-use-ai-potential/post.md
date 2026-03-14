@@ -13,7 +13,7 @@ tags:
 ---
 
 
-De recente Cisco AI Readiness Index, besproken door [Emerce](https://www.emerce.nl/research/amper-vier-procent-nederlandse-bedrijven-volledig-klaar-om-ai-zetten), zet een getal op wat de meeste mensen al aanvoelen: slechts 4% van de Nederlandse bedrijven is volledig voorbereid op AI. Dat is geen afrondingsverschil. Dat is een hele economie die naar een technologische verschuiving staart en grotendeels niet beweegt.
+De recente Cisco AI Readiness Index, besproken door [Emerce](https://www.emerce.nl/research/amper-vier-procent-nederlandse-bedrijven-volledig-klaar-om-ai-zetten), zet een getal op wat de meeste mensen al aanvoelen: slechts 4% van de Nederlandse bedrijven is volledig voorbereid op AI. Dat is geen klein verschil. Dat is een hele economie die naar een technologische verschuiving staart en grotendeels niet beweegt.
 
 De verleidelijke verklaring is dat organisaties meer tijd nodig hebben. Meer onderzoek. Meer strategiesessies. Meer whitepapers. Maar gereedheid is zelden een kennisprobleem. De meeste directieteams begrijpen dat AI ertoe doet. De kloof zit niet tussen weten en besluiten. Die zit tussen besluiten en doen.
 
