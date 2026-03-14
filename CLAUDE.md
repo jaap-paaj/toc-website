@@ -63,6 +63,8 @@ page.tsx (thin, no styling)
 | Blog posts | `content/blog/{en,nl}/{slug}/post.md` |
 | i18n utilities | `src/lib/i18n/` |
 | Audit scripts | `scripts/` |
+| Visual tests | `e2e/visual.spec.ts`, `playwright.config.ts` |
+| Visual baselines | `e2e/__screenshots__/{desktop,mobile}/` |
 
 ### Content structure
 
@@ -92,6 +94,24 @@ This runs: ESLint → TypeScript check → all 12 design system audits.
 Individual audits: `npm run audit:typography`, `audit:surfaces`, `audit:spacing`, `audit:states`, `audit:color`, `audit:theme`, `audit:pages`, `audit:content-shape`, `audit:card-canon`, `audit:legacy-heights`, `audit:layout-rhythm`.
 
 **If an audit fails: fix the violation. Never bypass with comments or allowlist hacks unless there's a genuine architectural exception.**
+
+## Visual Regression Tests
+
+Playwright screenshot tests compare every page (both locales, desktop + mobile) against committed baselines.
+
+```bash
+npm run test:visual          # Compare against baselines (fails on diff)
+npm run test:visual:update   # Regenerate baselines after intentional changes
+npm run test:visual:report   # Open HTML report with side-by-side diffs
+```
+
+- Tests run against a production build (`next build && next start`), not dev server
+- 60 screenshots: all pages × 2 locales × 2 viewports (1440px desktop, 375px mobile)
+- Includes all 4 AI Opportunity Scan hero variants per locale
+- Booking page iframe is masked (Google Calendar content changes daily)
+- Baselines live in `e2e/__screenshots__/` and are committed to git
+- **Not part of `npm run validate`** — separate concern, run when making visual changes
+- After updating baselines, commit the new screenshots alongside the code change
 
 ## Canonical Documentation
 
