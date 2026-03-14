@@ -303,7 +303,7 @@ const nl: typeof en = {
     },
     introCall: {
         eyebrow: "Kennismakingsgesprek",
-        title: "Het kennismakingsgesprek van 20 minuten",
+        title: "Het kennismakings\u00ADgesprek van 20 minuten",
         body: "Plan 20 minuten. Je ontvangt een sectoranalyse en een duidelijke vervolgstap — ook als je niet verdergaat.",
         card: {
             title: "Wat er gebeurt:",
