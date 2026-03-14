@@ -31,6 +31,26 @@ Content ownership is strictly layered.
 
 ---
 
+## 2b. Internationalization (i18n) Layer
+
+Content files are the single source of truth for all user-facing strings in both locales.
+
+| Concern | Rule |
+| :--- | :--- |
+| **Content files** | Export `Record<Locale, typeof en>` with `en` and `nl` branches. English is the type source. |
+| **Modules (server)** | Receive `lang: Locale` as prop from the page. Index into content: `featureContent[lang].section` |
+| **Modules (client)** | Use `useLocale()` hook to get `lang`. Never use `useLocale()` in server components. |
+| **Blog posts** | Markdown in `content/blog/{en,nl}/{slug}/post.md`. Falls back to English if NL version missing. |
+| **Page metadata** | Use `generateMetadata({ params })` to localize `<title>` from the content file's `meta` section. |
+| **Dates** | Use `toLocaleDateString()` with `nl-NL` or `en-GB` based on locale. Never hardcode month names. |
+
+**Strict Prohibition**:
+*   ❌ No inline ternaries for locale switching in components (e.g., `lang === "nl" ? "Meer" : "More"`)
+*   ❌ No hardcoded strings in either locale — all strings must live in content files
+*   ❌ No `useLocale()` in server components — pass `lang` as prop from the page
+
+---
+
 ## 3. Canonical Content Primitives
 
 We use a fixed set of structural primitives. New props must map to these concepts.
