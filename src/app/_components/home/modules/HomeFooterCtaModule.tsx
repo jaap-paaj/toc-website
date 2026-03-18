@@ -14,7 +14,7 @@ export function HomeFooterCtaModule() {
                 cta={homeContent[lang].footerCta.cta}
                 panelTitle={homeContent[lang].footerCta.panelTitle}
                 panelBody={homeContent[lang].footerCta.panelBody}
-                copyright={homeContent[lang].footerCta.copyright}
+
             />
         </HomeModule>
     );

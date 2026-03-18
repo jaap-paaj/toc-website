@@ -83,7 +83,6 @@ const en = {
         },
         panelTitle: "",
         panelBody: "After one conversation you'll know where the biggest opportunities are and the smallest first step to prove them.",
-        copyright: "© The Only Constant 2025"
     }
 };
 
@@ -170,7 +169,6 @@ const nl: typeof en = {
         },
         panelTitle: "",
         panelBody: "Na een gesprek weet je waar de grootste kansen liggen en wat de kleinste eerste stap is om ze te bewijzen.",
-        copyright: "© The Only Constant 2025"
     }
 };
 

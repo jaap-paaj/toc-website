@@ -176,7 +176,6 @@ const en = {
         },
         panelTitle: "NEXT STEPS",
         panelBody: "Select a time that works for you. You'll receive a confirmation email with a Google Meet link and a short pre-session questionnaire to help us prepare.",
-        copyright: "© The Only Constant 2025"
     },
     booking: {
         title: "Schedule Your Scan",
@@ -375,7 +374,6 @@ const nl: typeof en = {
         },
         panelTitle: "VOLGENDE STAPPEN",
         panelBody: "Kies een moment dat je uitkomt. Je ontvangt een bevestigingsmail met een Google Meet-link en een korte vragenlijst zodat wij ons kunnen voorbereiden.",
-        copyright: "© The Only Constant 2025"
     },
     booking: {
         title: "Plan je Scan",

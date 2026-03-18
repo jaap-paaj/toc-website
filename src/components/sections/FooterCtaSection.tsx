@@ -16,7 +16,6 @@ export interface FooterCtaSectionProps {
     };
     panelTitle?: string;
     panelBody: string;
-    copyright: string;
     className?: string; // Standard pattern
 }
 
@@ -25,7 +24,6 @@ export function FooterCtaSection({
     cta,
     panelTitle,
     panelBody,
-    copyright,
     className
 }: FooterCtaSectionProps) {
     const lang = useLocale();
@@ -74,7 +72,7 @@ export function FooterCtaSection({
                                     </Button>
                                 </div>
                                 <div className={cn(typography.variants.body.sm, "opacity-50")}>
-                                    {copyright}
+                                    © The Only Constant {new Date().getFullYear()}
                                 </div>
                             </div>
                         </div>
