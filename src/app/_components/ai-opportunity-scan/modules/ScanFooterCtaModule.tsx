@@ -14,7 +14,7 @@ export function ScanFooterCtaModule() {
                 cta={scanContent[lang].footerCta.cta}
                 panelTitle={scanContent[lang].footerCta.panelTitle}
                 panelBody={scanContent[lang].footerCta.panelBody}
-                copyright={scanContent[lang].footerCta.copyright}
+
             />
         </section>
     );
