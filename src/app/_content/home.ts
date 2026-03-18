@@ -2,23 +2,21 @@ import type { Locale } from "@/lib/i18n/config";
 
 const en = {
     hero: {
-        description: "We are a strategy and design partner that helps teams move from assumptions to proven business results by making. We build prototypes, Proofs of Concept, and automations that create clarity fast.",
+        description: "Most companies use AI to do what they already did, just faster. We help our clients discover where change delivers the most value.",
         cta: {
-            label: "EXPLORE OUR CAPABILITIES",
+            label: "EXPLORE OUR SERVICES",
             href: "#capabilities",
         }
     },
     about: {
         eyebrow: "About Us",
         statementLines: [
-            "DIGITAL INNOVATION",
-            "THAT DELIVERS",
-            "PROVEN IMPACT"
+            "PROOF FOR",
+            "BETTER DECISIONS"
         ],
         imageSrc: "/images/home/about.png",
         description: [
-            "We're a strategy and design partner for teams that need progress without the noise. We combine business goals, human needs and emerging tech to create practical concepts, prototypes and automations built for real-world use.",
-            "We focus on outcomes, not hype. That means clearer decisions, less manual work, and early proof of what's worth building so you can move faster without guessing."
+            "We're a strategy and design agency for organisations that want real progress. No reports or roadmaps, but prototypes, automations and PoCs you can test and act on. So you know where to invest before you scale."
         ],
         cta: {
             label: "MORE ABOUT US",
@@ -26,12 +24,12 @@ const en = {
         }
     },
     services: {
-        eyebrow: "Our Capabilities",
+        eyebrow: "Our Services",
         items: [
             {
                 id: "01",
                 title: "EDUCATE",
-                description: "Build practical AI and innovation skills fast through hands-on workshops using your team's real challenges.",
+                description: "Learning AI tools takes an afternoon. Knowing where to apply them is the real work. Our training programmes start with your own challenges and end with skills you'll use tomorrow.",
                 cta: {
                     label: "Explore Educate",
                     href: "/educate",
@@ -40,7 +38,7 @@ const en = {
             {
                 id: "02",
                 title: "AUTOMATE",
-                description: "Free your team from repetitive tasks with proven AI solutions that deliver measurable ROI.",
+                description: "Most automations fail because they automate the wrong thing. We start with the user and the goals. Then we design the process together and build the automation.",
                 cta: {
                     label: "Explore Automate",
                     href: "/automate",
@@ -49,7 +47,7 @@ const en = {
             {
                 id: "03",
                 title: "INNOVATE",
-                description: "Accelerate innovation with AI-driven sprints that deliver validated, ready-to-build solutions fast.",
+                description: "Innovation isn't about coming up with ideas. It's about finding proof for the best ones. Using proven design methods and AI, we build what works before you go all in.",
                 cta: {
                     label: "Explore Innovate",
                     href: "/innovate",
@@ -70,44 +68,42 @@ const en = {
         ],
     },
     insights: {
-        eyebrow: "Latest Thinking",
+        eyebrow: "Latest Insights",
         newBadge: "New",
         viewAll: "View all",
     },
     footerCta: {
         title: [
-            "READY FOR CHANGE?",
-            "LET'S TALK!"
+            "FIRST CONVERSATION,",
+            "FIRST DIRECTION"
         ],
         cta: {
-            label: "CONTACT",
+            label: "GET IN TOUCH",
             href: "/contact"
         },
-        panelTitle: "WHAT HAPPENS NEXT",
-        panelBody: "You will leave with experience, not just inspiration. You will understand what AI is and what it will change in your organisation, and you will know what is worth doing next. You will get ready-to-use prompts, templates, and practical workflows you can start using immediately. Then you are ready for the next step: automate, innovate, or both.",
+        panelTitle: "",
+        panelBody: "After one conversation you'll know where the biggest opportunities are and the smallest first step to prove them.",
         copyright: "© The Only Constant 2025"
     }
 };
 
 const nl: typeof en = {
     hero: {
-        description: "Wij zijn een strategie- en designpartner die teams helpt aannames om te zetten in bewezen bedrijfsresultaten door te maken. We bouwen prototypes, Proofs of Concept en automatiseringen die snel duidelijk maken wat werkt.",
+        description: "De meeste bedrijven gebruiken AI om sneller te doen wat ze al deden. Wij helpen onze klanten ontdekken waar verandering het meeste oplevert.",
         cta: {
-            label: "ONTDEK ONZE DIENSTEN",
+            label: "BEKIJK ONZE DIENSTEN",
             href: "#capabilities",
         }
     },
     about: {
         eyebrow: "Over Ons",
         statementLines: [
-            "DIGITALE INNOVATIE",
-            "DIE LEVERT",
-            "BEWEZEN IMPACT"
+            "BEWIJS VOOR",
+            "BETERE BESLISSINGEN"
         ],
         imageSrc: "/images/home/about.png",
         description: [
-            "We zijn een strategie- en designpartner voor teams die vooruitgang nodig hebben zonder ruis. We combineren bedrijfsdoelen, menselijke behoeften en opkomende technologie om praktische concepten, prototypes en automatiseringen te bouwen voor dagelijks gebruik.",
-            "We richten ons op resultaat, niet op hype. Dat betekent duidelijkere beslissingen, minder handmatig werk en vroeg bewijs van wat de moeite waard is zodat je sneller kunt handelen zonder te gokken."
+            "We zijn een strategie- en design agency voor organisaties die concreet vooruit willen. Geen rapporten of roadmaps, maar prototypes, automations en PoCs die je kunt testen en waarop je kunt beslissen. Zodat je weet waar je op inzet voordat je opschaalt."
         ],
         cta: {
             label: "MEER OVER ONS",
@@ -120,7 +116,7 @@ const nl: typeof en = {
             {
                 id: "01",
                 title: "EDUCATE",
-                description: "Bouw praktische AI- en innovatievaardigheden op door hands-on workshops met de echte uitdagingen van je team.",
+                description: "AI-tools leren kost een middag. Weten waar je ze inzet is het echte werk. Onze trainingen beginnen bij de eigen uitdagingen en eindigen met vaardigheden die je morgen al inzet.",
                 cta: {
                     label: "Ontdek Educate",
                     href: "/educate",
@@ -129,7 +125,7 @@ const nl: typeof en = {
             {
                 id: "02",
                 title: "AUTOMATE",
-                description: "Bevrijd je team van repetitieve taken met bewezen AI-oplossingen die meetbare ROI leveren.",
+                description: "De meeste automations mislukken omdat ze het verkeerde automatiseren. Wij starten bij de gebruiker en de doelen. Daarna ontwerpen we samen het proces en bouwen we de automation.",
                 cta: {
                     label: "Ontdek Automate",
                     href: "/automate",
@@ -138,7 +134,7 @@ const nl: typeof en = {
             {
                 id: "03",
                 title: "INNOVATE",
-                description: "Versnel innovatie met AI-gedreven sprints die gevalideerde, bouwklare oplossingen snel opleveren.",
+                description: "Innovatie gaat niet om ideeën bedenken, het gaat om bewijs vinden voor de beste. Met beproefde designmethoden en AI bouwen we wat werkt, voordat je er groot op inzet.",
                 cta: {
                     label: "Ontdek Innovate",
                     href: "/innovate",
@@ -165,15 +161,15 @@ const nl: typeof en = {
     },
     footerCta: {
         title: [
-            "KLAAR VOOR VERANDERING?",
-            "LATEN WE PRATEN!"
+            "EERSTE GESPREK,",
+            "EERSTE RICHTING"
         ],
         cta: {
-            label: "CONTACT",
+            label: "NEEM CONTACT OP",
             href: "/contact"
         },
-        panelTitle: "WAT GEBEURT ER DAARNA",
-        panelBody: "Je vertrekt met ervaring, niet alleen inspiratie. Je begrijpt wat AI is en wat het in je organisatie verandert, en je weet wat de moeite waard is om als volgende te doen. Je krijgt kant-en-klare prompts, templates en praktische workflows die je meteen kunt gebruiken. Daarna ben je klaar voor de volgende stap: automatiseren, innoveren, of allebei.",
+        panelTitle: "",
+        panelBody: "Na een gesprek weet je waar de grootste kansen liggen en wat de kleinste eerste stap is om ze te bewijzen.",
         copyright: "© The Only Constant 2025"
     }
 };

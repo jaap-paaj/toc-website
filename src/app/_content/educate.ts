@@ -4,42 +4,42 @@ const en = {
     hero: {
         eyebrow: "01",
         title: "EDUCATE",
-        description: "We help teams build practical AI capability through hands-on training based on real work. No hype, no theory-first. Expect doing, not listening: practical exercises, workflow mapping, and concrete outputs that make AI usable in daily work. Shared confidence grows around safe and responsible use, including the basics teams need to navigate the EU AI Act. People leave with reusable workflows, working examples, and clear next steps."
+        description: "Most AI training teaches buttons. We teach people to think in applications. Our programmes work with your challenges and data, so your team experiences what's possible and can run with it straight away."
     },
     trainingCatalog: {
         aiTraining: {
             eyebrow: "AI TRAINING",
-            description: "Hands-on programs that help you use AI to work smarter and explore new possibilities.",
+            description: "Programmes that start with your work, not with the technology. Designed with EU AI Act requirements in mind.",
             items: [
                 {
                     title: "AI INTRODUCTION",
-                    description: "Get a hands-on introduction to generative AI, tailored to your role and industry. Learn how it can transform your work, and build essential skills to innovate, automate, and create. No experience needed!",
+                    description: "What can generative AI do for your role and sector? After this session you'll know, and you'll be ready to start. No prior knowledge needed.",
                 },
                 {
-                    title: "CUSTOM GPTs",
-                    description: "Advanced, practical session designed to deepen your expertise with ChatGPT by exploring how to build, customize, and effectively apply Custom GPTs within your projects.",
+                    title: "CUSTOM GPTS",
+                    description: "For teams already using ChatGPT. You'll learn to build Custom GPTs that fit your workflows and are ready to deploy immediately.",
                 },
                 {
-                    title: "AI FOR VISUAL CONTENT CREATION",
-                    description: "Learn to create stunning visuals with Midjourney & Runway. Fast-track your workflow, refine your style, and innovate with AI. Hands-on and hassle-free.",
+                    title: "AI FOR VISUAL CONTENT",
+                    description: "Create compelling visuals with Midjourney and Runway. Tailored to your style and workflow, with results you'll use the same day.",
                 },
                 {
                     title: "EXECUTIVE AI STRATEGY",
-                    description: "Discover AI's potential for innovation and growth. This training provides executives with the strategic insights to drive smarter decisions and lead change.",
+                    description: "For leaders who want to make strategic decisions about AI. Where's the value, what are the risks, and where do you start?",
                 }
             ]
         },
         innovationTraining: {
             eyebrow: "INNOVATION TRAINING",
-            description: "Human-centered programs that help you explore opportunities and design better products and services.",
+            description: "Not every opportunity is the right one. These programmes teach your team to identify, validate and translate opportunities into better products and services.",
             items: [
                 {
                     title: "INNOVATION BY DESIGN",
-                    description: "Master creative problem-solving with a human-centered approach. This training helps you understand users, reframe challenges, and design solutions that create real impact. You'll learn practical methods you can apply immediately to any project or team.",
+                    description: "Most teams start with the solution. This programme starts with the user. You work on real challenges and leave with an approach your team can repeat on its own.",
                 },
                 {
                     title: "EXPERIENCE MAPPING",
-                    description: "Learn how to create customer journey maps and service blueprints that reveal how people interact with your product or service. You'll uncover pain points, spot opportunities and turn insights into practical improvements.",
+                    description: "Make visible how people experience your product or service, from first contact to aftersales. You'll learn to find the friction points and turn them into improvements you can implement tomorrow.",
                 }
             ]
         }
@@ -50,20 +50,20 @@ const en = {
         },
         items: [
             {
-                title: "RAPID CAPABILITY BUILDING",
-                description: "Sessions are packed with practical insights and tools, giving participants a lot of useful knowledge in just a few hours."
+                title: "NEW SKILLS IN HOURS",
+                description: "Compact and intensive. Your team gets more done in an afternoon than in most full-day training programmes."
             },
             {
-                title: "DIRECT IMPACT ON REAL WORK",
-                description: "We use your actual context and challenges so learning directly improves current work."
+                title: "YOUR WORK AS PRACTICE MATERIAL",
+                description: "We work with your context and data. What you learn is applicable tomorrow."
             },
             {
-                title: "LED BY REAL PRACTITIONERS",
-                description: "Training is led by experienced AI specialists and innovation leads who apply these methods in real client projects."
+                title: "EXPERIENCED PROFESSIONALS",
+                description: "AI specialists, design strategists and innovation leaders. Everything they teach comes from their own client practice."
             },
             {
-                title: "FASTER, MORE ALIGNED TEAMWORK",
-                description: "Teams leave with shared tools and methods that help them work faster and more effectively."
+                title: "A TEAM THAT SPEAKS THE SAME LANGUAGE",
+                description: "After the training, your team shares the same tools, methods and vocabulary. That makes collaboration faster."
             }
         ],
         images: {
@@ -77,13 +77,13 @@ const en = {
         eyebrow: "TESTIMONIALS",
         items: [
             {
-                quote: "Finally, an AI workshop that uses our real data and challenges. I left with actual knowledge I could put to work immediately, not just theoretical knowledge."
+                quote: "Finally an AI workshop that uses our own data and challenges. I went home with knowledge I applied the very next day."
             },
             {
-                quote: "In 4 hours I went from ChatGPT beginner to building a Custom GPT that saves our team 10 hours per week. The hands-on approach made all the difference."
+                quote: "In four hours I went from ChatGPT beginner to a working Custom GPT that saves our team ten hours a week. The hands-on approach made the difference."
             },
             {
-                quote: "I walked away with more than I expected. It was a lot and at times a bit overwhelming, but I learned more in those hours than in most full-day trainings."
+                quote: "A lot, and sometimes overwhelming, but I learned more in one afternoon about how to actually work differently."
             }
         ]
     }
@@ -93,42 +93,42 @@ const nl: typeof en = {
     hero: {
         eyebrow: "01",
         title: "EDUCATE",
-        description: "Wij helpen teams praktische AI-vaardigheden ontwikkelen door middel van hands-on training op basis van echt werk. Geen hype, geen theoretisch verhaal. Verwacht meedoen, niet alleen luisteren: praktische oefeningen, workflow mapping en concrete resultaten die AI bruikbaar maken in het dagelijks werk. Gedeeld vertrouwen groeit rond veilig en verantwoord gebruik, inclusief de basis die teams nodig hebben om verantwoord te werken binnen de EU AI Act. Deelnemers vertrekken met herbruikbare workflows, werkende voorbeelden en duidelijke vervolgstappen."
+        description: "De meeste AI-trainingen leren knoppen. Wij leren denken in toepassingen. Onze trainingen werken met jullie uitdagingen en data, zodat je team ervaart wat mogelijk is en er direct mee verder kan."
     },
     trainingCatalog: {
         aiTraining: {
             eyebrow: "AI TRAINING",
-            description: "Praktijkgerichte programma's die je helpen AI in te zetten om slimmer te werken en nieuwe mogelijkheden te verkennen.",
+            description: "Programma's die beginnen bij je eigen werkzaamheden, niet bij de technologie. Uiteraard rekening houdend met de eisen van de EU AI Act.",
             items: [
                 {
                     title: "AI INTRODUCTIE",
-                    description: "Krijg een praktische introductie in generatieve AI, afgestemd op jouw rol en sector. Ontdek hoe het je werk kan transformeren en bouw essentiële vaardigheden op om te innoveren, automatiseren en creëren. Geen ervaring nodig!",
+                    description: "Wat kan generatieve AI voor jouw rol en sector betekenen? Na deze sessie weet je het en kun je direct van start. Geen voorkennis nodig.",
                 },
                 {
-                    title: "CUSTOM GPTs",
-                    description: "Een gevorderde, praktische sessie om je expertise met ChatGPT te verdiepen door te ontdekken hoe je Custom GPTs bouwt, aanpast en effectief toepast binnen je projecten.",
+                    title: "CUSTOM GPTS",
+                    description: "Voor teams die ChatGPT al gebruiken. Je leert Custom GPTs bouwen die passen bij je werkprocessen en direct inzetbaar zijn.",
                 },
                 {
-                    title: "AI VOOR VISUELE CONTENT CREATIE",
-                    description: "Leer verbluffende visuals maken met Midjourney & Runway. Versnel je workflow, verfijn je stijl en innoveer met AI. Hands-on en zonder gedoe.",
+                    title: "AI VOOR VISUELE CONTENT",
+                    description: "Overtuigende visuals maken met Midjourney en Runway. Gericht op je eigen stijl en workflow, met resultaat dat je dezelfde dag nog gebruikt.",
                 },
                 {
                     title: "EXECUTIVE AI STRATEGIE",
-                    description: "Ontdek het potentieel van AI voor innovatie en groei. Deze training biedt leidinggevenden de strategische inzichten om slimmere beslissingen te nemen en verandering te leiden.",
+                    description: "Voor leidinggevenden die strategische keuzes willen maken over AI. Waar zit de waarde, wat zijn de risico's en waar begin je?",
                 }
             ]
         },
         innovationTraining: {
             eyebrow: "INNOVATIE TRAINING",
-            description: "Mensgerichte programma's die je helpen kansen te verkennen en betere producten en diensten te ontwerpen.",
+            description: "Niet elke kans is de juiste. Deze training leert je team om kansen te herkennen, valideren en vertalen naar betere producten en diensten.",
             items: [
                 {
                     title: "INNOVATION BY DESIGN",
-                    description: "Beheers creatief probleemoplossen met een mensgerichte aanpak. Deze training helpt je gebruikers te begrijpen, uitdagingen te herkaderen en oplossingen te ontwerpen die echte impact maken. Je leert praktische methoden die je direct kunt toepassen in elk project of team.",
+                    description: "De meeste teams beginnen bij de oplossing. Dit programma begint bij de gebruiker. Je oefent met echte vraagstukken en eindigt met een aanpak die je team zelf kan herhalen.",
                 },
                 {
                     title: "EXPERIENCE MAPPING",
-                    description: "Leer hoe je customer journey maps en service blueprints maakt die onthullen hoe mensen omgaan met je product of dienst. Je ontdekt pijnpunten, signaleert kansen en vertaalt inzichten naar praktische verbeteringen.",
+                    description: "Maak zichtbaar hoe mensen je product of dienst ervaren, van eerste contact tot aftersales. Je leert de knelpunten vinden én vertalen naar verbeteringen die je morgen kunt doorvoeren.",
                 }
             ]
         }
@@ -139,20 +139,20 @@ const nl: typeof en = {
         },
         items: [
             {
-                title: "SNEL VAARDIGHEDEN ONTWIKKELEN",
-                description: "Sessies zitten vol praktische inzichten en tools, waardoor deelnemers in slechts een paar uur veel bruikbare kennis opdoen."
+                title: "NIEUWE VAARDIGHEDEN IN UREN",
+                description: "Compact en intensief. Je team doet in een middag meer op dan in de meeste dagtrainingen."
             },
             {
-                title: "DIRECTE IMPACT OP ECHT WERK",
-                description: "We gebruiken jullie eigen context en uitdagingen, zodat het geleerde direct het huidige werk verbetert."
+                title: "EIGEN WERK ALS OEFENMATERIAAL",
+                description: "We werken met jullie context en data. Wat je leert is morgen toepasbaar."
             },
             {
-                title: "BEGELEID DOOR ERVAREN PROFESSIONALS",
-                description: "De trainingen worden gegeven door ervaren AI-specialisten en innovatieleiders die deze methoden toepassen in echte klantprojecten."
+                title: "ERVAREN PROFESSIONALS",
+                description: "AI-specialisten, designstrategen en innovators. Alles wat je leert komt uit hun eigen klantpraktijk."
             },
             {
-                title: "SNELLER, BETER AFGESTEMD TEAMWORK",
-                description: "Teams vertrekken met gedeelde tools en methoden die hen helpen sneller en effectiever samen te werken."
+                title: "EEN TEAM DAT DEZELFDE TAAL SPREEKT",
+                description: "Na de training deelt je team dezelfde tools, methoden en begrippen. Dat maakt samenwerken sneller."
             }
         ],
         images: {
@@ -166,13 +166,13 @@ const nl: typeof en = {
         eyebrow: "ERVARINGEN",
         items: [
             {
-                quote: "Eindelijk een AI-workshop die onze eigen data en uitdagingen gebruikt. Ik vertrok met kennis die ik direct kon toepassen, niet alleen theoretische kennis."
+                quote: "Eindelijk een AI-workshop die onze eigen data en uitdagingen gebruikt. Ik ging naar huis met kennis die ik de volgende dag al toepaste."
             },
             {
-                quote: "In 4 uur ging ik van ChatGPT-beginner naar het bouwen van een Custom GPT die ons team 10 uur per week bespaart. De hands-on aanpak maakte het verschil."
+                quote: "In vier uur ging ik van ChatGPT-beginner naar een werkende Custom GPT die ons team tien uur per week bespaart. De hands-on aanpak maakte het verschil."
             },
             {
-                quote: "Ik ging weg met meer dan verwacht. Het was veel en soms wat overweldigend, maar ik leerde meer in die uren dan in de meeste trainingen van een hele dag."
+                quote: "Veel en soms overweldigend, maar ik leerde meer in een middag hoe ik echt anders kan gaan werken"
             }
         ]
     }

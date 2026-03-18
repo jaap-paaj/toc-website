@@ -6,7 +6,7 @@ const en = {
     },
     form: {
         eyebrow: "GET IN TOUCH",
-        description: "Fill out the form below and we'll get back to you shortly.",
+        description: "Fill in the form and we'll get back to you shortly.",
         fields: {
             name: { label: "Name", placeholder: "Jane Doe" },
             email: { label: "Email", placeholder: "jane@example.com", error: "Please enter a valid email address." },
@@ -27,7 +27,7 @@ const en = {
         description: "Here you can find our visiting address and administrative details.",
         cards: [
             {
-                title: "VISIT US",
+                title: "VISITING ADDRESS",
                 lines: [
                     "Kon. Wilhelminalaan 21",
                     "3818 HN Amersfoort",
@@ -84,11 +84,11 @@ const nl: typeof en = {
         }
     },
     details: {
-        eyebrow: "BEDRIJFSGEGEVENS",
+        eyebrow: "BEDRIJFSINFORMATIE",
         description: "Hier vind je ons bezoekadres en onze bedrijfsgegevens.",
         cards: [
             {
-                title: "BEZOEK ONS",
+                title: "BEZOEKADRES",
                 lines: [
                     "Kon. Wilhelminalaan 21",
                     "3818 HN Amersfoort",

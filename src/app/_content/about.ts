@@ -9,15 +9,15 @@ const en = {
     },
     approach: {
         eyebrow: "OUR APPROACH",
-        title: "We believe in practical AI.",
+        title: "WE BELIEVE IN PRACTICAL CHANGE.",
         description: [
-            "We believe in practical change. AI is a tool to build and test ideas fast, not to produce more slides. Strategy should be proven through making, with prototypes, Proofs of Concept, and automations that create clarity. We work within real constraints, learn fast with real users and operations, and scale what earns its place.",
+            "You prove strategy by building, not by talking about it. We design and build prototypes, Proofs of Concept and automations, with AI as an accelerator. We work within real constraints, learn with real users and scale what proves its value.",
         ]
     },
     team: {
         eyebrow: "OUR TEAM",
         title: "",
-        description: "We are a senior core team, supported by trusted specialist network when it improves the work. The founders stay hands-on throughout. We scale expertise up or down based on the challenge, so you get depth without unnecessary overhead.",
+        description: "Small team, hands-on. Three founders who build alongside you, supported by specialists when the work calls for it. No layers between client and maker.",
         members: [
             {
                 name: "Maarten Mantje",
@@ -53,15 +53,15 @@ const nl: typeof en = {
     },
     approach: {
         eyebrow: "ONZE AANPAK",
-        title: "Wij geloven in praktische AI.",
+        title: "WE GELOVEN IN PRAKTISCHE VERANDERING.",
         description: [
-            "Wij geloven in praktische verandering. AI is een middel om ideeën snel te bouwen en te testen, niet om meer slides te produceren. Strategie moet je bewijzen door te bouwen, met prototypes, Proofs of Concept en automatiseringen die snel laten zien wat werkt. We werken binnen de echte beperkingen van organisaties, leren snel met echte gebruikers en operaties, en schalen op wat in de praktijk werkt.",
+            "Strategie bewijs je door te maken, niet door erover te praten. Wij ontwerpen en bouwen prototypes, Proofs of Concept en automations, met AI als versneller. We werken binnen echte beperkingen, leren met echte gebruikers en schalen op wat zijn waarde bewijst.",
         ]
     },
     team: {
         eyebrow: "ONS TEAM",
         title: "",
-        description: "Wij zijn een senior kernteam, ondersteund door een vertrouwd specialistennetwerk wanneer dat het werk verbetert. De oprichters blijven hands-on betrokken. We schalen expertise op of af op basis van de uitdaging, zodat je diepgang krijgt zonder onnodige overhead.",
+        description: "Klein team, hands-on. Drie oprichters die zelf meebouwen, aangevuld met specialisten wanneer het werk daarom vraagt. Geen laag tussen klant en maker.",
         members: [
             {
                 name: "Maarten Mantje",
