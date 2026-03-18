@@ -4,7 +4,7 @@ const en = {
     hero: {
         index: "03",
         title: "INNOVATE",
-        intro: "Strategic decisions are harder than ever before. They need proof over assumptions. Innovate is for proving what to build or change next, before you commit time, budget, and teams.We do this through an AI-supported sprints, using AI to build understanding faster, generate stronger options, and validate earlier through a prototype or Proof of Concept. The result is decision-grade evidence: what to pursue, what to drop, and what to scale."
+        intro: "Evidence makes decisions better. We build prototypes and Proofs of Concept that show what works, before you commit time, budget and teams. The result is decision data on what to pursue, what to drop and what to scale."
     },
     propositions: {
         eyebrow: "NEW PROPOSITIONS & PRODUCTS",
@@ -13,28 +13,28 @@ const en = {
             {
                 title: "Opportunity Sprint",
                 meta: "5 days",
-                body: "AI-supported research to uncover and validate new market opportunities. Ends with a roadmap and prioritization of high-value ideas."
+                body: "Discover and validate new market opportunities with AI-supported research. You end with a prioritised list of opportunities, backed by real research and a concrete next step."
             },
             {
                 title: "Design Sprint",
                 meta: "5 days",
-                body: "From problem to tested prototype in five days. Accelerated with AI to support ideation, prototyping, and user testing."
+                body: "From challenge to tested prototype in five days. AI accelerates the research, ideation and prototyping. The result: a validated concept ready for the next step."
             }
         ]
     },
     solutions: {
-        eyebrow: "AI-DRIVEN SOLUTIONS",
+        eyebrow: "AI SOLUTIONS",
         description: "",
         items: [
             {
                 title: "AI Exploration Sprint",
                 meta: "5 days",
-                body: "A deep dive into your organization's AI readiness and opportunities, including feasibility analysis, roadmap, and ROI insights."
+                body: "A thorough exploration of AI opportunities within your business. Where's the value, what's feasible and where do you start? You get a roadmap with substantiated priorities and realistic expectations."
             },
             {
                 title: "AI Build Sprint",
                 meta: "10 days",
-                body: "Design and deliver a working AI solution from scratch. Includes development, testing, training, and a plan for scaling."
+                body: "We build and test an AI solution in ten days. Including training for your team and a plan to scale."
             }
         ]
     },
@@ -43,25 +43,21 @@ const en = {
         variant: "comparison" as const,
         comparison: {
             left: {
-                title: "TRADITIONAL APPROACH",
+                title: "THE TRADITIONAL APPROACH",
                 bullets: [
-                    { tone: "negative" as const, text: "Takes months" },
-                    { tone: "negative" as const, text: "High & unpredictable investment" },
-                    { tone: "negative" as const, text: "Theoretical analysis & testing after launch" },
-                    { tone: "negative" as const, text: "Endless meetings & siloed teams" },
-                    { tone: "negative" as const, text: "Reports, presentations, estimations, guess-work" },
-                    { tone: "negative" as const, text: "70–90% of all digital innovations fail" }
+                    { tone: "negative" as const, text: "Months of lead time" },
+                    { tone: "negative" as const, text: "High costs, unpredictable outcomes" },
+                    { tone: "negative" as const, text: "Theoretical analyses you only test after launch" },
+                    { tone: "negative" as const, text: "70 to 90% of digital innovations never make it to market" }
                 ]
             },
             right: {
                 title: "OUR INNOVATION SPRINTS",
                 bullets: [
-                    { tone: "positive" as const, text: "Takes 5–10 days" },
-                    { tone: "positive" as const, text: "Low & predictable investment" },
-                    { tone: "positive" as const, text: "Real customer input & early testing" },
-                    { tone: "positive" as const, text: "Cross-functional collaboration" },
-                    { tone: "positive" as const, text: "Working prototype or Proof of Concept" },
-                    { tone: "positive" as const, text: "Consistently strong outcomes with repeated use" }
+                    { tone: "positive" as const, text: "5 to 10 days" },
+                    { tone: "positive" as const, text: "Low and predictable investment" },
+                    { tone: "positive" as const, text: "Real customer feedback, early testing, cross-functional collaboration" },
+                    { tone: "positive" as const, text: "A prototype or Proof of Concept as the deliverable, and decision data to build on" }
                 ]
             }
         },
@@ -96,7 +92,7 @@ const nl: typeof en = {
     hero: {
         index: "03",
         title: "INNOVATE",
-        intro: "Strategische beslissingen zijn moeilijker dan ooit. Ze vragen om bewijs in plaats van aannames. Innovate helpt je bewijzen wat je als volgende moet bouwen of veranderen, voordat je tijd, budget en teams inzet. Dit doen we via AI-ondersteunde sprints, waarbij AI wordt ingezet om sneller inzicht op te bouwen, sterkere opties te genereren en eerder te valideren met een prototype of Proof of Concept. Het resultaat is bewijs waarop je kunt besluiten: wat door te zetten, wat te laten vallen en wat op te schalen."
+        intro: "Bewijs maakt beslissingen beter. Wij bouwen prototypes en Proofs of Concept die laten zien wat werkt, voordat je er tijd, budget en teams op inzet. Het resultaat is decision data over wat doorzetten, wat laten vallen en wat opschalen."
     },
     propositions: {
         eyebrow: "NIEUWE PROPOSITIES & PRODUCTEN",
@@ -105,28 +101,28 @@ const nl: typeof en = {
             {
                 title: "Opportunity Sprint",
                 meta: "5 dagen",
-                body: "AI-ondersteund onderzoek om nieuwe marktkansen te ontdekken en te valideren. Eindigt met een routekaart en prioritering van waardevolle ideeën."
+                body: "Nieuwe marktkansen ontdekken en valideren met AI-ondersteund onderzoek. Je eindigt met een geprioriteerde lijst van kansen, onderbouwd met echt onderzoek en een concreet vervolgplan."
             },
             {
                 title: "Design Sprint",
                 meta: "5 dagen",
-                body: "Van probleem naar getest prototype in vijf dagen. Versneld met AI ter ondersteuning van ideeontwikkeling, prototyping en gebruikerstests. Eindigt met een gevalideerd concept klaar voor ontwikkeling."
+                body: "Van vraagstuk naar getest prototype in vijf dagen. AI versnelt het onderzoek, de ideeontwikkeling en het prototypen. Het resultaat: een gevalideerd concept dat klaar is voor de volgende stap."
             }
         ]
     },
     solutions: {
-        eyebrow: "AI-GEDREVEN OPLOSSINGEN",
+        eyebrow: "AI-OPLOSSINGEN",
         description: "",
         items: [
             {
                 title: "AI Exploration Sprint",
                 meta: "5 dagen",
-                body: "Een diepgaande verkenning van de AI-volwassenheid en kansen binnen jouw organisatie, inclusief haalbaarheidsanalyse, routekaart en ROI-inzichten."
+                body: "Grondige verkenning van AI-kansen binnen jouw bedrijf. Waar zit de waarde, wat is haalbaar en waar begin je? Je krijgt een routekaart met onderbouwde prioriteiten en realistische verwachtingen."
             },
             {
                 title: "AI Build Sprint",
                 meta: "10 dagen",
-                body: "Ontwerp en lever een werkende AI-oplossing vanaf nul. Inclusief ontwikkeling, testing, training en een plan voor opschaling."
+                body: "Wij bouwen en testen een AI-oplossing in tien dagen. Inclusief training voor je team en een plan om op te schalen."
             }
         ]
     },
@@ -137,23 +133,19 @@ const nl: typeof en = {
             left: {
                 title: "TRADITIONELE AANPAK",
                 bullets: [
-                    { tone: "negative", text: "Duurt maanden" },
-                    { tone: "negative", text: "Hoge en onvoorspelbare investering" },
-                    { tone: "negative", text: "Theoretische analyse en testen na lancering" },
-                    { tone: "negative", text: "Eindeloze vergaderingen en gescheiden teams" },
-                    { tone: "negative", text: "Rapporten, presentaties, schattingen, giswerk" },
-                    { tone: "negative", text: "70–90% van alle digitale innovaties mislukt" }
+                    { tone: "negative", text: "Maanden doorlooptijd" },
+                    { tone: "negative", text: "Hoge kosten, onvoorspelbare resultaten" },
+                    { tone: "negative", text: "Theoretische analyses die je pas na lancering toetst" },
+                    { tone: "negative", text: "70 tot 90% van digitale innovaties haalt de markt niet" }
                 ]
             },
             right: {
                 title: "ONZE INNOVATIE SPRINTS",
                 bullets: [
-                    { tone: "positive", text: "Duurt 5–10 dagen" },
+                    { tone: "positive", text: "5 tot 10 dagen" },
                     { tone: "positive", text: "Lage en voorspelbare investering" },
-                    { tone: "positive", text: "Echte klantinput en vroege tests" },
-                    { tone: "positive", text: "Cross-functionele samenwerking" },
-                    { tone: "positive", text: "Werkend prototype of Proof of Concept" },
-                    { tone: "positive", text: "Herhaalbare aanpak met consistent sterke resultaten" }
+                    { tone: "positive", text: "Echte klantfeedback, vroege tests, cross-functionele samenwerking" },
+                    { tone: "positive", text: "Een prototype of Proof of Concept als eindresultaat, en decision data om mee verder te bouwen" }
                 ]
             }
         },
