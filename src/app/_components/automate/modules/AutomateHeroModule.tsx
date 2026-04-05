@@ -22,6 +22,7 @@ export function AutomateHeroModule() {
                 index={hero.index}
                 title={hero.title}
                 description={hero.intro}
+                seoTitle={hero.seoTitle || undefined}
             />
         </HomeModule>
     );

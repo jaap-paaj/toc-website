@@ -8,8 +8,13 @@ import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { BlogProse } from "@/app/_components/blog/BlogProse";
+import { BlogFaqSection } from "@/app/_components/blog/BlogFaqSection";
+import { BlogCtaSection } from "@/app/_components/blog/BlogCtaSection";
+import { BlogAuthorBio } from "@/app/_components/blog/BlogAuthorBio";
 import type { BlogPost, BlogPostMeta } from "@/lib/blog/types";
 import { blogContent } from "@/app/_content/blog";
+import { getPillarForBlog } from "@/app/_content/pillar";
+import { BlogBreadcrumb } from "@/app/_components/blog/BlogBreadcrumb";
 import { useLocale } from "@/lib/i18n/useLocale";
 
 interface BlogPostModuleProps {
@@ -28,9 +33,13 @@ function formatDate(dateStr: string, lang: string): string {
 export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
     const lang = useLocale();
     const content = blogContent[lang].sidebar;
+    const pillar = getPillarForBlog(post.slug, lang);
     return (
         <HomeModule id="blog-post" width="full" tone="light" pad="m" padTop="xl" gap="s" containsContent>
             <div className={cn("w-full flex flex-col items-center", spacing.stackXl)}>
+                {/* Breadcrumb */}
+                <BlogBreadcrumb postTitle={post.title} slug={post.slug} />
+
                 {/* Post header */}
                 <header className={cn("flex flex-col items-center text-center max-w-4xl", spacing.component.sectionHeader, "px-[var(--space-sm)] md:px-0")}>
                     {/* Title */}
@@ -59,21 +68,17 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                             </time>
                         </div>
 
-                        {/* Tags */}
-                        {post.tags && post.tags.length > 0 && (
-                            <div className="flex items-center justify-center flex-wrap gap-[var(--space-xs)]">
-                                {post.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className={cn(
-                                            typography.variants.meta.badge,
-                                            "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full"
-                                        )}
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
+                        {/* Pillar tag */}
+                        {pillar && (
+                            <Link
+                                href={`/${pillar.pillarSlug}`}
+                                className={cn(
+                                    typography.variants.meta.badge,
+                                    "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full hover:bg-foreground/20 transition-colors duration-200"
+                                )}
+                            >
+                                {pillar.tagLabel}
+                            </Link>
                         )}
                     </div>
                 </header>
@@ -84,9 +89,43 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                 {/* Content Split: Prose + Sidebar */}
                 <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-[var(--space-xl)] lg:gap-[var(--space-xxl)] items-start">
 
-                    {/* Left: Prose */}
-                    <div className="flex flex-col w-full">
+                    {/* Left: Prose + CTA + Author Bio + FAQ */}
+                    <div className={cn("flex flex-col w-full", spacing.stackXl)}>
                         <BlogProse content={post.content} />
+
+                        {/* CTA section */}
+                        {post.ctaContent && (
+                            <BlogCtaSection content={post.ctaContent} />
+                        )}
+
+                        {/* Author bio */}
+                        <BlogAuthorBio />
+
+                        {/* FAQ accordion */}
+                        {post.faq && post.faq.length > 0 && (
+                            <BlogFaqSection
+                                title={blogContent[lang].faq.title}
+                                items={post.faq}
+                            />
+                        )}
+
+                        {/* Pillar page back-link */}
+                        {pillar && (
+                            <nav className={cn("w-full border-t border-border", spacing.stackSm, "pt-6" /* lint:allowed - visual separator */)}>
+                                <span className={cn(typography.variants.meta.eyebrow, "text-muted-foreground")}>
+                                    {lang === "nl" ? "Meer over dit onderwerp" : "More on this topic"}
+                                </span>
+                                <Link
+                                    href={`/${pillar.pillarSlug}`}
+                                    className={cn(
+                                        typography.variants.body.md,
+                                        "underline underline-offset-4 decoration-border hover:decoration-current transition-colors duration-200"
+                                    )}
+                                >
+                                    {pillar.title} &rarr;
+                                </Link>
+                            </nav>
+                        )}
                     </div>
 
                     {/* Right: Sidebar */}

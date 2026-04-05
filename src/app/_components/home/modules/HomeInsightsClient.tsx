@@ -7,6 +7,7 @@ import { typography } from "@/design-system/tokens/typography";
 import { cn } from "@/lib/utils";
 import type { BlogPostMeta } from "@/lib/blog/types";
 import { homeContent } from "@/app/_content/home";
+import { getPillarForBlog } from "@/app/_content/pillar";
 import { useLocale } from "@/lib/i18n/useLocale";
 
 function formatDate(dateStr: string, lang: string): string {
@@ -62,9 +63,28 @@ export function HomeInsightsClient({ posts }: { posts: BlogPostMeta[] }) {
     );
 }
 
+function PillarBadge({ slug, lang }: { slug: string; lang: string }) {
+    const pillar = getPillarForBlog(slug, lang as "nl" | "en");
+    if (!pillar) return null;
+    return (
+        <div className="flex">
+            <Link
+                href={`/${pillar.pillarSlug}`}
+                className={cn(
+                    typography.variants.meta.badge,
+                    "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full hover:bg-foreground/20 transition-colors duration-200"
+                )}
+                onClick={(e) => e.stopPropagation()}
+            >
+                {pillar.tagLabel}
+            </Link>
+        </div>
+    );
+}
+
 function FeaturedPost({ post, lang, newBadge }: { post: BlogPostMeta; lang: string; newBadge: string }) {
     return (
-        <Link href={`/blog/${post.slug}`} className="group flex flex-col gap-[var(--space-sm)] border-t border-border py-[var(--space-lg)]">
+        <article className="flex flex-col gap-[var(--space-sm)] border-t border-border py-[var(--space-lg)] cursor-default">
             <div className="flex items-center gap-[var(--space-xs)]">
                 {isRecent(post.date) && (
                     <span className={cn(typography.variants.meta.badge, "bg-primary text-primary-foreground px-2 py-0.5 rounded-full")}>
@@ -76,22 +96,26 @@ function FeaturedPost({ post, lang, newBadge }: { post: BlogPostMeta; lang: stri
                 </Text>
             </div>
 
-            <Heading level={3} size="page" className="underline underline-offset-4 decoration-transparent group-hover:decoration-current transition-colors duration-200">
-                {post.title}
-            </Heading>
+            <Link href={`/blog/${post.slug}`} className="group">
+                <Heading level={3} size="page" className="underline underline-offset-4 decoration-transparent group-hover:decoration-current transition-colors duration-200">
+                    {post.title}
+                </Heading>
+            </Link>
 
             {post.intro && (
                 <Text size="lg" measure="2xl" className="text-muted-foreground">
                     {post.intro}
                 </Text>
             )}
-        </Link>
+
+            <PillarBadge slug={post.slug} lang={lang} />
+        </article>
     );
 }
 
 function CompactPost({ post, lang, newBadge }: { post: BlogPostMeta; lang: string; newBadge: string }) {
     return (
-        <Link href={`/blog/${post.slug}`} className="group flex flex-col gap-[var(--space-xs)] border-t border-border py-[var(--space-lg)]">
+        <article className="flex flex-col gap-[var(--space-xs)] border-t border-border py-[var(--space-lg)] cursor-default">
             <div className="flex items-center gap-[var(--space-xs)]">
                 {isRecent(post.date) && (
                     <span className={cn(typography.variants.meta.badge, "bg-primary text-primary-foreground px-2 py-0.5 rounded-full")}>
@@ -103,15 +127,19 @@ function CompactPost({ post, lang, newBadge }: { post: BlogPostMeta; lang: strin
                 </Text>
             </div>
 
-            <Heading level={3} size="lg" className="underline underline-offset-4 decoration-transparent group-hover:decoration-current transition-colors duration-200">
-                {post.title}
-            </Heading>
+            <Link href={`/blog/${post.slug}`} className="group">
+                <Heading level={3} size="lg" className="underline underline-offset-4 decoration-transparent group-hover:decoration-current transition-colors duration-200">
+                    {post.title}
+                </Heading>
+            </Link>
 
             {post.intro && (
                 <Text size="md" measure="2xl" className="text-muted-foreground">
                     {post.intro}
                 </Text>
             )}
-        </Link>
+
+            <PillarBadge slug={post.slug} lang={lang} />
+        </article>
     );
 }

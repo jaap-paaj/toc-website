@@ -104,6 +104,9 @@ export function BlogProse({ content }: BlogProseProps) {
                             )}
                         </figure>
                     ),
+                    hr: () => (
+                        <hr className="border-border my-2" />
+                    ),
                     pre: ({ children }) => (
                         <pre className="bg-muted p-4 rounded-panel overflow-x-auto">
                             {children}
