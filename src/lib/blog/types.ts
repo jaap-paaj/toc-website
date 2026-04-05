@@ -1,3 +1,8 @@
+export interface FaqItem {
+    question: string;
+    answer: string;
+}
+
 export interface BlogPostMeta {
     slug: string;
     title: string;
@@ -8,5 +13,7 @@ export interface BlogPostMeta {
 }
 
 export interface BlogPost extends BlogPostMeta {
-    content: string; // raw markdown body (no frontmatter)
+    content: string; // raw markdown body (no frontmatter, CTA, or FAQ)
+    ctaContent?: string; // CTA section markdown (between last two --- before FAQ)
+    faq?: FaqItem[]; // parsed FAQ items
 }

@@ -22,6 +22,7 @@ export function EducateHeroModule() {
                 index={hero.eyebrow}
                 title={hero.title}
                 description={hero.description}
+                seoTitle={hero.seoTitle || undefined}
             />
         </HomeModule>
     );

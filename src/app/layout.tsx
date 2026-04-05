@@ -47,7 +47,14 @@ export default function RootLayout({
             url: SITE_URL,
             logo: `${SITE_URL}/images/brand/toc/TOC_Logo_black.svg`,
             description:
-              "Strategy and design partner for AI, automation and innovation.",
+              "AI consultancy voor marketing en organisatie-innovatie",
+            areaServed: "NL",
+            serviceType: [
+              "AI Consultancy",
+              "AI Workshop",
+              "AI Automatisering",
+              "AI Proof of Concept",
+            ],
           }}
         />
         <StructuredData

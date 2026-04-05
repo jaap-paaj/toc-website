@@ -1,0 +1,80 @@
+---
+title: 'AI drift: de stille degradatie die niemand ziet'
+date: '2026-04-03'
+intro: >-
+  Het gevaarlijkste aan een werkend AI-systeem is het moment dat iedereen stopt met opletten.
+author: The Only Constant
+tags:
+  - ai
+  - onderhoud
+  - strategie
+---
+
+In 2005 ging het Deepwater Horizon-platform van BP in gebruik. Elf jaar lang werkte het. Dagelijkse operaties verliepen soepel. Veiligheidsinspecties werden afgetekend. Procedures werden gevolgd, min of meer, steeds een beetje minder streng, elke dag een fractie slordiger, tot niemand meer precies wist waar de grens lag tussen "goed genoeg" en "risicovol."
+
+Op 20 april 2010 explodeerde het platform. Elf mensen kwamen om. Het was de grootste olieramp in de Amerikaanse geschiedenis.
+
+De oorzaak was geen plotselinge storing. Het was stille degradatie over jaren. Elke dag een klein beetje minder scherp. Tot het systeem zo ver was afgedreven van zijn oorspronkelijke staat dat een enkele trigger genoeg was.
+
+Bij AI-systemen heet dit drift. En het is het meest onderschatte risico in elke organisatie die AI inzet.
+
+## Vijf soorten stilte
+
+AI drift komt in vijf vormen. Ze zijn allemaal onzichtbaar tot ze een probleem worden.
+
+**Datadrift.** De wereld verandert. Klantgedrag verschuift. Productassortiment wijzigt. Maar de data waarop het AI-systeem is getraind weerspiegelt de wereld van zes maanden geleden. De aanbevelingen worden langzaam irrelevant. Niemand merkt het, want de output ziet er nog steeds professioneel uit.
+
+**Modeldrift.** De leverancier update het model. Een routine-update, geen aankondiging. Maar de prompts die vorige maand perfect werkten leveren nu subtiel andere resultaten op. De toon verschuift. De structuur verandert. Het systeem doet nog steeds iets, maar niet meer precies wat het deed.
+
+**Gedragsdrift.** De gevaarlijkste vorm. Gebruikers wennen aan de AI-output. Ze stoppen met controleren. Ze drukken op "verzenden" zonder te lezen. Het systeem wordt een black box die output produceert die niemand meer kritisch beoordeelt. Sleepwalking, noemen wij dat. Stel regelmatig [de Meaning Test](/nl/blog/meaning-test) om te checken of het team nog scherp is.
+
+**Kwaliteitsdrift.** De output wordt langzaam slechter. Een procent per week. Onmerkbaar op dagbasis. Maar na drie maanden is de kwaliteit significant gedaald. Zonder baseline-meting is er niets om mee te vergelijken.
+
+**Kostendrift.** Het gebruik groeit. Nieuwe teams ontdekken het systeem. Meer queries, meer tokens, hogere rekeningen. De maandelijkse kosten kruipen omhoog tot iemand schrikt van de factuur.
+
+Geen van deze vormen kondigt zichzelf aan. Ze zijn per definitie geleidelijk.
+
+## Hoe je het vangt
+
+Drie ritmes.
+
+**Wekelijks: kosten en gebruik.** Vijf minuten. Klopt het volume met de verwachting? Zijn de kosten in lijn? Dit is het vroegste signaal dat er iets verschuift.
+
+**Maandelijks: kwaliteitssteekproef.** De domein-eigenaar beoordeelt twintig willekeurige AI-outputs. Blindelings, zonder te weten of ze recent of oud zijn. Daalt de kwaliteit? Verschuift de toon? Dit is het equivalent van een fabriekscontrole: steekproefsgewijs kijken of de productie nog op standaard draait.
+
+**Elk kwartaal: de blinde test.** Leg het team een mix van AI-outputs voor. Sommige correct, sommige bewust fout. Als het team minder dan zeventig procent van de fouten herkent, heb je een sleepwalking-probleem. Mensen vertrouwen het systeem blindelings. Dat is het moment waarop drift dodelijk wordt.
+
+## Eigenaarschap
+
+Het fundamentele probleem bij drift is eigenaarschap. Wie is verantwoordelijk?
+
+De heldere verdeling: de techkant bezit het systeem (beschikbaarheid, beveiliging, kosten, modelgezondheid). De businesskant bezit de inhoud (outputkwaliteit, procesvaliditeit, strategische waarde, menselijke impact). Als de AI slechte adviezen geeft is dat een businessprobleem. Als de kosten verdrievoudigen is dat een techprobleem.
+
+Zonder die verdeling valt alles tussen wal en schip. Het techteam denkt dat de business de kwaliteit bewaakt. De business denkt dat het techteam de boel monitort. Niemand kijkt echt. Dit is waar [AI governance](/nl/blog/ai-governance) het verschil maakt: heldere afspraken over wie wat bewaakt, op een vast ritme.
+
+BP had procedures. BP had inspecties. BP had verantwoordelijken. Wat BP niet had was iemand die elke dag keek of het systeem nog deed wat het moest doen. De procedures werden gevolgd. Het systeem driftte.
+
+Bij AI is de les dezelfde. Implementeren is het makkelijke deel. Het moeilijke deel is blijven kijken. Elke week, elke maand, elk kwartaal. Met frisse ogen. Met de bereidheid om te zeggen: dit is niet meer goed genoeg. En als het bewijs er niet meer is, [niet doorschalen](/nl/blog/proof-before-scale) maar terug naar het experiment.
+
+---
+
+Klaar om hiermee aan de slag te gaan? Begin met een [AI Workshop](/nl/educate) om je team bewust te maken van drift. Of start een [AI Automatiseringstraject](/nl/automate) met ingebouwde monitoring en kwaliteitsbewaking.
+
+---
+
+## Veelgestelde vragen over AI drift
+
+**Wat is AI drift?**
+AI drift is de stille degradatie van een AI-systeem over tijd. Het systeem werkt nog, maar de output wordt langzaam minder accuraat, minder relevant of minder betrouwbaar. Dit kan komen door veranderingen in de data, updates van het onderliggende model, verschuivend gebruikersgedrag, geleidelijke kwaliteitsdaling of stijgende kosten.
+
+**Hoe herken je AI drift?**
+Door regelmatige monitoring op drie niveaus: wekelijks kosten en gebruik checken, maandelijks een steekproef van twintig outputs beoordelen, en elk kwartaal een blinde test doen waarbij het team een mix van correcte en incorrecte AI-outputs moet beoordelen. Als het foutendetectiepercentage onder de zeventig procent zakt, is er een probleem.
+
+**Wie is verantwoordelijk voor het bewaken van AI-systemen?**
+De technische kant (IT) bezit het systeem: beschikbaarheid, beveiliging, kosten en modelgezondheid. De business bezit de inhoud: outputkwaliteit, procesvaliditeit en menselijke impact. Beide partijen moeten hun deel actief monitoren. Zonder expliciete verdeling valt de verantwoordelijkheid tussen wal en schip.
+
+**Wat is sleepwalking bij AI?**
+Sleepwalking is het fenomeen waarbij gebruikers de AI-output blindelings vertrouwen en stoppen met kritisch controleren. Dit ontstaat geleidelijk naarmate het systeem langer draait en gebruikers wennen aan de output. Het is de gevaarlijkste vorm van drift omdat het menselijke vangnet wegvalt. Test elk kwartaal of gebruikers fouten nog herkennen.
+
+**Hoe voorkom je AI drift?**
+Door drie dingen: vaste monitoring-ritmes (wekelijks, maandelijks, elk kwartaal), expliciete eigenaarschap (wie bewaakt wat), en een baseline om tegen te meten. Zonder baseline weet je niet of de kwaliteit daalt. Meet aan het begin van elk AI-project de uitgangssituatie, en vergelijk daar elk kwartaal mee.

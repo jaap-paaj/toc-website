@@ -4,6 +4,7 @@ const en = {
     hero: {
         index: "02",
         title: "AUTOMATE",
+        seoTitle: "" as string,
         intro: "Most automations fail. Not because of bad technology, but because they automate the wrong process. We start with the friction and build from there, creating solutions that work for you."
     },
     readyToRun: {
@@ -91,6 +92,7 @@ const nl: typeof en = {
     hero: {
         index: "02",
         title: "AUTOMATE",
+        seoTitle: "AI Automatisering voor Bedrijven - The Only Constant",
         intro: "De meeste automations mislukken. Niet door slechte technologie, maar omdat ze het verkeerde proces automatiseren. Wij beginnen bij de frictie en bouwen van daaruit oplossingen die voor je werken."
     },
     readyToRun: {
@@ -173,5 +175,62 @@ const nl: typeof en = {
         ]
     }
 };
+
+// FAQ items shared with blog post "ai-automatisering"
+const enFaq = {
+    eyebrow: "FAQ",
+    title: "Frequently Asked Questions about AI Automation",
+    items: [
+        {
+            question: "What is AI automation?",
+            answer: "AI automation uses artificial intelligence to make business processes smarter. Unlike traditional automation, AI can handle unstructured information like emails, documents and conversations, and perform tasks that previously required human judgment.",
+        },
+        {
+            question: "What is the difference between AI automation and regular automation?",
+            answer: "Traditional automation follows fixed rules: if X, then Y. AI automation can recognize patterns, understand context and handle variation. A traditional automation sends every complaint to the same inbox. AI automation reads the complaint, assesses urgency and routes it to the right person.",
+        },
+        {
+            question: "What does AI automation cost?",
+            answer: "A first AI automation project at The Only Constant, including intake, roadmap and first working automation, starts from 5,000 euros. Follow-up automations start from 2,250 euros. The investment typically pays for itself within three months through time savings and quality improvement.",
+        },
+        {
+            question: "Which processes are suitable for AI automation?",
+            answer: "The best candidates are processes with lots of repetition, unstructured information and human assessment steps that are time-consuming but not complex. Examples: processing incoming orders, classifying customer questions, summarizing meetings, generating first drafts of reports or proposals.",
+        },
+        {
+            question: "How do you start with AI automation?",
+            answer: "Don't start with the technology but with the friction. Sit next to someone doing the work and see where it gets stuck. Choose the process with the most daily pain and build a small, working automation for it. Test with real users, measure the result, and only scale when proven value is demonstrated.",
+        },
+    ],
+};
+
+const nlFaq: typeof enFaq = {
+    eyebrow: "FAQ",
+    title: "Veelgestelde vragen over AI automatisering",
+    items: [
+        {
+            question: "Wat is AI automatisering?",
+            answer: "AI automatisering is het inzetten van kunstmatige intelligentie om bedrijfsprocessen slimmer te maken. Het verschil met traditionele automatisering: AI kan omgaan met ongestructureerde informatie, zoals e-mails, documenten en gesprekken, en kan taken uitvoeren die voorheen menselijk beoordelingsvermogen vereisten.",
+        },
+        {
+            question: "Wat is het verschil tussen AI automatisering en gewone automatisering?",
+            answer: "Traditionele automatisering volgt vaste regels: als X, dan Y. AI automatisering kan patronen herkennen, context begrijpen en omgaan met variatie. Een traditionele automatisering stuurt elke klacht naar dezelfde inbox. AI automatisering leest de klacht, beoordeelt de urgentie en stuurt hem naar de juiste persoon.",
+        },
+        {
+            question: "Wat kost AI automatisering?",
+            answer: "Een eerste AI automatiseringstraject, inclusief intake, roadmap en eerste werkende automation, start bij The Only Constant vanaf 5.000 euro. Vervolgautomatiseringen starten vanaf 2.250 euro. De investering verdient zich in de meeste gevallen binnen drie maanden terug door tijdsbesparing en kwaliteitsverbetering.",
+        },
+        {
+            question: "Voor welke processen is AI automatisering geschikt?",
+            answer: "De beste kandidaten zijn processen met veel herhaling, ongestructureerde informatie en menselijke beoordeelstappen die tijdrovend maar niet complex zijn. Voorbeelden: het verwerken van inkomende orders, het classificeren van klantvragen, het samenvatten van vergaderingen, het genereren van eerste concepten voor rapporten of offertes.",
+        },
+        {
+            question: "Hoe begin je met AI automatisering?",
+            answer: "Begin niet bij de technologie maar bij de frictie. Ga naast iemand zitten die het werk doet en kijk waar het schuurt. Kies het proces met de meeste dagelijkse pijn en bouw daar een kleine, werkende automatisering voor. Test het met echte gebruikers, meet het resultaat, en schaal pas op als het bewezen waarde levert.",
+        },
+    ],
+};
+
+export const automateFaq = { en: enFaq, nl: nlFaq };
 
 export const automateContent: Record<Locale, typeof en> = { en, nl };

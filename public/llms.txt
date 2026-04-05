@@ -1,0 +1,42 @@
+# The Only Constant
+
+> AI consultancy voor marketing en organisatie-innovatie. Werkende prototypes en beslisdata, geen slideware.
+
+## Bedrijfsinformatie
+- Naam: The Only Constant (TOC)
+- Type: Marketing & Organisation Innovation Studio
+- Locatie: Nederland
+- Doelgroep: Organisaties met 50+ FTE in retail, manufacturing en high-tech
+- Focus: AI-adoptie als managementdiscipline
+
+## Services
+
+### Educate
+- [AI Workshop voor Bedrijven](https://theonlyconstant.nl/nl/educate): AI workshops op locatie voor teams. Prijsrange 1.500-3.500 euro.
+
+### Automate
+- [AI Automatisering](https://theonlyconstant.nl/nl/automate): Workflow automatisering met generatieve AI. Intake + eerste build vanaf 5.000 euro.
+
+### Innovate
+- [AI Proof of Concept / Innovation Sprint](https://theonlyconstant.nl/nl/innovate): In 2 weken van idee naar werkend prototype. Vanaf 15.000 euro.
+
+## Expertise
+- AI-adoptie strategie en implementatie
+- Proof of Value trajecten (2-4 weken, meetbaar resultaat)
+- Workshop-driven AI readiness
+- Workflow automatisering met generatieve AI
+- AI voor retail, manufacturing en high-tech
+
+## Kernconcepten
+- Follow the Friction: begin bij het werk, niet bij de tool
+- Proof before Scale: bewijs waarde voordat je investering vergroot
+- Thinnest Viable Slice: begin met het kleinste stuk dat waarde creëert
+- Boring is Success: goede AI-automatisering valt niet op
+- Shadow AI als strategisch signaal
+
+## Blog
+- [Blog overzicht](https://theonlyconstant.nl/nl/blog)
+
+## Contact
+- [Contact pagina](https://theonlyconstant.nl/nl/contact)
+- Website: https://theonlyconstant.nl

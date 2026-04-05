@@ -5,6 +5,7 @@ import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { blogContent } from "@/app/_content/blog";
+import { getPillarForBlog } from "@/app/_content/pillar";
 import type { BlogPostMeta } from "@/lib/blog/types";
 import type { Locale } from "@/lib/i18n/config";
 
@@ -38,16 +39,32 @@ export function BlogGridSection({ posts, lang }: BlogGridSectionProps) {
                         href={`/blog/${post.slug}`}
                         className={cn(spacing.stackXs, "group")}
                     >
-                        {/* Date */}
-                        <time
-                            dateTime={post.date}
-                            className={cn(
-                                typography.variants.meta.label,
-                                "text-muted-foreground"
-                            )}
-                        >
-                            {formatDate(post.date, lang)}
-                        </time>
+                        {/* Date + pillar */}
+                        <div className="flex items-center flex-wrap gap-[var(--space-xs)]">
+                            <time
+                                dateTime={post.date}
+                                className={cn(
+                                    typography.variants.meta.label,
+                                    "text-muted-foreground"
+                                )}
+                            >
+                                {formatDate(post.date, lang)}
+                            </time>
+                            {(() => {
+                                const pillar = getPillarForBlog(post.slug, lang);
+                                if (!pillar) return null;
+                                return (
+                                    <span
+                                        className={cn(
+                                            typography.variants.meta.badge,
+                                            "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full"
+                                        )}
+                                    >
+                                        {pillar.tagLabel}
+                                    </span>
+                                );
+                            })()}
+                        </div>
 
                         {/* Title */}
                         <Heading

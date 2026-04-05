@@ -13,8 +13,8 @@ export function BrandHeroHeadline({ className }: BrandHeroHeadlineProps) {
             // Reuse system utility for hero display size
             className={cn(typography.variants.display.hero, className)}
         >
-            {/* Semantic accessible label */}
-            <span className="sr-only">The Only Constant Is Change</span>
+            {/* Semantic H1 for SEO — visual text is aria-hidden below */}
+            <span className="sr-only">AI Consultancy Nederland — The Only Constant</span>
 
             {/* Visual presentation with forced line breaks */}
             <div aria-hidden="true" className="flex flex-col items-start">

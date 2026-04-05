@@ -82,7 +82,7 @@ const en = {
         subtitle: "heads of operations, marketing, sales or product at organisations that:",
         items: [
             "Have 30+ employees or several repeatable processes",
-            "Already expect to use AI — or are under pressure to adopt it — but don't yet know where",
+            "Already expect to use AI, or are under pressure to adopt it, but don't yet know where",
             "Want decisions and measurable progress, not just experiments"
         ]
     },
@@ -280,7 +280,7 @@ const nl: typeof en = {
         subtitle: "Hoofden van operations, marketing, sales of product bij organisaties die:",
         items: [
             "30+ medewerkers of meerdere herhaalbare processen hebben",
-            "AI willen inzetten — of onder druk staan om ermee aan de slag te gaan — maar nog niet weten waar te beginnen",
+            "AI willen inzetten, of onder druk staan om ermee aan de slag te gaan, maar nog niet weten waar te beginnen",
             "Besluiten en meetbare voortgang willen, niet alleen experimenten"
         ]
     },
@@ -303,7 +303,7 @@ const nl: typeof en = {
     introCall: {
         eyebrow: "Kennismakingsgesprek",
         title: "Het kennismakings\u00ADgesprek van 20 minuten",
-        body: "Plan 20 minuten. Je ontvangt een sectoranalyse en een duidelijke vervolgstap — ook als je niet verdergaat.",
+        body: "Plan 20 minuten. Je ontvangt een sectoranalyse en een duidelijke vervolgstap, ook als je niet verdergaat.",
         card: {
             title: "Wat er gebeurt:",
             bullets: [

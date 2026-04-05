@@ -8,6 +8,7 @@ import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import type { BlogPostMeta } from "@/lib/blog/types";
 import { blogContent } from "@/app/_content/blog";
+import { getPillarForBlog } from "@/app/_content/pillar";
 import { useLocale } from "@/lib/i18n/useLocale";
 
 interface BlogLatestSectionProps {
@@ -49,7 +50,7 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
                     )}
                 >
                     {/* Meta row: NEW badge + date */}
-                    <div className="flex items-center justify-center gap-[var(--space-xs)]">
+                    <div className="flex items-center justify-center flex-wrap gap-[var(--space-xs)]">
                         {isRecent(post.date) && (
                             <span
                                 className={cn(
@@ -85,6 +86,25 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
                     <Text size="lg">
                         {post.intro}
                     </Text>
+
+                    {/* Pillar badge */}
+                    {(() => {
+                        const pillar = getPillarForBlog(post.slug, lang);
+                        if (!pillar) return null;
+                        return (
+                            <div className="flex justify-center">
+                                <Link
+                                    href={`/${pillar.pillarSlug}`}
+                                    className={cn(
+                                        typography.variants.meta.badge,
+                                        "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full hover:bg-foreground/20 transition-colors duration-200"
+                                    )}
+                                >
+                                    {pillar.tagLabel}
+                                </Link>
+                            </div>
+                        );
+                    })()}
 
                 </article>
             ))}

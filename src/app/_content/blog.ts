@@ -17,6 +17,15 @@ const en = {
         viewAll: "View all blogs",
         newBadge: "New",
     },
+    authorBio: {
+        label: "About the author",
+        name: "Maarten Mantje",
+        description:
+            "Founder of The Only Constant, an AI consultancy for marketing and organization innovation. He helps organizations discover what AI makes possible and builds the proof that it works.",
+    },
+    faq: {
+        title: "Frequently Asked Questions",
+    },
 };
 
 const nl: typeof en = {
@@ -35,6 +44,15 @@ const nl: typeof en = {
         moreFrom: "Meer inzichten van The Only Constant",
         viewAll: "Bekijk alle blogs",
         newBadge: "Nieuw",
+    },
+    authorBio: {
+        label: "Over de auteur",
+        name: "Maarten Mantje",
+        description:
+            "Oprichter van The Only Constant, een AI consultancy voor marketing en organisatie-innovatie. Hij helpt organisaties ontdekken wat AI mogelijk maakt en bouwt het bewijs dat het werkt.",
+    },
+    faq: {
+        title: "Veelgestelde vragen",
     },
 };
 
