@@ -5,8 +5,8 @@ const en = {
         title: "BLOG",
     },
     overview: {
-        latestTitle: "Latest Thinking",
-        moreTitle: "More Thinking",
+        latestTitle: "Latest Insights",
+        moreTitle: "More Insights",
     },
     sidebar: {
         latestPosts: "Latest Posts",
