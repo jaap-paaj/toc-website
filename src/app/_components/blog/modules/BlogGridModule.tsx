@@ -39,32 +39,16 @@ export function BlogGridSection({ posts, lang }: BlogGridSectionProps) {
                         href={`/blog/${post.slug}`}
                         className={cn(spacing.stackXs, "group")}
                     >
-                        {/* Date + pillar */}
-                        <div className="flex items-center flex-wrap gap-[var(--space-xs)]">
-                            <time
-                                dateTime={post.date}
-                                className={cn(
-                                    typography.variants.meta.label,
-                                    "text-muted-foreground"
-                                )}
-                            >
-                                {formatDate(post.date, lang)}
-                            </time>
-                            {(() => {
-                                const pillar = getPillarForBlog(post.slug, lang);
-                                if (!pillar) return null;
-                                return (
-                                    <span
-                                        className={cn(
-                                            typography.variants.meta.badge,
-                                            "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full"
-                                        )}
-                                    >
-                                        {pillar.tagLabel}
-                                    </span>
-                                );
-                            })()}
-                        </div>
+                        {/* Date */}
+                        <time
+                            dateTime={post.date}
+                            className={cn(
+                                typography.variants.meta.label,
+                                "text-muted-foreground"
+                            )}
+                        >
+                            {formatDate(post.date, lang)}
+                        </time>
 
                         {/* Title */}
                         <Heading
@@ -79,6 +63,24 @@ export function BlogGridSection({ posts, lang }: BlogGridSectionProps) {
                         <Text size="md" className="text-muted-foreground line-clamp-3">
                             {post.intro}
                         </Text>
+
+                        {/* Pillar badge */}
+                        {(() => {
+                            const pillar = getPillarForBlog(post.slug, lang);
+                            if (!pillar) return null;
+                            return (
+                                <div className="flex">
+                                    <span
+                                        className={cn(
+                                            typography.variants.meta.badge,
+                                            "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full"
+                                        )}
+                                    >
+                                        {pillar.tagLabel}
+                                    </span>
+                                </div>
+                            );
+                        })()}
 
                     </Link>
                 ))}
