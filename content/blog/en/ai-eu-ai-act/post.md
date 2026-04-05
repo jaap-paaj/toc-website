@@ -34,7 +34,7 @@ If you can answer these three questions, you are largely compliant. The details 
 
 The AI Act is legislation. But the impact is not in the fines. The impact is in trust.
 
-Organisations that can explain how their AI works, why certain choices were made, and where the limits are — those organisations build trust with customers, employees, and partners. Organisations that cannot, build risk.
+Organisations that can explain how their AI works, why certain choices were made, and where the limits are, those organisations build trust with customers, employees, and partners. Organisations that cannot, build risk.
 
 The interesting shift: the AI Act forces conversations that organisations should be having anyway. Who is responsible for the output? Where does the system's autonomy end? How do you know it is still working correctly? These are not compliance questions. They are [governance questions](/nl/blog/ai-governance) that make every AI project better.
 
@@ -42,7 +42,7 @@ The interesting shift: the AI Act forces conversations that organisations should
 
 Four steps you can take this month.
 
-**Inventory.** Which AI systems are running in your organisation? Including the unofficial ones — the [Shadow AI](/nl/blog/shadow-ai) that employees use on their own initiative. You cannot be compliant with systems whose existence you do not know about.
+**Inventory.** Which AI systems are running in your organisation? Including the unofficial ones, the [Shadow AI](/nl/blog/shadow-ai) that employees use on their own initiative. You cannot be compliant with systems whose existence you do not know about.
 
 **Classify.** For each system: high risk (decisions that directly affect people) or limited risk (most business applications)? The classification determines which requirements apply.
 

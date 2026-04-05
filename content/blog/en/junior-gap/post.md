@@ -10,7 +10,7 @@ tags:
   - talent
 ---
 
-In the 1950s, British surgeon Wilfred Ninewells discovered something troubling. Young doctors trained with the latest surgical techniques could perform complex procedures. But when the technology failed — when the device broke down or the unexpected happened — they were lost. They had never learned to work without it.
+In the 1950s, British surgeon Wilfred Ninewells discovered something troubling. Young doctors trained with the latest surgical techniques could perform complex procedures. But when the technology failed, when the device broke down or the unexpected happened, they were lost. They had never learned to work without it.
 
 The technology had made the craft more accessible. And at the same time, removed its foundations.
 
@@ -46,7 +46,7 @@ The answer lies in a deliberate choice: which work should a junior still do manu
 
 ## The bigger picture
 
-Organisations that handle this well think about AI as a people question. The technology is the easy part. The hard question is: how do we make sure our people get better, not just faster? A good [AI workshop](/nl/blog/ai-workshop-bedrijven) starts exactly there — with the people, not the technology.
+Organisations that handle this well think about AI as a people question. The technology is the easy part. The hard question is: how do we make sure our people get better, not just faster? A good [AI workshop](/nl/blog/ai-workshop-bedrijven) starts exactly there, with the people, not the technology.
 
 That requires an uncomfortable conversation. It requires managers to say: "I know AI can do this faster, but I want you to do it yourself first." That feels inefficient. It is an investment.
 

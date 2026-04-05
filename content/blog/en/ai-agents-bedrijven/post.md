@@ -20,7 +20,7 @@ That is powerful. It is also risky. And the distinction between the two comes do
 
 The market sells full autonomy. AI that independently runs your customer service. AI that takes over your entire quoting process. AI that makes decisions without human involvement.
 
-The problem: most organisations are not ready for that. Not technically — organisationally. Who is responsible when the agent makes a wrong decision? Who checks whether the agent is still doing what it should? How do you explain to your regulator what happened?
+The problem: most organisations are not ready for that. Not technically, organisationally. Who is responsible when the agent makes a wrong decision? Who checks whether the agent is still doing what it should? How do you explain to your regulator what happened?
 
 The promise of full autonomy is tempting. The reality is that most organisations benefit from something in between.
 
@@ -34,7 +34,7 @@ We call it agentish AI. Intelligent systems that act autonomously within clear, 
 
 **Guardrails.** Where does the system stop? Complaints above a certain severity are always escalated to a human. Financial decisions above a threshold require approval. The system may advise, but never act autonomously on high-impact matters. How you build that [governance in](/nl/blog/ai-governance) without creating bureaucracy is critical.
 
-**Explainability.** Why did the system do what it did? Every action is traceable. Every decision can be explained — to the customer, to management, to the regulator.
+**Explainability.** Why did the system do what it did? Every action is traceable. Every decision can be explained, to the customer, to management, to the regulator.
 
 That is less exciting than full autonomy. It works.
 
@@ -42,11 +42,11 @@ That is less exciting than full autonomy. It works.
 
 Three patterns where agentish AI has the most impact.
 
-**Triage and routing.** A stream of incoming information — complaints, requests, orders — that needs to be assessed and routed. The agent reads, classifies, and directs. The human handles. The volume a human can process multiplies tenfold.
+**Triage and routing.** A stream of incoming information, complaints, requests, orders, that needs to be assessed and routed. The agent reads, classifies, and directs. The human handles. The volume a human can process multiplies tenfold.
 
-**Monitoring and alerting.** An agent that continuously watches: quality of output, deviations in patterns, costs that are climbing. Not reacting to problems — noticing them before they become problems. That is also how you [detect drift](/nl/blog/ai-drift) in existing AI systems.
+**Monitoring and alerting.** An agent that continuously watches: quality of output, deviations in patterns, costs that are climbing. Not reacting to problems, noticing them before they become problems. That is also how you [detect drift](/nl/blog/ai-drift) in existing AI systems.
 
-**First drafts.** An agent that creates an initial version based on input — a quote, a report, an analysis — that a human then reviews and completes. The human shifts from maker to reviewer. That requires the human to genuinely master the craft, which is precisely the [Junior Gap](/nl/blog/junior-gap) risk.
+**First drafts.** An agent that creates an initial version based on input, a quote, a report, an analysis, that a human then reviews and completes. The human shifts from maker to reviewer. That requires the human to genuinely master the craft, which is precisely the [Junior Gap](/nl/blog/junior-gap) risk.
 
 ## How to start
 

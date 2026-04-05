@@ -14,7 +14,7 @@ In 1999, Iridium launched a network of 66 satellites for global mobile telephony
 
 Iridium proved that something was possible. They never proved that anyone wanted it.
 
-That distinction — between "it works" and "it is worth it" — is at the heart of every AI project that needs to move from experiment to production.
+That distinction, between "it works" and "it is worth it", is at the heart of every AI project that needs to move from experiment to production.
 
 ## The momentum problem
 
@@ -72,13 +72,13 @@ Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team
 When you can answer seven questions positively: is the value proven with data, is there a permanent owner, has the work improved as a result, is usage genuine and voluntary, is it safe at scale, is the evidence file complete, and can you detect degradation? If any of these answers is "no," go back to the experiment.
 
 **What does it cost to scale AI?**
-The technical costs — infrastructure, integrations, security — are visible and predictable. The hidden costs are larger: organisational change, training, process management, monitoring. Allow for three to six months and an investment two to five times the cost of the experiment. The biggest cost item is almost always the human side, not the technical one.
+The technical costs, infrastructure, integrations, security, are visible and predictable. The hidden costs are larger: organisational change, training, process management, monitoring. Allow for three to six months and an investment two to five times the cost of the experiment. The biggest cost item is almost always the human side, not the technical one.
 
 **What is the difference between an AI experiment and production?**
 In an experiment you use temporary technology: CSV exports, manual workarounds, disposable code. In production you migrate to enterprise-grade infrastructure: live API integrations, automated monitoring, security controls, single sign-on. That migration is a project in itself. Do not underestimate it.
 
 **How do you prevent an AI project from failing at scale?**
-By doing three things: prove the value at small scale before you expand (proof before scale), ensure there is a permanent owner in the business who takes responsibility, and build in monitoring for drift — degradation of quality, cost or usage. Most scaling failures occur because one of these three is missing.
+By doing three things: prove the value at small scale before you expand (proof before scale), ensure there is a permanent owner in the business who takes responsibility, and build in monitoring for drift, degradation of quality, cost or usage. Most scaling failures occur because one of these three is missing.
 
 **What is AI drift?**
 AI drift is the quiet degradation of an AI system over time. Five forms: data drift (the world changes, training data becomes outdated), model drift (the vendor updates the model, prompts behave differently), behaviour drift (users trust the output blindly), quality drift (output gradually worsens), and cost drift (usage and costs creep upward). Monitoring is essential to detect drift before it becomes a problem.

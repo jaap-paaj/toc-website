@@ -40,7 +40,7 @@ There is a conversation that almost nobody is having. The conversation with the 
 
 Three sentences that help.
 
-"Your role is changing. The parts that require judgement and creativity are becoming more important." This is not a reassuring phrase. It is an honest description of what happens when AI takes over routine work. The human becomes the evaluator, quality guardian, decision maker. That is a promotion — provided it is treated as one.
+"Your role is changing. The parts that require judgement and creativity are becoming more important." This is not a reassuring phrase. It is an honest description of what happens when AI takes over routine work. The human becomes the evaluator, quality guardian, decision maker. That is a promotion, provided it is treated as one.
 
 "I want to make sure you keep building those skills. Do this task manually for the coming period." This is the hardest sentence to say, because it sounds like a step backwards. It is. A deliberate, temporary step back to ensure the foundations remain solid. Without those foundations, [the Junior Gap](/nl/blog/junior-gap) emerges: editors who have never learned to write.
 

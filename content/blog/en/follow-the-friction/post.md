@@ -50,7 +50,7 @@ If the answer is "old," don't automate it. Retire it.
 
 ## From observation to action
 
-The step from watching to doing is smaller than you think. Choose the friction that comes up most often. The smallest piece with the most pain. Build something for it in two weeks. Test it with the people you observed. They are your best judges — they feel immediately whether it makes their work better.
+The step from watching to doing is smaller than you think. Choose the friction that comes up most often. The smallest piece with the most pain. Build something for it in two weeks. Test it with the people you observed. They are your best judges, they feel immediately whether it makes their work better.
 
 This is how the best [AI automation projects](/nl/blog/ai-automatisering) begin. Not with a roadmap, a business case or a vendor selection. With twenty minutes of watching. With the willingness to be surprised by what you see.
 

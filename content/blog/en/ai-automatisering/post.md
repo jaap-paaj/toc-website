@@ -73,13 +73,13 @@ Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team
 ## Frequently Asked Questions about AI automation
 
 **What is AI automation?**
-AI automation means using artificial intelligence to make business processes smarter. The difference from traditional automation: AI can handle unstructured information — emails, documents, conversations — and perform tasks that previously required human judgment. Think of automatically classifying customer queries, summarising meetings, or generating reports from raw data.
+AI automation means using artificial intelligence to make business processes smarter. The difference from traditional automation: AI can handle unstructured information, emails, documents, conversations, and perform tasks that previously required human judgment. Think of automatically classifying customer queries, summarising meetings, or generating reports from raw data.
 
 **What is the difference between AI automation and regular automation?**
 Traditional automation follows fixed rules: if X, then Y. AI automation can recognise patterns, understand context, and handle variation. Traditional automation sends every complaint to the same inbox. AI automation reads the complaint, assesses urgency, and routes it to the right person. The difference lies in the ability to deal with unpredictable input.
 
 **What does AI automation cost?**
-That depends on the complexity. A first AI automation project — including intake, roadmap, and first working automation — starts at The Only Constant from €5,000. Subsequent automations start from €2,250. In most cases the investment pays for itself within three months through time savings and quality improvements.
+That depends on the complexity. A first AI automation project, including intake, roadmap, and first working automation, starts at The Only Constant from €5,000. Subsequent automations start from €2,250. In most cases the investment pays for itself within three months through time savings and quality improvements.
 
 **Which processes are suitable for AI automation?**
 The best candidates are processes with high repetition, unstructured information, and human judgment steps that are time-consuming but not particularly complex. Examples: processing incoming orders, classifying customer queries, summarising meetings, generating first drafts for reports or proposals. Processes that rely purely on creativity or empathy are less suitable.

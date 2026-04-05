@@ -32,7 +32,7 @@ A good AI consultancy makes itself redundant. Quickly. That sounds like a contra
 
 Three questions that reveal more than any reference call.
 
-**Where is the evidence?** Ask for working examples. Not case studies in a PDF — working systems you can actually see. A consultancy that only shows reports probably only delivers reports. A consultancy that shows prototypes builds prototypes.
+**Where is the evidence?** Ask for working examples. Not case studies in a PDF, working systems you can actually see. A consultancy that only shows reports probably only delivers reports. A consultancy that shows prototypes builds prototypes.
 
 **How fast is the first result?** If the answer is "after the eight-week analysis phase," keep looking. The value of AI experiments lies in speed. Two weeks to put something working in place. That something delivers the information needed to decide: continue, adjust, or stop. Decision data, not slideware.
 
@@ -46,7 +46,7 @@ The first type sells tools. They have a partnership with a platform and their ad
 
 The second type sells complexity. The more complicated the engagement, the longer the assignment. Forty-page governance frameworks. Roadmaps running to 2028. Risk analyses so extensive they become a risk themselves. That is [Solutioneering](/nl/blog/solutioneering) from the supply side: the tool sells itself, the problem comes later.
 
-The question that helps: would this consultancy also advise me to do nothing? If the answer is no — if the recommendation is always "more" — then the business model is the problem.
+The question that helps: would this consultancy also advise me to do nothing? If the answer is no, if the recommendation is always "more", then the business model is the problem.
 
 ## How to get started without getting lost
 
@@ -54,9 +54,9 @@ Three principles that help with any AI engagement, regardless of who runs it.
 
 **Pick a fight.** The biggest mistake is starting everywhere at once. Choose one domain, one team, one process. Go deep rather than broad. Every additional scope item halves your learning capacity.
 
-**Demand working things.** Presentations are not a result. Reports are not a result. A working prototype that real people use during their normal working day — that is a result. It does not need to be finished. It needs to be real. A good [AI proof of concept](/nl/blog/ai-proof-of-concept) delivers exactly that: decision data, not slideware.
+**Demand working things.** Presentations are not a result. Reports are not a result. A working prototype that real people use during their normal working day, that is a result. It does not need to be finished. It needs to be real. A good [AI proof of concept](/nl/blog/ai-proof-of-concept) delivers exactly that: decision data, not slideware.
 
-**Measure to learn.** The reflex is to measure whether AI "works." That is the wrong question at the start. The right question: what have we learned? Which assumptions held and which did not? Measuring to learn creates safety. Measuring to judge creates politics. And only scale when the evidence is there, not when the enthusiasm is. That principle — [proof before scale](/nl/blog/proof-before-scale) — protects against the most expensive mistake in AI adoption.
+**Measure to learn.** The reflex is to measure whether AI "works." That is the wrong question at the start. The right question: what have we learned? Which assumptions held and which did not? Measuring to learn creates safety. Measuring to judge creates politics. And only scale when the evidence is there, not when the enthusiasm is. That principle, [proof before scale](/nl/blog/proof-before-scale), protects against the most expensive mistake in AI adoption.
 
 John Snow was initially ignored. The establishment had a theory, and that theory was comfortable. But Snow had data. And data always beats comfort, if you are willing to look.
 
