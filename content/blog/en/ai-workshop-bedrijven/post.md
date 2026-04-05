@@ -28,7 +28,7 @@ There is a more fundamental issue underneath. AI is not a tool you learn to use 
 
 In four out of five workshops we run, the same moment arrives. Someone from the team says: "But don't we already have an AI tool?" And it turns out three people use it, two have never heard of it, and the tool does something entirely different from what it was intended for.
 
-That is a signal. It tells you that people are already searching for solutions to friction in their work. They are doing it alone, without coordination, without direction. We call this [Shadow AI](/nl/blog/shadow-ai) — unofficial AI use as strategic radar.
+That is a signal. It tells you that people are already searching for solutions to friction in their work. They are doing it alone, without coordination, without direction. We call this [Shadow AI](/nl/blog/shadow-ai), unofficial AI use as strategic radar.
 
 The smartest organisations treat that as information. Where are people already using AI on their own? Those are the places where friction is highest and value is clearest.
 
@@ -38,7 +38,7 @@ A workshop that works starts with the reality of the participants. Their process
 
 Three elements make the difference.
 
-**The emotional check-in.** Ask the team: what excites you about AI? What concerns you? What changes in your work if AI takes over thirty percent of routine tasks? The answers are revealing. Most anxiety sits with middle management — the people who translate between strategy and execution. If they are sceptical, you are nowhere near done.
+**The emotional check-in.** Ask the team: what excites you about AI? What concerns you? What changes in your work if AI takes over thirty percent of routine tasks? The answers are revealing. Most anxiety sits with middle management, the people who translate between strategy and execution. If they are sceptical, you are nowhere near done.
 
 **The friction inventory.** Walk participants through their own work and have them mark where things snag. Where do they lose time? Where do they copy data between systems? Where do they do things knowing it could be done smarter? This is the [Follow the Friction](/nl/blog/follow-the-friction) principle in action. That inventory yields more than any technology demo ever could.
 

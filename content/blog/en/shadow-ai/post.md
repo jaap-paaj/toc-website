@@ -10,15 +10,15 @@ tags:
   - organisatie
 ---
 
-During the Second World War, the US Navy analysed which parts of returning bombers had the most bullet holes. The conclusion seemed obvious: reinforce those spots. The mathematician Abraham Wald saw it differently. The planes that came back had survived the damage. You needed to look at the spots without bullet holes. Those were where the fatal hits landed — on the planes that never returned.
+During the Second World War, the US Navy analysed which parts of returning bombers had the most bullet holes. The conclusion seemed obvious: reinforce those spots. The mathematician Abraham Wald saw it differently. The planes that came back had survived the damage. You needed to look at the spots without bullet holes. Those were where the fatal hits landed, on the planes that never returned.
 
 Survivorship bias. You draw conclusions from what you see and miss what is invisible.
 
-The same thing plays out in AI adoption inside organisations. The visible AI projects — the official pilots, the approved tools — those are the planes that came back. The real story is in what you cannot see.
+The same thing plays out in AI adoption inside organisations. The visible AI projects, the official pilots, the approved tools, those are the planes that came back. The real story is in what you cannot see.
 
 ## The invisible adoption
 
-In virtually every organisation we work with, the same thing is happening. Employees are using ChatGPT, Claude, Copilot — on their own phones, with their own accounts, without anyone knowing. They write emails with it, summarise meetings, generate first drafts of reports. Sometimes at work, sometimes at home in the evening.
+In virtually every organisation we work with, the same thing is happening. Employees are using ChatGPT, Claude, Copilot, on their own phones, with their own accounts, without anyone knowing. They write emails with it, summarise meetings, generate first drafts of reports. Sometimes at work, sometimes at home in the evening.
 
 The reflex of most organisations: this is a compliance problem. Data is leaking out. There is no policy. We need to ban it or regulate it.
 
@@ -32,7 +32,7 @@ The smartest approach: amnesty. No punishment for unofficial AI use. Bring it in
 
 The answers are revealing. "I use ChatGPT for customer emails because our template system doesn't work." "I have Claude summarise my meetings because otherwise I spend two hours on minutes." "I generate first drafts of proposals because the quoting process has six steps that nobody understands."
 
-Every unofficial AI tool is a pointer to a broken process. And those pointers are more reliable than any consultancy report. People vote with their feet. Or in this case: with their prompts. It is [Follow the Friction](/nl/blog/follow-the-friction) in its purest form — the friction finds itself.
+Every unofficial AI tool is a pointer to a broken process. And those pointers are more reliable than any consultancy report. People vote with their feet. Or in this case: with their prompts. It is [Follow the Friction](/nl/blog/follow-the-friction) in its purest form, the friction finds itself.
 
 ## What to do with it
 
@@ -40,7 +40,7 @@ Three steps.
 
 **Inventory.** Ask each team: which AI tools are you using, for what, and what value does it deliver? Map it out. Not to audit, but to understand. The places with the most shadow usage are your best starting points. An [AI workshop](/nl/blog/ai-workshop-bedrijven) is an effective way to have this conversation in a structured setting.
 
-**Professionalise.** The tools that deliver value — make them official. With the right security, the right data agreements, the right boundaries. That shifts you from unmanaged sprawl to focused adoption without losing the energy behind it.
+**Professionalise.** The tools that deliver value, make them official. With the right security, the right data agreements, the right boundaries. That shifts you from unmanaged sprawl to focused adoption without losing the energy behind it.
 
 **Learn.** The patterns in shadow usage tell you more about your organisation than many a strategy session. Where are the process breaks? Where is friction greatest? Where are people finding their own solutions because the official route is too slow or too cumbersome?
 
@@ -71,4 +71,4 @@ Start with amnesty: no punishment for existing usage, but do inventory it. Map w
 By asking. An anonymous survey works best: which AI tools do you use, how often, and for what? Most employees are willing to share this if there are no consequences attached. You can also look at network logs or licence overviews, but the direct conversation yields the richest information.
 
 **What is the difference between Shadow AI and official AI use?**
-Official AI use falls within the organisation's policy: approved tools, secured environments, data agreements. Shadow AI emerges outside that — on employees' own initiative. The difference lies in visibility and control. The goal is to convert valuable Shadow AI into official use, so the benefits are preserved and the risks become manageable.
+Official AI use falls within the organisation's policy: approved tools, secured environments, data agreements. Shadow AI emerges outside that, on employees' own initiative. The difference lies in visibility and control. The goal is to convert valuable Shadow AI into official use, so the benefits are preserved and the risks become manageable.

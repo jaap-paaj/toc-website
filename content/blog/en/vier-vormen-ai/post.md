@@ -10,7 +10,7 @@ tags:
   - capabilities
 ---
 
-"What kinds of AI are there?" It is one of the most common questions in our workshops. And the answer you find everywhere — narrow AI versus general AI versus super AI — is completely useless when you want to decide where to start tomorrow morning.
+"What kinds of AI are there?" It is one of the most common questions in our workshops. And the answer you find everywhere, narrow AI versus general AI versus super AI, is completely useless when you want to decide where to start tomorrow morning.
 
 That framework is about what AI theoretically is. Not what AI practically does. And as a director or manager, you need the second.
 
@@ -18,7 +18,7 @@ That framework is about what AI theoretically is. Not what AI practically does. 
 
 AI has four core capabilities that are relevant to organisations. They sound simple. The combinations are powerful.
 
-**Sense.** AI can perceive. Read text, listen to audio, recognise images, scan documents. Everything that arrives as unstructured information — emails, customer conversations, invoices, product photos — AI can perceive and convert into structured data.
+**Sense.** AI can perceive. Read text, listen to audio, recognise images, scan documents. Everything that arrives as unstructured information, emails, customer conversations, invoices, product photos, AI can perceive and convert into structured data.
 
 A logistics company that manually enters hundreds of delivery notes every day can run that stream through an AI layer that reads, recognises, and structures. The work does not disappear. It shifts from entering to checking.
 
@@ -26,7 +26,7 @@ A logistics company that manually enters hundreds of delivery notes every day ca
 
 A retailer receiving thousands of customer reviews every month can use AI to identify which themes recur most often, where sentiment is shifting, where a problem is growing before it escalates. No human reads a thousand reviews per month. AI does.
 
-**Generate.** AI can produce. Write texts, generate reports, draft proposals, create variations. The most familiar application — and the most overrated. Generating without the other three capabilities is a machine producing things without context.
+**Generate.** AI can produce. Write texts, generate reports, draft proposals, create variations. The most familiar application, and the most overrated. Generating without the other three capabilities is a machine producing things without context.
 
 Where it gets interesting: AI that generates based on what it has perceived and interpreted. A quote automatically drafted based on customer history (Sense), market position (Interpret), and internal guidelines (knowledge). That is not a standard template. That is a bespoke first draft in minutes.
 
@@ -46,7 +46,7 @@ All four: a customer service operation that reads incoming queries (Sense), clas
 
 ## What this means for your strategy
 
-Most organisations start with Generate. They have AI write texts, make presentations, draft emails. That produces something, but it is the least strategic application. The real difference lies in Sense and Interpret — the capabilities that let your organisation see things [you could not see yesterday](/nl/blog/ai-readiness).
+Most organisations start with Generate. They have AI write texts, make presentations, draft emails. That produces something, but it is the least strategic application. The real difference lies in Sense and Interpret, the capabilities that let your organisation see things [you could not see yesterday](/nl/blog/ai-readiness).
 
 The question for every AI investment: which capability are we adding? And which combination delivers the most value for this specific process?
 

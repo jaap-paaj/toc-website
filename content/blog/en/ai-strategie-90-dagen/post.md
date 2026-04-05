@@ -28,15 +28,15 @@ What works: short, defined cycles. Ninety days from strategic question to decisi
 
 **Week one: choose focus.** Pick a domain, a team, a process. The biggest pitfall is starting everywhere at once. Every additional scope item halves your learning capacity. Write the question on one page. If it does not fit on one page, the scope is too broad.
 
-**Weeks two and three: discover.** Go and look at where the work is actually being done. [Map the friction](/nl/blog/follow-the-friction). Find out where people are already unofficially using AI. Talk to the sceptics — they know exactly where things get stuck. At the end of this phase you know where the pain is greatest and which piece of work is most suitable for an experiment.
+**Weeks two and three: discover.** Go and look at where the work is actually being done. [Map the friction](/nl/blog/follow-the-friction). Find out where people are already unofficially using AI. Talk to the sceptics, they know exactly where things get stuck. At the end of this phase you know where the pain is greatest and which piece of work is most suitable for an experiment.
 
-**Weeks four and five: design.** What will the AI solution look like? Who does what — human and machine? What will you measure? How will you know whether it works? Define the success criteria before you start building. And run the litmus test: if a human expert performed this task perfectly, would users care? If the answer is no, do not build it.
+**Weeks four and five: design.** What will the AI solution look like? Who does what, human and machine? What will you measure? How will you know whether it works? Define the success criteria before you start building. And run the litmus test: if a human expert performed this task perfectly, would users care? If the answer is no, do not build it.
 
 **Weeks six through ten: build and test.** The smallest slice that creates value. Real people, real work, real data. Measure in pairs: speed alongside quality. Gather evidence. At the end of the cycle, force a decision: scale, adjust, change direction, or stop. Only scale when the evidence is there. That is the principle of [proof before scale](/nl/blog/proof-before-scale).
 
 ## What you have at the end
 
-After ninety days you know more about AI in your organisation than after six months of roadmapping. You know whether your team can handle change. You know whether your data is usable. You know whether AI genuinely adds value to this piece of work. And you know it based on evidence — based on something you built and tested with real people.
+After ninety days you know more about AI in your organisation than after six months of roadmapping. You know whether your team can handle change. You know whether your data is usable. You know whether AI genuinely adds value to this piece of work. And you know it based on evidence, based on something you built and tested with real people.
 
 That knowledge is the foundation for the next cycle. And the one after that. Each cycle builds on the previous. After three cycles you have an AI strategy that grew organically from evidence, rather than one conceived top-down in a meeting room.
 
@@ -44,7 +44,7 @@ That knowledge is the foundation for the next cycle. And the one after that. Eac
 
 This is where things get interesting. The first cycle is the hardest. Everything is new. The team needs to adjust to a different way of working. Processes are not yet streamlined.
 
-The second cycle goes faster. The third faster still. The team has learned. Governance is in place. Measurement methods have been tested. The organisation has evidence that things work — or evidence that certain things do not, which is equally valuable.
+The second cycle goes faster. The third faster still. The team has learned. Governance is in place. Measurement methods have been tested. The organisation has evidence that things work, or evidence that certain things do not, which is equally valuable.
 
 After a year you have completed four cycles. Four defined experiments. Four rounds of evidence. Four forced decisions. Compare that with the organisation that has spent a year writing an AI strategy and built nothing.
 

@@ -63,7 +63,7 @@ Ready to get started? Begin with an [AI Workshop](/nl/educate) to bring your tea
 ## Frequently Asked Questions about AI readiness
 
 **What is AI readiness?**
-AI readiness is the degree to which an organisation is able to successfully deploy artificial intelligence. It covers technical aspects (data, infrastructure), organisational aspects (culture, leadership, willingness to change), and strategic aspects (clear problem, defined scope, measurable goals). Importantly: readiness is not a prerequisite for starting — it is a result of starting.
+AI readiness is the degree to which an organisation is able to successfully deploy artificial intelligence. It covers technical aspects (data, infrastructure), organisational aspects (culture, leadership, willingness to change), and strategic aspects (clear problem, defined scope, measurable goals). Importantly: readiness is not a prerequisite for starting, it is a result of starting.
 
 **How do you measure AI readiness?**
 The most effective way is a short, focused experiment. Choose a specific process, build a working prototype in two to four weeks, and measure what happens. That delivers more concrete information than any questionnaire. It is also valuable to map where employees are already unofficially using AI tools (Shadow AI) and how the team feels emotionally about AI adoption.

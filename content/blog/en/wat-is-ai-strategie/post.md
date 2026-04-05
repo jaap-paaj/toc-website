@@ -36,7 +36,7 @@ The core of a working AI strategy is focus. Pick one fight. Go deep on it. Every
 
 Two patterns we encounter in almost every organisation.
 
-The first: starting with the tool. "We need to do something with agents." "Have you looked at Copilot yet?" The technology is central. The problem comes later. Or never. That is [Solutioneering](/nl/blog/solutioneering) — the fastest route to an expensive project that delivers nothing.
+The first: starting with the tool. "We need to do something with agents." "Have you looked at Copilot yet?" The technology is central. The problem comes later. Or never. That is [Solutioneering](/nl/blog/solutioneering), the fastest route to an expensive project that delivers nothing.
 
 The second: no owner. An AI strategy without someone who has the authority to stop is a strategy without brakes. You need a sponsor who can say "no." To the CEO, to the vendor, to the enthusiasm when it is heading in the wrong direction.
 
@@ -68,13 +68,13 @@ Ready to get started? Begin with an [AI Workshop](/nl/educate) to choose a focus
 An AI strategy is an explicit decision about where an organisation focuses its capacity to learn when it comes to artificial intelligence. It encompasses the choice of a specific domain, clear goals, measurable criteria, and a timeframe. A good AI strategy fits on one page and enforces focus rather than fragmentation.
 
 **What are the four forms of AI for organisations?**
-AI has four core capabilities relevant to businesses: Sense (reading, listening, observing — such as scanning documents or analysing conversations), Interpret (recognising patterns, classifying, assessing risk), Generate (writing texts, producing reports, drafting proposals), and Decide (making recommendations, proposing escalations). The most valuable applications combine several of these capabilities.
+AI has four core capabilities relevant to businesses: Sense (reading, listening, observing, such as scanning documents or analysing conversations), Interpret (recognising patterns, classifying, assessing risk), Generate (writing texts, producing reports, drafting proposals), and Decide (making recommendations, proposing escalations). The most valuable applications combine several of these capabilities.
 
 **How do you build an AI strategy?**
 Start with the friction: observe where employees lose time every day. Choose the process with the most pain and the narrowest scope. State the problem without mentioning technology. Set measurable criteria before you start. Build something working in two to four weeks. Measure the result. Force a decision: continue, adjust, or stop.
 
 **How much does an AI strategy cost?**
-An AI Opportunity Scan at The Only Constant starts from 2,500 euros and delivers a concrete picture of where AI adds the most value. A full engagement — scan, first experiment, and decision data — starts from 5,000 euros. Larger innovation sprints (two weeks, working prototype) start from 15,000 euros. The investment is small compared to the cost of wrong AI investments based on untested assumptions.
+An AI Opportunity Scan at The Only Constant starts from 2,500 euros and delivers a concrete picture of where AI adds the most value. A full engagement, scan, first experiment, and decision data, starts from 5,000 euros. Larger innovation sprints (two weeks, working prototype) start from 15,000 euros. The investment is small compared to the cost of wrong AI investments based on untested assumptions.
 
 **What is the difference between an AI strategy and an AI roadmap?**
 An AI roadmap is a plan for eighteen months. An AI strategy is a decision for ninety days. The difference: the roadmap is based on assumptions that age. The strategy is based on evidence from short experimentation cycles. After four ninety-day cycles, you will have learned more than after a year of roadmapping.

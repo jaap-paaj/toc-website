@@ -24,7 +24,7 @@ The pattern is familiar. Someone had a good idea. Budget was freed up. A team bu
 
 No decision to scale. No decision to stop. The pilot hangs in a state of permanent evaluation. "We're keeping an eye on it." Quarter after quarter.
 
-It costs more than you think. The direct costs — licences, compute, maintenance — are visible. The indirect costs are larger. The team managing the pilot cannot work on anything new. The organisation loses confidence in AI projects generally. And every new pilot starts with the unspoken question: will this be the next zombie?
+It costs more than you think. The direct costs, licences, compute, maintenance, are visible. The indirect costs are larger. The team managing the pilot cannot work on anything new. The organisation loses confidence in AI projects generally. And every new pilot starts with the unspoken question: will this be the next zombie?
 
 ## Why it happens
 

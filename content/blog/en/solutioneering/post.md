@@ -70,7 +70,7 @@ Ready to get started? Begin with an [AI Workshop](/nl/educate) to find the right
 The most common reason is Solutioneering: starting with the technology instead of the problem. Other frequent causes: scope that is too broad (trying to start everywhere at once), vague success criteria (so nobody can judge whether it works), and a lack of ownership after the pilot phase.
 
 **How do you choose the right AI project to start with?**
-Start with the friction. Observe where employees lose time every day on work that does not contribute to the end result. Choose the process with the most pain and the narrowest scope. State the problem without mentioning technology. Then test which solution fits — whether that is AI, traditional automation, or a process change.
+Start with the friction. Observe where employees lose time every day on work that does not contribute to the end result. Choose the process with the most pain and the narrowest scope. State the problem without mentioning technology. Then test which solution fits, whether that is AI, traditional automation, or a process change.
 
 **What is the difference between Solutioneering and innovation?**
 Innovation starts with a problem or opportunity and looks for the best solution. Solutioneering starts with a technology and looks for a problem to justify it. The difference is sequence: problem first, or tool first. Innovation leads to solutions that add value. Solutioneering leads to technology that looks good but changes nothing.

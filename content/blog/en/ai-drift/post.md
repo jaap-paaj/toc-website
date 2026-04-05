@@ -10,7 +10,7 @@ tags:
   - strategie
 ---
 
-In 2005, BP's Deepwater Horizon platform went into service. For eleven years it ran. Daily operations were smooth. Safety inspections got signed off. Procedures were followed — more or less, each day a fraction less strictly, until nobody quite knew anymore where the line was between "good enough" and "risky."
+In 2005, BP's Deepwater Horizon platform went into service. For eleven years it ran. Daily operations were smooth. Safety inspections got signed off. Procedures were followed, more or less, each day a fraction less strictly, until nobody quite knew anymore where the line was between "good enough" and "risky."
 
 On 20 April 2010, the platform exploded. Eleven people died. It was the largest oil spill in American history.
 
@@ -24,7 +24,7 @@ AI drift comes in five forms. All of them are invisible until they become a prob
 
 **Data drift.** The world changes. Customer behaviour shifts. The product range evolves. But the data the AI system was trained on reflects the world from six months ago. Recommendations become gradually irrelevant. Nobody notices, because the output still looks professional.
 
-**Model drift.** The vendor updates the model. A routine update, no announcement. But the prompts that worked perfectly last month now produce subtly different results. The tone shifts. The structure changes. The system still does something — just not quite what it used to.
+**Model drift.** The vendor updates the model. A routine update, no announcement. But the prompts that worked perfectly last month now produce subtly different results. The tone shifts. The structure changes. The system still does something, just not quite what it used to.
 
 **Behavioural drift.** The most dangerous form. Users get used to the AI output. They stop checking. They hit send without reading. The system becomes a black box producing output that nobody critically reviews anymore. We call this sleepwalking. Run [the Meaning Test](/nl/blog/meaning-test) regularly to check whether the team is still engaged.
 
@@ -40,7 +40,7 @@ Three rhythms.
 
 **Weekly: costs and usage.** Five minutes. Does the volume match expectations? Are costs in line? This is the earliest signal that something is shifting.
 
-**Monthly: quality sample.** The domain owner reviews twenty random AI outputs. Blind — without knowing whether they are recent or old. Is quality falling? Is the tone shifting? This is the equivalent of a factory inspection: spot-checking whether production is still running to standard.
+**Monthly: quality sample.** The domain owner reviews twenty random AI outputs. Blind, without knowing whether they are recent or old. Is quality falling? Is the tone shifting? This is the equivalent of a factory inspection: spot-checking whether production is still running to standard.
 
 **Every quarter: the blind test.** Present the team with a mix of AI outputs. Some correct, some deliberately wrong. If the team catches fewer than seventy percent of the errors, you have a sleepwalking problem. People are trusting the system blindly. That is the moment drift becomes dangerous.
 
@@ -54,7 +54,7 @@ Without that division, everything falls through the cracks. The tech team thinks
 
 BP had procedures. BP had inspections. BP had people responsible. What BP did not have was someone looking every day at whether the system was still doing what it was supposed to do. The procedures were followed. The system drifted.
 
-With AI the lesson is the same. Implementation is the easy part. The hard part is keeping watch. Every week, every month, every quarter. With fresh eyes. With the willingness to say: this is no longer good enough. And when the evidence is no longer there, do not [scale further](/nl/blog/proof-before-scale) — go back to the experiment.
+With AI the lesson is the same. Implementation is the easy part. The hard part is keeping watch. Every week, every month, every quarter. With fresh eyes. With the willingness to say: this is no longer good enough. And when the evidence is no longer there, do not [scale further](/nl/blog/proof-before-scale), go back to the experiment.
 
 ---
 
