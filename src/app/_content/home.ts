@@ -31,7 +31,7 @@ const en = {
                 title: "EDUCATE",
                 description: "Learning AI tools takes an afternoon. Knowing where to apply them is the real work. Our training programmes start with your own challenges and end with skills you'll use tomorrow.",
                 cta: {
-                    label: "Explore Educate",
+                    label: "AI workshops for business",
                     href: "/educate",
                 }
             },
@@ -40,7 +40,7 @@ const en = {
                 title: "AUTOMATE",
                 description: "Most automations fail because they automate the wrong thing. We start with the user and the goals. Then we design the process together and build the automation.",
                 cta: {
-                    label: "Explore Automate",
+                    label: "AI automation",
                     href: "/automate",
                 }
             },
@@ -49,7 +49,7 @@ const en = {
                 title: "INNOVATE",
                 description: "Innovation isn't about coming up with ideas. It's about finding proof for the best ones. Using proven design methods and AI, we build what works before you go all in.",
                 cta: {
-                    label: "Explore Innovate",
+                    label: "AI proof of concepts",
                     href: "/innovate",
                 }
             },
@@ -117,7 +117,7 @@ const nl: typeof en = {
                 title: "EDUCATE",
                 description: "AI-tools leren kost een middag. Weten waar je ze inzet is het echte werk. Onze trainingen beginnen bij de eigen uitdagingen en eindigen met vaardigheden die je morgen al inzet.",
                 cta: {
-                    label: "Ontdek Educate",
+                    label: "AI workshops voor bedrijven",
                     href: "/educate",
                 }
             },
@@ -126,7 +126,7 @@ const nl: typeof en = {
                 title: "AUTOMATE",
                 description: "De meeste automations mislukken omdat ze het verkeerde automatiseren. Wij starten bij de gebruiker en de doelen. Daarna ontwerpen we samen het proces en bouwen we de automation.",
                 cta: {
-                    label: "Ontdek Automate",
+                    label: "AI automatisering",
                     href: "/automate",
                 }
             },
@@ -135,7 +135,7 @@ const nl: typeof en = {
                 title: "INNOVATE",
                 description: "Innovatie gaat niet om ideeën bedenken, het gaat om bewijs vinden voor de beste. Met beproefde designmethoden en AI bouwen we wat werkt, voordat je er groot op inzet.",
                 cta: {
-                    label: "Ontdek Innovate",
+                    label: "AI proof of concepts",
                     href: "/innovate",
                 }
             },

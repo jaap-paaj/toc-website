@@ -8,9 +8,6 @@ tags:
   - ai
 ---
 
-proof of concept
-innovatie
-
 In 1901 probeerde Samuel Langley als eerste een gemotoriseerd vliegtuig te lanceren. Hij had alles mee: financiering van het Smithsonian, het beste team, de nieuwste technologie. Zijn vliegtuig stortte twee keer in de Potomac. Negen dagen na de tweede crash vlogen de gebroeders Wright. Met een budget van minder dan duizend dollar. In een fietsenwinkel.
 
 Het verschil: Langley bouwde om te bewijzen dat vliegen kon. De Wrights bouwden om te leren hoe vliegen werkte. Langley wilde gelijk krijgen. De Wrights wilden informatie.
