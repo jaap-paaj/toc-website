@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "@/lib/blog/loader";
+import { getAllPosts, getAllSlugs, getPostBySlug } from "@/lib/blog/loader";
 import { BlogDetailPage } from "@/app/_components/blog/BlogDetailPage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import type { Locale } from "@/lib/i18n/config";
@@ -12,10 +12,8 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-    // Generate slug params for all locales — the loader falls back to "en"
-    // so the same slugs work for both /nl/blog/... and /en/blog/...
-    const posts = getAllPosts("en");
-    return posts.map((post) => ({ slug: post.slug }));
+    const slugs = getAllSlugs();
+    return slugs.map((slug) => ({ slug }));
 }
 
 export const dynamicParams = true;
@@ -27,9 +25,21 @@ export async function generateMetadata({
     const post = getPostBySlug(slug, lang as Locale);
     if (!post) return { title: "Post Not Found" };
 
+    const pageUrl = `${SITE_URL}/${lang}/blog/${slug}`;
+
     return {
         title: `${post.title} | Blog | The Only Constant`,
         description: post.intro,
+        alternates: {
+            canonical: pageUrl,
+        },
+        openGraph: {
+            title: post.title,
+            description: post.intro,
+            type: "article",
+            url: pageUrl,
+            siteName: "The Only Constant",
+        },
     };
 }
 
@@ -55,22 +65,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
     return (
         <>
+            {/* Article + Author schema */}
             <StructuredData
                 data={{
                     "@context": "https://schema.org",
-                    "@type": "BlogPosting",
+                    "@type": "Article",
                     headline: fullPost.title,
                     description: fullPost.intro,
                     datePublished: fullPost.date,
-                    ...(fullPost.author && {
-                        author: {
-                            "@type": "Person",
-                            name: fullPost.author,
+                    dateModified: fullPost.date,
+                    author: {
+                        "@type": "Person",
+                        name: "Maarten Mantje",
+                        jobTitle: "Founder & Strategist",
+                        worksFor: {
+                            "@type": "Organization",
+                            name: "The Only Constant",
                         },
-                    }),
+                    },
                     publisher: {
                         "@type": "Organization",
                         name: "The Only Constant",
+                        url: SITE_URL,
                         logo: {
                             "@type": "ImageObject",
                             url: `${SITE_URL}/images/brand/toc/TOC_Logo_black.svg`,
@@ -80,6 +96,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     inLanguage: locale,
                 }}
             />
+
+            {/* Breadcrumb schema */}
             <StructuredData
                 data={{
                     "@context": "https://schema.org",
@@ -105,6 +123,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     ],
                 }}
             />
+
+            {/* FAQ schema (only if post has FAQ items) */}
+            {fullPost.faq && fullPost.faq.length > 0 && (
+                <StructuredData
+                    data={{
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        mainEntity: fullPost.faq.map((item) => ({
+                            "@type": "Question",
+                            name: item.question,
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: item.answer,
+                            },
+                        })),
+                    }}
+                />
+            )}
+
             <BlogDetailPage post={fullPost} latestPosts={latestPosts} />
         </>
     );

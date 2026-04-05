@@ -4,6 +4,7 @@ const en = {
     hero: {
         eyebrow: "01",
         title: "EDUCATE",
+        seoTitle: "" as string,
         description: "Most AI training teaches buttons. We teach people to think in applications. Our programmes work with your challenges and data, so your team experiences what's possible and can run with it straight away."
     },
     trainingCatalog: {
@@ -93,6 +94,7 @@ const nl: typeof en = {
     hero: {
         eyebrow: "01",
         title: "EDUCATE",
+        seoTitle: "AI Workshop voor Bedrijven - The Only Constant",
         description: "De meeste AI-trainingen leren knoppen. Wij leren denken in toepassingen. Onze trainingen werken met jullie uitdagingen en data, zodat je team ervaart wat mogelijk is en er direct mee verder kan."
     },
     trainingCatalog: {
@@ -177,5 +179,70 @@ const nl: typeof en = {
         ]
     }
 };
+
+// FAQ items shared with blog post "ai-workshop-bedrijven"
+const enFaq = {
+    eyebrow: "FAQ",
+    title: "Frequently Asked Questions about AI Workshops",
+    items: [
+        {
+            question: "What do you learn at an AI workshop?",
+            answer: "A good AI workshop combines three things: understanding what AI can and can't do, insight into where AI adds value to your specific work, and a concrete starting point. Participants leave with a clear picture of which processes are most suitable for AI, and a plan to start next week.",
+        },
+        {
+            question: "How much does an AI workshop cost?",
+            answer: "An in-company AI workshop at The Only Constant costs between 1,500 and 3,500 euros, depending on scope and preparation. This includes an intake to tailor the workshop to your situation, the session itself, and a follow-up with concrete next steps.",
+        },
+        {
+            question: "How long does an AI workshop take?",
+            answer: "Plan for half a day for an AI workshop (3-4 hours) and a full day for a hands-on session where the team actually works with their own processes. The most effective workshops combine a morning of theory and context with an afternoon where participants work on their own use cases.",
+        },
+        {
+            question: "Who is an AI workshop suitable for?",
+            answer: "AI workshops are most effective for teams that work daily with processes where friction exists: customer service, marketing, operations, finance, HR. The ideal group is 8 to 20 participants from the same organization, preferably a mix of management and executors.",
+        },
+        {
+            question: "What is the difference between an AI workshop and an AI training?",
+            answer: "A training focuses on skills: how to use specific tools, write good prompts, integrate AI into your daily workflow. A workshop focuses on strategy and direction: where is the most value for our organization, which processes are suitable, and how do we start.",
+        },
+        {
+            question: "How do I prepare my team for an AI workshop?",
+            answer: "The most important preparation is openness. Ask your team to think about two things: which part of their work takes the most time, and where they already (informally) use AI tools. No technical knowledge is required, the workshop is designed for everyone to participate.",
+        },
+    ],
+};
+
+const nlFaq: typeof enFaq = {
+    eyebrow: "FAQ",
+    title: "Veelgestelde vragen over AI workshops",
+    items: [
+        {
+            question: "Wat leer je bij een AI workshop?",
+            answer: "Een goede AI workshop combineert drie dingen: begrip van wat AI wel en niet kan, inzicht in waar AI waarde toevoegt aan jouw specifieke werk, en een concreet startpunt om ermee te beginnen. Deelnemers verlaten de sessie met een helder beeld van welke processen het meest geschikt zijn voor AI, en een plan om daar volgende week mee te starten.",
+        },
+        {
+            question: "Hoeveel kost een AI workshop?",
+            answer: "Een incompany AI workshop bij The Only Constant kost tussen de 1.500 en 3.500 euro, afhankelijk van de omvang en voorbereiding. Dit is inclusief een intake om de workshop af te stemmen op jullie situatie, de sessie zelf, en een opvolging met concrete vervolgstappen.",
+        },
+        {
+            question: "Hoe lang duurt een AI workshop?",
+            answer: "Reken op een halve dag voor een AI workshop (3-4 uur) en een hele dag voor een hands-on sessie waarin het team ook daadwerkelijk aan de slag gaat met hun eigen processen. De meest effectieve workshops combineren een ochtend theorie en context met een middag waarin deelnemers werken aan hun eigen use cases.",
+        },
+        {
+            question: "Voor wie is een AI workshop geschikt?",
+            answer: "AI workshops zijn het meest effectief voor teams die dagelijks met processen werken waar frictie zit: klantenservice, marketing, operations, finance, HR. De ideale groep is 8 tot 20 deelnemers uit dezelfde organisatie, liefst een mix van management en uitvoerders.",
+        },
+        {
+            question: "Wat is het verschil tussen een AI workshop en een AI training?",
+            answer: "Een training richt zich op vaardigheden: hoe gebruik je specifieke tools, hoe schrijf je goede prompts, hoe integreer je AI in je dagelijkse workflow. Een workshop richt zich op strategie en richting: waar zit de meeste waarde voor onze organisatie, welke processen zijn geschikt, en hoe beginnen we.",
+        },
+        {
+            question: "Hoe bereid ik mijn team voor op een AI workshop?",
+            answer: "De belangrijkste voorbereiding is openheid. Vraag je team vooraf na te denken over twee dingen: welk onderdeel van hun werk het meeste tijd kost, en waar ze al (informeel) AI-tools gebruiken. Verder hoeft er geen technische kennis aanwezig te zijn.",
+        },
+    ],
+};
+
+export const educateFaq = { en: enFaq, nl: nlFaq };
 
 export const educateContent: Record<Locale, typeof en> = { en, nl };

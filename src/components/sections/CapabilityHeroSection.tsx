@@ -8,12 +8,14 @@ export interface CapabilityHeroSectionProps {
     index: string;
     title: string;
     description: string;
+    seoTitle?: string; // When provided, rendered as sr-only H1 for SEO
 }
 
 export function CapabilityHeroSection({
     index,
     title,
     description,
+    seoTitle,
 }: CapabilityHeroSectionProps) {
     return (
         <div className="container mx-auto">
@@ -27,7 +29,14 @@ export function CapabilityHeroSection({
                         level={1}
                         className={cn(typography.variants.display.heroSecondary, "w-full")}
                     >
-                        {title}
+                        {seoTitle ? (
+                            <>
+                                <span className="sr-only">{seoTitle}</span>
+                                <span aria-hidden="true">{title}</span>
+                            </>
+                        ) : (
+                            title
+                        )}
                     </Heading>
                 </div>
 

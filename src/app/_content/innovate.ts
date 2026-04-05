@@ -72,7 +72,7 @@ const en = {
             },
             {
                 title: "Human + AI",
-                body: "Creativity amplified by AI — not replaced."
+                body: "Creativity amplified by AI, not replaced."
             },
             {
                 title: "Built to Scale",
@@ -160,7 +160,7 @@ const nl: typeof en = {
             },
             {
                 title: "Mens + AI",
-                body: "Creativiteit versterkt door AI — niet vervangen."
+                body: "Creativiteit versterkt door AI, niet vervangen."
             },
             {
                 title: "Gebouwd om te Schalen",
