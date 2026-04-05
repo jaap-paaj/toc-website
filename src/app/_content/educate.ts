@@ -10,7 +10,7 @@ const en = {
     trainingCatalog: {
         aiTraining: {
             eyebrow: "AI TRAINING",
-            description: "Programmes that start with your work, not with the technology. Designed with EU AI Act requirements in mind.",
+            description: "Programmes that start with your work, not with the technology. Designed with EU AI Act requirements in mind. In-company workshops from 1,500 euros.",
             items: [
                 {
                     title: "AI INTRODUCTION",
@@ -100,7 +100,7 @@ const nl: typeof en = {
     trainingCatalog: {
         aiTraining: {
             eyebrow: "AI TRAINING",
-            description: "Programma's die beginnen bij je eigen werkzaamheden, niet bij de technologie. Uiteraard rekening houdend met de eisen van de EU AI Act.",
+            description: "Programma's die beginnen bij je eigen werkzaamheden, niet bij de technologie. Uiteraard rekening houdend met de eisen van de EU AI Act. Incompany workshops vanaf 1.500 euro.",
             items: [
                 {
                     title: "AI INTRODUCTIE",
