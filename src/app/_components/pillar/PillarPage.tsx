@@ -11,8 +11,17 @@ import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { pillarContent, type PillarSlug } from "@/app/_content/pillar";
+import { blogContent } from "@/app/_content/blog";
+import { BlogBreadcrumb } from "@/app/_components/blog/BlogBreadcrumb";
 import type { BlogPostMeta } from "@/lib/blog/types";
 import { useLocale } from "@/lib/i18n/useLocale";
+
+function isRecent(dateStr: string, days = 30): boolean {
+    const postDate = new Date(dateStr);
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - days);
+    return postDate >= cutoff;
+}
 
 interface PillarPageProps {
     slug: PillarSlug;
@@ -35,19 +44,25 @@ export function PillarPage({ slug, posts }: PillarPageProps) {
         <PageLayout variant="landing">
             {/* Hero */}
             <HomeModule id="pillar-hero" width="full" tone="light" pad="m" padTop="xl" gap="none" containsContent>
-                <div className={cn("w-full", spacing.stackLg)}>
-                    <div className={spacing.stackSm}>
-                        <span className={cn(typography.variants.meta.eyebrow, "text-muted-foreground")}>
+                <div className={cn("w-full flex flex-col items-center", spacing.stackLg)}>
+                    <BlogBreadcrumb slug={posts[0]?.slug} />
+                    <div className={cn(spacing.stackSm, "flex flex-col items-center text-center")}>
+                        {/* 1. Pillar badge */}
+                        <span className={cn(
+                            typography.variants.meta.badge,
+                            "bg-foreground text-background px-2 py-0.5 rounded-full"
+                        )}>
                             {content.hero.eyebrow}
                         </span>
-                        <Heading level={1} size="section">
+                        <Heading level={1} size="section" className="text-balance">
                             {content.hero.title}
                         </Heading>
-                        <Heading level={2} size="card" className="text-muted-foreground">
+                        <Heading level={2} size="card" className="text-muted-foreground text-balance">
                             {content.hero.subtitle}
                         </Heading>
                     </div>
-                    <div className={spacing.stackMd}>
+                    {/* 3. Brand border-left on intro */}
+                    <div className={cn(spacing.stackMd, "border-l-4 border-primary pl-6 max-w-3xl")}>
                         {content.intro.map((p, i) => (
                             <Text key={i} size="lg" measure="2xl" className="text-muted-foreground">
                                 {p}
@@ -58,19 +73,26 @@ export function PillarPage({ slug, posts }: PillarPageProps) {
             </HomeModule>
 
             {/* Blog links */}
-            <HomeModule id="pillar-articles" width="full" tone="light" pad="m" padTop="none" gap="none" containsContent>
+            <HomeModule id="pillar-articles" width="full" tone="light" padTop="none" padBottom="s" gap="none" containsContent>
                 <div className="flex flex-col max-w-4xl">
                     <span className={cn(typography.variants.meta.eyebrow, "text-foreground")}>
-                        {lang === "nl" ? "Inzichten" : "Insights"}
+                        {content.hero.title} {lang === "nl" ? "Inzichten" : "Insights"}
                     </span>
                     {posts.map((post) => (
                         <article key={post.slug} className="flex flex-col gap-[var(--space-xs)] border-t border-border py-[var(--space-lg)] cursor-default">
-                            <time
-                                dateTime={post.date}
-                                className={cn(typography.variants.meta.label, "text-muted-foreground")}
-                            >
-                                {formatDate(post.date, lang)}
-                            </time>
+                            <div className="flex items-center gap-[var(--space-xs)]">
+                                {isRecent(post.date) && (
+                                    <span className={cn(typography.variants.meta.badge, "bg-primary text-primary-foreground px-2 py-0.5 rounded-full")}>
+                                        {blogContent[lang].detail.newBadge}
+                                    </span>
+                                )}
+                                <time
+                                    dateTime={post.date}
+                                    className={cn(typography.variants.meta.label, "text-muted-foreground")}
+                                >
+                                    {formatDate(post.date, lang)}
+                                </time>
+                            </div>
                             <Link href={`/blog/${post.slug}`} className="group">
                                 <Heading level={3} size="lg" className="underline underline-offset-4 decoration-transparent group-hover:decoration-current transition-colors duration-200">
                                     {post.title}
@@ -97,7 +119,7 @@ export function PillarPage({ slug, posts }: PillarPageProps) {
             </HomeModule>
 
             {/* Service CTA */}
-            <HomeModule id="pillar-services" width="full" tone="light" pad="m" padTop="none" gap="none" containsContent>
+            <HomeModule id="pillar-services" width="full" tone="light" padTop="none" padBottom="m" gap="none" containsContent>
                 <Surface variant="panel" className={cn("px-6 py-8 md:px-8 md:py-10 bg-foreground/5" /* lint:allowed - CTA block internal padding */, spacing.stackMd)}>
                     <Heading level={2} size="card">
                         {lang === "nl" ? "Klaar om te beginnen?" : "Ready to start?"}

@@ -14,6 +14,7 @@ import { BlogAuthorBio } from "@/app/_components/blog/BlogAuthorBio";
 import type { BlogPost, BlogPostMeta } from "@/lib/blog/types";
 import { blogContent } from "@/app/_content/blog";
 import { getPillarForBlog } from "@/app/_content/pillar";
+import { BlogBreadcrumb } from "@/app/_components/blog/BlogBreadcrumb";
 import { useLocale } from "@/lib/i18n/useLocale";
 
 interface BlogPostModuleProps {
@@ -36,6 +37,9 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
     return (
         <HomeModule id="blog-post" width="full" tone="light" pad="m" padTop="xl" gap="s" containsContent>
             <div className={cn("w-full flex flex-col items-center", spacing.stackXl)}>
+                {/* Breadcrumb */}
+                <BlogBreadcrumb postTitle={post.title} slug={post.slug} />
+
                 {/* Post header */}
                 <header className={cn("flex flex-col items-center text-center max-w-4xl", spacing.component.sectionHeader, "px-[var(--space-sm)] md:px-0")}>
                     {/* Title */}
