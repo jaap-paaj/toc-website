@@ -24,7 +24,7 @@ const aiStrategie = {
             title: "AI Strategy - The Only Constant",
             description: "From question to proof. Articles about building an AI strategy that starts with work and ends with decisions.",
         },
-        hero: { eyebrow: "Pillar", title: "AI Strategy", subtitle: "from question to proof" },
+        hero: { eyebrow: "Theme", title: "AI Strategy", subtitle: "from question to proof" },
         intro: [
             "Start with the right questions, not the right tools. The organizations that succeed with AI share one trait: they begin with focus and end with decisions.",
             "These articles help you build an AI strategy that starts with the work and produces evidence, not slide decks.",
@@ -47,7 +47,7 @@ const aiStrategie = {
             title: "AI-strategie - The Only Constant",
             description: "Van vraag naar bewijs. Artikelen over het bouwen van een AI-strategie die begint bij het werk en eindigt bij beslissingen.",
         },
-        hero: { eyebrow: "Pillar", title: "AI-strategie", subtitle: "van vraag naar bewijs" },
+        hero: { eyebrow: "Thema", title: "AI-strategie", subtitle: "van vraag naar bewijs" },
         intro: [
             "Begin met de juiste vragen, niet met de juiste tools. De organisaties die slagen met AI delen een eigenschap: ze beginnen met focus en eindigen met beslissingen.",
             "Deze artikelen helpen je een AI-strategie bouwen die begint bij het werk en bewijs oplevert, geen slideware.",
@@ -73,7 +73,7 @@ const aiAutomatisering = {
             title: "AI Automation Guide - The Only Constant",
             description: "From friction to working solution. Articles about AI automation that actually adds value.",
         },
-        hero: { eyebrow: "Pillar", title: "AI Automation", subtitle: "from friction to working solution" },
+        hero: { eyebrow: "Theme", title: "AI Automation", subtitle: "from friction to working solution" },
         intro: [
             "Faster isn't better if you're speeding up the wrong thing. The best AI automation starts with understanding what should exist, not what already does.",
             "These articles show how to approach AI automation that truly adds value, without paving the cow path.",
@@ -95,7 +95,7 @@ const aiAutomatisering = {
             title: "AI Automatisering Gids - The Only Constant",
             description: "Van frictie naar werkende oplossing. Artikelen over AI-automatisering die echt waarde toevoegt.",
         },
-        hero: { eyebrow: "Pillar", title: "AI-automatisering", subtitle: "van frictie naar werkende oplossing" },
+        hero: { eyebrow: "Thema", title: "AI-automatisering", subtitle: "van frictie naar werkende oplossing" },
         intro: [
             "Sneller is niet beter als je het verkeerde versnelt. De beste AI-automatisering begint met begrijpen wat zou moeten bestaan, niet met wat er al is.",
             "Deze artikelen laten zien hoe je AI-automatisering aanpakt die echt waarde toevoegt, zonder het bestaande spoor te asfalteren.",
@@ -120,7 +120,7 @@ const aiEnMensen = {
             title: "AI and People - The Only Constant",
             description: "AI changes not just processes, but work itself. Articles about governance, responsibility, and whether work has actually improved.",
         },
-        hero: { eyebrow: "Pillar", title: "AI and People", subtitle: "making work better" },
+        hero: { eyebrow: "Theme", title: "AI and People", subtitle: "making work better" },
         intro: [
             "AI doesn't just change processes, it changes work. The question isn't whether AI saves time, but what happens with the time it saves.",
             "These articles explore the human side: governance, responsibility, skills, and the question whether work has actually gotten better.",
@@ -143,7 +143,7 @@ const aiEnMensen = {
             title: "AI en Mensen - The Only Constant",
             description: "AI verandert niet alleen processen, maar werk zelf. Artikelen over governance, verantwoordelijkheid en de vraag of het werk beter is geworden.",
         },
-        hero: { eyebrow: "Pillar", title: "AI en mensen", subtitle: "werk beter maken" },
+        hero: { eyebrow: "Thema", title: "AI en mensen", subtitle: "werk beter maken" },
         intro: [
             "AI verandert niet alleen processen, het verandert werk. De vraag is niet of AI tijd bespaart, maar wat er met die tijd gebeurt.",
             "Deze artikelen gaan over de menselijke kant: governance, verantwoordelijkheid, vaardigheden en de vraag of het werk echt beter is geworden.",
