@@ -1,4 +1,24 @@
-import type { EhboChatResponse } from "./types";
+import type { EhboChatResponse, EhboContactInfo } from "./types";
+
+export async function submitEhboContact(
+    sessionId: string,
+    contact: EhboContactInfo
+): Promise<void> {
+    const response = await fetch("/api/ehbo-contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            session_id: sessionId,
+            ...contact,
+        }),
+    });
+
+    if (!response.ok) {
+        throw new Error(`Contact request failed: ${response.statusText}`);
+    }
+}
 
 export async function sendEhboMessage(
     sessionId: string | null,

@@ -61,6 +61,16 @@ const en = {
         send: "Send",
         errorMessage: "Something went wrong. Please try again, or reach out directly at hello@theonlyconstant.nl.",
         back: "Back",
+        contact: {
+            title: "Want us to send you a summary?",
+            emailPlaceholder: "Your email",
+            namePlaceholder: "Name (optional)",
+            companyPlaceholder: "Company (optional)",
+            submit: "Send me the summary",
+            sending: "Sending...",
+            success: "Got it. We'll be in touch.",
+            error: "Something went wrong. Try again or email hello@theonlyconstant.nl directly.",
+        },
     },
 };
 
@@ -125,6 +135,16 @@ const nl: typeof en = {
         send: "Verstuur",
         errorMessage: "Er ging iets mis. Probeer het opnieuw, of neem direct contact op via hello@theonlyconstant.nl.",
         back: "Terug",
+        contact: {
+            title: "Wil je dat we je een samenvatting sturen?",
+            emailPlaceholder: "Je e-mailadres",
+            namePlaceholder: "Naam (optioneel)",
+            companyPlaceholder: "Bedrijf (optioneel)",
+            submit: "Stuur me de samenvatting",
+            sending: "Versturen...",
+            success: "Ontvangen. We nemen contact op.",
+            error: "Er ging iets mis. Probeer het opnieuw of mail hello@theonlyconstant.nl.",
+        },
     },
 };
 
