@@ -124,7 +124,7 @@ export function EhboChat() {
                         placeholder={content.placeholder}
                         className={cn(
                             typography.variants.body.md,
-                            "flex-1 resize-none rounded-surface border border-border bg-background px-4 py-3 focus:outline-none focus:border-foreground/40 min-h-[44px] max-h-[160px]" /* lint:allowed - chat input */
+                            "flex-1 resize-none rounded-surface border border-border bg-background px-3 py-3 focus:outline-none focus:border-foreground/40 min-h-[44px] max-h-[160px] text-base" /* lint:allowed - chat input, text-base prevents iOS zoom */
                         )}
                         rows={1}
                         disabled={isLoading}
@@ -132,12 +132,12 @@ export function EhboChat() {
                     <button
                         type="submit"
                         disabled={isLoading || !input.trim()}
-                        className={cn(
-                            typography.variants.ui.button.md,
-                            "rounded-surface bg-foreground text-background px-5 py-3 hover:bg-foreground/80 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
-                        )}
+                        className="flex items-center justify-center w-11 h-11 rounded-full bg-foreground text-background hover:bg-foreground/80 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
+                        aria-label={content.send}
                     >
-                        {content.send}
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M12 19V5M5 12l7-7 7 7" />
+                        </svg>
                     </button>
                 </form>
             </div>
