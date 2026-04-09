@@ -10,3 +10,9 @@ export interface EhboChatResponse {
     session_id: string;
     should_offer_contact: boolean;
 }
+
+export interface EhboContactInfo {
+    email: string;
+    name?: string;
+    company?: string;
+}
