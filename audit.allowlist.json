@@ -33,5 +33,19 @@
         "rationale": "Media embed locking (minHeight: 200) to ensure map visibility in split layout.",
         "linkedCanon": "CARD_CANON.md",
         "status": "accepted"
+    },
+    {
+        "path": "src/app/_components/ai-ehbo/EhboChat.tsx",
+        "rule": "raw-min-height",
+        "rationale": "Chat textarea input constraints (min-h-[44px], max-h-[160px]) for auto-growing input. Form domain, not Card.",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
+    },
+    {
+        "path": "src/app/_components/ai-ehbo/modules/EhboChatModule.tsx",
+        "rule": "raw-min-height",
+        "rationale": "Chat container viewport height (min-h-[500px]) to ensure usable chat area. Application domain, not Card.",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
     }
 ]
