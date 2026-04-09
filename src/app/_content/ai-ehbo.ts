@@ -59,7 +59,7 @@ const en = {
         emptyDescription: "Any language, any level of detail. We'll figure it out together.",
         placeholder: "What's going on with AI in your organisation?",
         send: "Send",
-        errorMessage: "Something went wrong. Please try again, or reach out directly at hello@theonlyconstant.nl.",
+        errorMessage: "Something went wrong. Please try again, or reach out directly at info@theonlyconstant.nl.",
         back: "Back",
         contact: {
             title: "Want us to send you a summary?",
@@ -69,7 +69,7 @@ const en = {
             submit: "Send me the summary",
             sending: "Sending...",
             success: "Got it. We'll be in touch.",
-            error: "Something went wrong. Try again or email hello@theonlyconstant.nl directly.",
+            error: "Something went wrong. Try again or email info@theonlyconstant.nl directly.",
         },
     },
 };
@@ -133,7 +133,7 @@ const nl: typeof en = {
         emptyDescription: "Elke taal, elk detailniveau. We komen er samen uit.",
         placeholder: "Wat speelt er met AI in je organisatie?",
         send: "Verstuur",
-        errorMessage: "Er ging iets mis. Probeer het opnieuw, of neem direct contact op via hello@theonlyconstant.nl.",
+        errorMessage: "Er ging iets mis. Probeer het opnieuw, of neem direct contact op via info@theonlyconstant.nl.",
         back: "Terug",
         contact: {
             title: "Wil je dat we je een samenvatting sturen?",
@@ -143,7 +143,7 @@ const nl: typeof en = {
             submit: "Stuur me de samenvatting",
             sending: "Versturen...",
             success: "Ontvangen. We nemen contact op.",
-            error: "Er ging iets mis. Probeer het opnieuw of mail hello@theonlyconstant.nl.",
+            error: "Er ging iets mis. Probeer het opnieuw of mail info@theonlyconstant.nl.",
         },
     },
 };
