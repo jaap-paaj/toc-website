@@ -126,5 +126,19 @@
         "linkedCanon": "CARD_CANON.md",
         "status": "long-term",
         "expires": "2026-12-31"
+    },
+    {
+        "path": "src/app/_components/ai-ehbo/modules/EhboProblemsModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Surface card internal padding for problem items (component-level, not module outer spacing).",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
+    },
+    {
+        "path": "src/app/_components/ai-ehbo/modules/EhboChatModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Chat navigation back button internal spacing (component-level).",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
     }
 ]
