@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
 import { sendEhboMessage } from "@/lib/ehbo/api";
 import { EhboChatMessage } from "./EhboChatMessage";
+import { EhboContactForm } from "./EhboContactForm";
 import { ehboContent } from "@/app/_content/ai-ehbo";
 import { useLocale } from "@/lib/i18n/useLocale";
 import type { EhboMessage } from "@/lib/ehbo/types";
@@ -17,6 +18,7 @@ export function EhboChat() {
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [sessionId, setSessionId] = useState<string | null>(null);
+    const [showContactForm, setShowContactForm] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -62,6 +64,10 @@ export function EhboChat() {
             };
 
             setMessages((prev) => [...prev, assistantMessage]);
+
+            if (response.should_offer_contact) {
+                setShowContactForm(true);
+            }
         } catch {
             const errorMessage: EhboMessage = {
                 id: crypto.randomUUID(),
@@ -99,6 +105,12 @@ export function EhboChat() {
                 {messages.map((msg) => (
                     <EhboChatMessage key={msg.id} message={msg} />
                 ))}
+                {showContactForm && sessionId && (
+                    <EhboContactForm
+                        sessionId={sessionId}
+                        content={content.contact}
+                    />
+                )}
                 {isLoading && (
                     <div className="flex justify-start mb-4">
                         <div className="bg-muted rounded-surface rounded-bl-none px-4 py-3">
