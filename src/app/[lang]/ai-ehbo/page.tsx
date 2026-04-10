@@ -28,6 +28,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             type: "website",
             url: `${SITE_URL}/${lang}/ai-ehbo`,
             siteName: "The Only Constant",
+            locale: lang === "nl" ? "nl_NL" : "en_GB",
+            images: [
+                {
+                    url: `${SITE_URL}/images/brand/toc/og-ai-ehbo.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: meta.title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: meta.title,
+            description: meta.description,
+            images: [`${SITE_URL}/images/brand/toc/og-ai-ehbo.png`],
         },
     };
 }
