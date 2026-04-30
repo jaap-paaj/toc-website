@@ -1,68 +1,68 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-
-import { GoogleBookingSection } from "@/components/sections/GoogleBookingSection";
-import { scanContent } from "@/app/_content/ai-opportunity-scan";
-import { spacing } from "@/design-system/tokens/spacing";
-import { Button } from "@/components/ui/Button";
-import { Heading } from "@/design-system/components/Typography";
 import { ArrowLeft } from "lucide-react";
 import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
+import { HomeModule } from "@/app/_components/home/HomeModule";
+import { GoogleBookingSection } from "@/components/sections/GoogleBookingSection";
+import { Heading } from "@/design-system/components/Typography";
+import { Button } from "@/components/ui/Button";
+import { spacing } from "@/design-system/tokens/spacing";
+import { cn } from "@/lib/utils";
+import { scanContent } from "@/app/_content/ai-opportunity-scan";
 import { useLocale } from "@/lib/i18n/useLocale";
 
 export function ScanBookingModule() {
     const lang = useLocale();
+    const content = scanContent[lang].booking;
+
     return (
-        <section className={spacing.modulePad.m}>
-            <div className={cn("container mx-auto max-w-4xl", spacing.stackLg)}>
-
-                <div className={cn("flex flex-row items-center w-full", spacing.component.sectionHeader)}>
-                    {/* Left: Back Link */}
-                    <div className="flex-1 flex justify-start">
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            asChild
-                            className="rounded-full bg-foreground text-background hover:bg-foreground/90 hover:text-background"
-                            aria-label={scanContent[lang].booking.backLink.label}
-                        >
-                            <Link href={scanContent[lang].booking.backLink.href}>
-                                <ArrowLeft />
-                            </Link>
-                        </Button>
+        <HomeModule
+            id="scan-booking"
+            width="full"
+            tone="light"
+            pad="none"
+            padTop="xs"
+            padBottom="s"
+            gap="none"
+            containsContent
+        >
+            <div className="w-full flex flex-col items-center">
+                <div className={cn("w-full max-w-5xl flex flex-col", spacing.stackSm)}>
+                    {/* Header: [back · title] left-grouped · logo right */}
+                    <div className="flex items-center justify-between w-full">
+                        <div className={cn("flex items-center gap-3 md:gap-4")}> {/* lint:allowed - back+title group */}
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                asChild
+                                className="rounded-full bg-foreground text-background hover:bg-foreground/90 hover:text-background"
+                                aria-label={content.backLink.label}
+                            >
+                                <Link href={content.backLink.href}>
+                                    <ArrowLeft />
+                                </Link>
+                            </Button>
+                            <Heading level={2} size="card" className="text-foreground">
+                                {content.title}
+                            </Heading>
+                        </div>
+                        <img
+                            src="/images/brand/toc/TOC_Logo_black.svg"
+                            alt="The Only Constant"
+                            className="h-7 w-auto" /* lint:allowed - logo size */
+                        />
                     </div>
 
-                    {/* Center: Title (can wrap now) */}
-                    <Heading level={1} size="page" className="text-center">
-                        {scanContent[lang].booking.title}
-                    </Heading>
-
-                    {/* Right: Invisible clone for perfect mechanical centering */}
-                    <div className="flex-1 flex justify-end" aria-hidden="true">
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            className="invisible pointer-events-none"
-                            tabIndex={-1}
-                        >
-                            <ArrowLeft />
-                        </Button>
-                    </div>
-                </div>
-
-                <div className="w-full">
                     <GoogleBookingSection
-                        // Title is now rendered above
                         title={undefined}
-                        embedUrl={scanContent[lang].booking.embedUrl}
-                        fallback={scanContent[lang].booking.fallback}
+                        embedUrl={content.embedUrl}
+                        fallback={content.fallback}
                         className="w-full"
                         enableContainer={false}
-                        loadingText={scanContent[lang].booking.loadingText}
+                        loadingText={content.loadingText}
                     />
                 </div>
             </div>
-        </section>
+        </HomeModule>
     );
 }
