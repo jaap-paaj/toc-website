@@ -84,6 +84,39 @@ for (const locale of LOCALES) {
     });
 }
 
+// --- AI Act Check (landing + first question) ---
+
+for (const locale of LOCALES) {
+    test(`ai-act-landing — ${locale}`, async ({ page }) => {
+        await page.goto(`/${locale}/ai-act`, { waitUntil: "networkidle" });
+        await expect(page).toHaveScreenshot(`ai-act-landing-${locale}.png`, {
+            fullPage: true,
+        });
+    });
+
+    test(`ai-act-check — ${locale}`, async ({ page }) => {
+        await page.goto(`/${locale}/ai-act/check`, {
+            waitUntil: "networkidle",
+        });
+        await expect(page).toHaveScreenshot(`ai-act-check-${locale}.png`, {
+            fullPage: true,
+        });
+    });
+}
+
+// --- EHBO chat (empty state) ---
+
+for (const locale of LOCALES) {
+    test(`ehbo-chat — ${locale}`, async ({ page }) => {
+        await page.goto(`/${locale}/ai-ehbo/chat`, {
+            waitUntil: "networkidle",
+        });
+        await expect(page).toHaveScreenshot(`ehbo-chat-${locale}.png`, {
+            fullPage: true,
+        });
+    });
+}
+
 // --- Blog posts ---
 
 for (const locale of LOCALES) {

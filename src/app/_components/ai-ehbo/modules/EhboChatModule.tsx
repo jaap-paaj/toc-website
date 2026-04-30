@@ -1,10 +1,11 @@
 "use client";
 
+import { ArrowLeft } from "lucide-react";
 import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { HomeModule } from "@/app/_components/home/HomeModule";
-import { Heading } from "@/design-system/components/Typography";
 import { Surface } from "@/design-system/components/Surfaces";
-import { typography } from "@/design-system/tokens/typography";
+import { Heading } from "@/design-system/components/Typography";
+import { Button } from "@/components/ui/Button";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { EhboChat } from "@/app/_components/ai-ehbo/EhboChat";
@@ -16,31 +17,45 @@ export function EhboChatModule() {
     const content = ehboContent[lang];
 
     return (
-        <HomeModule id="ehbo-chat" width="full" tone="light" pad="none" padTop="s" padBottom="m" gap="none" containsContent>
+        <HomeModule
+            id="ehbo-chat"
+            width="full"
+            tone="light"
+            pad="none"
+            padTop="xs"
+            padBottom="s"
+            gap="none"
+            containsContent
+        >
             <div className="w-full flex flex-col items-center">
-                <div className={cn("w-full max-w-3xl flex flex-col", spacing.stackMd)}>
-                    {/* Header */}
-                    <div className="flex flex-col items-center text-center gap-2">
+                <div className={cn("w-full max-w-3xl flex flex-col", spacing.stackSm)}>
+                    {/* Header: [back · title] left-grouped · logo right */}
+                    <div className="flex items-center justify-between w-full">
+                        <div className={cn("flex items-center gap-3 md:gap-4")}> {/* lint:allowed - back+title group */}
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                asChild
+                                className="rounded-full bg-foreground text-background hover:bg-foreground/90 hover:text-background"
+                                aria-label={content.chat.back}
+                            >
+                                <Link href="/ai-ehbo">
+                                    <ArrowLeft />
+                                </Link>
+                            </Button>
+                            <Heading level={2} size="card" className="text-foreground">
+                                {content.hero.eyebrow}
+                            </Heading>
+                        </div>
                         <img
                             src="/images/brand/toc/TOC_Logo_black.svg"
                             alt="The Only Constant"
-                            className="h-8 w-auto"
+                            className="h-7 w-auto" /* lint:allowed - logo size */
                         />
-                        <span className={cn(typography.variants.meta.eyebrow, "text-muted-foreground")}>
-                            {content.hero.eyebrow}
-                        </span>
                     </div>
 
-                    {/* Back link */}
-                    <Link
-                        href="/ai-ehbo"
-                        className={cn(typography.variants.meta.label, "text-muted-foreground hover:text-foreground transition-colors")}
-                    >
-                        &larr; {content.chat.back}
-                    </Link>
-
                     {/* Chat container */}
-                    <Surface variant="card" className="overflow-hidden flex flex-col h-[calc(100vh-280px)] min-h-[500px]">
+                    <Surface variant="card" className="overflow-hidden flex flex-col h-[calc(100vh-200px)] min-h-[500px]"> {/* lint:allowed - chat container height */}
                         <EhboChat />
                     </Surface>
                 </div>

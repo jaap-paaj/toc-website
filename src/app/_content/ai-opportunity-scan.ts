@@ -6,11 +6,11 @@ const en = {
         description: "Get clarity on where AI creates value. A half-day AI Opportunity Scan delivering priorities, a roadmap, and one PoC-ready process.",
     },
     hero: {
-        title: "AI Opportunity Scan: priorities, roadmap and one PoC-ready process in half a day",
-        subtitle: "Know where AI pays off. Get a build-ready plan, not a slide deck.",
-        outcomes: [
-            "Typical outcome 3 prioritised use cases · 1 process mapped for PoC · 90-day roadmap · concrete owners and next steps"
-        ],
+        eyebrow: "AI Opportunity Scan",
+        title: "Priorities, roadmap and one PoC-ready process",
+        titleMuted: "in half a day",
+        subtitle:
+            "Know where AI pays off. Get a build-ready plan, not a slide deck: 3 prioritised use cases, 1 PoC-ready process, and a 90-day roadmap with concrete owners and next steps.",
         cta: {
             label: "Plan 20 minutes",
             href: "/ai-opportunity-scan/book"
@@ -204,11 +204,11 @@ const nl: typeof en = {
         description: "Duidelijkheid over waar AI waarde creëert. Een halve dag AI Opportunity Scan met prioriteiten, roadmap en één PoC-klaar proces.",
     },
     hero: {
-        title: "AI Opportunity Scan: prioriteiten, roadmap en één PoC-klaar proces in een halve dag",
-        subtitle: "Weet waar AI zich terugverdient. Krijg een bouwklaar plan, geen slideshow.",
-        outcomes: [
-            "Typisch resultaat 3 geprioriteerde use cases · 1 proces uitgewerkt voor PoC · 90-dagen-roadmap · concrete eigenaren en vervolgstappen"
-        ],
+        eyebrow: "AI Opportunity Scan",
+        title: "Prioriteiten, roadmap en één PoC-klaar proces",
+        titleMuted: "in een halve dag",
+        subtitle:
+            "Weet waar AI zich terugverdient. Krijg een bouwklaar plan, geen slideshow: 3 geprioriteerde use cases, 1 PoC-klaar proces, en een 90-dagen-roadmap met concrete eigenaren en vervolgstappen.",
         cta: {
             label: "Plan 20 minuten",
             href: "/ai-opportunity-scan/book"
@@ -406,37 +406,37 @@ export type HeroVariant = {
 export const scanHeroVariants: Record<Locale, Record<string, HeroVariant>> = {
     en: {
         "v-human-time": {
-            title: "AI Opportunity Scan: HUMAN TIME IS THE BOTTLENECK",
+            title: "HUMAN TIME IS THE BOTTLENECK",
             subtitle: "Your best people are stuck in work they should not do. We find the AI priorities that free your team and give you a build-ready 90-day roadmap."
         },
         "v-theatre": {
-            title: "AI Opportunity Scan: EXPERIMENTS WITHOUT PLANS ARE JUST THEATRE",
+            title: "EXPERIMENTS WITHOUT PLANS ARE JUST THEATRE",
             subtitle: "Pilots that don't tie to decisions waste time and budget. We turn experiments into decision-making workstreams and PoC-ready processes."
         },
         "v-right-things": {
-            title: "AI Opportunity Scan: DOING THE RIGHT THINGS vs DOING THINGS RIGHT",
+            title: "DOING THE RIGHT THINGS vs DOING THINGS RIGHT",
             subtitle: "Most AI projects make the wrong work faster. We show where AI creates business outcomes and shift human time to higher-value work."
         },
         "v-arriving-late": {
-            title: "AI Opportunity Scan: THE REAL COST IS ARRIVING LATE",
+            title: "THE REAL COST IS ARRIVING LATE",
             subtitle: "While you calculate, competitors ship. We map the opportunities you should act on now and deliver a build-ready plan."
         }
     },
     nl: {
         "v-human-time": {
-            title: "AI Opportunity Scan: JE BESTE MENSEN ZITTEN VAST IN HET VERKEERDE WERK",
+            title: "JE BESTE MENSEN ZITTEN VAST IN HET VERKEERDE WERK",
             subtitle: "Je beste mensen besteden hun tijd aan werk dat niet bij hen hoort. Wij brengen in kaart waar AI echt waarde toevoegt, maken de juiste prioriteiten scherp en vertalen die naar een bouwklare roadmap voor de komende 90 dagen."
         },
         "v-theatre": {
-            title: "AI Opportunity Scan: ZONDER PLAN WORDT AI AL SNEL THEATER",
+            title: "ZONDER PLAN WORDT AI AL SNEL THEATER",
             subtitle: "Pilots die niet leiden tot echte keuzes kosten tijd en budget. Wij vertalen experimenten naar concrete beslissingen, duidelijke werkstromen en processen die klaar zijn voor een PoC."
         },
         "v-right-things": {
-            title: "AI Opportunity Scan: AI MAAKT HET VERKEERDE WERK OOK ALLEEN MAAR SNELLER",
+            title: "AI MAAKT HET VERKEERDE WERK OOK ALLEEN MAAR SNELLER",
             subtitle: "De meeste AI-projecten versnellen vooral werk dat weinig oplevert. Wij laten zien waar AI echt bedrijfswaarde creëert en verschuiven tijd van mensen naar werk met meer impact."
         },
         "v-arriving-late": {
-            title: "AI Opportunity Scan: DE ECHTE KOSTEN ZITTEN IN TE LANG WACHTEN",
+            title: "DE ECHTE KOSTEN ZITTEN IN TE LANG WACHTEN",
             subtitle: "Terwijl jij nog afweegt, zetten concurrenten al stappen. Wij maken zichtbaar waar je nu moet handelen en leveren een bouwklaar plan om door te pakken."
         }
     }
