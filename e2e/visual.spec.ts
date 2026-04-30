@@ -117,6 +117,19 @@ for (const locale of LOCALES) {
     });
 }
 
+// --- 10 AI tips landing ---
+
+for (const locale of LOCALES) {
+    test(`ten-ai-tips — ${locale}`, async ({ page }) => {
+        await page.goto(`/${locale}/10-ai-tips`, {
+            waitUntil: "networkidle",
+        });
+        await expect(page).toHaveScreenshot(`ten-ai-tips-${locale}.png`, {
+            fullPage: true,
+        });
+    });
+}
+
 // --- Blog posts ---
 
 for (const locale of LOCALES) {
