@@ -17,24 +17,24 @@ const en = {
     howItWorks: {
         items: [
             {
-                index: "1.",
+                step: "01",
                 title: "Stabilise",
                 description:
                     "What to do this week to stop things from getting worse. Concrete actions, not vague advice.",
             },
             {
-                index: "2.",
+                step: "02",
                 title: "Diagnose",
                 description:
                     "What's actually going on underneath the symptoms. The structural cause, named in plain language.",
             },
             {
-                index: "3.",
+                step: "03",
                 title: "Route forward",
                 description:
                     "Three to five prioritised steps that make sense and feel achievable. Specific enough to act on.",
             },
-        ],
+        ] as Array<{ step: string; duration?: string; title: string; description: string }>,
     },
     problems: {
         title: "Sound familiar?",
@@ -91,24 +91,24 @@ const nl: typeof en = {
     howItWorks: {
         items: [
             {
-                index: "1.",
+                step: "01",
                 title: "Stabiliseren",
                 description:
                     "Wat je deze week kunt doen om te voorkomen dat het erger wordt. Concrete acties, geen vaag advies.",
             },
             {
-                index: "2.",
+                step: "02",
                 title: "Diagnose",
                 description:
                     "Wat er werkelijk speelt onder de symptomen. De structurele oorzaak, in heldere taal benoemd.",
             },
             {
-                index: "3.",
+                step: "03",
                 title: "Route vooruit",
                 description:
                     "Drie tot vijf geprioriteerde stappen die logisch en haalbaar zijn. Specifiek genoeg om op te handelen.",
             },
-        ],
+        ] as Array<{ step: string; duration?: string; title: string; description: string }>,
     },
     problems: {
         title: "Herkenbaar?",

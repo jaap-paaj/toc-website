@@ -27,7 +27,7 @@ export function EhboProblemsModule() {
                     {problems.items.map((problem) => (
                         <Surface key={problem} variant="muted" className="px-5 py-4 flex items-start gap-3"> {/* lint:allowed - problem card internal padding */}
                             <CheckIcon className="w-5 h-5 text-foreground shrink-0 mt-0.5" /* lint:allowed */ />
-                            <Text size="md" className="text-muted-foreground">
+                            <Text size="md" className="text-foreground">
                                 {problem}
                             </Text>
                         </Surface>
@@ -38,7 +38,7 @@ export function EhboProblemsModule() {
                         href="/ai-ehbo/chat"
                         className={cn(
                             typography.variants.ui.button.lg,
-                            "rounded-full bg-foreground text-background px-8 py-4 hover:bg-foreground/80 transition-colors" /* lint:allowed - CTA button */
+                            "rounded-full bg-primary text-primary-foreground px-8 py-4 hover:bg-primary/80 transition-colors" /* lint:allowed - CTA button */
                         )}
                     >
                         {hero.cta}
