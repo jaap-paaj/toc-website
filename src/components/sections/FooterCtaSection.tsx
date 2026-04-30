@@ -14,6 +14,11 @@ export interface FooterCtaSectionProps {
         label: string;
         href: string;
     };
+    secondaryAction?: {
+        prefix: string; // "Of mail naar"
+        label: string; // visible text
+        href: string; // mailto: or https://
+    };
     panelTitle?: string;
     panelBody: string;
     className?: string; // Standard pattern
@@ -22,6 +27,7 @@ export interface FooterCtaSectionProps {
 export function FooterCtaSection({
     title,
     cta,
+    secondaryAction,
     panelTitle,
     panelBody,
     className
@@ -56,20 +62,38 @@ export function FooterCtaSection({
                             </h2>
 
                             <div className="flex flex-col gap-6">
-                                <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
-                                    <Button
-                                        asChild
-                                        size="xl"
-                                        className="tone-dark bg-background text-foreground hover:bg-background/80 rounded-full"
-                                        onClick={() =>
-                                            trackEvent("cta_click", {
-                                                cta_label: cta.label,
-                                                cta_location: "footer",
-                                            })
-                                        }
-                                    >
-                                        <a href={localizeHref(cta.href, lang)}>{cta.label}</a>
-                                    </Button>
+                                <div className="flex flex-col gap-3 items-start">
+                                    <div className="flex items-center gap-3">
+                                        <Button
+                                            asChild
+                                            size="xl"
+                                            className="tone-dark bg-background text-foreground hover:bg-background/80 rounded-full"
+                                            onClick={() =>
+                                                trackEvent("cta_click", {
+                                                    cta_label: cta.label,
+                                                    cta_location: "footer",
+                                                })
+                                            }
+                                        >
+                                            <a href={localizeHref(cta.href, lang)}>{cta.label}</a>
+                                        </Button>
+                                        {secondaryAction && (
+                                            <span className={cn(typography.variants.body.md)}>
+                                                {secondaryAction.prefix}
+                                            </span>
+                                        )}
+                                    </div>
+                                    {secondaryAction && (
+                                        <Button
+                                            asChild
+                                            size="xl"
+                                            className="tone-light bg-background text-foreground hover:bg-background/80 rounded-full"
+                                        >
+                                            <a href={secondaryAction.href}>
+                                                {secondaryAction.label}
+                                            </a>
+                                        </Button>
+                                    )}
                                 </div>
                                 <div className={cn(typography.variants.body.sm, "opacity-50")}>
                                     © The Only Constant {new Date().getFullYear()}
