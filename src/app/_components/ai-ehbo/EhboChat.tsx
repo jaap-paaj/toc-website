@@ -114,7 +114,7 @@ export function EhboChat() {
     return (
         <div className="flex flex-col h-full">
             {/* Messages area */}
-            <div className="flex-1 overflow-y-auto px-4 py-6 flex flex-col gap-6">
+            <div className="flex-1 overflow-y-auto px-4 py-6 flex flex-col gap-2">
                 {messages.length === 0 && (
                     <div className="text-center text-muted-foreground py-12 flex flex-col gap-2">  {/* lint:allowed - empty state padding */}
                         <p className={typography.variants.body.lg}>
