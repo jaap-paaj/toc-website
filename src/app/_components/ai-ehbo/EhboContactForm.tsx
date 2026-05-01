@@ -52,8 +52,8 @@ export function EhboContactForm({ sessionId, content, onDismiss }: EhboContactFo
     }
 
     return (
-        <div className="border-t border-border bg-muted px-4 py-4">
-            <div className="flex items-start justify-between gap-3 mb-3"> {/* lint:allowed - sticky banner header */}
+        <div className="border-t border-border bg-muted px-4 py-4 flex flex-col gap-3">
+            <div className="flex items-start justify-between gap-3"> {/* lint:allowed - sticky banner header */}
                 <div className="flex flex-col gap-0.5"> {/* lint:allowed - tight stack */}
                     <p className={cn(typography.variants.meta.label, "text-foreground")}>
                         {content.title}
@@ -94,7 +94,7 @@ export function EhboContactForm({ sessionId, content, onDismiss }: EhboContactFo
                     {status === "sending" ? content.sending : content.submit}
                 </button>
             </form>
-            <div className="grid grid-cols-2 gap-2 mt-2"> {/* lint:allowed - optional fields row */}
+            <div className="grid grid-cols-2 gap-2"> {/* lint:allowed - optional fields row */}
                 <input
                     type="text"
                     placeholder={content.namePlaceholder}
@@ -117,7 +117,7 @@ export function EhboContactForm({ sessionId, content, onDismiss }: EhboContactFo
                 />
             </div>
             {status === "error" && (
-                <p className={cn(typography.variants.body.sm, "text-destructive mt-2")}>
+                <p className={cn(typography.variants.body.sm, "text-destructive")}>
                     {content.error}
                 </p>
             )}
