@@ -15,7 +15,7 @@ export function EhboChatMessage({ message }: EhboChatMessageProps) {
 
     if (isUser) {
         return (
-            <div className="flex justify-end mb-6">
+            <div className="flex justify-end my-8">
                 <div className="max-w-[80%] rounded-surface rounded-br-none bg-muted text-foreground px-4 py-3">
                     <div className={cn(typography.variants.body.md, "whitespace-pre-wrap")}>
                         {message.content}
@@ -26,7 +26,7 @@ export function EhboChatMessage({ message }: EhboChatMessageProps) {
     }
 
     return (
-        <div className="mb-6">
+        <div className="my-8">
             <div className={cn(typography.variants.body.md, "flex flex-col gap-2 text-foreground")}>
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
