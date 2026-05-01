@@ -16,3 +16,13 @@ export interface EhboContactInfo {
     name?: string;
     company?: string;
 }
+
+export class EhboSessionLimitError extends Error {
+    readonly closingMessage: string;
+
+    constructor(closingMessage: string) {
+        super("session_limit_reached");
+        this.name = "EhboSessionLimitError";
+        this.closingMessage = closingMessage;
+    }
+}
