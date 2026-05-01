@@ -67,7 +67,7 @@ export const tenAiTipsContent: Record<Locale, TenAiTipsContent> = {
             {
                 number: "05",
                 title: "Bepaal wat je niet automatiseert",
-                body: "Het adviesgesprek op de winkelvloer. De creatieve keuze voor een etalage. De persoonlijke klantrelatie. Sommige dingen blijven mensenwerk. Die keuze maakt je bedrijf sterker.",
+                body: "Het gesprek waarin je een klant écht begrijpt. Het oordeel van de vakman op de bouwplaats. De zorg die alleen werkt met aandacht. Sommige dingen blijven mensenwerk. Die keuze maakt je bedrijf sterker.",
             },
             {
                 number: "06",
@@ -146,7 +146,7 @@ export const tenAiTipsContent: Record<Locale, TenAiTipsContent> = {
             {
                 number: "05",
                 title: "Decide what you don't automate",
-                body: "The advice on the shop floor. The creative call for a window display. The personal customer relationship. Some things stay human work. Choosing that makes your business stronger.",
+                body: "The conversation where you truly understand a customer. The craftsman's judgement on the building site. The care that only works with full attention. Some things stay human work. Choosing that makes your business stronger.",
             },
             {
                 number: "06",
