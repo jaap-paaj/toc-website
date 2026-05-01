@@ -31,7 +31,7 @@ interface TenAiTipsContent {
 export const tenAiTipsContent: Record<Locale, TenAiTipsContent> = {
     nl: {
         meta: {
-            title: "10 AI tips voor retailers",
+            title: "10 AI tips voor ondernemers",
             description:
                 "Van eerste stap tot echt resultaat. Tien concrete stappen die je vandaag kunt zetten om gericht van interessant naar werkend te gaan met AI.",
         },
@@ -39,7 +39,7 @@ export const tenAiTipsContent: Record<Locale, TenAiTipsContent> = {
             eyebrow: "Van eerste stap tot echt resultaat",
             titleLine1: "10 AI",
             titleAccent: "tips",
-            titleLine2: "voor retailers",
+            titleLine2: "voor ondernemers",
             intro:
                 "Je hebt gezien wat AI kan. De vraag is nu: wat ga je er vandaag mee doen? Met deze 10 stappen ga je gericht van interessant naar werkend.",
         },
@@ -105,12 +105,12 @@ export const tenAiTipsContent: Record<Locale, TenAiTipsContent> = {
             },
             panelTitle: "Benieuwd wat AI voor jouw bedrijf kan betekenen?",
             panelBody:
-                "Bij The Only Constant helpen we retailers razendsnel met verandering. Van eerste AI-experiment tot werkende automations en AI-gedreven innovaties. Sneller, beter en betaalbaarder dan je denkt.",
+                "Bij The Only Constant helpen we ondernemers razendsnel met verandering. Van eerste AI-experiment tot werkende automations en AI-gedreven innovaties. Sneller, beter en betaalbaarder dan je denkt.",
         },
     },
     en: {
         meta: {
-            title: "10 AI tips for retailers",
+            title: "10 AI tips for entrepreneurs",
             description:
                 "From first step to real results. Ten concrete moves you can make today to go from interesting to working AI in your business.",
         },
@@ -118,7 +118,7 @@ export const tenAiTipsContent: Record<Locale, TenAiTipsContent> = {
             eyebrow: "From first step to real results",
             titleLine1: "10 AI",
             titleAccent: "tips",
-            titleLine2: "for retailers",
+            titleLine2: "for entrepreneurs",
             intro:
                 "You've seen what AI can do. The question now is: what will you do with it today? These 10 steps take you deliberately from interesting to working.",
         },
@@ -184,7 +184,7 @@ export const tenAiTipsContent: Record<Locale, TenAiTipsContent> = {
             },
             panelTitle: "Curious what AI could mean for your business?",
             panelBody:
-                "At The Only Constant we help retailers move fast through change. From first AI experiment to working automations and AI-driven innovation. Faster, better and more affordable than you'd think.",
+                "At The Only Constant we help entrepreneurs move fast through change. From first AI experiment to working automations and AI-driven innovation. Faster, better and more affordable than you'd think.",
         },
     },
 };
