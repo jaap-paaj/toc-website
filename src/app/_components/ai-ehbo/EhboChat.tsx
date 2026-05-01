@@ -129,7 +129,7 @@ export function EhboChat() {
                     <EhboChatMessage key={msg.id} message={msg} />
                 ))}
                 {isLoading && (
-                    <div className="flex justify-start mb-4">
+                    <div className="flex justify-start mb-6">
                         <div className="bg-muted rounded-surface rounded-bl-none px-4 py-3">
                             <div className="flex gap-1">
                                 <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce [animation-delay:0ms]" />
