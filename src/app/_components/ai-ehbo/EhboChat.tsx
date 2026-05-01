@@ -4,10 +4,12 @@ import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
 import { sendEhboMessage } from "@/lib/ehbo/api";
+import { EhboSessionLimitError } from "@/lib/ehbo/types";
 import { EhboChatMessage } from "./EhboChatMessage";
 import { EhboContactForm } from "./EhboContactForm";
 import { ehboContent } from "@/app/_content/ai-ehbo";
 import { useLocale } from "@/lib/i18n/useLocale";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import type { EhboMessage } from "@/lib/ehbo/types";
 
 export function EhboChat() {
@@ -19,6 +21,8 @@ export function EhboChat() {
     const [isLoading, setIsLoading] = useState(false);
     const [sessionId, setSessionId] = useState<string | null>(null);
     const [showContactForm, setShowContactForm] = useState(false);
+    const [formDismissed, setFormDismissed] = useState(false);
+    const [closedOut, setClosedOut] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -36,7 +40,7 @@ export function EhboChat() {
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         const trimmed = input.trim();
-        if (!trimmed || isLoading) return;
+        if (!trimmed || isLoading || closedOut) return;
 
         const userMessage: EhboMessage = {
             id: crypto.randomUUID(),
@@ -68,14 +72,25 @@ export function EhboChat() {
             if (response.should_offer_contact) {
                 setShowContactForm(true);
             }
-        } catch {
-            const errorMessage: EhboMessage = {
-                id: crypto.randomUUID(),
-                role: "assistant",
-                content: content.errorMessage,
-                created_at: new Date().toISOString(),
-            };
-            setMessages((prev) => [...prev, errorMessage]);
+        } catch (err) {
+            if (err instanceof EhboSessionLimitError) {
+                const closingMessage: EhboMessage = {
+                    id: crypto.randomUUID(),
+                    role: "assistant",
+                    content: err.closingMessage,
+                    created_at: new Date().toISOString(),
+                };
+                setMessages((prev) => [...prev, closingMessage]);
+                setClosedOut(true);
+            } else {
+                const errorMessage: EhboMessage = {
+                    id: crypto.randomUUID(),
+                    role: "assistant",
+                    content: content.errorMessage,
+                    created_at: new Date().toISOString(),
+                };
+                setMessages((prev) => [...prev, errorMessage]);
+            }
         } finally {
             setIsLoading(false);
         }
@@ -87,6 +102,14 @@ export function EhboChat() {
             handleSubmit(e);
         }
     }
+
+    function openWorkingDocumentForm() {
+        setFormDismissed(false);
+        setShowContactForm(true);
+    }
+
+    const formVisible =
+        sessionId !== null && showContactForm && !formDismissed;
 
     return (
         <div className="flex flex-col h-full">
@@ -105,12 +128,6 @@ export function EhboChat() {
                 {messages.map((msg) => (
                     <EhboChatMessage key={msg.id} message={msg} />
                 ))}
-                {showContactForm && sessionId && (
-                    <EhboContactForm
-                        sessionId={sessionId}
-                        content={content.contact}
-                    />
-                )}
                 {isLoading && (
                     <div className="flex justify-start mb-4">
                         <div className="bg-muted rounded-surface rounded-bl-none px-4 py-3">
@@ -125,34 +142,67 @@ export function EhboChat() {
                 <div ref={messagesEndRef} />
             </div>
 
-            {/* Input area */}
-            <div className="border-t border-border px-4 py-3">
-                <form onSubmit={handleSubmit} className="flex gap-2 items-end">
-                    <textarea
-                        ref={textareaRef}
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        onKeyDown={handleKeyDown}
-                        placeholder={content.placeholder}
+            {/* Sticky working-document form (visible while session is active) */}
+            {formVisible && sessionId && (
+                <EhboContactForm
+                    sessionId={sessionId}
+                    content={content.contact}
+                    onDismiss={() => setFormDismissed(true)}
+                />
+            )}
+
+            {/* Input area or close-out CTAs */}
+            {closedOut ? (
+                <div className="border-t border-border px-4 py-3 flex flex-col sm:flex-row gap-2">
+                    <Link
+                        href={content.closeOut.bookCallHref}
                         className={cn(
-                            typography.variants.body.md,
-                            "flex-1 resize-none rounded-surface border border-border bg-background px-3 py-3 focus:outline-none focus:border-foreground/40 min-h-[44px] max-h-[160px] text-base" /* lint:allowed - chat input, text-base prevents iOS zoom */
+                            typography.variants.ui.button.sm,
+                            "flex-1 inline-flex items-center justify-center rounded-surface bg-foreground text-background px-4 py-2 hover:bg-foreground/80 transition-colors"
                         )}
-                        rows={1}
-                        disabled={isLoading}
-                    />
-                    <button
-                        type="submit"
-                        disabled={isLoading || !input.trim()}
-                        className="flex items-center justify-center w-11 h-11 rounded-full bg-foreground text-background hover:bg-foreground/80 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
-                        aria-label={content.send}
                     >
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M12 19V5M5 12l7-7 7 7" />
-                        </svg>
+                        {content.closeOut.bookCall}
+                    </Link>
+                    <button
+                        type="button"
+                        onClick={openWorkingDocumentForm}
+                        className={cn(
+                            typography.variants.ui.button.sm,
+                            "flex-1 inline-flex items-center justify-center rounded-surface border border-border bg-background text-foreground px-4 py-2 hover:bg-muted transition-colors"
+                        )}
+                    >
+                        {content.closeOut.sendDocument}
                     </button>
-                </form>
-            </div>
+                </div>
+            ) : (
+                <div className="border-t border-border px-4 py-3">
+                    <form onSubmit={handleSubmit} className="flex gap-2 items-end">
+                        <textarea
+                            ref={textareaRef}
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            onKeyDown={handleKeyDown}
+                            placeholder={content.placeholder}
+                            className={cn(
+                                typography.variants.body.md,
+                                "flex-1 resize-none rounded-surface border border-border bg-background px-3 py-3 focus:outline-none focus:border-foreground/40 min-h-[44px] max-h-[160px] text-base" /* lint:allowed - chat input, text-base prevents iOS zoom */
+                            )}
+                            rows={1}
+                            disabled={isLoading}
+                        />
+                        <button
+                            type="submit"
+                            disabled={isLoading || !input.trim()}
+                            className="flex items-center justify-center w-11 h-11 rounded-full bg-foreground text-background hover:bg-foreground/80 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
+                            aria-label={content.send}
+                        >
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            )}
         </div>
     );
 }
