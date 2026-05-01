@@ -19,6 +19,8 @@ export const scales = {
         subsection: "text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl",
         // Card/Module Titles - 20px -> 24px
         card: "text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl",
+        // Long-form Prompts/Questions - 24px -> 30px (sentence case, readable)
+        prompt: "text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-3xl",
     },
     body: {
         // Lead - 18px -> 20px
@@ -78,6 +80,7 @@ export const typography = {
             page: `font-serif tracking-tight leading-tight font-black uppercase ${scales.heading.page}`, // H1 default
             subsection: `font-serif tracking-tight leading-snug font-black uppercase ${scales.heading.subsection}`, // Section H2/H3
             card: `font-serif tracking-tight leading-snug font-bold uppercase ${scales.heading.card}`, // Card Titles
+            prompt: `font-serif tracking-tight leading-snug font-bold ${scales.heading.prompt}`, // Long-form Questions/Prompts (sentence case)
         },
         body: {
             lg: `font-sans leading-relaxed font-normal ${scales.body.lg}`, // Lead / Intro
@@ -128,6 +131,7 @@ export type TypographyRole =
     | "heading.page"
     | "heading.subsection"
     | "heading.card"
+    | "heading.prompt"
     | "body.lg" | "body.md" | "body.sm"
     | "meta.eyebrow" | "meta.label" | "meta.badge" | "meta.code" | "meta.step"
     | "ui.button.lg" | "ui.button.md" | "ui.button.sm"

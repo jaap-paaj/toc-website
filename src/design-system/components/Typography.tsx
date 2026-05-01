@@ -3,13 +3,14 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
 
-type HeadingSize = "page" | "section" | "card" | "xl" | "lg" | "md" | "sm";
+type HeadingSize = "page" | "section" | "card" | "prompt" | "xl" | "lg" | "md" | "sm";
 type TextSize = "lg" | "md" | "sm";
 
 const headingSizes: Record<HeadingSize, string> = {
     page: typography.variants.heading.page,
     section: typography.variants.display.section,
     card: typography.variants.heading.card,
+    prompt: typography.variants.heading.prompt,
     // Legacy mapping compatibility (mapped to closest semantic role)
     xl: typography.variants.heading.page,
     lg: typography.variants.heading.subsection,
