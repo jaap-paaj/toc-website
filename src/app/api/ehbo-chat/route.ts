@@ -18,13 +18,14 @@ export async function POST(request: NextRequest) {
         }),
     });
 
+    const data = await response.json().catch(() => null);
+
     if (!response.ok) {
         return NextResponse.json(
-            { error: "Chat request failed" },
+            data ?? { error: "Chat request failed" },
             { status: response.status }
         );
     }
 
-    const data = await response.json();
     return NextResponse.json(data);
 }

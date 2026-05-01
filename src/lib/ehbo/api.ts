@@ -1,3 +1,4 @@
+import { EhboSessionLimitError } from "./types";
 import type { EhboChatResponse, EhboContactInfo } from "./types";
 
 export async function submitEhboContact(
@@ -36,6 +37,10 @@ export async function sendEhboMessage(
     });
 
     if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        if (data?.error === "session_limit_reached" && typeof data.message === "string") {
+            throw new EhboSessionLimitError(data.message);
+        }
         throw new Error(`Chat request failed: ${response.statusText}`);
     }
 
