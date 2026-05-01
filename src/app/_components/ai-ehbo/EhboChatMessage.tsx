@@ -15,7 +15,7 @@ export function EhboChatMessage({ message }: EhboChatMessageProps) {
 
     if (isUser) {
         return (
-            <div className="flex justify-end mb-4">
+            <div className="flex justify-end mb-6">
                 <div className="max-w-[80%] rounded-surface rounded-br-none bg-muted text-foreground px-4 py-3">
                     <div className={cn(typography.variants.body.md, "whitespace-pre-wrap")}>
                         {message.content}

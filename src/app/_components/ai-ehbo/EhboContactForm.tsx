@@ -43,7 +43,7 @@ export function EhboContactForm({ sessionId, content, onDismiss }: EhboContactFo
 
     if (status === "sent") {
         return (
-            <div className="border-t border-border bg-muted px-4 py-3">
+            <div className="border-t border-border bg-muted px-4 py-4">
                 <p className={cn(typography.variants.body.sm, "text-foreground")}>
                     {content.success}
                 </p>
@@ -52,8 +52,8 @@ export function EhboContactForm({ sessionId, content, onDismiss }: EhboContactFo
     }
 
     return (
-        <div className="border-t border-border bg-muted px-4 py-3">
-            <div className="flex items-start justify-between gap-3 mb-2"> {/* lint:allowed - sticky banner header */}
+        <div className="border-t border-border bg-muted px-4 py-4">
+            <div className="flex items-start justify-between gap-3 mb-3"> {/* lint:allowed - sticky banner header */}
                 <div className="flex flex-col gap-0.5"> {/* lint:allowed - tight stack */}
                     <p className={cn(typography.variants.meta.label, "text-foreground")}>
                         {content.title}
