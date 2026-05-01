@@ -110,7 +110,7 @@ export function AiActQuestionCard({
                 </div>
             </div>
 
-            <Heading level={2} size="lg" className="text-balance">
+            <Heading level={2} size="prompt" className="text-balance">
                 {question.text}
             </Heading>
 

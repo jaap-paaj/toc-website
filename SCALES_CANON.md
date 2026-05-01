@@ -47,7 +47,7 @@ Components must request a role, not a font-size.
 | Role Category | Roles | Usage |
 | :--- | :--- | :--- |
 | **Display** | `display.hero`, `display.heroSecondary`, `display.heroTertiary`, `display.section` | Landing page heroes and section headers. |
-| **Heading** | `heading.page`, `heading.subsection`, `heading.card` | Structural headings (H1-H3). |
+| **Heading** | `heading.page`, `heading.subsection`, `heading.card`, `heading.prompt` | Structural headings (H1-H3) and long-form prompts/questions (sentence case, serif bold). |
 | **Body** | `body.lg` (Hero Intro ONLY), `body.md` (Default), `body.sm` (Compact) | Reading text. |
 | **Meta** | `meta.eyebrow`, `meta.label`, `meta.badge`, `meta.code` | UI labels and micro-copy. |
 | **UI** | `ui.button.*`, `ui.nav.*`, `ui.input.value` | Interactive elements. |
