@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
@@ -22,11 +22,16 @@ interface EhboContactFormProps {
         dismiss: string;
     };
     onDismiss: () => void;
+    onSent?: () => void;
 }
 
-export function EhboContactForm({ sessionId, content, onDismiss }: EhboContactFormProps) {
+export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboContactFormProps) {
     const [form, setForm] = useState<EhboContactInfo>({ email: "" });
     const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+    useEffect(() => {
+        if (status === "sent") onSent?.();
+    }, [status, onSent]);
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
