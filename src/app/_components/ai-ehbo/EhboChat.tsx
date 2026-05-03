@@ -23,6 +23,7 @@ export function EhboChat() {
     const [showContactForm, setShowContactForm] = useState(false);
     const [formDismissed, setFormDismissed] = useState(false);
     const [closedOut, setClosedOut] = useState(false);
+    const [formSent, setFormSent] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -40,7 +41,7 @@ export function EhboChat() {
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         const trimmed = input.trim();
-        if (!trimmed || isLoading || closedOut) return;
+        if (!trimmed || isLoading || closedOut || formSent) return;
 
         const userMessage: EhboMessage = {
             id: crypto.randomUUID(),
@@ -148,11 +149,12 @@ export function EhboChat() {
                     sessionId={sessionId}
                     content={content.contact}
                     onDismiss={() => setFormDismissed(true)}
+                    onSent={() => setFormSent(true)}
                 />
             )}
 
-            {/* Input area or close-out CTAs */}
-            {closedOut ? (
+            {/* Input area, close-out CTAs, or hidden after form-sent */}
+            {formSent ? null : closedOut ? (
                 <div className="border-t border-border px-4 py-3 flex flex-col sm:flex-row gap-2">
                     <Link
                         href={content.closeOut.bookCallHref}
