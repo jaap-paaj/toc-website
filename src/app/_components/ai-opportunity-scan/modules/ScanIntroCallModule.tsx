@@ -67,8 +67,10 @@ export function ScanIntroCallModule() {
                                     className="w-full sm:w-auto self-start max-w-full h-auto whitespace-normal text-left py-2" /* lint:allowed - CTA multiline support */
                                     onClick={() =>
                                         trackEvent("cta_click", {
+                                            tool: "readiness",
                                             cta_label: scanContent[lang].introCall.card.cta.label,
                                             cta_location: "intro_call",
+                                            language: lang,
                                         })
                                     }
                                 >

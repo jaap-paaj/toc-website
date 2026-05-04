@@ -18,8 +18,10 @@ export function ScanLandingHeroModule({ title, subtitle }: ScanLandingHeroModule
 
     const handleCtaClick = () => {
         trackEvent("cta_click", {
+            tool: "readiness",
             cta_label: base.cta.label,
             cta_location: "hero_scan_landing",
+            language: lang,
         });
     };
 
