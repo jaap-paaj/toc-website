@@ -5,6 +5,8 @@ import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
 import { submitEhboContact } from "@/lib/ehbo/api";
+import { trackEvent } from "@/lib/analytics/ga";
+import { useLocale } from "@/lib/i18n/useLocale";
 import type { EhboContactInfo } from "@/lib/ehbo/types";
 
 interface EhboContactFormProps {
@@ -26,6 +28,7 @@ interface EhboContactFormProps {
 }
 
 export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboContactFormProps) {
+    const lang = useLocale();
     const [form, setForm] = useState<EhboContactInfo>({ email: "" });
     const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
@@ -40,6 +43,11 @@ export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboC
         setStatus("sending");
         try {
             await submitEhboContact(sessionId, form);
+            trackEvent("ehbo_form_submit", {
+                tool: "ehbo",
+                step: "lead_submit",
+                language: lang,
+            });
             setStatus("sent");
         } catch {
             setStatus("error");

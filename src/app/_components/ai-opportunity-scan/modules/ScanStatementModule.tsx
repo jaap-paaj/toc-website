@@ -73,8 +73,10 @@ export function ScanStatementModule() {
                                 className="w-full sm:w-auto self-start max-w-full h-auto whitespace-normal text-left py-2" // lint:allowed - CTA multiline support
                                 onClick={() =>
                                     trackEvent("cta_click", {
+                                        tool: "readiness",
                                         cta_label: scanContent[lang].statement.cta.label,
                                         cta_location: "statement_why_now",
+                                        language: lang,
                                     })
                                 }
                             >

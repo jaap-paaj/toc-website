@@ -10,6 +10,7 @@ import { Heading, Text } from "@/design-system/components/Typography";
 import { aiActContent } from "@/app/_content/ai-act";
 import { useLocale } from "@/lib/i18n/useLocale";
 import { saveLead } from "@/lib/ai-act/api";
+import { trackEvent } from "@/lib/analytics/ga";
 
 interface AiActLeadFormProps {
     scanId: string | null;
@@ -48,6 +49,11 @@ export function AiActLeadForm({ scanId, resultId }: AiActLeadFormProps) {
                 role: role.trim() || null,
                 consent_marketing: consent,
                 result_id: resultId,
+            });
+            trackEvent("aiact_lead_submit", {
+                tool: "aiact",
+                step: "lead_submit",
+                language: lang,
             });
             setStatus("done");
         } catch (err) {
