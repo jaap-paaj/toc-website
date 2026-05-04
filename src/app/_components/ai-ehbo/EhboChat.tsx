@@ -10,6 +10,7 @@ import { EhboContactForm } from "./EhboContactForm";
 import { ehboContent } from "@/app/_content/ai-ehbo";
 import { useLocale } from "@/lib/i18n/useLocale";
 import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
+import { trackEvent } from "@/lib/analytics/ga";
 import type { EhboMessage } from "@/lib/ehbo/types";
 
 export function EhboChat() {
@@ -24,6 +25,7 @@ export function EhboChat() {
     const [formDismissed, setFormDismissed] = useState(false);
     const [closedOut, setClosedOut] = useState(false);
     const [formSent, setFormSent] = useState(false);
+    const completionFiredRef = useRef(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -50,6 +52,14 @@ export function EhboChat() {
             created_at: new Date().toISOString(),
         };
 
+        if (messages.length === 0) {
+            trackEvent("ehbo_chat_start", {
+                tool: "ehbo",
+                step: "start",
+                language: lang,
+            });
+        }
+
         setMessages((prev) => [...prev, userMessage]);
         setInput("");
         setIsLoading(true);
@@ -71,6 +81,14 @@ export function EhboChat() {
             setMessages((prev) => [...prev, assistantMessage]);
 
             if (response.should_offer_contact) {
+                if (!completionFiredRef.current) {
+                    completionFiredRef.current = true;
+                    trackEvent("ehbo_completion", {
+                        tool: "ehbo",
+                        step: "completion",
+                        language: lang,
+                    });
+                }
                 setShowContactForm(true);
             }
         } catch (err) {

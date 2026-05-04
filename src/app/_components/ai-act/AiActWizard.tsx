@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
@@ -18,6 +18,7 @@ import {
     getQuestions,
 } from "@/lib/ai-act/data";
 import { saveScan } from "@/lib/ai-act/api";
+import { trackEvent } from "@/lib/analytics/ga";
 import type { Choice, GameState } from "@/lib/ai-act/types";
 import type { Locale } from "@/lib/i18n/config";
 import { AiActQuestionCard } from "./AiActQuestionCard";
@@ -76,9 +77,18 @@ function AiActWizardInner() {
 
     const [legalRef, setLegalRef] = useState<string | null>(null);
     const [scanId, setScanId] = useState<string | null>(null);
+    const completionFiredRef = useRef(false);
 
     useEffect(() => {
         if (state.view !== "result" || !state.result) return;
+        if (!completionFiredRef.current) {
+            completionFiredRef.current = true;
+            trackEvent("aiact_completion", {
+                tool: "aiact",
+                step: "completion",
+                language: lang,
+            });
+        }
         let cancelled = false;
         saveScan({ result: state.result, history: state.history }).then(
             (id) => {
@@ -88,7 +98,7 @@ function AiActWizardInner() {
         return () => {
             cancelled = true;
         };
-    }, [state.view, state.result, state.history]);
+    }, [state.view, state.result, state.history, lang]);
 
     const questions = getQuestions(lang);
     const questionNumber = entries.length + 1;
@@ -111,6 +121,13 @@ function AiActWizardInner() {
 
     const handleAnswer = (choice: Choice) => {
         if (state.view !== "quiz") return;
+        if (entries.length === 0) {
+            trackEvent("aiact_check_start", {
+                tool: "aiact",
+                step: "start",
+                language: lang,
+            });
+        }
         const newEntries = [
             ...entries,
             { qId: state.currentQuestionId, choice },
@@ -120,6 +137,7 @@ function AiActWizardInner() {
 
     const handleReset = () => {
         setScanId(null);
+        completionFiredRef.current = false;
         pushTrail("");
     };
 
