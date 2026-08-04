@@ -51,9 +51,13 @@ export function AnswerHeroModule({ lang, page }: AnswerHeroModuleProps) {
                             {page.question}
                         </Heading>
                     </div>
-                    <Text size="lg" className="text-muted-foreground">
-                        {page.lead}
-                    </Text>
+                    {/* Standfirst: same brand rule the pillar pages use, so the
+                        lead reads as a lead and not as weaker body copy. */}
+                    <div className="border-l-4 border-primary pl-6">
+                        <Text size="lg" className="text-muted-foreground">
+                            {page.lead}
+                        </Text>
+                    </div>
                 </div>
             </div>
         </HomeModule>

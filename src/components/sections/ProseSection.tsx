@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/design-system/components/Typography";
-import { spacing } from "@/design-system/tokens/spacing";
+import { typography } from "@/design-system/tokens/typography";
 
 /**
  * Content shape for long-form prose.
@@ -18,9 +18,19 @@ export interface ProseSectionProps {
     className?: string;
 }
 
+/**
+ * Typography follows BlogProse: body.lg at full contrast, measure-capped, with
+ * the same list indent and rhythm. Long-form reads the same everywhere on the
+ * site, whether it came from markdown or from a content file.
+ */
 export function ProseSection({ blocks, className }: ProseSectionProps) {
     return (
-        <div className={cn(spacing.stackLg, "w-full max-w-2xl", className)}>
+        <article
+            className={cn(
+                "w-full max-w-2xl flex flex-col gap-[var(--space-md)]",
+                className,
+            )}
+        >
             {blocks.map((block, i) => {
                 if (block.kind === "subheading") {
                     return (
@@ -36,16 +46,13 @@ export function ProseSection({ blocks, className }: ProseSectionProps) {
                         <ListTag
                             key={i}
                             className={cn(
-                                spacing.stackSm,
-                                "pl-5",
+                                "flex flex-col gap-[var(--space-xs)] pl-6",
                                 block.ordered ? "list-decimal" : "list-disc",
                             )}
                         >
                             {block.items.map((item, j) => (
-                                <li key={j} className="text-muted-foreground">
-                                    <Text size="md" as="span" className="text-muted-foreground">
-                                        {item}
-                                    </Text>
+                                <li key={j} className={typography.variants.body.lg}>
+                                    {item}
                                 </li>
                             ))}
                         </ListTag>
@@ -53,11 +60,11 @@ export function ProseSection({ blocks, className }: ProseSectionProps) {
                 }
 
                 return (
-                    <Text key={i} size="md" className="text-muted-foreground">
+                    <Text key={i} size="lg" measure="2xl">
                         {block.text}
                     </Text>
                 );
             })}
-        </div>
+        </article>
     );
 }
