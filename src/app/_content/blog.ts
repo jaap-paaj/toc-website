@@ -7,6 +7,7 @@ const en = {
     overview: {
         latestTitle: "Latest Insights",
         moreTitle: "More Insights",
+        questionsLink: "Questions about AI in your organization",
     },
     sidebar: {
         latestPosts: "Latest Posts",
@@ -35,6 +36,7 @@ const nl: typeof en = {
     overview: {
         latestTitle: "Laatste inzichten",
         moreTitle: "Meer inzichten",
+        questionsLink: "Vragen over AI in je organisatie",
     },
     sidebar: {
         latestPosts: "Laatste inzichten",

@@ -3,21 +3,30 @@
 import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
-import { sendEhboMessage } from "@/lib/ehbo/api";
-import { EhboSessionLimitError } from "@/lib/ehbo/types";
-import { EhboChatMessage } from "./EhboChatMessage";
-import { EhboContactForm } from "./EhboContactForm";
-import { ehboContent } from "@/app/_content/ai-ehbo";
+import { sendToolMessage } from "@/lib/tools/api";
+import { ToolSessionLimitError } from "@/lib/tools/types";
+import { ToolChatMessage } from "./ToolChatMessage";
+import { ToolContactForm } from "./ToolContactForm";
 import { useLocale } from "@/lib/i18n/useLocale";
 import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { trackEvent } from "@/lib/analytics/ga";
-import type { EhboMessage } from "@/lib/ehbo/types";
+import type {
+    ToolAnalytics,
+    ToolChatContent,
+    ToolEndpoints,
+    ToolMessage,
+} from "@/lib/tools/types";
 
-export function EhboChat() {
+interface ToolChatProps {
+    endpoints: ToolEndpoints;
+    analytics: ToolAnalytics;
+    content: ToolChatContent;
+}
+
+export function ToolChat({ endpoints, analytics, content }: ToolChatProps) {
     const lang = useLocale();
-    const content = ehboContent[lang].chat;
 
-    const [messages, setMessages] = useState<EhboMessage[]>([]);
+    const [messages, setMessages] = useState<ToolMessage[]>([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [sessionId, setSessionId] = useState<string | null>(null);
@@ -45,7 +54,7 @@ export function EhboChat() {
         const trimmed = input.trim();
         if (!trimmed || isLoading || closedOut || formSent) return;
 
-        const userMessage: EhboMessage = {
+        const userMessage: ToolMessage = {
             id: crypto.randomUUID(),
             role: "user",
             content: trimmed,
@@ -53,8 +62,8 @@ export function EhboChat() {
         };
 
         if (messages.length === 0) {
-            trackEvent("ehbo_chat_start", {
-                tool: "ehbo",
+            trackEvent(analytics.startEvent, {
+                tool: analytics.tool,
                 step: "start",
                 language: lang,
             });
@@ -65,13 +74,13 @@ export function EhboChat() {
         setIsLoading(true);
 
         try {
-            const response = await sendEhboMessage(sessionId, trimmed);
+            const response = await sendToolMessage(endpoints, sessionId, trimmed);
 
             if (!sessionId) {
                 setSessionId(response.session_id);
             }
 
-            const assistantMessage: EhboMessage = {
+            const assistantMessage: ToolMessage = {
                 id: crypto.randomUUID(),
                 role: "assistant",
                 content: response.message,
@@ -83,17 +92,25 @@ export function EhboChat() {
             if (response.should_offer_contact) {
                 if (!completionFiredRef.current) {
                     completionFiredRef.current = true;
-                    trackEvent("ehbo_completion", {
-                        tool: "ehbo",
+                    trackEvent(analytics.completionEvent, {
+                        tool: analytics.tool,
                         step: "completion",
                         language: lang,
                     });
                 }
                 setShowContactForm(true);
             }
+
+            // The backend calls the conversation finished before the session
+            // limit does. Close out here so the two CTAs appear on that turn,
+            // instead of one turn later after a 429.
+            if (response.conversation_complete) {
+                setShowContactForm(true);
+                setClosedOut(true);
+            }
         } catch (err) {
-            if (err instanceof EhboSessionLimitError) {
-                const closingMessage: EhboMessage = {
+            if (err instanceof ToolSessionLimitError) {
+                const closingMessage: ToolMessage = {
                     id: crypto.randomUUID(),
                     role: "assistant",
                     content: err.closingMessage,
@@ -102,7 +119,7 @@ export function EhboChat() {
                 setMessages((prev) => [...prev, closingMessage]);
                 setClosedOut(true);
             } else {
-                const errorMessage: EhboMessage = {
+                const errorMessage: ToolMessage = {
                     id: crypto.randomUUID(),
                     role: "assistant",
                     content: content.errorMessage,
@@ -127,8 +144,7 @@ export function EhboChat() {
         setShowContactForm(true);
     }
 
-    const formVisible =
-        sessionId !== null && showContactForm && !formDismissed;
+    const formVisible = sessionId !== null && showContactForm && !formDismissed;
 
     return (
         <div className="flex flex-col h-full">
@@ -145,7 +161,7 @@ export function EhboChat() {
                     </div>
                 )}
                 {messages.map((msg) => (
-                    <EhboChatMessage key={msg.id} message={msg} />
+                    <ToolChatMessage key={msg.id} message={msg} />
                 ))}
                 {isLoading && (
                     <div className="flex justify-start">
@@ -163,8 +179,10 @@ export function EhboChat() {
 
             {/* Sticky working-document form (visible while session is active) */}
             {formVisible && sessionId && (
-                <EhboContactForm
+                <ToolContactForm
                     sessionId={sessionId}
+                    endpoints={endpoints}
+                    analytics={analytics}
                     content={content.contact}
                     onDismiss={() => setFormDismissed(true)}
                     onSent={() => setFormSent(true)}

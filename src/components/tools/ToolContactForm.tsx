@@ -4,32 +4,35 @@ import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
-import { submitEhboContact } from "@/lib/ehbo/api";
+import { submitToolContact } from "@/lib/tools/api";
 import { trackEvent } from "@/lib/analytics/ga";
 import { useLocale } from "@/lib/i18n/useLocale";
-import type { EhboContactInfo } from "@/lib/ehbo/types";
+import type {
+    ToolAnalytics,
+    ToolContactContent,
+    ToolContactInfo,
+    ToolEndpoints,
+} from "@/lib/tools/types";
 
-interface EhboContactFormProps {
+interface ToolContactFormProps {
     sessionId: string;
-    content: {
-        title: string;
-        helper: string;
-        emailPlaceholder: string;
-        namePlaceholder: string;
-        companyPlaceholder: string;
-        submit: string;
-        sending: string;
-        success: string;
-        error: string;
-        dismiss: string;
-    };
+    endpoints: ToolEndpoints;
+    analytics: ToolAnalytics;
+    content: ToolContactContent;
     onDismiss: () => void;
     onSent?: () => void;
 }
 
-export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboContactFormProps) {
+export function ToolContactForm({
+    sessionId,
+    endpoints,
+    analytics,
+    content,
+    onDismiss,
+    onSent,
+}: ToolContactFormProps) {
     const lang = useLocale();
-    const [form, setForm] = useState<EhboContactInfo>({ email: "" });
+    const [form, setForm] = useState<ToolContactInfo>({ email: "" });
     const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
     useEffect(() => {
@@ -42,9 +45,9 @@ export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboC
 
         setStatus("sending");
         try {
-            await submitEhboContact(sessionId, form);
-            trackEvent("ehbo_form_submit", {
-                tool: "ehbo",
+            await submitToolContact(endpoints, sessionId, form);
+            trackEvent(analytics.leadEvent, {
+                tool: analytics.tool,
                 step: "lead_submit",
                 language: lang,
             });

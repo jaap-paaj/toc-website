@@ -7,6 +7,8 @@ import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { blogContent } from "@/app/_content/blog";
+import { VRAGEN_BASE_PATH } from "@/app/_content/vragen";
+import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { useLocale } from "@/lib/i18n/useLocale";
 
 export function BlogHeroModule() {
@@ -31,6 +33,17 @@ export function BlogHeroModule() {
                     >
                         {blogContent[lang].hero.title}
                     </Heading>
+                    <div className="flex">
+                        <Link
+                            href={VRAGEN_BASE_PATH}
+                            className={cn(
+                                typography.variants.meta.label,
+                                "underline underline-offset-4 decoration-border hover:decoration-current transition-colors",
+                            )}
+                        >
+                            {blogContent[lang].overview.questionsLink} &rarr;
+                        </Link>
+                    </div>
                 </div>
             </div>
         </HomeModule>

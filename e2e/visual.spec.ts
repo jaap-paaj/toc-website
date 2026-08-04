@@ -10,6 +10,7 @@ const STATIC_PAGES = [
     { name: "educate", path: "/educate" },
     { name: "contact", path: "/contact" },
     { name: "blog", path: "/blog" },
+    { name: "vragen", path: "/vragen" },
 ];
 
 const SCAN_VARIANTS = [
@@ -22,6 +23,13 @@ const SCAN_VARIANTS = [
 const BLOG_SLUGS = [
     "ai-cannot-fix-what-you-cannot-explain",
     "rethinking-strategy",
+];
+
+// All 14 answer pages share one template. Two representatives cover both CTA
+// targets, matching how BLOG_SLUGS samples the blog.
+const ANSWER_SLUGS = [
+    "is-ai-betrouwbaar",
+    "wat-kost-ai-adoptie",
 ];
 
 // --- Static pages ---
@@ -117,6 +125,28 @@ for (const locale of LOCALES) {
     });
 }
 
+// --- AI Readiness Scan (landing + chat empty state) ---
+
+for (const locale of LOCALES) {
+    test(`readiness-scan — ${locale}`, async ({ page }) => {
+        await page.goto(`/${locale}/ai-readiness-scan`, {
+            waitUntil: "networkidle",
+        });
+        await expect(page).toHaveScreenshot(`readiness-scan-${locale}.png`, {
+            fullPage: true,
+        });
+    });
+
+    test(`readiness-chat — ${locale}`, async ({ page }) => {
+        await page.goto(`/${locale}/ai-readiness-scan/chat`, {
+            waitUntil: "networkidle",
+        });
+        await expect(page).toHaveScreenshot(`readiness-chat-${locale}.png`, {
+            fullPage: true,
+        });
+    });
+}
+
 // --- 10 AI tips landing ---
 
 for (const locale of LOCALES) {
@@ -128,6 +158,22 @@ for (const locale of LOCALES) {
             fullPage: true,
         });
     });
+}
+
+// --- GEO answer pages ---
+
+for (const locale of LOCALES) {
+    for (const slug of ANSWER_SLUGS) {
+        test(`vragen ${slug} — ${locale}`, async ({ page }) => {
+            await page.goto(`/${locale}/vragen/${slug}`, {
+                waitUntil: "networkidle",
+            });
+            await expect(page).toHaveScreenshot(
+                `vragen-${slug}-${locale}.png`,
+                { fullPage: true }
+            );
+        });
+    }
 }
 
 // --- Blog posts ---

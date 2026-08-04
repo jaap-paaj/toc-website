@@ -36,6 +36,10 @@ const aiStrategie = {
             { slug: "follow-the-friction", title: "Follow the Friction: why the best AI strategy starts with looking" },
             { slug: "solutioneering", title: "Solutioneering: the most expensive mistake in AI" },
             { slug: "shadow-ai", title: "Shadow AI: the signal you're missing" },
+            { slug: "rethinking-strategy", title: "Rethinking Strategy" },
+            { slug: "ai-cannot-fix-what-you-cannot-explain", title: "AI Cannot Fix What You Cannot Explain" },
+            { slug: "still-struggling-to-use-ai-potential", title: "Still Struggling to Use AI's Potential?" },
+            { slug: "verkeerde-as", title: "The Wrong Axis: Why 'Europe Has Lost the AI Race' Misses the Point" },
         ],
         services: [
             { href: "/educate", label: "AI Workshop" },
@@ -59,6 +63,10 @@ const aiStrategie = {
             { slug: "follow-the-friction", title: "Follow the Friction: waarom de beste AI-strategie begint met kijken" },
             { slug: "solutioneering", title: "Solutioneering: de duurste fout bij AI" },
             { slug: "shadow-ai", title: "Shadow AI: het signaal dat je mist" },
+            { slug: "rethinking-strategy", title: "Strategie heroverwogen" },
+            { slug: "ai-cannot-fix-what-you-cannot-explain", title: "AI lost niet op wat je zelf niet kunt uitleggen" },
+            { slug: "still-struggling-to-use-ai-potential", title: "Worstelt je organisatie nog met het potentieel van AI?" },
+            { slug: "verkeerde-as", title: "De verkeerde as: waarom 'Europa heeft de AI-race verloren' de plank misslaat" },
         ],
         services: [
             { href: "/educate", label: "AI Workshop" },
@@ -133,6 +141,9 @@ const aiEnMensen = {
             { slug: "ai-workshop-bedrijven", title: "AI workshop for business: beyond the inspiration session" },
             { slug: "ai-consultancy-kiezen", title: "Choosing an AI consultancy: the question nobody asks" },
             { slug: "ai-proof-of-concept", title: "AI proof of concept: from pilot graveyard to decision data" },
+            { slug: "the-age-of-the-ideas-people", title: "The Age of the Ideas People" },
+            { slug: "the-design-process-is-dead", title: "The Design Process Is Dead. The Design Discipline Isn't." },
+            { slug: "ai-design-sprint-secretive-superheroes", title: "The Superheroes You Already Have" },
         ],
         services: [
             { href: "/educate", label: "AI Workshop" },
@@ -156,6 +167,9 @@ const aiEnMensen = {
             { slug: "ai-workshop-bedrijven", title: "AI workshop voor bedrijven: voorbij de inspiratiesessie" },
             { slug: "ai-consultancy-kiezen", title: "AI consultancy kiezen: de vraag die niemand stelt" },
             { slug: "ai-proof-of-concept", title: "AI proof of concept: van pilot-kerkhof naar beslisdata" },
+            { slug: "the-age-of-the-ideas-people", title: "Het tijdperk van de ideeënmensen" },
+            { slug: "the-design-process-is-dead", title: "Het designproces is dood. De ontwerpdiscipline niet." },
+            { slug: "ai-design-sprint-secretive-superheroes", title: "De superhelden die je al in huis hebt" },
         ],
         services: [
             { href: "/educate", label: "AI Workshop" },
