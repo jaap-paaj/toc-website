@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { InventoryPage } from "@/app/_components/intern/InventoryPage";
 import { countInboundLinks, getRoutes } from "@/lib/inventory/routes";
-import { checkLive, sitemapPaths } from "@/lib/inventory/status";
+import { checkLive, sitemapPaths, UNLISTED_ON_PURPOSE } from "@/lib/inventory/status";
 import { TOOLS } from "@/lib/inventory/tools";
 import { getContentGroups } from "@/lib/inventory/content";
 
@@ -23,6 +23,7 @@ export default async function Page() {
         inSitemap: inSitemap.has(route.sample) || inSitemap.has(route.pattern),
         live: live.get(route.sample) ?? "unknown",
         inboundLinks: countInboundLinks(route.pattern),
+        unlistedReason: UNLISTED_ON_PURPOSE[route.pattern],
     }));
 
     return (

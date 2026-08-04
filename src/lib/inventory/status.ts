@@ -4,6 +4,19 @@ const PRODUCTION_URL = "https://www.theonlyconstant.nl";
 
 export type LiveStatus = "live" | "missing" | "unknown";
 
+/**
+ * Pages we keep out of the sitemap on purpose, with the reason.
+ *
+ * Without this the inventory would flag them every time, and a signal you
+ * always ignore stops being a signal.
+ */
+export const UNLISTED_ON_PURPOSE: Record<string, string> = {
+    "/ai-ehbo/chat": "de tool zelf, de landingspagina is de ingang",
+    "/ai-readiness-scan/chat": "de tool zelf, de landingspagina is de ingang",
+    "/ai-act/check": "de wizard zelf, de landingspagina is de ingang",
+    "/ai-opportunity-scan/book": "boekingspagina, ingesloten agenda zonder eigen inhoud",
+};
+
 /** Which paths the sitemap actually advertises, locale prefix stripped. */
 export function sitemapPaths(): Set<string> {
     const paths = new Set<string>();

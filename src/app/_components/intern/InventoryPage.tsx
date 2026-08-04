@@ -19,6 +19,8 @@ interface Row {
     inSitemap: boolean;
     live: LiveStatus;
     inboundLinks: number;
+    /** Set when the page is kept out of the sitemap deliberately. */
+    unlistedReason?: string;
 }
 
 interface InventoryPageProps {
@@ -40,7 +42,7 @@ function signals(row: Row): string[] {
     if (row.live === "missing" && row.inSitemap) {
         found.push("staat in de sitemap maar is niet live");
     }
-    if (row.live === "live" && !row.inSitemap) {
+    if (row.live === "live" && !row.inSitemap && !row.unlistedReason) {
         found.push("live maar niet in de sitemap");
     }
     if (row.pattern !== "" && row.inboundLinks === 0) {
@@ -232,7 +234,11 @@ export function InventoryPage({ rows, tools, contentGroups }: InventoryPageProps
                                             </CategoryPill>
                                         </td>
                                         <td className={cellClass(true)}>
-                                            {row.inSitemap ? "ja" : "nee"}
+                                            {row.inSitemap
+                                                ? "ja"
+                                                : row.unlistedReason
+                                                  ? `bewust niet — ${row.unlistedReason}`
+                                                  : "nee"}
                                         </td>
                                         <td className={cellClass(true)}>{row.inboundLinks}</td>
                                     </tr>
