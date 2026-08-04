@@ -11,7 +11,11 @@ import type { ProseBlock } from "@/components/sections/ProseSection";
  * AI Readiness Scan.
  */
 
-export const EHBO_HREF = "/ai-ehbo";
+/**
+ * Straight into the chat, not the landing page: the closing copy promises a
+ * conversation, and the answer page already did the convincing.
+ */
+export const EHBO_HREF = "/ai-ehbo/chat";
 
 /**
  * The Readiness Scan frontend currently runs on its own Vercel deployment.
