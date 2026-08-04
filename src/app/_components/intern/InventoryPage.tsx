@@ -6,6 +6,8 @@ import { CategoryPill } from "@/components/ui/CategoryPill";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
+import { InventoryContent } from "@/app/_components/intern/InventoryContent";
+import type { ContentGroup } from "@/lib/inventory/content";
 import type { LiveStatus } from "@/lib/inventory/status";
 import type { ToolEntry } from "@/lib/inventory/tools";
 
@@ -22,6 +24,7 @@ interface Row {
 interface InventoryPageProps {
     rows: Row[];
     tools: ToolEntry[];
+    contentGroups: ContentGroup[];
 }
 
 const LIVE_LABEL: Record<LiveStatus, string> = {
@@ -58,7 +61,7 @@ function cellClass(muted = false) {
     );
 }
 
-export function InventoryPage({ rows, tools }: InventoryPageProps) {
+export function InventoryPage({ rows, tools, contentGroups }: InventoryPageProps) {
     const flagged = rows
         .map((row) => ({ row, found: signals(row) }))
         .filter((entry) => entry.found.length > 0);
@@ -237,6 +240,25 @@ export function InventoryPage({ rows, tools }: InventoryPageProps) {
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </HomeModule>
+
+            {/* What sits behind the collapsed dynamic routes */}
+            <HomeModule
+                id="inventory-content"
+                width="full"
+                tone="light"
+                pad="m"
+                padTop="none"
+                padBottom="m"
+                gap="none"
+                containsContent
+            >
+                <div className={cn(spacing.stackMd, "w-full")}>
+                    <Heading level={2} size="card">
+                        Inhoud
+                    </Heading>
+                    <InventoryContent groups={contentGroups} />
                 </div>
             </HomeModule>
         </PageLayout>

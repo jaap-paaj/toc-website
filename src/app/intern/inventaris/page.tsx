@@ -3,6 +3,7 @@ import { InventoryPage } from "@/app/_components/intern/InventoryPage";
 import { countInboundLinks, getRoutes } from "@/lib/inventory/routes";
 import { checkLive, sitemapPaths } from "@/lib/inventory/status";
 import { TOOLS } from "@/lib/inventory/tools";
+import { getContentGroups } from "@/lib/inventory/content";
 
 export const metadata: Metadata = {
     title: "Inventaris — intern",
@@ -24,5 +25,11 @@ export default async function Page() {
         inboundLinks: countInboundLinks(route.pattern),
     }));
 
-    return <InventoryPage rows={rows} tools={TOOLS} />;
+    return (
+        <InventoryPage
+            rows={rows}
+            tools={TOOLS}
+            contentGroups={getContentGroups()}
+        />
+    );
 }
