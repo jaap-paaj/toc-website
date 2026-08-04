@@ -6,6 +6,7 @@ import { Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
+import { categoryPillClass, categoryPillInteractiveClass } from "@/components/ui/CategoryPill";
 import type { BlogPostMeta } from "@/lib/blog/types";
 import { blogContent } from "@/app/_content/blog";
 import { getPillarForBlog } from "@/app/_content/pillar";
@@ -96,8 +97,8 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
                                 <Link
                                     href={`/${pillar.pillarSlug}`}
                                     className={cn(
-                                        typography.variants.meta.badge,
-                                        "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full hover:bg-foreground/20 transition-colors duration-200"
+                                        categoryPillClass,
+                                        categoryPillInteractiveClass
                                     )}
                                 >
                                     {pillar.tagLabel}

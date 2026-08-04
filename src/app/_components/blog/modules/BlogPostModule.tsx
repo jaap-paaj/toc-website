@@ -7,6 +7,7 @@ import { Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
+import { categoryPillClass, categoryPillInteractiveClass } from "@/components/ui/CategoryPill";
 import { BlogProse } from "@/app/_components/blog/BlogProse";
 import { BlogFaqSection } from "@/app/_components/blog/BlogFaqSection";
 import { BlogCtaSection } from "@/app/_components/blog/BlogCtaSection";
@@ -73,8 +74,8 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                             <Link
                                 href={`/${pillar.pillarSlug}`}
                                 className={cn(
-                                    typography.variants.meta.badge,
-                                    "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full hover:bg-foreground/20 transition-colors duration-200"
+                                    categoryPillClass,
+                                    categoryPillInteractiveClass
                                 )}
                             >
                                 {pillar.tagLabel}

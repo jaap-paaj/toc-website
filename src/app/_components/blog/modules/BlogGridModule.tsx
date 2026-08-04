@@ -4,6 +4,7 @@ import { Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
+import { CategoryPill } from "@/components/ui/CategoryPill";
 import { blogContent } from "@/app/_content/blog";
 import { getPillarForBlog } from "@/app/_content/pillar";
 import type { BlogPostMeta } from "@/lib/blog/types";
@@ -70,14 +71,7 @@ export function BlogGridSection({ posts, lang }: BlogGridSectionProps) {
                             if (!pillar) return null;
                             return (
                                 <div className="flex">
-                                    <span
-                                        className={cn(
-                                            typography.variants.meta.badge,
-                                            "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full"
-                                        )}
-                                    >
-                                        {pillar.tagLabel}
-                                    </span>
+                                    <CategoryPill>{pillar.tagLabel}</CategoryPill>
                                 </div>
                             );
                         })()}

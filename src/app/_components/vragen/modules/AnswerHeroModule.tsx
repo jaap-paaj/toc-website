@@ -1,7 +1,6 @@
 import { HomeModule } from "@/app/_components/home/HomeModule";
-import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
+import { Breadcrumb, type Crumb } from "@/components/ui/Breadcrumb";
 import { Heading, Text } from "@/design-system/components/Typography";
-import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { vragenContent, VRAGEN_BASE_PATH, type AnswerPage } from "@/app/_content/vragen";
@@ -14,6 +13,12 @@ interface AnswerHeroModuleProps {
 
 export function AnswerHeroModule({ lang, page }: AnswerHeroModuleProps) {
     const { index } = vragenContent[lang];
+
+    const crumbs: Crumb[] = [
+        { label: index.breadcrumbLabel, href: VRAGEN_BASE_PATH },
+        { label: page.cluster },
+        { label: page.question },
+    ];
 
     return (
         <HomeModule
@@ -29,28 +34,10 @@ export function AnswerHeroModule({ lang, page }: AnswerHeroModuleProps) {
             {/* Centering uses flex, not mx-auto: globals.css nullifies margins. */}
             <div className="flex justify-center">
                 <div className={cn(spacing.stackLg, "w-full max-w-2xl")}>
-                    <Link
-                        href={VRAGEN_BASE_PATH}
-                        className={cn(
-                            typography.variants.meta.eyebrow,
-                            "text-muted-foreground underline underline-offset-4 decoration-border hover:decoration-current transition-colors",
-                        )}
-                    >
-                        {index.backLabel}
-                    </Link>
-                    <div className={spacing.stackMd}>
-                        <span
-                            className={cn(
-                                typography.variants.meta.badge,
-                                "text-muted-foreground",
-                            )}
-                        >
-                            {page.cluster}
-                        </span>
-                        <Heading level={1} size="prompt" className="text-balance">
-                            {page.question}
-                        </Heading>
-                    </div>
+                    <Breadcrumb crumbs={crumbs} />
+                    <Heading level={1} size="prompt" className="text-balance">
+                        {page.question}
+                    </Heading>
                     {/* Standfirst: same brand rule the pillar pages use, so the
                         lead reads as a lead and not as weaker body copy. */}
                     <div className="border-l-4 border-primary pl-6">

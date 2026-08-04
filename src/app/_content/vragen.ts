@@ -47,7 +47,7 @@ const en = {
             intro: "Fourteen questions we get asked in almost every first conversation, answered the way we would answer them across the table. No sales pitch, no jargon.",
         },
         listEyebrow: "All questions",
-        backLabel: "All questions about AI",
+        breadcrumbLabel: "Questions",
     },
     pages: [
         {
@@ -689,7 +689,7 @@ const nl: typeof en = {
             intro: "Veertien vragen die in vrijwel elk eerste gesprek langskomen, beantwoord zoals we ze aan tafel zouden beantwoorden. Geen verkoopverhaal, geen jargon.",
         },
         listEyebrow: "Alle vragen",
-        backLabel: "Alle vragen over AI",
+        breadcrumbLabel: "Vragen",
     },
     pages: [
         {

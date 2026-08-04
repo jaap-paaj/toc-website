@@ -1,5 +1,6 @@
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
+import { CategoryPill } from "@/components/ui/CategoryPill";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
@@ -42,14 +43,9 @@ export function VragenIndexListModule({ lang }: VragenIndexListModuleProps) {
                                 key={page.slug}
                                 className="flex flex-col gap-[var(--space-xs)] border-t border-border py-[var(--space-lg)]"
                             >
-                                <span
-                                    className={cn(
-                                        typography.variants.meta.label,
-                                        "text-muted-foreground",
-                                    )}
-                                >
-                                    {page.cluster}
-                                </span>
+                                <div className="flex">
+                                    <CategoryPill>{page.cluster}</CategoryPill>
+                                </div>
                                 <Link
                                     href={`${VRAGEN_BASE_PATH}/${page.slug}`}
                                     className="group"
