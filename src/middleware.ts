@@ -28,6 +28,7 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/images") ||
+    pathname.startsWith("/intern") || // internal tooling, not localised content
     pathname.includes(".") // static files
   ) {
     return;
