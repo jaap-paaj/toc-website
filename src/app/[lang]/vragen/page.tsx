@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { VragenIndexPage } from "@/app/_components/vragen/VragenIndexPage";
 import { vragenContent, VRAGEN_BASE_PATH } from "@/app/_content/vragen";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: meta.title,
         description: meta.description,
-        alternates: { canonical: url },
+        alternates: buildAlternates(lang, VRAGEN_BASE_PATH),
         openGraph: {
             title: meta.title,
             description: meta.description,

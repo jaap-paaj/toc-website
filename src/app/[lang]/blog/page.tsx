@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog/loader";
 import { BlogOverviewPage } from "@/app/_components/blog/BlogOverviewPage";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
         description: isNl
             ? "Inzichten over AI-adoptie, marketing innovatie en organisatieverandering."
             : "Insights on AI adoption, marketing innovation and organizational change.",
-        alternates: { canonical: `${SITE_URL}/${lang}/blog` },
+        alternates: buildAlternates(lang, "/blog"),
         openGraph: {
             title: "Blog - The Only Constant",
             description: isNl

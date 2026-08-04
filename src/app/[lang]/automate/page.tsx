@@ -3,6 +3,7 @@ import { AutomatePage } from "@/app/_components/automate/AutomatePage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { automateFaq } from "@/app/_content/automate";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         description: isNl
             ? "Workflow automatisering met generatieve AI en tools als n8n en Make. Van intake tot eerste werkende automation in 2-3 weken."
             : "Workflow automation with generative AI and tools like n8n and Make. From intake to first working automation in 2-3 weeks.",
-        alternates: { canonical: `${SITE_URL}/${lang}/automate` },
+        alternates: buildAlternates(lang, "/automate"),
         openGraph: {
             title: isNl ? "AI Automatisering voor Bedrijven - The Only Constant" : "AI Automation for Business - The Only Constant",
             description: isNl
