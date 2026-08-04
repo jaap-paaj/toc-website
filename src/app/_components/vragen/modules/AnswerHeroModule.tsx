@@ -1,5 +1,6 @@
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { Breadcrumb, type Crumb } from "@/components/ui/Breadcrumb";
+import { CategoryPill } from "@/components/ui/CategoryPill";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
@@ -14,9 +15,10 @@ interface AnswerHeroModuleProps {
 export function AnswerHeroModule({ lang, page }: AnswerHeroModuleProps) {
     const { index } = vragenContent[lang];
 
+    // The cluster is not a page, so it would be a dead crumb. It shows up as a
+    // badge below instead, the same way the index lists it.
     const crumbs: Crumb[] = [
         { label: index.breadcrumbLabel, href: VRAGEN_BASE_PATH },
-        { label: page.cluster },
         { label: page.question },
     ];
 
@@ -35,9 +37,14 @@ export function AnswerHeroModule({ lang, page }: AnswerHeroModuleProps) {
             <div className="flex justify-center">
                 <div className={cn(spacing.stackLg, "w-full max-w-2xl")}>
                     <Breadcrumb crumbs={crumbs} />
-                    <Heading level={1} size="prompt" className="text-balance">
-                        {page.question}
-                    </Heading>
+                    <div className={cn(spacing.stackSm, "items-start")}>
+                        <div className="flex">
+                            <CategoryPill>{page.cluster}</CategoryPill>
+                        </div>
+                        <Heading level={1} size="prompt" className="text-balance">
+                            {page.question}
+                        </Heading>
+                    </div>
                     {/* Standfirst: same brand rule the pillar pages use, so the
                         lead reads as a lead and not as weaker body copy. */}
                     <div className="border-l-4 border-primary pl-6">
