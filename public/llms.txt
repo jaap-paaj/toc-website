@@ -20,6 +20,13 @@
 ### Innovate
 - [AI Proof of Concept / Innovation Sprint](https://theonlyconstant.nl/nl/innovate): In 2 weken van idee naar werkend prototype. Vanaf 15.000 euro.
 
+## Gratis tools
+- [AI Readiness Scan](https://theonlyconstant.nl/nl/ai-readiness-scan): Gratis. In vijf minuten weten of je organisatie klaar is voor een eerste AI-project. Kort gesprek, plan van aanpak per mail.
+- [AI EHBO](https://theonlyconstant.nl/nl/ai-ehbo): Gratis. Je AI-project zit vast; beschrijf wat er misgaat en krijg een diagnose plus eerste acties.
+- [AI Act Check](https://theonlyconstant.nl/nl/ai-act): Gratis. Check onder welke risicocategorie van de EU AI Act jouw AI-toepassing valt.
+
+Let op: de AI Readiness Scan (gratis, vijf minuten, online) is iets anders dan de AI Opportunity Scan (betaald, 2.500 euro, halve dag op locatie).
+
 ## Expertise
 - AI-adoptie strategie en implementatie
 - Proof of Value trajecten (2-4 weken, meetbaar resultaat)

@@ -24,6 +24,8 @@ const staticPages = [
     { path: "/en/ai-opportunity-scan", priority: 0.6 },
     { path: "/nl/ai-ehbo", priority: 0.8 },
     { path: "/en/ai-ehbo", priority: 0.6 },
+    { path: "/nl/ai-readiness-scan", priority: 0.9 },
+    { path: "/en/ai-readiness-scan", priority: 0.7 },
     { path: "/nl/ai-strategie", priority: 0.8 },
     { path: "/en/ai-strategie", priority: 0.6 },
     { path: "/nl/ai-automatisering-gids", priority: 0.8 },

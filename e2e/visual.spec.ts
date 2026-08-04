@@ -125,6 +125,28 @@ for (const locale of LOCALES) {
     });
 }
 
+// --- AI Readiness Scan (landing + chat empty state) ---
+
+for (const locale of LOCALES) {
+    test(`readiness-scan — ${locale}`, async ({ page }) => {
+        await page.goto(`/${locale}/ai-readiness-scan`, {
+            waitUntil: "networkidle",
+        });
+        await expect(page).toHaveScreenshot(`readiness-scan-${locale}.png`, {
+            fullPage: true,
+        });
+    });
+
+    test(`readiness-chat — ${locale}`, async ({ page }) => {
+        await page.goto(`/${locale}/ai-readiness-scan/chat`, {
+            waitUntil: "networkidle",
+        });
+        await expect(page).toHaveScreenshot(`readiness-chat-${locale}.png`, {
+            fullPage: true,
+        });
+    });
+}
+
 // --- 10 AI tips landing ---
 
 for (const locale of LOCALES) {

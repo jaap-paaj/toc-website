@@ -1,5 +1,6 @@
 import type { Locale } from "@/lib/i18n/config";
 import type { ProseBlock } from "@/components/sections/ProseSection";
+import { READINESS_SCAN_CHAT_PATH } from "@/app/_content/ai-readiness-scan";
 
 /**
  * GEO answer pages ("vragen").
@@ -17,15 +18,7 @@ import type { ProseBlock } from "@/components/sections/ProseSection";
  */
 export const EHBO_HREF = "/ai-ehbo/chat";
 
-/**
- * The Readiness Scan frontend currently runs on its own Vercel deployment.
- * Backend is the same Supabase project as the EHBO (readiness-chat,
- * readiness-contact, readiness-summary).
- *
- * Single source of truth: change this one line to "/ai-scan" once the scan is
- * mounted as a path on the main site.
- */
-export const SCAN_HREF = "https://ai-readiness-scan.vercel.app";
+export const SCAN_HREF = READINESS_SCAN_CHAT_PATH;
 
 /** Block shape is owned by the section that renders it. */
 export type AnswerBlock = ProseBlock;
