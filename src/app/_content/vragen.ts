@@ -14,10 +14,14 @@ import type { ProseBlock } from "@/components/sections/ProseSection";
 export const EHBO_HREF = "/ai-ehbo";
 
 /**
- * The Readiness Scan lives here once it is mounted on the site.
- * Single source of truth: change this one line if the path changes.
+ * The Readiness Scan frontend currently runs on its own Vercel deployment.
+ * Backend is the same Supabase project as the EHBO (readiness-chat,
+ * readiness-contact, readiness-summary).
+ *
+ * Single source of truth: change this one line to "/ai-scan" once the scan is
+ * mounted as a path on the main site.
  */
-export const SCAN_HREF = "/ai-scan";
+export const SCAN_HREF = "https://ai-readiness-scan.vercel.app";
 
 /** Block shape is owned by the section that renders it. */
 export type AnswerBlock = ProseBlock;
