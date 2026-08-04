@@ -8,8 +8,8 @@ import { Heading } from "@/design-system/components/Typography";
 import { Button } from "@/components/ui/Button";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
-import { EhboChat } from "@/app/_components/ai-ehbo/EhboChat";
-import { ehboContent } from "@/app/_content/ai-ehbo";
+import { ToolChat } from "@/components/tools/ToolChat";
+import { ehboContent, EHBO_ANALYTICS, EHBO_ENDPOINTS } from "@/app/_content/ai-ehbo";
 import { useLocale } from "@/lib/i18n/useLocale";
 
 export function EhboChatModule() {
@@ -56,7 +56,11 @@ export function EhboChatModule() {
 
                     {/* Chat container */}
                     <Surface variant="card" className="overflow-hidden flex flex-col h-[calc(100vh-200px)] min-h-[500px]"> {/* lint:allowed - chat container height */}
-                        <EhboChat />
+                        <ToolChat
+                            endpoints={EHBO_ENDPOINTS}
+                            analytics={EHBO_ANALYTICS}
+                            content={content.chat}
+                        />
                     </Surface>
                 </div>
             </div>

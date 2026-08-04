@@ -1,4 +1,17 @@
 import type { Locale } from "@/lib/i18n/config";
+import type { ToolAnalytics, ToolEndpoints } from "@/lib/tools/types";
+
+export const EHBO_ENDPOINTS: ToolEndpoints = {
+    chat: "/api/ehbo-chat",
+    contact: "/api/ehbo-contact",
+};
+
+export const EHBO_ANALYTICS: ToolAnalytics = {
+    tool: "ehbo",
+    startEvent: "ehbo_chat_start",
+    completionEvent: "ehbo_completion",
+    leadEvent: "ehbo_form_submit",
+};
 
 const en = {
     meta: {
