@@ -8,7 +8,7 @@ import { READINESS_SCAN_CHAT_PATH } from "@/app/_content/ai-readiness-scan";
  * Long-form answers to buying questions people ask AI assistants and search
  * engines. Not blog posts: no dates, no chronology, evergreen by design.
  *
- * Each page closes with one tool CTA. Seven point at the AI EHBO, seven at the
+ * Each page closes with one tool CTA. Seven point at the AI First Aid, seven at the
  * AI Readiness Scan.
  */
 
@@ -37,13 +37,13 @@ export interface AnswerPage {
 const en = {
     index: {
         meta: {
-            title: "Questions about AI in your organization - The Only Constant",
+            title: "Questions about AI in your organisation - The Only Constant",
             description:
-                "Straight answers to the questions organizations ask before they start with AI: what it costs, who can help, whether it is safe and why projects fail.",
+                "Straight answers to the questions organisations ask before they start with AI: what it costs, who can help, whether it is safe and why projects fail.",
         },
         hero: {
             eyebrow: "Answers",
-            title: "Questions about AI in your organization",
+            title: "Questions about AI in your organisation",
             intro: "Fourteen questions we get asked in almost every first conversation, answered the way we would answer them across the table. No sales pitch, no jargon.",
         },
         listEyebrow: "All questions",
@@ -52,13 +52,13 @@ const en = {
     pages: [
         {
             slug: "hoe-kies-je-de-juiste-ai-partner",
-            cluster: "Who can help me",
+            cluster: "Who can help us",
             meta: {
                 title: "How to choose the right AI partner - The Only Constant",
                 description:
                     "Four questions that separate a useful AI partner from a sales pitch, and what the right answers sound like.",
             },
-            question: "How do you choose the right AI partner for your organization?",
+            question: "How do you choose the right AI partner for your organisation?",
             lead: "There are probably ten agencies sitting in your inbox, all with AI transformation in the subject line, and you have to pick one. They all sound the same, because they are all offering the same thing.",
             blocks: [
                 { kind: "subheading", text: "How do you approach it?" },
@@ -80,17 +80,17 @@ const en = {
                 { kind: "subheading", text: "Where do you start?" },
                 {
                     kind: "paragraph",
-                    text: "The only good answer: on the floor. An AI partner who spends a morning watching your customer service team knows more about your process by lunch than a steering committee learns in three months. The wrong answer is easy to spot: a demo of their own platform without a single substantive question about your organization.",
+                    text: "The only good answer: on the floor. An AI partner who spends a morning watching your customer service team knows more about your process by lunch than a steering committee learns in three months. The wrong answer is easy to spot: a demo of their own platform without a single substantive question about your organisation.",
                 },
                 { kind: "subheading", text: "How small can the first step be?" },
                 {
                     kind: "paragraph",
-                    text: "A good partner wants to start on one process quickly, preferably low effort and high value, and wants it working fast. Think sorting and answering incoming customer email, or preparing sales conversations. They do that to get to know you, so that later in the relationship they can judge far better how to help you further. After a first assignment like that, a partner can tell whether your organization is ready to change and whether your people are up for it. What you do not want to discuss at the start: an eighteen-month programme with a seven-phase roadmap.",
+                    text: "A good partner wants to start on one process quickly, preferably low effort and high value, and wants it working fast. Think sorting and answering incoming customer email, or preparing sales conversations. They do that to get to know you, so that later in the relationship they can judge far better how to help you further. After a first assignment like that, a partner can tell whether your organisation is ready to change and whether the team is ready to adopt it. What you do not want to discuss at the start: an eighteen-month programme with a seven-phase roadmap.",
                 },
                 { kind: "subheading", text: "How will we know in a month whether it works?" },
                 {
                     kind: "paragraph",
-                    text: "A partner who genuinely understands that AI is about organizational goals rather than technology will set KPIs with you for every project. Experimenting without KPIs is nothing more than very expensive innovation theatre. Put more sharply: if you do not know what you want to achieve, every experiment is pointless before it starts. Show the agency that wants to define project KPIs in a later phase to the door.",
+                    text: "A partner who genuinely understands that AI is about organisational goals rather than technology will set KPIs with you for every project. Experimenting without KPIs is nothing more than very expensive innovation theatre. Put more sharply: if you do not know what you want to achieve, every experiment is pointless before it starts. Show the agency that wants to define project KPIs in a later phase to the door.",
                 },
                 { kind: "subheading", text: "What can we do ourselves once you are done?" },
                 {
@@ -104,18 +104,18 @@ const en = {
         },
         {
             slug: "waar-vind-ik-ai-consultants",
-            cluster: "Who can help me",
+            cluster: "Who can help us",
             meta: {
                 title: "Where to find AI consultants in the Netherlands - The Only Constant",
                 description:
                     "Four types of AI provider in the Dutch market, what each one is good for, and how to tell which one you actually need.",
             },
             question: "Where do I find AI consultants for the Dutch market?",
-            lead: "Searching for AI consultant Netherlands returns a sea of providers all promising the same thing. The supply itself has become the problem.",
+            lead: "Search for \"AI consultant Netherlands\" and you get a sea of providers all promising the same thing. The sheer number of them is the problem.",
             blocks: [
                 {
                     kind: "paragraph",
-                    text: "The Dutch market has roughly four kinds of AI provider:",
+                    text: "The Dutch market has roughly four types of AI provider:",
                 },
                 {
                     kind: "list",
@@ -124,7 +124,7 @@ const en = {
                         "IT companies that build systems",
                         "marketing and communications agencies offering AI as an add-on",
                         "independent AI specialists",
-                        "AI adoption agencies that teach your organization to work with AI itself",
+                        "AI adoption agencies that teach your organisation to work with AI itself",
                     ],
                 },
                 {
@@ -138,17 +138,17 @@ const en = {
                         "IT companies are the right choice when you know exactly what needs building and you are only looking for hands. They are not the right first step when you do not yet know which problem you are solving: they will build what you ask for, including the wrong thing.",
                         "Agencies with AI as a side subject are fine for one campaign or advice on which tool to buy, but too thin once it touches your processes, your data or your people.",
                         "Independent specialists are fast and affordable for a well-defined job. Do ask yourself: what happens to your new system when they move on to the next client?",
-                        "Adoption agencies start with your organization. What exactly do you deliver, how do the internal processes work, where is the potential value of AI for you? Technology comes second. That is the category The Only Constant sits in: we help Dutch companies with well-defined AI projects and always transfer the knowledge to their own people.",
+                        "Adoption agencies start with your organisation. What exactly do you deliver, how do the internal processes work, where is the potential value of AI for you? Technology comes second. That is the category The Only Constant sits in: we help Dutch companies with well-defined AI projects and always transfer the knowledge to their own people.",
                     ],
                 },
             ],
             closing:
-                "Not sure which type of provider fits you? The free AI EHBO points you in the right direction in a short conversation, including a plan of action for the short term.",
-            cta: { label: "Start the free AI EHBO", href: EHBO_HREF },
+                "Not sure which type of provider fits you? The free AI First Aid points you in the right direction in a short conversation, including a plan of action for the short term.",
+            cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
             slug: "ai-implementatie-mkb",
-            cluster: "Who can help me",
+            cluster: "Who can help us",
             meta: {
                 title: "AI implementation for SMEs: who offers it - The Only Constant",
                 description:
@@ -159,7 +159,7 @@ const en = {
             blocks: [
                 {
                     kind: "paragraph",
-                    text: "AI implementation that fits an SME is recognizable by four things:",
+                    text: "AI implementation that fits an SME is recognisable by four things:",
                 },
                 {
                     kind: "list",
@@ -177,7 +177,7 @@ const en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "Why these four? A fixed price forces the provider into a small, sharp, well-defined assignment, and a small assignment is exactly what a first AI project needs. Weeks instead of months means you know very quickly whether your AI project delivers anything. Existing software as a starting point, because the simplest solution that works is almost always the cheapest. And knowledge transfer determines whether you can move forward yourself, or whether every adjustment sends you back to the supplier. Given the speed at which AI changes everything, that matters more than ever.",
+                    text: "Why these four? A fixed price forces the provider into a small, sharp, well-defined assignment, and a small assignment is exactly what a first AI project needs. Weeks instead of months means you know very quickly whether your AI project delivers anything. Starting from software you already have keeps the solution simpler, and the simplest thing that works is almost always the cheapest. And knowledge transfer determines whether you can move forward yourself, or whether every adjustment sends you back to the supplier. Given the speed at which AI changes everything, that matters more than ever.",
                 },
                 {
                     kind: "paragraph",
@@ -185,19 +185,19 @@ const en = {
                 },
             ],
             closing:
-                "Curious which first project would deliver the most for you? You can find out in a few minutes with the free AI EHBO.",
-            cta: { label: "Start the free AI EHBO", href: EHBO_HREF },
+                "Curious which first project would deliver the most for you? You can find out in a few minutes with the free AI First Aid.",
+            cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
             slug: "ai-integreren-zonder-technische-kennis",
-            cluster: "How do I start",
+            cluster: "Where do we start",
             meta: {
                 title: "Integrating AI without technical knowledge - The Only Constant",
                 description:
                     "You do not need a data scientist to start with AI. You need three other things, and the technology comes last.",
             },
             question: "How can my company integrate AI without technical knowledge?",
-            lead: "You have no real IT department, no data scientist, and when someone says API everyone nods wisely and then looks away. Meanwhile the board does want something with AI.",
+            lead: "You have no real IT department, no data scientist, and when someone says API everyone nods knowingly and then looks away. Meanwhile the board does want something with AI.",
             blocks: [
                 {
                     kind: "paragraph",
@@ -218,7 +218,7 @@ const en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "Start with the quiet usage, the shadow AI. In practically every company the best people have been using ChatGPT or Claude on a personal account for a long time, for emails, summaries and proposal text. Treat that as a compass: they have already done the research for you and are pointing at exactly where the work gets stuck. Ask about it without judgement, even when it is not allowed, otherwise nobody will tell you what they do, what works and what does not. List who uses what and for which task. That list is immediately your longlist of first projects.",
+                    text: "Start with the informal use, the shadow AI. In practically every company the best people have been using ChatGPT or Claude on a personal account for a long time, for emails, summaries and proposal text. Treat that as a compass: their behaviour already shows you exactly where the work gets stuck. Ask about it without judgement, even when it is not allowed, otherwise nobody will tell you what they do, what works and what does not. List who uses what and for which task. That gives you a useful longlist of possible first projects.",
                 },
                 {
                     kind: "paragraph",
@@ -235,7 +235,7 @@ const en = {
         },
         {
             slug: "hoe-start-je-met-ai-adoptie",
-            cluster: "How do I start",
+            cluster: "Where do we start",
             meta: {
                 title: "How to start with AI adoption in an SME - The Only Constant",
                 description:
@@ -256,11 +256,11 @@ const en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "After that you know whether the AI implementation works, how quickly your organization can change and where the resistance sits. That is already more than most AI programmes can say after eighteen months.",
+                    text: "After that you know whether the AI implementation works, how quickly your organisation can change and where adoption is likely to slow down. That is already more than most AI programmes can say after eighteen months.",
                 },
                 {
                     kind: "paragraph",
-                    text: "Watching the work is the step almost everyone skips and the one that yields the most insight. Sit next to someone for twenty minutes and have them narrate what they are doing. You will see things that appear in no manual: the spreadsheet on the side, the copying between two systems, the five minutes of searching before every email that goes out. You are not doing this for the company: what you see there determines which process you pick.",
+                    text: "Watching the work is the step almost everyone skips and the one that yields the most insight. Sit next to someone for twenty minutes and have them narrate what they are doing. You will see things that appear in no manual: the spreadsheet on the side, the copying between two systems, the five minutes of searching before every email that goes out. You are not doing this to be polite: what you see there decides which process you pick.",
                 },
                 {
                     kind: "paragraph",
@@ -272,7 +272,7 @@ const en = {
                 },
             ],
             closing:
-                "Want to be sure your organization is ready first? The free AI Readiness Scan checks in five minutes whether your foundation is in place and sends you a plan of action.",
+                "Want to be sure your organisation is ready first? The free AI Readiness Scan checks in five minutes whether your foundation is in place and sends you a plan of action.",
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
         {
@@ -303,7 +303,7 @@ const en = {
                 { kind: "subheading", text: "Level 1" },
                 {
                     kind: "paragraph",
-                    text: "Existing tools (€25 to €30 per person per month). Faster writing, summarizing, searching, translating. ChatGPT, Claude or Copilot, plus proper training and one working session on what may and may not be done with company data. Without that training you are mostly buying noise. Done in days. Anyone offering you a build project for this is charging you for something you can arrange yourself in an afternoon.",
+                    text: "Existing tools (€25 to €30 per person per month). Faster writing, summarising, searching, translating. ChatGPT, Claude or Copilot, plus proper training and one working session on what may and may not be done with company data. Without that training you are mostly buying noise. Done in days. Anyone offering you a build project for this is charging you for something you can arrange yourself in an afternoon.",
                 },
                 { kind: "subheading", text: "Level 2" },
                 {
@@ -321,19 +321,19 @@ const en = {
                 },
             ],
             closing:
-                "Want to know which level your bottleneck sits at before a single euro goes to technology? The free AI EHBO works it out with you in a short conversation, and you get a first action to take with it.",
-            cta: { label: "Start the free AI EHBO", href: EHBO_HREF },
+                "Want to know which level your bottleneck sits at before a single euro goes to technology? The free AI First Aid works it out with you in a short conversation, and you get a first action to take with it.",
+            cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
             slug: "ai-voor-klantenservice",
-            cluster: "What can I use AI for",
+            cluster: "What can we use AI for",
             meta: {
                 title: "How to use AI for customer service - The Only Constant",
                 description:
                     "The three customer service tasks where AI actually pays off, and why a chatbot on your mailbox is almost never the answer.",
             },
             question: "How do I use AI for customer service?",
-            lead: "The customer emails at 9:02. At 9:27 your colleague is still looking for which folder the returns policy is in.",
+            lead: "The customer emails at 9:02. At 9:27 your colleague is still looking for which folder contains the returns policy.",
             blocks: [
                 {
                     kind: "paragraph",
@@ -366,12 +366,12 @@ const en = {
                 },
             ],
             closing:
-                "Where is the biggest time sink in your customer contact? The free AI EHBO tracks it down in a short conversation, and you get a first action to take with it.",
-            cta: { label: "Start the free AI EHBO", href: EHBO_HREF },
+                "Where is the biggest time sink in your customer contact? The free AI First Aid tracks it down in a short conversation, and you get a first action to take with it.",
+            cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
             slug: "ai-voor-marketing-en-administratie",
-            cluster: "What can I use AI for",
+            cluster: "What can we use AI for",
             meta: {
                 title: "How to use AI for marketing or administration - The Only Constant",
                 description:
@@ -390,7 +390,7 @@ const en = {
                     items: [
                         "drafting copy for four channels from a single campaign idea",
                         "producing a draft quote including a reference to the source data",
-                        "recognizing and analyzing incoming invoices, and where possible completing them for your accounting system",
+                        "recognizing and analysing incoming invoices, and where possible completing them for your accounting system",
                     ],
                 },
                 {
@@ -400,16 +400,16 @@ const en = {
                 { kind: "subheading", text: "How to approach it" },
                 {
                     kind: "paragraph",
-                    text: "Pick one task where it chafes daily and write down which step AI can take and which step the human has to keep. That process description gives you a sharp view of how something actually works. You will find that writing the system down tells you a great deal about what to automate and how. The result: AI writes the draft quote in minutes and adds the sources; you check it, adjust it and approve. Or: AI writes the campaign copy for LinkedIn, email and the site based on the original campaign idea and the brand guidelines, and the marketer guards the message. One more example: AI reads incoming invoices, corrects what it can, asks for extra information where needed, and queues them up for the finance team to book. That division on paper, the process description, matters more than which tool you choose, because the process is where you fix who holds control. For personal work such as emails, reports and summaries, a simple AI subscription is enough and any custom build is usually a waste of money.",
+                    text: "Pick one task where friction shows up every day and write down which step AI can take and which step the human has to keep. That process description gives you a sharp view of how something actually works. You will find that mapping the process tells you a great deal about what to automate and how. The result: AI writes the draft quote in minutes and adds the sources; you check it, adjust it and approve. Or: AI writes the campaign copy for LinkedIn, email and the site based on the original campaign idea and the brand guidelines, and the marketer stays responsible for the message. One more example: AI reads incoming invoices, corrects what it can, asks for extra information where needed, and queues them for review and posting by the finance team. That division on paper, the process description, matters more than which tool you choose, because the process is where you define who stays accountable. For personal work such as emails, reports and summaries, a simple AI subscription is enough and any custom build is usually a waste of money.",
                 },
                 {
                     kind: "paragraph",
-                    text: "Run the system for four weeks and agree the KPIs up front, for example the lead time of a quote. If it gets faster without the quality dropping, you expand. If not, you know exactly where it chafes, and that is worth something too.",
+                    text: "Run the system for four weeks and agree the KPIs up front, for example the lead time of a quote. If it gets faster without the quality dropping, you expand. If not, you know exactly where friction shows up, and that is worth something too.",
                 },
             ],
             closing:
-                "Wondering whether your biggest time sink is in the quotes, the invoices or somewhere else entirely? The free AI EHBO maps it out in a short conversation, with a first action for this week.",
-            cta: { label: "Start the free AI EHBO", href: EHBO_HREF },
+                "Wondering whether your biggest time sink is in the quotes, the invoices or somewhere else entirely? The free AI First Aid maps it out in a short conversation, with a first action for this week.",
+            cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
             slug: "ai-en-bedrijfsgegevens",
@@ -445,7 +445,7 @@ const en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "And the AI Act? For most SME applications (summarizing, sorting, drafting) you fall into the lightest category. Heavier requirements only apply to decisions about people, such as recruitment or lending.",
+                    text: "And the AI Act? Most everyday uses, such as summarising, sorting and drafting, do not fall into the heaviest category. But it is the application that counts, not the action: the moment AI weighs in on decisions about people, the picture changes. So judge it per use case rather than per tool.",
                 },
             ],
             closing:
@@ -454,7 +454,7 @@ const en = {
         },
         {
             slug: "team-meekrijgen-met-ai",
-            cluster: "Will my people come along",
+            cluster: "Will the team come along",
             meta: {
                 title: "How to get your team on board with AI - The Only Constant",
                 description:
@@ -518,20 +518,20 @@ const en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "The second mistake is everywhere: no KPIs up front. Without a number fixed in advance (the lead time of a quote, say, or how quickly a customer gets an answer) every outcome is good for something in hindsight. Everyone talks the project up and nobody learns anything. So agree before you start what has to improve, and measure the same thing at the end.",
+                    text: "The second mistake is everywhere: no KPIs up front. Without a number fixed in advance (the lead time of a quote, say, or how quickly a customer gets an answer) almost any outcome can be presented as a success in hindsight. Everyone talks the project up and nobody learns anything. So agree before you start what has to improve, and measure the same thing at the end.",
                 },
                 {
                     kind: "paragraph",
-                    text: "The third point is the most expensive over time: knowledge that stays with the supplier. If it works but you cannot change anything without calling the builder, you have bought a subscription to dependency. You will not be getting rid of that agency. Make sure your own people understand the approach and start innovating themselves. That is the difference between a project that stays alive and one that stalls the moment the invoice is paid.",
+                    text: "The third point is the most expensive over time: knowledge that stays with the supplier. If it works but you cannot change anything without calling the builder, you have bought a subscription to dependency. Dependency becomes part of how you operate. Make sure your own people understand the approach and start innovating themselves. That is the difference between a project that stays alive and one that stalls the moment the invoice is paid.",
                 },
             ],
             closing:
-                "Want to know in advance where your biggest risk sits? The free AI EHBO exposes it in a short conversation, and you get a first action to take with it.",
-            cta: { label: "Start the free AI EHBO", href: EHBO_HREF },
+                "Want to know in advance where your biggest risk sits? The free AI First Aid exposes it in a short conversation, and you get a first action to take with it.",
+            cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
             slug: "ai-voor-installatiebedrijven",
-            cluster: "For my sector",
+            cluster: "Technical services",
             meta: {
                 title: "AI for installation and technical companies - The Only Constant",
                 description:
@@ -546,11 +546,11 @@ const en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "An AI model that makes those documents searchable gives the engineer in the field the right answer within seconds. A system like that usually stands within a few weeks.",
+                    text: "An AI model that makes those documents searchable gives the engineer in the field the right answer within seconds. A focused first version is often running within a few weeks.",
                 },
                 {
                     kind: "paragraph",
-                    text: "Three places where it chafes daily:",
+                    text: "Three places where friction shows up every day:",
                 },
                 {
                     kind: "list",
@@ -563,16 +563,16 @@ const en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "Important for the trade: let AI do the looking up and the preparing, but never the decision about safety or the installation itself. The professional is and remains the professional.",
+                    text: "Important for the trade: let AI do the looking up and the preparing, but never the decision about safety or the installation itself. The qualified professional stays responsible.",
                 },
                 {
                     kind: "paragraph",
-                    text: "In short: start with the knowledge base, because it touches every engineer every day, and agree one simple KPI: how many calls to the office disappear in the first month. And ask your engineers whether they trust the answer, because if they do not use it, no KPI counts.",
+                    text: "In short: start with the knowledge base, because it touches every engineer every day, and agree one simple KPI: how many calls to the office disappear in the first month. And ask your engineers whether they trust the answer, because if they do not use it, the KPI only tells you half the story.",
                 },
             ],
             closing:
-                "Where does most of your time leak away, in the field or in the office? The free AI EHBO works it out with you in a short chat, and you get a first action to take with it.",
-            cta: { label: "Start the free AI EHBO", href: EHBO_HREF },
+                "Where does most of your time leak away, in the field or in the office? The free AI First Aid works it out with you in a short chat, and you get a first action to take with it.",
+            cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
             slug: "is-ai-betrouwbaar",
@@ -596,7 +596,7 @@ const en = {
                 { kind: "subheading", text: "How do you prevent hallucinations?" },
                 {
                     kind: "paragraph",
-                    text: "The intervention that works is organizational, not technical: put a human at the point where the work leaves the building. Alongside that, three things you can arrange today:",
+                    text: "The intervention that works is organisational, not technical: put a human at the point where the work leaves the building. Alongside that, three things you can arrange today:",
                 },
                 {
                     kind: "list",
@@ -617,19 +617,19 @@ const en = {
                 },
             ],
             closing:
-                "Want to know whether your organization has that control in place? The free AI Readiness Scan checks your decision structure and your room to fail among other things, and sends you a plan of action.",
+                "Want to know whether your organisation has that control in place? The free AI Readiness Scan checks your decision structure and your scope for safe experimentation among other things, and sends you a plan of action.",
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
         {
             slug: "custom-gpt-bouwen",
-            cluster: "Building it yourself",
+            cluster: "Building it ourselves",
             meta: {
                 title: "How to build a custom GPT (and when not to) - The Only Constant",
                 description:
                     "Building a custom GPT takes half an hour. Knowing when it is the wrong answer saves you a great deal more.",
             },
             question: "How do you build a custom GPT (and when is that not the answer)?",
-            lead: "How do you build a GPT is a question that comes up at every knowledge session. There is almost always a different question underneath: this work is costing me too much time and I want someone to take it over.",
+            lead: "\u201cHow do you build a GPT?\u201d is a question that comes up at every knowledge session. There is almost always a different question underneath: this work is costing me too much time and I want someone to take it over.",
             blocks: [
                 {
                     kind: "paragraph",
@@ -650,7 +650,7 @@ const en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "The second is where it usually goes wrong. A GPT handed your entire department drive will answer from outdated files with just as much conviction as from the good ones. Three accurate, current documents produce a better assistant than two hundred files half of which are obsolete. Clear up first, build after.",
+                    text: "The second is where it usually goes wrong. A GPT handed your entire department drive will answer from outdated files with just as much conviction as from the good ones. Three accurate, current documents produce a better assistant than two hundred files half of which are obsolete. Clean up first, build second.",
                 },
                 {
                     kind: "paragraph",
@@ -670,7 +670,7 @@ const en = {
                 },
             ],
             closing:
-                "Want to know whether your organization is ready for the step after that? The free AI Readiness Scan checks your data and your sponsor among other things, and sends you a plan of action.",
+                "Want to know whether your organisation is ready for the step after that? The free AI Readiness Scan checks your data and your sponsor among other things, and sends you a plan of action.",
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
     ] satisfies AnswerPage[],
@@ -1087,7 +1087,7 @@ const nl: typeof en = {
                 },
                 {
                     kind: "paragraph",
-                    text: "En de AI Act? Voor de meeste MKB-toepassingen (samenvatten, sorteren, concepten schrijven) val je in de lichtste categorie. Zwaardere eisen gelden pas bij beslissingen over mensen, zoals werving of kredietverlening.",
+                    text: "En de AI Act? De meeste alledaagse toepassingen, zoals samenvatten, sorteren en concepten schrijven, vallen niet in de zwaarste categorie. Maar het is de toepassing die telt, niet de handeling: zodra AI meeweegt in beslissingen over mensen, verandert het plaatje. Beoordeel dus per gebruikssituatie, niet per tool.",
                 },
             ],
             closing:
