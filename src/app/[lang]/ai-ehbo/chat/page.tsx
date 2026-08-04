@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { EhboChatModule } from "@/app/_components/ai-ehbo/modules/EhboChatModule";
 import { ehboContent } from "@/app/_content/ai-ehbo";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
-const SITE_URL = "https://theonlyconstant.nl";
 
 interface PageProps {
     params: Promise<{ lang: string }>;
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: meta.title,
         description: meta.description,
-        alternates: { canonical: `${SITE_URL}/${lang}/ai-ehbo/chat` },
+        alternates: buildAlternates(lang, "/ai-ehbo/chat"),
     };
 }
 

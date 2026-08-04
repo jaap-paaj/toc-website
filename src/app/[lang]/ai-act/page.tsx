@@ -8,6 +8,7 @@ import { AiActProblemsModule } from "@/app/_components/ai-act/modules/AiActProbl
 import { AiActAboutModule } from "@/app/_components/ai-act/modules/AiActAboutModule";
 import { aiActContent } from "@/app/_content/ai-act";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: meta.title,
         description: meta.description,
-        alternates: { canonical: `${SITE_URL}/${lang}/ai-act` },
+        alternates: buildAlternates(lang, "/ai-act"),
         openGraph: {
             title: meta.title,
             description: meta.description,

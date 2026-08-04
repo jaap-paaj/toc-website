@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactPage } from "@/app/_components/contact/ContactPage";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         description: isNl
             ? "Neem contact op met The Only Constant. AI consultancy voor marketing en organisatie-innovatie."
             : "Get in touch with The Only Constant. AI consultancy for marketing and organization innovation.",
-        alternates: { canonical: `${SITE_URL}/${lang}/contact` },
+        alternates: buildAlternates(lang, "/contact"),
         openGraph: {
             title: "Contact - The Only Constant",
             description: isNl

@@ -11,6 +11,7 @@ import { ScanFooterCtaModule } from "@/app/_components/ai-opportunity-scan/modul
 import { Metadata } from "next";
 import { scanHeroVariants, scanContent } from "@/app/_content/ai-opportunity-scan";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 interface PageProps {
     params: Promise<{ lang: string }>;
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const { lang } = await params;
     const { meta } = scanContent[lang as Locale];
     return {
+        alternates: buildAlternates(lang, "/ai-opportunity-scan"),
         title: meta.title,
         description: meta.description,
     };

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { InnovatePage } from "@/app/_components/innovate/InnovatePage";
 import { StructuredData } from "@/components/seo/StructuredData";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         description: isNl
             ? "In 2 weken van idee naar werkend prototype. Levert beslisdata op, geen slideware. Voor organisaties die AI willen testen."
             : "From idea to working prototype in 2 weeks. Delivers decision data, not slideware. For organizations looking to test AI.",
-        alternates: { canonical: `${SITE_URL}/${lang}/innovate` },
+        alternates: buildAlternates(lang, "/innovate"),
         openGraph: {
             title: "AI Proof of Concept - The Only Constant",
             description: isNl

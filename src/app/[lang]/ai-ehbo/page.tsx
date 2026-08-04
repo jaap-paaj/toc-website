@@ -8,6 +8,7 @@ import { EhboProblemsModule } from "@/app/_components/ai-ehbo/modules/EhboProble
 import { EhboAboutModule } from "@/app/_components/ai-ehbo/modules/EhboAboutModule";
 import { ehboContent } from "@/app/_content/ai-ehbo";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: meta.title,
         description: meta.description,
-        alternates: { canonical: `${SITE_URL}/${lang}/ai-ehbo` },
+        alternates: buildAlternates(lang, "/ai-ehbo"),
         openGraph: {
             title: meta.title,
             description: meta.description,

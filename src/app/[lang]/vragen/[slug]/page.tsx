@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { VragenAnswerPage } from "@/app/_components/vragen/VragenAnswerPage";
 import { getAnswerPage, getAnswerSlugs, VRAGEN_BASE_PATH } from "@/app/_content/vragen";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: page.meta.title,
         description: page.meta.description,
-        alternates: { canonical: url },
+        alternates: buildAlternates(lang, `${VRAGEN_BASE_PATH}/${slug}`),
         openGraph: {
             title: page.meta.title,
             description: page.meta.description,

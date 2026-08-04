@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HomePage } from "@/app/_components/home/HomePage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
         description: isNl
             ? "AI consultancy voor retail, manufacturing en high-tech. Workshops, automatisering en proof of concepts die beslisdata opleveren."
             : "AI consultancy for retail, manufacturing and high-tech. Workshops, automation and proof of concepts that deliver decision data.",
-        alternates: { canonical: `${SITE_URL}/${lang}` },
+        alternates: buildAlternates(lang, ""),
         openGraph: {
             title: isNl ? "AI Consultancy Nederland - The Only Constant" : "AI Consultancy Netherlands - The Only Constant",
             description: isNl
