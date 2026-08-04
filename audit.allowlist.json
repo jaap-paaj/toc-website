@@ -35,16 +35,16 @@
         "status": "accepted"
     },
     {
-        "path": "src/app/_components/ai-ehbo/EhboChat.tsx",
+        "path": "src/app/_components/ai-ehbo/modules/EhboChatModule.tsx",
         "rule": "raw-min-height",
-        "rationale": "Chat textarea input constraints (min-h-[44px], max-h-[160px]) for auto-growing input. Form domain, not Card.",
+        "rationale": "Chat container viewport height (min-h-[500px]) to ensure usable chat area. Application domain, not Card.",
         "linkedCanon": "CARD_CANON.md",
         "status": "accepted"
     },
     {
-        "path": "src/app/_components/ai-ehbo/modules/EhboChatModule.tsx",
+        "path": "src/app/_components/ai-readiness-scan/modules/ReadinessChatModule.tsx",
         "rule": "raw-min-height",
-        "rationale": "Chat container viewport height (min-h-[500px]) to ensure usable chat area. Application domain, not Card.",
+        "rationale": "Chat container viewport height (min-h-[500px]) to ensure usable chat area. Application domain, not Card. Same exception as EhboChatModule; both render the shared ToolChat.",
         "linkedCanon": "CARD_CANON.md",
         "status": "accepted"
     }

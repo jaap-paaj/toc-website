@@ -1,7 +1,8 @@
 import { HomeModule } from "@/app/_components/home/HomeModule";
 import { Breadcrumb, type Crumb } from "@/components/ui/Breadcrumb";
 import { CategoryPill } from "@/components/ui/CategoryPill";
-import { Heading, Text } from "@/design-system/components/Typography";
+import { Heading } from "@/design-system/components/Typography";
+import { StandfirstSection } from "@/components/sections/StandfirstSection";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { vragenContent, VRAGEN_BASE_PATH, type AnswerPage } from "@/app/_content/vragen";
@@ -45,13 +46,7 @@ export function AnswerHeroModule({ lang, page }: AnswerHeroModuleProps) {
                             {page.question}
                         </Heading>
                     </div>
-                    {/* Standfirst: same brand rule the pillar pages use, so the
-                        lead reads as a lead and not as weaker body copy. */}
-                    <div className="border-l-4 border-primary pl-6">
-                        <Text size="lg" className="text-muted-foreground">
-                            {page.lead}
-                        </Text>
-                    </div>
+                    <StandfirstSection text={page.lead} />
                 </div>
             </div>
         </HomeModule>
