@@ -21,6 +21,11 @@ export interface FooterCtaSectionProps {
     };
     panelTitle?: string;
     panelBody: string;
+    /** Quiet link on the copyright line, for pages that need a crawl path. */
+    footerLink?: {
+        label: string;
+        href: string;
+    };
     className?: string; // Standard pattern
 }
 
@@ -30,6 +35,7 @@ export function FooterCtaSection({
     secondaryAction,
     panelTitle,
     panelBody,
+    footerLink,
     className
 }: FooterCtaSectionProps) {
     const lang = useLocale();
@@ -95,8 +101,32 @@ export function FooterCtaSection({
                                         </Button>
                                     )}
                                 </div>
-                                <div className={cn(typography.variants.body.sm, "opacity-50")}>
-                                    © The Only Constant {new Date().getFullYear()}
+                                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                                    <span className={cn(typography.variants.body.sm, "opacity-50")}>
+                                        © The Only Constant {new Date().getFullYear()}
+                                    </span>
+                                    {footerLink && (
+                                        <>
+                                            <span
+                                                className={cn(
+                                                    typography.variants.body.sm,
+                                                    "opacity-30",
+                                                )}
+                                                aria-hidden="true"
+                                            >
+                                                ·
+                                            </span>
+                                            <a
+                                                href={localizeHref(footerLink.href, lang)}
+                                                className={cn(
+                                                    typography.variants.body.sm,
+                                                    "underline underline-offset-4 decoration-current/40 hover:decoration-current transition-colors",
+                                                )}
+                                            >
+                                                {footerLink.label}
+                                            </a>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>
