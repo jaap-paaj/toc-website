@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { Loader2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
 import { submitToolContact } from "@/lib/tools/api";
@@ -104,9 +104,12 @@ export function ToolContactForm({
                     disabled={status === "sending" || !form.email}
                     className={cn(
                         typography.variants.ui.button.sm,
-                        "rounded-surface bg-foreground text-background px-4 py-2 hover:bg-foreground/80 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
+                        "inline-flex items-center justify-center gap-2 rounded-surface bg-foreground text-background px-4 py-2 hover:bg-foreground/80 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
                     )}
                 >
+                    {status === "sending" && (
+                        <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />
+                    )}
                     {status === "sending" ? content.sending : content.submit}
                 </button>
             </form>
@@ -132,6 +135,11 @@ export function ToolContactForm({
                     )}
                 />
             </div>
+            {status === "sending" && (
+                <p className={cn(typography.variants.body.sm, "text-muted-foreground")}>
+                    {content.sendingHint}
+                </p>
+            )}
             {status === "error" && (
                 <p className={cn(typography.variants.body.sm, "text-destructive")}>
                     {content.error}
