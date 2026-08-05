@@ -97,6 +97,7 @@ const en = {
             companyPlaceholder: "Company (optional)",
             submit: "Send the plan of action",
             sending: "Sending...",
+            sendingHint: "This takes a moment. We are putting your plan of action together now.",
             success:
                 "Your plan of action has been sent. Good luck the coming weeks, and let us know if you have any questions.",
             error: "Something went wrong. Try again or email info@theonlyconstant.nl directly.",
@@ -184,6 +185,7 @@ const nl: typeof en = {
             companyPlaceholder: "Bedrijf (optioneel)",
             submit: "Stuur het plan van aanpak",
             sending: "Versturen...",
+            sendingHint: "Dit duurt even. We stellen je plan van aanpak nu samen.",
             success:
                 "Je plan van aanpak is verstuurd. Succes de komende weken, en laat het weten als je vragen hebt.",
             error: "Er ging iets mis. Probeer het opnieuw of mail direct naar info@theonlyconstant.nl.",

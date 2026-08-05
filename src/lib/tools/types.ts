@@ -64,6 +64,12 @@ export interface ToolContactContent {
     companyPlaceholder: string;
     submit: string;
     sending: string;
+    /**
+     * Shown while the request is in flight. The backend composes the document
+     * before it answers, so this can take tens of seconds, and a disabled
+     * button alone does not tell you whether it is working or stuck.
+     */
+    sendingHint: string;
     success: string;
     error: string;
     dismiss: string;
