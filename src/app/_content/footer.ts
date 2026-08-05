@@ -9,6 +9,19 @@ import { contactContent } from "@/app/_content/contact";
  * things on the site, which is the opposite of what they should be.
  */
 
+/**
+ * Interim: one link to the answer-page index, on the copyright line of the CTA
+ * band. Satisfies the crawl path the pages need until the footer redesign
+ * lands, which will absorb it.
+ *
+ * The anchor text is the question phrasing on purpose: that is what an engine
+ * matches on.
+ */
+export const footerIndexLink: Record<Locale, { label: string; href: string }> = {
+    en: { label: "Frequently asked questions about AI", href: "/vragen" },
+    nl: { label: "Veelgestelde vragen over AI", href: "/vragen" },
+};
+
 const en = {
     columns: [
         {
