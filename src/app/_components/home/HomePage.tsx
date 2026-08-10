@@ -20,7 +20,9 @@ export function HomePage({ lang }: HomePageProps) {
             <HomeClientsModule />
             <HomeInsightsModule lang={lang} />
             <HomeAboutModule />
-            <SiteFooterModule />
+            {/* The about module above is dark too, so there is no edge to split
+                the space: one step, not two. */}
+            <SiteFooterModule spaceAbove="none" />
         </PageLayout>
     );
 }
