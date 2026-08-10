@@ -58,7 +58,7 @@ Components must request a role, not a font-size.
 
 ### 3.2 Implementation Contract
 *   Single Source of Truth: `src/design-system/tokens/typography.ts`
-*   Theme values (custom leadings, shadows, radii): the `@theme` block in `src/app/globals.css`. **Not** `tailwind.config.ts` — Tailwind v4 does not load it (no `@config` directive); values defined only there silently do not exist.
+*   Theme values (custom leadings, shadows, radii): the `@theme` block in `src/app/globals.css`. **Never** a `tailwind.config.*` file — Tailwind v4 only loads one via an explicit `@config` directive, which this project deliberately does not use. The legacy config has been deleted; do not reintroduce one, its values would silently not exist.
 *   **Rule**: No raw typography scale utilities in modules.
     *   Forbidden: `text-{size}`, `font-{weight}`, `leading-*`, `tracking-*`, `uppercase`, `lowercase`, `capitalize`.
     *   Allowed: `text-{color}` and `text-{alignment}` (covered by other audits).

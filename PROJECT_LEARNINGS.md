@@ -85,3 +85,12 @@ Waarom kon dit blijven liggen:
    en screenshots-tegen-oude-baselines bewijzen dit soort dingen niet.
 3. `test:visual:update` nooit draaien vóór de wijziging is beoordeeld:
    baselines accepteren klakkeloos wat de pagina op dat moment doet.
+
+**Naschrift — het hele bestand was dood.** Na de leading-fix bleek de rest van
+`tailwind.config.ts` (colors, boxShadow, fontFamily) óók volledig gedupliceerd
+in het `@theme`-blok van `globals.css`. Geverifieerd: builds mét en zónder het
+bestand leveren byte-identieke CSS, en niets verwijst ernaar. Het bestand is
+verwijderd, juist omdat het gevaarlijk was zolang het bestond: wie er een
+kleur in aanpast ziet niets veranderen en gaat zoeken — dezelfde bug als de
+leadings, maar dan voor kleuren en schaduwen. In Tailwind v4 zonder
+`@config`-directive is `@theme` in `globals.css` de enige themabron.
