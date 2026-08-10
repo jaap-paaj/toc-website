@@ -18,7 +18,7 @@ AI is about to do the same thing. Faster.
 
 The story always sounds the same. "With AI, we save twenty percent of the time we spend on reporting." The steering committee applauds. The team implements. And three months later, it turns out that twenty percent has been filled with more reporting. Or with extra checks on the AI output. Or with meetings to discuss the AI results.
 
-The saving is real. The improvement is not. It is the same trap as with [AI automation](/nl/blog/ai-automatisering): faster is not the same as better.
+The saving is real. The improvement is not. It is the same trap as with [AI automation](/en/blog/ai-automation): faster is not the same as better.
 
 This is the pattern we encounter in almost every organisation that deploys AI for efficiency. The focus is on speed. On throughput. On cost per unit. Those metrics go down. Everyone is pleased. But nobody asks the question that actually matters.
 
@@ -42,7 +42,7 @@ Three sentences that help.
 
 "Your role is changing. The parts that require judgement and creativity are becoming more important." This is not a reassuring phrase. It is an honest description of what happens when AI takes over routine work. The human becomes the evaluator, quality guardian, decision maker. That is a promotion, provided it is treated as one.
 
-"I want to make sure you keep building those skills. Do this task manually for the coming period." This is the hardest sentence to say, because it sounds like a step backwards. It is. A deliberate, temporary step back to ensure the foundations remain solid. Without those foundations, [the Junior Gap](/nl/blog/junior-gap) emerges: editors who have never learned to write.
+"I want to make sure you keep building those skills. Do this task manually for the coming period." This is the hardest sentence to say, because it sounds like a step backwards. It is. A deliberate, temporary step back to ensure the foundations remain solid. Without those foundations, [the Junior Gap](/en/blog/junior-gap) emerges: editors who have never learned to write.
 
 "I don't just care whether the tools save time. I care whether the work that remains feels worthwhile." When a manager asks this and actually listens to the answer, something shifts in the team. People feel seen. That sounds soft. It is the foundation of every successful change.
 
@@ -50,7 +50,7 @@ Three sentences that help.
 
 Always measure in pairs. Speed alongside quality. Efficiency alongside meaning. Cost savings alongside employee satisfaction. One-sided metrics lead to one-sided decisions.
 
-And add a question that most dashboards miss: if we were about to switch off the AI tool, would users object? If the answer is no, you have built something efficient but irrelevant. If the answer is yes, you are on the right track. Also watch for [AI drift](/nl/blog/ai-drift): if nobody is looking critically at the output anymore, quality declines without anyone noticing.
+And add a question that most dashboards miss: if we were about to switch off the AI tool, would users object? If the answer is no, you have built something efficient but irrelevant. If the answer is yes, you are on the right track. Also watch for [AI drift](/en/blog/ai-drift): if nobody is looking critically at the output anymore, quality declines without anyone noticing.
 
 Keynes was right about the technology. He was wrong about the outcome. The technology did exactly what he predicted: it made it possible to work less. But the choice to actually do so was left to the people. And the people chose more.
 
@@ -60,7 +60,7 @@ That is a question you can only answer by asking it.
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to discover together where AI genuinely improves the work. Or start an [AI Automation trajectory](/nl/automate) that measures not just speed, but meaning.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to discover together where AI genuinely improves the work. Or start an [AI Automation trajectory](/en/automate) that measures not just speed, but meaning.
 
 ---
 

@@ -37,25 +37,25 @@ The AI Act is legislation. But the impact is not in the fines. The impact is in 
 
 Organisations that can explain how their AI works, why certain choices were made, and where the limits are, those organisations build trust with customers, employees, and partners. Organisations that cannot, build risk.
 
-The interesting shift: the AI Act forces conversations that organisations should be having anyway. Who is responsible for the output? Where does the system's autonomy end? How do you know it is still working correctly? These are not compliance questions. They are [governance questions](/nl/blog/ai-governance) that make every AI project better.
+The interesting shift: the AI Act forces conversations that organisations should be having anyway. Who is responsible for the output? Where does the system's autonomy end? How do you know it is still working correctly? These are not compliance questions. They are [governance questions](/en/blog/ai-governance) that make every AI project better.
 
 ## What you can do now
 
 Four steps you can take this month.
 
-**Inventory.** Which AI systems are running in your organisation? Including the unofficial ones, the [Shadow AI](/nl/blog/shadow-ai) that employees use on their own initiative. You cannot be compliant with systems whose existence you do not know about.
+**Inventory.** Which AI systems are running in your organisation? Including the unofficial ones, the [Shadow AI](/en/blog/shadow-ai) that employees use on their own initiative. You cannot be compliant with systems whose existence you do not know about.
 
 **Classify.** For each system: high risk (decisions that directly affect people) or limited risk (most business applications)? The classification determines which requirements apply.
 
 **Document.** For each system, a brief description: what it does, what data it uses, who is responsible, and where the limits are. Not a thirty-page report. One page per system is enough.
 
-**Build it in.** The most effective compliance is compliance that lives inside the product, not pasted on top. Every [automation you build](/nl/blog/ai-automatisering) has three layers: what it does, where it stops, and why it does what it does. If you include that from the start, compliance becomes a by-product of good design.
+**Build it in.** The most effective compliance is compliance that lives inside the product, not pasted on top. Every [automation you build](/en/blog/ai-automation) has three layers: what it does, where it stops, and why it does what it does. If you include that from the start, compliance becomes a by-product of good design.
 
 Most organisations wait until enforcement begins and then handle it under pressure. The smart ones handle it now, as part of how they design AI. It costs less, it produces better systems, and it builds the trust you will need when the regulator calls.
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) where compliance and strategy come together. Or kick off an [AI Automation Programme](/nl/automate) with built-in governance that you can explain to your regulator.
+Ready to get started? Begin with an [AI Workshop](/en/educate) where compliance and strategy come together. Or kick off an [AI Automation Programme](/en/automate) with built-in governance that you can explain to your regulator.
 
 ---
 

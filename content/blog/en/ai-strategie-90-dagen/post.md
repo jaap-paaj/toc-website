@@ -21,7 +21,7 @@ Most AI strategies look different. They begin with broad research. They result i
 
 Six months later, half the roadmap is outdated. The technology has changed. Priorities have shifted. The team that wrote the roadmap is working on other things. The document is in a drawer.
 
-The fundamental problem: an AI roadmap is a plan for a world that no longer exists by the time you finish planning. Technology moves too fast. The insights you need to make good decisions only come through building. A plan based on theory is a plan based on assumptions. The question is not whether your organisation is [AI-ready](/nl/blog/ai-readiness). The question is whether you are willing to start.
+The fundamental problem: an AI roadmap is a plan for a world that no longer exists by the time you finish planning. Technology moves too fast. The insights you need to make good decisions only come through building. A plan based on theory is a plan based on assumptions. The question is not whether your organisation is [AI-ready](/en/blog/ai-readiness). The question is whether you are willing to start.
 
 ## Ninety days
 
@@ -29,11 +29,11 @@ What works: short, defined cycles. Ninety days from strategic question to decisi
 
 **Week one: choose focus.** Pick a domain, a team, a process. The biggest pitfall is starting everywhere at once. Every additional scope item halves your learning capacity. Write the question on one page. If it does not fit on one page, the scope is too broad.
 
-**Weeks two and three: discover.** Go and look at where the work is actually being done. [Map the friction](/nl/blog/follow-the-friction). Find out where people are already unofficially using AI. Talk to the sceptics, they know exactly where things get stuck. At the end of this phase you know where the pain is greatest and which piece of work is most suitable for an experiment.
+**Weeks two and three: discover.** Go and look at where the work is actually being done. [Map the friction](/en/blog/follow-the-friction). Find out where people are already unofficially using AI. Talk to the sceptics, they know exactly where things get stuck. At the end of this phase you know where the pain is greatest and which piece of work is most suitable for an experiment.
 
 **Weeks four and five: design.** What will the AI solution look like? Who does what, human and machine? What will you measure? How will you know whether it works? Define the success criteria before you start building. And run the litmus test: if a human expert performed this task perfectly, would users care? If the answer is no, do not build it.
 
-**Weeks six through ten: build and test.** The smallest slice that creates value. Real people, real work, real data. Measure in pairs: speed alongside quality. Gather evidence. At the end of the cycle, force a decision: scale, adjust, change direction, or stop. Only scale when the evidence is there. That is the principle of [proof before scale](/nl/blog/proof-before-scale).
+**Weeks six through ten: build and test.** The smallest slice that creates value. Real people, real work, real data. Measure in pairs: speed alongside quality. Gather evidence. At the end of the cycle, force a decision: scale, adjust, change direction, or stop. Only scale when the evidence is there. That is the principle of [proof before scale](/en/blog/proof-before-scale).
 
 ## What you have at the end
 
@@ -55,7 +55,7 @@ Ninety days is enough to land. Or to discover that you need to change course. Ei
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to choose focus. Or start an [Innovation Sprint](/nl/innovate) to work through the first cycle in two weeks.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to choose focus. Or start an [Innovation Sprint](/en/innovate) to work through the first cycle in two weeks.
 
 ---
 

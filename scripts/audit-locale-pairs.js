@@ -10,11 +10,12 @@
  * audit puts the guarantee back. Without it, the first unpaired post ships an
  * hreflang pointing at a 404 and nothing says a word.
  *
- * Four rules:
+ * Five rules:
  *   1. Every key exists in both locales.
  *   2. No two posts share a slug within one locale.
  *   3. No slug collides with a retired URL that now redirects.
  *   4. Slugs are URL-safe.
+ *   5. No post links into the other language.
  */
 const fs = require('fs');
 const path = require('path');
@@ -162,6 +163,29 @@ for (const locale of LOCALES) {
                     'SHAPE',
                     `content/blog/${locale}/${post.key}/ uses the slug "${slug}". ` +
                         `Lowercase letters, digits and single hyphens only — no accents, spaces or capitals.`
+                );
+            }
+        }
+    }
+
+    // Rule 5 — no post links into the other language. Markdown links are
+    // rendered verbatim, so a /nl/ link inside an English post sends the reader
+    // — and the crawler — onto the Dutch site.
+    const others = LOCALES.filter((l) => l !== locale);
+    for (const post of posts) {
+        const body = fs.readFileSync(
+            path.join(BLOG_DIR, locale, post.key, 'post.md'),
+            'utf-8'
+        );
+        for (const other of others) {
+            for (const [, href] of body.matchAll(
+                new RegExp(`\\]\\((/${other}/[^)]*)\\)`, 'g')
+            )) {
+                report(
+                    'CROSS_LOCALE_LINK',
+                    `content/blog/${locale}/${post.key}/post.md links to ${href}. ` +
+                        `A ${locale.toUpperCase()} page must link to ${locale.toUpperCase()} pages — ` +
+                        `use the ${locale.toUpperCase()} equivalent.`
                 );
             }
         }

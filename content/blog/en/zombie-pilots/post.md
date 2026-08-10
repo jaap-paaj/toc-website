@@ -32,19 +32,19 @@ Three mechanisms keep zombies alive.
 
 **No owner.** Most pilots are started by a project team. When the project team is done, there is nobody to say: this is now my responsibility. Without an owner, there is nobody to make the hard decision.
 
-**Wrong metrics.** The pilot measures whether the technology works. That is the wrong evidence. The question that matters: are real people using this voluntarily during their normal working day? If you threaten to switch it off and nobody protests, you have your answer. It also helps to apply the [Meaning Test](/nl/blog/meaning-test): has the work actually improved, or just gotten faster?
+**Wrong metrics.** The pilot measures whether the technology works. That is the wrong evidence. The question that matters: are real people using this voluntarily during their normal working day? If you threaten to switch it off and nobody protests, you have your answer. It also helps to apply the [Meaning Test](/en/blog/meaning-test): has the work actually improved, or just gotten faster?
 
 **Stopping feels like failure.** In most organisations, it is easier to let a project drift than to explicitly stop it. Stopping requires someone to say: this was not worth the investment. That is politically uncomfortable. Drifting just costs money.
 
 ## What to do about it
 
-The solution is a firm agreement before you start. Every AI pilot gets a fixed end date and four possible outcomes from the outset: scale, adjust, change direction, or stop. All four are good outcomes. The only bad outcome is taking no decision. A well-structured [AI proof of concept](/nl/blog/ai-proof-of-concept) forces that decision within two weeks.
+The solution is a firm agreement before you start. Every AI pilot gets a fixed end date and four possible outcomes from the outset: scale, adjust, change direction, or stop. All four are good outcomes. The only bad outcome is taking no decision. A well-structured [AI proof of concept](/en/blog/ai-proof-of-concept) forces that decision within two weeks.
 
 Two weeks is enough for a first experiment. At the end of those two weeks, you force a choice. With data. How many people used it? Has quality gone up? Do they complain when you threaten to switch it off?
 
 And if the answer is "stop," celebrate that. Document what you learned. A stopped experiment that produces insights is more valuable than a drifting pilot that proves nothing.
 
-It is about discipline. The discipline to decide based on evidence. The discipline to stop when the evidence is not there. The discipline to refuse "we're keeping an eye on it" as a strategy. [Proof before scale](/nl/blog/proof-before-scale): prove the value before you increase the investment.
+It is about discipline. The discipline to decide based on evidence. The discipline to stop when the evidence is not there. The discipline to refuse "we're keeping an eye on it" as a strategy. [Proof before scale](/en/blog/proof-before-scale): prove the value before you increase the investment.
 
 Salyut 1 was eventually replaced by Salyut 4, 6, and 7. Each station built on what the previous one had learned. The Soviet Union had done something crucial right: they were willing to let it go in order to build something better.
 
@@ -52,7 +52,7 @@ How many AI pilots in your organisation would be better served by an honourable 
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team the foundations. Or kick off an [AI Automation Programme](/nl/automate) to discover where AI genuinely adds value in your organisation.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to give your team the foundations. Or kick off an [AI Automation Programme](/en/automate) to discover where AI genuinely adds value in your organisation.
 
 ---
 

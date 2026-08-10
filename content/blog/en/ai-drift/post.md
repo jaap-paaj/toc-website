@@ -26,7 +26,7 @@ AI drift comes in five forms. All of them are invisible until they become a prob
 
 **Model drift.** The vendor updates the model. A routine update, no announcement. But the prompts that worked perfectly last month now produce subtly different results. The tone shifts. The structure changes. The system still does something, just not quite what it used to.
 
-**Behavioural drift.** The most dangerous form. Users get used to the AI output. They stop checking. They hit send without reading. The system becomes a black box producing output that nobody critically reviews anymore. We call this sleepwalking. Run [the Meaning Test](/nl/blog/meaning-test) regularly to check whether the team is still engaged.
+**Behavioural drift.** The most dangerous form. Users get used to the AI output. They stop checking. They hit send without reading. The system becomes a black box producing output that nobody critically reviews anymore. We call this sleepwalking. Run [the Meaning Test](/en/blog/meaning-test) regularly to check whether the team is still engaged.
 
 **Quality drift.** Output slowly gets worse. One percent per week. Imperceptible day to day. But after three months quality has dropped significantly. Without a baseline measurement there is nothing to compare against.
 
@@ -50,15 +50,15 @@ The fundamental problem with drift is ownership. Who is responsible?
 
 The clear division: the tech side owns the system (availability, security, costs, model health). The business side owns the content (output quality, process validity, strategic value, human impact). If the AI gives bad advice, that is a business problem. If costs triple, that is a tech problem.
 
-Without that division, everything falls through the cracks. The tech team thinks the business is monitoring quality. The business thinks the tech team is watching things. Nobody is actually looking. This is where [AI governance](/nl/blog/ai-governance) makes the difference: clear agreements about who monitors what, on a fixed rhythm.
+Without that division, everything falls through the cracks. The tech team thinks the business is monitoring quality. The business thinks the tech team is watching things. Nobody is actually looking. This is where [AI governance](/en/blog/ai-governance) makes the difference: clear agreements about who monitors what, on a fixed rhythm.
 
 BP had procedures. BP had inspections. BP had people responsible. What BP did not have was someone looking every day at whether the system was still doing what it was supposed to do. The procedures were followed. The system drifted.
 
-With AI the lesson is the same. Implementation is the easy part. The hard part is keeping watch. Every week, every month, every quarter. With fresh eyes. With the willingness to say: this is no longer good enough. And when the evidence is no longer there, do not [scale further](/nl/blog/proof-before-scale), go back to the experiment.
+With AI the lesson is the same. Implementation is the easy part. The hard part is keeping watch. Every week, every month, every quarter. With fresh eyes. With the willingness to say: this is no longer good enough. And when the evidence is no longer there, do not [scale further](/en/blog/proof-before-scale), go back to the experiment.
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to make your team aware of drift. Or start an [AI Automation Track](/nl/automate) with built-in monitoring and quality controls.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to make your team aware of drift. Or start an [AI Automation Track](/en/automate) with built-in monitoring and quality controls.
 
 ---
 

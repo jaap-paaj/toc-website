@@ -18,7 +18,7 @@ That distinction determines whether an AI proof of concept delivers something or
 
 Every organisation of any size has a few. AI pilots that were once launched with enthusiasm, produced an impressive demo, and are now running in a corner somewhere. Three people use it. The steering group asks every quarter "how's the AI going?" and gets a vaguely positive answer.
 
-Too alive to bury, too weak to scale. We call them [Zombie Pilots](/nl/blog/zombie-pilots).
+Too alive to bury, too weak to scale. We call them [Zombie Pilots](/en/blog/zombie-pilots).
 
 It almost always starts the same way. Someone has a good idea. A pilot gets launched. The pilot proves the technology works. And then it stops. Because "the technology works" is the wrong proof.
 
@@ -40,11 +40,11 @@ Three things that make the difference.
 
 Two weeks. A defined process. A build team that puts something working together quickly. And real users getting their hands on it from day three.
 
-At the end of those two weeks, there is a working solution. Not a report, not a presentation, something that runs. Plus the data to decide: do we continue, do we adjust, or do we stop? Only once that evidence exists is [scaling justified](/nl/blog/proof-before-scale).
+At the end of those two weeks, there is a working solution. Not a report, not a presentation, something that runs. Plus the data to decide: do we continue, do we adjust, or do we stop? Only once that evidence exists is [scaling justified](/en/blog/proof-before-scale).
 
 The investment for such an engagement is around €15,000. That sounds like a lot for two weeks. But compare it with the alternative: six months of piloting that yields nothing, followed by the conclusion that you need to start again. The most expensive choice in AI is making no choice at all.
 
-And there is a second layer. A good proof of concept tests the technology and the organisation at the same time. How does the team respond? Where is the resistance? Which assumptions about the process held and which did not? Those insights are often more valuable than the prototype itself. And remember that even a successful system needs maintenance: without monitoring, [AI drift](/nl/blog/ai-drift) sets in, silent degradation that nobody notices until it is too late.
+And there is a second layer. A good proof of concept tests the technology and the organisation at the same time. How does the team respond? Where is the resistance? Which assumptions about the process held and which did not? Those insights are often more valuable than the prototype itself. And remember that even a successful system needs maintenance: without monitoring, [AI drift](/en/blog/ai-drift) sets in, silent degradation that nobody notices until it is too late.
 
 Langley built his aircraft out of prestige. The Wrights built out of curiosity. They crashed too, dozens of times. But every crash delivered information. And with that information they built the next model.
 
@@ -52,7 +52,7 @@ An AI proof of concept works the same way. You build to learn. The crash is part
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team the foundations. Or start an [Innovation Sprint](/nl/innovate) to test in two weeks where AI genuinely creates value for your organisation.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to give your team the foundations. Or start an [Innovation Sprint](/en/innovate) to test in two weeks where AI genuinely creates value for your organisation.
 
 ---
 

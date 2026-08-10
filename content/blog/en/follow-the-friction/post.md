@@ -22,7 +22,7 @@ AI strategy is almost always devised in a meeting room. A team of managers brain
 
 The problem: nobody has gone to look.
 
-The people who do the work are not in that meeting room. The processes that cause daily frustration are not in the process handbook. The workarounds employees have invented to make the system bearable are invisible to management. Sometimes they are already using AI tools on their own initiative just to keep the work manageable. That phenomenon, [Shadow AI](/nl/blog/shadow-ai), is one of the most reliable signals that friction exists.
+The people who do the work are not in that meeting room. The processes that cause daily frustration are not in the process handbook. The workarounds employees have invented to make the system bearable are invisible to management. Sometimes they are already using AI tools on their own initiative just to keep the work manageable. That phenomenon, [Shadow AI](/en/blog/shadow-ai), is one of the most reliable signals that friction exists.
 
 And so the AI strategy ends up targeting the wrong things. Processes that look important on paper. Problems that managers see but employees do not recognise. Solutions to symptoms while the cause sits somewhere else entirely.
 
@@ -52,7 +52,7 @@ If the answer is "old," don't automate it. Retire it.
 
 The step from watching to doing is smaller than you think. Choose the friction that comes up most often. The smallest piece with the most pain. Build something for it in two weeks. Test it with the people you observed. They are your best judges, they feel immediately whether it makes their work better.
 
-This is how the best [AI automation projects](/nl/blog/ai-automatisering) begin. Not with a roadmap, a business case or a vendor selection. With twenty minutes of watching. With the willingness to be surprised by what you see.
+This is how the best [AI automation projects](/en/blog/ai-automation) begin. Not with a roadmap, a business case or a vendor selection. With twenty minutes of watching. With the willingness to be surprised by what you see.
 
 Ohno sometimes stood in his chalk circle for six hours. You do not need to go that far. Twenty minutes is enough to see what a month of meetings cannot produce.
 
@@ -60,7 +60,7 @@ The best AI strategy starts by walking out the door and going to see how the wor
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) where your team maps out the friction together. Or start an [AI Automation trajectory](/nl/automate) to tackle the most painful processes.
+Ready to get started? Begin with an [AI Workshop](/en/educate) where your team maps out the friction together. Or start an [AI Automation trajectory](/en/automate) to tackle the most painful processes.
 
 ---
 

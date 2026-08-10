@@ -23,7 +23,7 @@ A retailer we spoke with had "automated its returns process with AI." That sound
 
 This is the pattern we encounter in almost every organisation. Someone says "we're going to automate with AI" and the project starts with the existing process diagram. Step by step it gets translated into a digital version. Same route, same stops, same detours. Just with an AI label on it.
 
-There's a name for this: the Cow Path Trap. You pave the path instead of designing a road. The result is a sealed route that goes nowhere, just faster now. This is [Solutioneering](/nl/blog/solutioneering) in its purest form: starting with what already exists instead of what should exist.
+There's a name for this: the Cow Path Trap. You pave the path instead of designing a road. The result is a sealed route that goes nowhere, just faster now. This is [Solutioneering](/en/blog/solutioneering) in its purest form: starting with what already exists instead of what should exist.
 
 The real problem runs deeper. Many of those processes exist not because they make sense, but because they were once a workaround for a constraint that no longer applies. Three approval layers because there was no digital overview back then. Manual data entry because two systems couldn't talk to each other. Copy-pasting between spreadsheets because nobody ever took the time to set things up differently.
 
@@ -39,7 +39,7 @@ Ask: "What's frustrating about this?" Ask: "Why do you have to enter this into t
 
 The answers are almost always surprising. People are so used to the friction that they no longer see it. They navigate around it the way you avoid a pothole in the road you cycle past every day. You stop noticing it. It's just there.
 
-That friction is the starting point. We call this principle [Follow the Friction](/nl/blog/follow-the-friction): the best AI opportunities become visible by looking at where work gets stuck.
+That friction is the starting point. We call this principle [Follow the Friction](/en/blog/follow-the-friction): the best AI opportunities become visible by looking at where work gets stuck.
 
 ## Start small, learn fast
 
@@ -51,7 +51,7 @@ Then measure. Not just speed. Speed without quality is a dangerous metric. Alway
 
 There is a simple litmus test. Threaten to switch the tool off. If people complain, you've built something valuable. If nobody notices, it was a solution to a problem that didn't exist.
 
-That sounds harsh. But it protects you against the most common AI problem in organisations: pilots that get stuck. Too alive to bury, too weak to scale. We call them [Zombie Pilots](/nl/blog/zombie-pilots). They linger in a twilight zone of "we're keeping an eye on it." That is not a strategy, that is procrastination.
+That sounds harsh. But it protects you against the most common AI problem in organisations: pilots that get stuck. Too alive to bury, too weak to scale. We call them [Zombie Pilots](/en/blog/zombie-pilots). They linger in a twilight zone of "we're keeping an eye on it." That is not a strategy, that is procrastination.
 
 ## What's left when it works
 
@@ -67,7 +67,7 @@ The right question for AI automation: what would this process look like if we we
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team the foundations. Or start an [AI Automation Track](/nl/automate) to discover where AI genuinely adds value in your organisation.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to give your team the foundations. Or start an [AI Automation Track](/en/automate) to discover where AI genuinely adds value in your organisation.
 
 ---
 

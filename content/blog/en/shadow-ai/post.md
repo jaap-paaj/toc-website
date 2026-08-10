@@ -32,13 +32,13 @@ The smartest approach: amnesty. No punishment for unofficial AI use. Bring it in
 
 The answers are revealing. "I use ChatGPT for customer emails because our template system doesn't work." "I have Claude summarise my meetings because otherwise I spend two hours on minutes." "I generate first drafts of proposals because the quoting process has six steps that nobody understands."
 
-Every unofficial AI tool is a pointer to a broken process. And those pointers are more reliable than any consultancy report. People vote with their feet. Or in this case: with their prompts. It is [Follow the Friction](/nl/blog/follow-the-friction) in its purest form, the friction finds itself.
+Every unofficial AI tool is a pointer to a broken process. And those pointers are more reliable than any consultancy report. People vote with their feet. Or in this case: with their prompts. It is [Follow the Friction](/en/blog/follow-the-friction) in its purest form, the friction finds itself.
 
 ## What to do with it
 
 Three steps.
 
-**Inventory.** Ask each team: which AI tools are you using, for what, and what value does it deliver? Map it out. Not to audit, but to understand. The places with the most shadow usage are your best starting points. An [AI workshop](/nl/blog/ai-workshop-bedrijven) is an effective way to have this conversation in a structured setting.
+**Inventory.** Ask each team: which AI tools are you using, for what, and what value does it deliver? Map it out. Not to audit, but to understand. The places with the most shadow usage are your best starting points. An [AI workshop](/en/blog/ai-workshops-for-business) is an effective way to have this conversation in a structured setting.
 
 **Professionalise.** The tools that deliver value, make them official. With the right security, the right data agreements, the right boundaries. That shifts you from unmanaged sprawl to focused adoption without losing the energy behind it.
 
@@ -48,11 +48,11 @@ Three steps.
 
 Organisations that treat Shadow AI as a threat lose the information it contains. Organisations that treat it as radar get a free diagnosis of where the value is.
 
-Abraham Wald saved aircraft by looking at what was invisible. The best AI strategy begins in the same place: with the work your team is already doing when nobody is watching. The question then is whether your organisation is [ready to act on it](/nl/blog/ai-readiness), or whether something else needs to happen first.
+Abraham Wald saved aircraft by looking at what was invisible. The best AI strategy begins in the same place: with the work your team is already doing when nobody is watching. The question then is whether your organisation is [ready to act on it](/en/blog/ai-readiness), or whether something else needs to happen first.
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to map Shadow AI across your organisation. Or start an [AI Automation trajectory](/nl/automate) to professionalise the most valuable use cases.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to map Shadow AI across your organisation. Or start an [AI Automation trajectory](/en/automate) to professionalise the most valuable use cases.
 
 ---
 

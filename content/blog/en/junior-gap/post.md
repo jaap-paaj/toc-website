@@ -32,7 +32,7 @@ The effect is not visible in the short term. The output looks good. The KPIs imp
 
 Over the longer term, something erodes. The critical eye needed to evaluate AI output is built on experience with the work itself. If you have never written a customer email, how do you know whether the AI version is good? If you have never cleaned a dataset, how do you spot an error in the AI analysis?
 
-A generation of employees emerges who can operate the dashboard but do not understand the machine. That works fine until it does not. And with AI, it always goes wrong eventually. Especially when [AI drift](/nl/blog/ai-drift) occurs and output quietly degrades without anyone noticing the difference.
+A generation of employees emerges who can operate the dashboard but do not understand the machine. That works fine until it does not. And with AI, it always goes wrong eventually. Especially when [AI drift](/en/blog/ai-drift) occurs and output quietly degrades without anyone noticing the difference.
 
 ## What you can do about it
 
@@ -42,11 +42,11 @@ The answer lies in a deliberate choice: which work should a junior still do manu
 
 **Make AI a tutor, not a replacement.** The most powerful use of AI for juniors is as a sparring partner. Let the junior do the work. Let AI give feedback, suggest alternatives, flag mistakes. That builds capability with AI as an accelerator of the learning process, rather than a detour around it.
 
-**Ask the meaning question.** Check with the team each quarter: is the work that remains after AI involvement more or less meaningful than before? This is what we call [the Meaning Test](/nl/blog/meaning-test). Meaningful means: it requires judgement, it builds expertise, it gives a sense of contributing to something. If AI saves ten hours a week and those ten hours fill up with more administration, you have not improved the work. You have just moved it.
+**Ask the meaning question.** Check with the team each quarter: is the work that remains after AI involvement more or less meaningful than before? This is what we call [the Meaning Test](/en/blog/meaning-test). Meaningful means: it requires judgement, it builds expertise, it gives a sense of contributing to something. If AI saves ten hours a week and those ten hours fill up with more administration, you have not improved the work. You have just moved it.
 
 ## The bigger picture
 
-Organisations that handle this well think about AI as a people question. The technology is the easy part. The hard question is: how do we make sure our people get better, not just faster? A good [AI workshop](/nl/blog/ai-workshop-bedrijven) starts exactly there, with the people, not the technology.
+Organisations that handle this well think about AI as a people question. The technology is the easy part. The hard question is: how do we make sure our people get better, not just faster? A good [AI workshop](/en/blog/ai-workshops-for-business) starts exactly there, with the people, not the technology.
 
 That requires an uncomfortable conversation. It requires managers to say: "I know AI can do this faster, but I want you to do it yourself first." That feels inefficient. It is an investment.
 
@@ -56,7 +56,7 @@ That is the model. AI that makes work better and people who grow alongside it. B
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team the foundation. Or start an [AI Automation trajectory](/nl/automate) to discover where AI genuinely adds value in your organisation.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to give your team the foundation. Or start an [AI Automation trajectory](/en/automate) to discover where AI genuinely adds value in your organisation.
 
 ---
 
