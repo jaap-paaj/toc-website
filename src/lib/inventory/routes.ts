@@ -38,20 +38,14 @@ function walk(dir: string, prefix = ""): string[] {
     return found;
 }
 
-/** Reads the directory names behind a dynamic segment, e.g. blog post folders. */
-function contentSlugs(...segments: string[]): string[] {
-    const dir = path.join(process.cwd(), ...segments);
-    if (!fs.existsSync(dir)) return [];
-    return fs
-        .readdirSync(dir, { withFileTypes: true })
-        .filter((e) => e.isDirectory())
-        .map((e) => e.name);
-}
-
 function expand(pattern: string): { count: number; sample: string } {
     if (pattern.startsWith("/blog/[slug]")) {
-        const slugs = contentSlugs("content", "blog", "nl");
-        return { count: slugs.length, sample: `/blog/${slugs[0] ?? ""}` };
+        // The folder name is the key, not the URL — the slug lives in the
+        // frontmatter, so ask the loader rather than the filesystem.
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        const { getAllPosts } = require("@/lib/blog/loader");
+        const posts: { slug: string }[] = getAllPosts("nl");
+        return { count: posts.length, sample: `/blog/${posts[0]?.slug ?? ""}` };
     }
 
     if (pattern.startsWith("/vragen/[slug]")) {

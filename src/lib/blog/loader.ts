@@ -71,39 +71,65 @@ function parseContent(rawContent: string): {
 }
 
 /**
- * Read all blog posts for a given locale, sorted by date descending.
- * Falls back to "en" when a locale folder doesn't exist or is empty.
+ * Which directory a locale actually reads from.
+ *
+ * Falls back to "en" when the locale folder is missing or holds no posts. The
+ * emptiness check matters: a folder that exists but is empty used to pass, and
+ * the site then rendered a blog with nothing in it.
+ *
+ * Every reader below goes through here, so a locale can never resolve its list
+ * from one directory and its individual posts from another.
  */
-export function getAllPosts(locale: Locale = "en"): BlogPostMeta[] {
-    const localeDir = path.join(BLOG_DIR, locale);
-    const fallbackDir = path.join(BLOG_DIR, "en");
+function localeDir(locale: Locale): string | null {
+    const dir = path.join(BLOG_DIR, locale);
+    const hasPosts =
+        fs.existsSync(dir) &&
+        fs.readdirSync(dir, { withFileTypes: true }).some((d) => d.isDirectory());
 
-    // Use locale dir only if it exists and has subdirectories (posts)
-    const hasLocalePosts =
-        fs.existsSync(localeDir) &&
-        fs.readdirSync(localeDir, { withFileTypes: true }).some((d) => d.isDirectory());
+    if (hasPosts) return dir;
 
-    const dir = hasLocalePosts ? localeDir : fallbackDir;
+    const fallback = path.join(BLOG_DIR, "en");
+    return fs.existsSync(fallback) ? fallback : null;
+}
 
-    if (!fs.existsSync(dir)) return [];
-
-    const slugs = fs
+/** Folder names under a locale directory, i.e. the keys published in that locale. */
+function keysIn(dir: string): string[] {
+    return fs
         .readdirSync(dir, { withFileTypes: true })
         .filter((d) => d.isDirectory())
         .map((d) => d.name);
+}
+
+/**
+ * The URL segment for a post. The `slug:` frontmatter field wins; without it
+ * the folder name is used, which is what every post did before slugs became
+ * translatable.
+ */
+function resolveSlug(data: Record<string, unknown>, key: string): string {
+    const declared = typeof data.slug === "string" ? data.slug.trim() : "";
+    return declared || key;
+}
+
+/**
+ * Read all blog posts for a given locale, sorted by date descending.
+ */
+export function getAllPosts(locale: Locale = "en"): BlogPostMeta[] {
+    const dir = localeDir(locale);
+    if (!dir) return [];
 
     const posts: BlogPostMeta[] = [];
 
-    for (const slug of slugs) {
-        const filePath = path.join(dir, slug, "post.md");
+    for (const key of keysIn(dir)) {
+        const filePath = path.join(dir, key, "post.md");
         if (!fs.existsSync(filePath)) continue;
 
         const raw = fs.readFileSync(filePath, "utf-8");
         const { data } = matter(raw);
 
         posts.push({
-            slug,
-            title: (data.title as string) ?? slug,
+            key,
+            slug: resolveSlug(data, key),
+            title: (data.title as string) ?? key,
             date: (data.date as string) ?? "",
             intro: (data.intro as string) ?? "",
             author: data.author as string | undefined,
@@ -117,28 +143,40 @@ export function getAllPosts(locale: Locale = "en"): BlogPostMeta[] {
 }
 
 /**
- * Collect all unique slugs across all locales for static param generation.
+ * Every ({lang, slug}) pair that has a page, for static param generation.
+ *
+ * Not a union of slugs: the same post can have a different slug per locale, so
+ * a flat list would prerender half the site under the wrong path.
  */
-export function getAllSlugs(): string[] {
-    const slugs = new Set<string>();
-    for (const locale of ["en", "nl"]) {
-        const dir = path.join(BLOG_DIR, locale);
-        if (!fs.existsSync(dir)) continue;
-        fs.readdirSync(dir, { withFileTypes: true })
-            .filter((d) => d.isDirectory())
-            .forEach((d) => slugs.add(d.name));
-    }
-    return [...slugs];
+export function getAllBlogParams(): { lang: Locale; slug: string }[] {
+    return (["nl", "en"] as const).flatMap((lang) =>
+        getAllPosts(lang).map((post) => ({ lang, slug: post.slug }))
+    );
 }
 
 /**
- * Read a single blog post by slug. Checks locale folder first, falls back to "en".
+ * The blog path per locale for one post, for hreflang and canonical.
+ * Returns null when the key is not published in every locale — the pair check
+ * in `npm run validate` is what stops that from reaching production.
  */
-export function getPostBySlug(slug: string, locale: Locale = "en"): BlogPost | null {
-    const localeDir = path.join(BLOG_DIR, locale, slug, "post.md");
-    const fallbackPath = path.join(BLOG_DIR, "en", slug, "post.md");
-    const filePath = fs.existsSync(localeDir) ? localeDir : fallbackPath;
+export function getBlogPathsByKey(key: string): Record<Locale, string> | null {
+    const paths = {} as Record<Locale, string>;
 
+    for (const locale of ["nl", "en"] as const) {
+        const post = getPostByKey(key, locale);
+        if (!post) return null;
+        paths[locale] = `/blog/${post.slug}`;
+    }
+
+    return paths;
+}
+
+/** Read one post by its stable key, within a single locale. */
+export function getPostByKey(key: string, locale: Locale = "en"): BlogPost | null {
+    const dir = localeDir(locale);
+    if (!dir) return null;
+
+    const filePath = path.join(dir, key, "post.md");
     if (!fs.existsSync(filePath)) return null;
 
     const raw = fs.readFileSync(filePath, "utf-8");
@@ -146,8 +184,9 @@ export function getPostBySlug(slug: string, locale: Locale = "en"): BlogPost | n
     const { body, ctaContent, faq } = parseContent(rawContent);
 
     return {
-        slug,
-        title: data.title ?? slug,
+        key,
+        slug: resolveSlug(data, key),
+        title: data.title ?? key,
         date: data.date ?? "",
         intro: data.intro ?? "",
         author: data.author,
@@ -156,4 +195,26 @@ export function getPostBySlug(slug: string, locale: Locale = "en"): BlogPost | n
         ctaContent,
         faq,
     };
+}
+
+/**
+ * Read one post by the slug in its URL, within a single locale.
+ *
+ * Deliberately no cross-locale fallback: now that slugs are translatable, a
+ * miss on the Dutch side is a Dutch 404, not a licence to serve the English
+ * text under a Dutch URL.
+ */
+export function getPostBySlug(slug: string, locale: Locale = "en"): BlogPost | null {
+    const dir = localeDir(locale);
+    if (!dir) return null;
+
+    for (const key of keysIn(dir)) {
+        const filePath = path.join(dir, key, "post.md");
+        if (!fs.existsSync(filePath)) continue;
+
+        const { data } = matter(fs.readFileSync(filePath, "utf-8"));
+        if (resolveSlug(data, key) === slug) return getPostByKey(key, locale);
+    }
+
+    return null;
 }

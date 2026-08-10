@@ -40,7 +40,7 @@ function blogGroup(now: number): ContentGroup {
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
     const items = posts.map((post) => {
-        const pillar = getPillarForBlog(post.slug, "nl");
+        const pillar = getPillarForBlog(post.key, "nl");
         const age = now - new Date(post.date).getTime();
 
         const flags: string[] = [];

@@ -63,8 +63,8 @@ export function HomeInsightsClient({ posts }: { posts: BlogPostMeta[] }) {
     );
 }
 
-function PillarBadge({ slug, lang }: { slug: string; lang: string }) {
-    const pillar = getPillarForBlog(slug, lang as "nl" | "en");
+function PillarBadge({ postKey, lang }: { postKey: string; lang: string }) {
+    const pillar = getPillarForBlog(postKey, lang as "nl" | "en");
     if (!pillar) return null;
     return (
         <div className="flex">
@@ -108,7 +108,7 @@ function FeaturedPost({ post, lang, newBadge }: { post: BlogPostMeta; lang: stri
                 </Text>
             )}
 
-            <PillarBadge slug={post.slug} lang={lang} />
+            <PillarBadge postKey={post.key} lang={lang} />
         </article>
     );
 }
@@ -139,7 +139,7 @@ function CompactPost({ post, lang, newBadge }: { post: BlogPostMeta; lang: strin
                 </Text>
             )}
 
-            <PillarBadge slug={post.slug} lang={lang} />
+            <PillarBadge postKey={post.key} lang={lang} />
         </article>
     );
 }

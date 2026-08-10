@@ -34,12 +34,12 @@ function formatDate(dateStr: string, lang: string): string {
 export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
     const lang = useLocale();
     const content = blogContent[lang].sidebar;
-    const pillar = getPillarForBlog(post.slug, lang);
+    const pillar = getPillarForBlog(post.key, lang);
     return (
         <HomeModule id="blog-post" width="full" tone="light" pad="m" padTop="xl" gap="s" containsContent>
             <div className={cn("w-full flex flex-col items-center", spacing.stackXl)}>
                 {/* Breadcrumb */}
-                <BlogBreadcrumb postTitle={post.title} slug={post.slug} />
+                <BlogBreadcrumb postTitle={post.title} postKey={post.key} />
 
                 {/* Post header */}
                 <header className={cn("flex flex-col items-center text-center max-w-4xl", spacing.component.sectionHeader, "px-[var(--space-sm)] md:px-0")}>

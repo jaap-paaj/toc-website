@@ -6,12 +6,13 @@ import { useLocale } from "@/lib/i18n/useLocale";
 
 interface BlogBreadcrumbProps {
     postTitle?: string;
-    slug?: string;
+    /** The post's stable key, which is what pillars are keyed on. */
+    postKey?: string;
 }
 
-export function BlogBreadcrumb({ postTitle, slug }: BlogBreadcrumbProps) {
+export function BlogBreadcrumb({ postTitle, postKey }: BlogBreadcrumbProps) {
     const lang = useLocale();
-    const pillar = slug ? getPillarForBlog(slug, lang) : null;
+    const pillar = postKey ? getPillarForBlog(postKey, lang) : null;
 
     const crumbs: Crumb[] = [
         { label: lang === "nl" ? "Inzichten" : "Insights", href: "/blog" },

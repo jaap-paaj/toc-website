@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PillarPage } from "@/app/_components/pillar/PillarPage";
 import { pillarContent } from "@/app/_content/pillar";
-import { getPostBySlug } from "@/lib/blog/loader";
+import { getPostByKey } from "@/lib/blog/loader";
 import type { Locale } from "@/lib/i18n/config";
 import { buildAlternates } from "@/lib/i18n/alternates";
 
@@ -32,9 +32,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function Page({ params }: PageProps) {
     const { lang } = await params;
     const locale = lang as Locale;
-    const slugs = pillarContent[PILLAR_SLUG][locale].blogLinks.map((l) => l.slug);
-    const posts = slugs
-        .map((s) => getPostBySlug(s, locale))
+    const keys = pillarContent[PILLAR_SLUG][locale].blogLinks.map((l) => l.key);
+    const posts = keys
+        .map((k) => getPostByKey(k, locale))
         .filter((p) => p !== null);
 
     return <PillarPage slug={PILLAR_SLUG} posts={posts} />;
