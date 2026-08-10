@@ -36,11 +36,6 @@ const config: Config = {
                 // We will stick to standard scale but ensure we have the line-heights we need.
             },
 
-            lineHeight: {
-                'hero-tight': '0.85',
-                'section-tight': '0.9',
-            },
-
             fontFamily: {
                 sans: "var(--font-sans)",
                 serif: "var(--font-sans)", // Enforce no-font-pairing policy

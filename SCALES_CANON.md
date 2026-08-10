@@ -58,10 +58,32 @@ Components must request a role, not a font-size.
 
 ### 3.2 Implementation Contract
 *   Single Source of Truth: `src/design-system/tokens/typography.ts`
-*   Tailwind Config: `tailwind.config.ts` extends theme to map tokens.
+*   Theme values (custom leadings, shadows, radii): the `@theme` block in `src/app/globals.css`. **Not** `tailwind.config.ts` — Tailwind v4 does not load it (no `@config` directive); values defined only there silently do not exist.
 *   **Rule**: No raw typography scale utilities in modules.
     *   Forbidden: `text-{size}`, `font-{weight}`, `leading-*`, `tracking-*`, `uppercase`, `lowercase`, `capitalize`.
     *   Allowed: `text-{color}` and `text-{alignment}` (covered by other audits).
+
+### 3.3 Leading Contract (Line-Height per Role)
+
+Every role's line-height is a contract, not a side effect of its font-size.
+These are the ratios each variant must **render** (`getComputedStyle`), at every breakpoint:
+
+| Role | Leading class | Ratio | Why |
+| :--- | :--- | :--- | :--- |
+| `display.hero` | `leading-hero-tight` | **0.85** | Uppercase serif display: caps carry no descenders, so negative half-leading binds multi-line heroes into one block. |
+| `display.heroSecondary` / `heroTertiary` / `section` | `leading-section-tight` | **0.9** | Same principle, slightly looser at sub-hero scale. |
+| `display.editorialStatement` | `leading-none` | **1.0** | Iconic single statements; no binding needed, no cramping wanted. |
+| `heading.page` | `leading-tight` | **1.25** | Structural H1: tighter than prose, but with enough air to stay readable when it wraps. |
+| `heading.subsection` / `card` / `prompt` | `leading-snug` | **1.375** | Multi-line headings and long-form prompts must stay legible as sentences. |
+| `body.lg` / `md` / `sm` | `leading-relaxed` | **1.625** | Reading text. Matches `--line-height-relaxed` and the `body { line-height: 1.6 }` baseline intent. |
+| `ui.nav.listLink` | `leading-tight` | **1.25** | A wrapped label's second line must bind to its first, not read as the next list item. |
+| `meta.*`, other `ui.*` | *(none)* | Tailwind per-size default | Single-line labels and controls; the size's native line-height is acceptable and box height is governed by the component, not the type. |
+
+**Class-order rule (hard):** in composed variant strings, `leading-*` comes **after** the `text-*` scale. Tailwind's `text-*` utilities carry their own line-height, so `tailwind-merge` treats a preceding `leading-*` as a resolved conflict and strips it before it reaches the HTML. This dropped the leading of twelve variants unnoticed.
+
+**Source rule:** custom leading values (`hero-tight`, `section-tight`) are defined as `--leading-*` in the `@theme` block of `globals.css`. A value that exists only in `tailwind.config.ts` generates no class.
+
+**Verification rule:** this contract is checked against the rendered page (`getComputedStyle` ratio per variant), not against source strings or the DOM class list. A promised leading that does not render is a violation even when every audit is green.
 
 ---
 

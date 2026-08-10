@@ -254,6 +254,15 @@
   --line-height-tight: 1.1;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.625;
+
+  /*
+   * Display leading (SCALES_CANON.md §3.3). Generates leading-hero-tight and
+   * leading-section-tight. These used to live in tailwind.config.ts, which
+   * Tailwind v4 never loads (no @config directive) — the classes silently
+   * didn't exist. Theme values must live here.
+   */
+  --leading-hero-tight: 0.85;
+  --leading-section-tight: 0.9;
 }
 
 

@@ -1,16 +1,18 @@
 // Tier-0 Typography Scale (Native Tailwind Steps Only)
+// Sizes only — line-height lives in the variant composition below, where it
+// must come AFTER the scale (see the class-order contract at `variants`).
 export const scales = {
     display: {
         // Primary Hero (Home) - 48px -> 72px -> 96px
-        hero: "leading-hero-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-8xl",
+        hero: "text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-8xl",
         // Secondary Hero (Feature) - 36px -> 60px -> 72px
-        heroSecondary: "leading-section-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl",
+        heroSecondary: "text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl",
         // Tertiary Hero (Contact/About) - 30px -> 48px -> 60px
-        heroTertiary: "leading-section-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
+        heroTertiary: "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
         // Section Headers - 36px -> 48px -> 60px
-        section: "leading-section-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
+        section: "text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
         // Editorial Statement - 36px -> 48px -> 60px (Iconic Display)
-        editorialStatement: "leading-none text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
+        editorialStatement: "text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl",
     },
     heading: {
         // Page H1 - 30px -> 36px -> 48px
@@ -66,26 +68,32 @@ export const typography = {
 
     // Semantic Variants
     // Semantic Roles (Canon v1)
+    //
+    // Class-order contract (SCALES_CANON.md §3.3): the leading-* class comes
+    // AFTER the scale, always. Tailwind's text-* utilities carry their own
+    // line-height, so tailwind-merge treats a preceding leading-* as the loser
+    // of that conflict and strips it before it ever reaches the HTML. This
+    // silently dropped the leading of twelve variants once — do not reorder.
     variants: {
         display: {
             // Flattened Hero Roles (No more 900/800/700)
-            hero: `font-serif tracking-tight uppercase font-black ${scales.display.hero}`, // Home
-            heroSecondary: `font-serif tracking-tight uppercase font-black ${scales.display.heroSecondary}`, // Feature Pages
-            heroTertiary: `font-serif tracking-tight uppercase font-black ${scales.display.heroTertiary}`, // Contact/About
-            section: `font-serif tracking-tight uppercase font-black ${scales.display.section}`,
-            editorialStatement: `font-serif tracking-tight uppercase font-black ${scales.display.editorialStatement}`,
+            hero: `font-serif tracking-tight uppercase font-black ${scales.display.hero} leading-hero-tight`, // Home
+            heroSecondary: `font-serif tracking-tight uppercase font-black ${scales.display.heroSecondary} leading-section-tight`, // Feature Pages
+            heroTertiary: `font-serif tracking-tight uppercase font-black ${scales.display.heroTertiary} leading-section-tight`, // Contact/About
+            section: `font-serif tracking-tight uppercase font-black ${scales.display.section} leading-section-tight`,
+            editorialStatement: `font-serif tracking-tight uppercase font-black ${scales.display.editorialStatement} leading-none`,
         },
         heading: {
             // Structural Page Headings
-            page: `font-serif tracking-tight leading-tight font-black uppercase ${scales.heading.page}`, // H1 default
-            subsection: `font-serif tracking-tight leading-snug font-black uppercase ${scales.heading.subsection}`, // Section H2/H3
-            card: `font-serif tracking-tight leading-snug font-bold uppercase ${scales.heading.card}`, // Card Titles
-            prompt: `font-serif tracking-tight leading-snug font-bold ${scales.heading.prompt}`, // Long-form Questions/Prompts (sentence case)
+            page: `font-serif tracking-tight font-black uppercase ${scales.heading.page} leading-tight`, // H1 default
+            subsection: `font-serif tracking-tight font-black uppercase ${scales.heading.subsection} leading-snug`, // Section H2/H3
+            card: `font-serif tracking-tight font-bold uppercase ${scales.heading.card} leading-snug`, // Card Titles
+            prompt: `font-serif tracking-tight font-bold ${scales.heading.prompt} leading-snug`, // Long-form Questions/Prompts (sentence case)
         },
         body: {
-            lg: `font-sans leading-relaxed font-normal ${scales.body.lg}`, // Lead / Intro
-            md: `font-sans leading-relaxed font-normal ${scales.body.md}`, // Default prose
-            sm: `font-sans leading-relaxed font-normal ${scales.body.sm}`, // Compact prose
+            lg: `font-sans font-normal ${scales.body.lg} leading-relaxed`, // Lead / Intro
+            md: `font-sans font-normal ${scales.body.md} leading-relaxed`, // Default prose
+            sm: `font-sans font-normal ${scales.body.sm} leading-relaxed`, // Compact prose
         },
         meta: {
             // UI Labels & Micro-copy
