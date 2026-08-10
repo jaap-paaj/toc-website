@@ -20,7 +20,7 @@ export function TipsListModule({ lang }: TipsListModuleProps) {
             width="full"
             tone="dark"
             padTop="none"
-            padBottom="xs"
+            padBottom="m"
             gap="none"
             containsContent
         >
