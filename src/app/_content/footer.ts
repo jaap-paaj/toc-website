@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n/config";
+import { capabilityLinks } from "@/app/_content/navigation";
 
 /**
  * The site's navigation footer.
@@ -45,20 +46,9 @@ export const footerCta: Record<Locale, FooterCtaContent> = {
  *
  * The three capabilities, not a fourth link list: they are the spine the header
  * already navigates on, so the footer restates the same spine at a size that
- * anchors the strip. Same wording in both locales, as in the header.
+ * anchors the strip. Same source as the header, so the two cannot drift.
  */
-export const footerPrimary: Record<Locale, { label: string; href: string }[]> = {
-    en: [
-        { label: "Educate", href: "/educate" },
-        { label: "Automate", href: "/automate" },
-        { label: "Innovate", href: "/innovate" },
-    ],
-    nl: [
-        { label: "Educate", href: "/educate" },
-        { label: "Automate", href: "/automate" },
-        { label: "Innovate", href: "/innovate" },
-    ],
-};
+export const footerPrimary = capabilityLinks;
 
 const en = {
     columns: [
