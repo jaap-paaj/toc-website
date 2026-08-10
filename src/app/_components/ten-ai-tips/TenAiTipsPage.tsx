@@ -14,7 +14,11 @@ export function TenAiTipsPage({ lang }: TenAiTipsPageProps) {
         <PageLayout variant="landing">
             <TipsHeroModule lang={lang} />
             <TipsListModule lang={lang} />
-            <SiteFooterModule cta={tenAiTipsContent[lang].closing} />
+            {/* The tips list paints the same colour, so one step, not two. */}
+            <SiteFooterModule
+                cta={tenAiTipsContent[lang].closing}
+                spaceAbove="none"
+            />
         </PageLayout>
     );
 }

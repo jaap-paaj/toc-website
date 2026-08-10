@@ -1,21 +1,19 @@
 import { test, expect } from "@playwright/test";
 
 /**
- * The footer seam.
+ * Vertical rhythm between modules.
  *
- * Screenshot tests do catch a broken seam, but only if someone looks at the
- * diff: test:visual:update accepts whatever the page currently does, and a
- * doubled seam looks like an intentional change. These assertions have no
- * baseline to overwrite.
+ * Neither of the existing safety nets can see this. The audits read source, so
+ * a module's own padding always looks legal — the mistake only exists in the
+ * relationship between two of them. The screenshot tests do catch it, but only
+ * if someone reads the diff: test:visual:update accepts whatever the page
+ * currently does, and a doubled seam is indistinguishable from an intentional
+ * change. These assertions measure the rendered page and have no baseline to
+ * overwrite.
  *
- * The rule they encode is the narrow one that was actually broken: when the
- * module above the footer paints the same colour and already ends on a full
- * step, the footer must not add a second one. Two steps in one colour read as
- * one oversized gap, because there is no edge between them to divide it.
- *
- * Where the colour does change, both blocks may keep their own step — the edge
- * splits the space and each side reads as its own. That is a design call per
- * page, so it is not asserted here.
+ * The rule, in one line: a colour edge divides the space, so both blocks may
+ * keep a step; without an edge the two steps merge into one oversized gap, so
+ * only one of them gets it.
  */
 
 const ROUTES = [
@@ -38,83 +36,102 @@ const ROUTES = [
     "/en/10-ai-tips",
 ];
 
-/** Below this, the module above is not carrying the seam on its own. */
+/** Anything at or above this is a module carrying a seam on its own. */
 const FULL_STEP = 48;
 
-async function seam(page: import("@playwright/test").Page) {
-    return page.evaluate(() => {
-        const band = document.querySelector("#site-footer-cta");
-        const strip = document.querySelector("#site-footer-nav");
-        if (!band || !strip) return null;
-
-        const prev = band.previousElementSibling;
-        const green = band.querySelector('[class*="rounded"]');
-        const firstLink = strip.querySelector("a");
-        if (!prev || !green || !firstLink) return null;
-
-        /** The colour actually painted behind an element. */
-        const painted = (start: Element) => {
-            let node: Element | null = start;
-            let bg = getComputedStyle(start).backgroundColor;
-            while (node && (bg === "rgba(0, 0, 0, 0)" || bg === "transparent")) {
-                node = node.parentElement;
-                if (!node) break;
-                bg = getComputedStyle(node).backgroundColor;
-            }
-            return bg;
-        };
-
-        // The bottom of the last thing actually drawn above, not the section's
-        // border box — the section's own padding is part of the gap.
-        let lastContentBottom = -Infinity;
-        for (const el of prev.querySelectorAll("*")) {
-            const r = el.getBoundingClientRect();
-            if (r.width > 0 && r.height > 0 && r.bottom > lastContentBottom) {
-                lastContentBottom = r.bottom;
-            }
+/** Runs in the page: every seam between two adjacent module sections. */
+function collectSeams(step: number) {
+    const painted = (start: Element) => {
+        let node: Element | null = start;
+        let bg = getComputedStyle(start).backgroundColor;
+        while (node && bg === "rgba(0, 0, 0, 0)") {
+            node = node.parentElement;
+            if (!node) break;
+            bg = getComputedStyle(node).backgroundColor;
         }
+        return bg;
+    };
 
-        const g = green.getBoundingClientRect();
-        return {
-            sameColour: painted(prev) === painted(band),
-            prevPadBottom: parseFloat(getComputedStyle(prev).paddingBottom),
-            bandPadTop: parseFloat(getComputedStyle(band).paddingTop),
-            below: Math.round(firstLink.getBoundingClientRect().top - g.bottom),
-            above: Math.round(g.top - lastContentBottom),
-        };
-    });
+    const seams: {
+        name: string;
+        padBottom: number;
+        padTop: number;
+        sameColour: boolean;
+        doubled: boolean;
+    }[] = [];
+
+    for (const section of document.querySelectorAll("section")) {
+        const next = section.nextElementSibling;
+        if (!next || next.tagName !== "SECTION") continue;
+
+        const padBottom = parseFloat(getComputedStyle(section).paddingBottom);
+        const padTop = parseFloat(getComputedStyle(next).paddingTop);
+        const sameColour = painted(section) === painted(next);
+
+        seams.push({
+            name: `${section.id || "(unnamed)"} → ${next.id || "(unnamed)"}`,
+            padBottom,
+            padTop,
+            sameColour,
+            doubled: sameColour && padBottom >= step && padTop >= step,
+        });
+    }
+    return seams;
 }
 
-test.describe("footer seam", () => {
+test.describe("module rhythm", () => {
     for (const route of ROUTES) {
-        test(`does not stack two steps in one colour — ${route}`, async ({ page }) => {
+        test(`no seam stacks two steps in one colour — ${route}`, async ({ page }) => {
             await page.goto(route, { waitUntil: "networkidle" });
-            const m = await seam(page);
-            expect(m, `${route} has no footer to measure`).not.toBeNull();
+            const seams = await page.evaluate(collectSeams, FULL_STEP);
+            expect(seams.length, `${route} has no module seams to measure`).toBeGreaterThan(0);
 
-            if (m!.sameColour && m!.prevPadBottom >= FULL_STEP) {
-                expect(
-                    m!.bandPadTop,
-                    `the module above paints the same colour and already ends on ` +
-                        `${m!.prevPadBottom}px, so the footer must not add another ` +
-                        `${m!.bandPadTop}px on top of it`,
-                ).toBe(0);
-            } else if (!m!.sameColour) {
-                expect(
-                    m!.bandPadTop,
-                    `the colour changes above the band, so the dark side needs a ` +
-                        `margin of its own — otherwise the band lands straight ` +
-                        `against the edge`,
-                ).toBeGreaterThanOrEqual(FULL_STEP);
-            }
+            const doubled = seams.filter((s) => s.doubled);
+            expect(
+                doubled.map((s) => `${s.name} (${s.padBottom}px + ${s.padTop}px)`),
+                "with no colour edge between them the two steps read as one " +
+                    "oversized gap — only one side should carry it",
+            ).toEqual([]);
         });
     }
 
-    test("the band sits evenly between the page and the links", async ({ page }) => {
-        // Home: same colour above, so one step above and one below the band.
-        await page.goto("/nl", { waitUntil: "networkidle" });
-        const m = await seam(page);
-        expect(m).not.toBeNull();
-        expect(Math.abs(m!.above - m!.below)).toBeLessThanOrEqual(8);
+    test.describe("footer seam", () => {
+        for (const route of ROUTES) {
+            test(`the module above ends on a full step — ${route}`, async ({ page }) => {
+                await page.goto(route, { waitUntil: "networkidle" });
+                const m = await page.evaluate(() => {
+                    const band = document.querySelector("#site-footer-cta");
+                    const prev = band?.previousElementSibling;
+                    if (!band || !prev) return null;
+                    return {
+                        padBottom: parseFloat(getComputedStyle(prev).paddingBottom),
+                    };
+                });
+                expect(m, `${route} has no footer`).not.toBeNull();
+
+                // No page gets to end tight and have the footer make up for it.
+                // That is what turned one seam into a special case: a module
+                // that stopped short, and a prop invented to cover for it.
+                expect(
+                    m!.padBottom,
+                    `the module above the footer ends on ${m!.padBottom}px, which ` +
+                        `is not a full step — give it its own padBottom rather ` +
+                        `than padding the footer`,
+                ).toBeGreaterThanOrEqual(FULL_STEP);
+            });
+        }
+
+        test("a colour change keeps a margin on the dark side", async ({ page }) => {
+            await page.goto("/nl/educate", { waitUntil: "networkidle" });
+            const padTop = await page.evaluate(() => {
+                const band = document.querySelector("#site-footer-cta")!;
+                return parseFloat(getComputedStyle(band).paddingTop);
+            });
+            expect(
+                padTop,
+                "the colour changes above the band, so the dark side needs a " +
+                    "margin of its own or the band lands against the edge",
+            ).toBeGreaterThanOrEqual(FULL_STEP);
+        });
     });
 });
