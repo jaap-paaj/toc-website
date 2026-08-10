@@ -1,6 +1,5 @@
 import { PageLayout } from "@/design-system/components/Layout";
-import { HomeModule } from "@/app/_components/home/HomeModule";
-import { HomeFooterCtaModule } from "../home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { EducateHeroModule } from "./modules/EducateHeroModule";
 import { EducateTrainingCatalogModule } from "./modules/EducateTrainingCatalogModule";
 import { EducateWhyUsImageDuoModule } from "./modules/EducateWhyUsImageDuoModule";
@@ -20,16 +19,7 @@ export function EducatePage() {
 
             <EducateTestimonialsModule />
             <EducateFaqModule />
-            <HomeModule
-                id="educate-cta-seam"
-                width="full"
-                tone="dark"
-                pad="none"
-                padTop="m"
-                gap="none"
-            >
-                <HomeFooterCtaModule />
-            </HomeModule>
+            <SiteFooterModule />
         </PageLayout>
     );
 }

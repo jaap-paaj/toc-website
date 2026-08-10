@@ -1,9 +1,8 @@
 import { PageLayout } from "@/design-system/components/Layout";
-import { HomeModule } from "../home/HomeModule";
 import { ContactHeroModule } from "./modules/ContactHeroModule";
 import { ContactFormModule } from "./modules/ContactFormModule";
 import { ContactDetailsModule } from "./modules/ContactDetailsModule";
-import { HomeFooterCtaModule } from "../home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 
 export function ContactPage() {
     return (
@@ -11,16 +10,7 @@ export function ContactPage() {
             <ContactHeroModule />
             <ContactFormModule />
             <ContactDetailsModule />
-            <HomeModule
-                id="contact-cta-seam"
-                width="full"
-                tone="dark"
-                pad="none"
-                padTop="m"
-                gap="none"
-            >
-                <HomeFooterCtaModule />
-            </HomeModule>
+            <SiteFooterModule />
         </PageLayout>
     );
 }

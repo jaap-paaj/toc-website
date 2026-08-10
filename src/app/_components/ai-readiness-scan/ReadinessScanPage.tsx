@@ -1,6 +1,5 @@
 import { PageLayout } from "@/design-system/components/Layout";
-import { HomeModule } from "@/app/_components/home/HomeModule";
-import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { ReadinessHeroModule } from "@/app/_components/ai-readiness-scan/modules/ReadinessHeroModule";
 import { ReadinessHowItWorksModule } from "@/app/_components/ai-readiness-scan/modules/ReadinessHowItWorksModule";
 import { ReadinessChecksModule } from "@/app/_components/ai-readiness-scan/modules/ReadinessChecksModule";
@@ -13,16 +12,7 @@ export function ReadinessScanPage() {
             <ReadinessHowItWorksModule />
             <ReadinessChecksModule />
             <ReadinessAboutModule />
-            <HomeModule
-                id="readiness-cta-seam"
-                width="full"
-                tone="dark"
-                pad="none"
-                padTop="m"
-                gap="none"
-            >
-                <HomeFooterCtaModule />
-            </HomeModule>
+            <SiteFooterModule />
         </PageLayout>
     );
 }

@@ -4,7 +4,7 @@ import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { PageLayout } from "@/design-system/components/Layout";
 import { BlogPostModule } from "./modules/BlogPostModule";
 import { HomeModule } from "@/app/_components/home/HomeModule";
-import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { BlogLatestSection } from "./modules/BlogLatestModule";
 import type { BlogPost, BlogPostMeta } from "@/lib/blog/types";
 import { typography } from "@/design-system/tokens/typography";
@@ -41,16 +41,7 @@ export function BlogDetailPage({ post, latestPosts }: BlogDetailPageProps) {
                     </div>
                 </div>
             </HomeModule>
-            <HomeModule
-                id="blog-cta-seam"
-                width="full"
-                tone="dark"
-                pad="none"
-                padTop="m"
-                gap="none"
-            >
-                <HomeFooterCtaModule />
-            </HomeModule>
+            <SiteFooterModule />
         </PageLayout>
     );
 }

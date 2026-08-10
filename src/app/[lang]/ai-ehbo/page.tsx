@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageLayout } from "@/design-system/components/Layout";
-import { HomeModule } from "@/app/_components/home/HomeModule";
-import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { EhboHeroModule } from "@/app/_components/ai-ehbo/modules/EhboHeroModule";
 import { EhboHowItWorksModule } from "@/app/_components/ai-ehbo/modules/EhboHowItWorksModule";
 import { EhboProblemsModule } from "@/app/_components/ai-ehbo/modules/EhboProblemsModule";
@@ -55,16 +54,7 @@ export default function Page() {
             <EhboHowItWorksModule />
             <EhboProblemsModule />
             <EhboAboutModule />
-            <HomeModule
-                id="ehbo-cta-seam"
-                width="full"
-                tone="dark"
-                pad="none"
-                padTop="m"
-                gap="none"
-            >
-                <HomeFooterCtaModule />
-            </HomeModule>
+            <SiteFooterModule />
         </PageLayout>
     );
 }

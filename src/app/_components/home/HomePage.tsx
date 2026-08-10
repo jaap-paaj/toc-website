@@ -6,7 +6,7 @@ import { HomeServicesModule } from "./modules/HomeServicesModule";
 import { HomeClientsModule } from "./modules/HomeClientsModule";
 import { HomeAboutModule } from "./modules/HomeAboutModule";
 import { HomeInsightsModule } from "./modules/HomeInsightsModule";
-import { HomeFooterCtaModule } from "./modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 
 interface HomePageProps {
     lang: Locale;
@@ -20,7 +20,7 @@ export function HomePage({ lang }: HomePageProps) {
             <HomeClientsModule />
             <HomeInsightsModule lang={lang} />
             <HomeAboutModule />
-            <HomeFooterCtaModule />
+            <SiteFooterModule />
         </PageLayout>
     );
 }

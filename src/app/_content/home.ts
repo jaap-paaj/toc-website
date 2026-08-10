@@ -73,18 +73,6 @@ const en = {
         newBadge: "New",
         viewAll: "View all",
     },
-    footerCta: {
-        title: [
-            "FIRST CONVERSATION,",
-            "FIRST DIRECTION"
-        ],
-        cta: {
-            label: "GET IN TOUCH",
-            href: "/contact"
-        },
-        panelTitle: "",
-        panelBody: "After one conversation you'll know where the biggest opportunities are and the smallest first step to prove them.",
-    }
 };
 
 const nl: typeof en = {
@@ -160,18 +148,6 @@ const nl: typeof en = {
         newBadge: "Nieuw",
         viewAll: "Bekijk alles",
     },
-    footerCta: {
-        title: [
-            "EERSTE GESPREK,",
-            "EERSTE RICHTING"
-        ],
-        cta: {
-            label: "NEEM CONTACT OP",
-            href: "/contact"
-        },
-        panelTitle: "",
-        panelBody: "Na een gesprek weet je waar de grootste kansen liggen en wat de kleinste eerste stap is om ze te bewijzen.",
-    }
 };
 
 export const homeContent: Record<Locale, typeof en> = { en, nl };
