@@ -15,7 +15,8 @@ export function InnovatePage() {
             <InnovateSolutionsModule />
             <InnovateImageDuoModule />
             <InnovateWhyUsModule />
-            <SiteFooterModule />
+            {/* The module above paints the same colour, so one step, not two. */}
+            <SiteFooterModule spaceAbove="none" />
         </PageLayout>
     );
 }
