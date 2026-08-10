@@ -1,5 +1,6 @@
 ---
 title: 'Choosing an AI consultancy: the question nobody asks'
+slug: choosing-an-ai-consultancy
 date: '2026-04-03'
 intro: >-
   There are hundreds of agencies doing AI projects. Most deliver a report. The good ones deliver a decision.

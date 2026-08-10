@@ -1,5 +1,6 @@
 ---
 title: 'What Is an AI Strategy (and Why Most of Them Do Not Work)'
+slug: what-is-an-ai-strategy
 date: '2026-04-04'
 intro: >-
   Ninety-three percent of AI pilots never reach production. The problem is rarely the technology.

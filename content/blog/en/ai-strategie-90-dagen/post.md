@@ -1,5 +1,6 @@
 ---
 title: 'AI strategy in ninety days: from question to evidence'
+slug: ai-strategy-in-90-days
 date: '2026-04-03'
 intro: >-
   Most AI roadmaps run to 2028. Most AI experiments need ninety days.

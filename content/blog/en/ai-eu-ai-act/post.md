@@ -1,5 +1,6 @@
 ---
 title: 'The EU AI Act for Non-Lawyers'
+slug: eu-ai-act
 date: '2026-04-04'
 intro: >-
   Every company using AI will soon need to explain what its system does and why. The question is whether you handle that now or under pressure later.

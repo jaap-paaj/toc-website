@@ -1,5 +1,6 @@
 ---
 title: 'AI Agents for Business: The Promise, the Reality, and What Lies Between'
+slug: ai-agents-for-business
 date: '2026-04-04'
 intro: >-
   "We need to do something with agents." Five words that cause more damage than any competitor.

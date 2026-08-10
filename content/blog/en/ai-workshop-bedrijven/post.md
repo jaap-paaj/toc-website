@@ -1,5 +1,6 @@
 ---
 title: 'AI Workshops for Businesses: Why Most Deliver Nothing'
+slug: ai-workshops-for-business
 date: '2026-04-03'
 intro: >-
   Half a day of inspiration is enjoyable. But if everything is back to normal by Monday, you might as well have watched a TED Talk.

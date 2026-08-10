@@ -1,5 +1,6 @@
 ---
 title: 'AI automation does not start with the tool'
+slug: ai-automation
 date: '2026-04-03'
 intro: >-
   Most companies automate what already exists. The smart ones start by asking whether it should exist at all.

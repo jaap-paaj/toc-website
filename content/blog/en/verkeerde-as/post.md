@@ -1,5 +1,6 @@
 ---
 title: 'The Wrong Axis: Why ''Europe Has Lost the AI Race'' Misses the Point'
+slug: the-wrong-axis
 date: '2026-06-15'
 intro: >-
   Europe isn't out of the AI race. We're just looking at the wrong half of it.

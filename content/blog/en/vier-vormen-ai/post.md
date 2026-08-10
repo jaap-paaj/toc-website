@@ -1,5 +1,6 @@
 ---
 title: 'The Four Forms of AI That Matter for Your Organisation'
+slug: four-forms-of-ai
 date: '2026-04-04'
 intro: >-
   Forget narrow AI, general AI, and superintelligence. The framework that actually matters for your business is different.
