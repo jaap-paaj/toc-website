@@ -3,6 +3,7 @@ import { EducatePage } from "@/app/_components/educate/EducatePage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { educateFaq } from "@/app/_content/educate";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         description: isNl
             ? "AI workshop op locatie voor teams. Van AI-basiskennis tot hands-on werken met AI tools. Voor organisaties met 50+ medewerkers."
             : "On-site AI workshop for teams. From AI fundamentals to hands-on work with AI tools. For organizations with 50+ employees.",
-        alternates: { canonical: `${SITE_URL}/${lang}/educate` },
+        alternates: buildAlternates(lang, "/educate"),
         openGraph: {
             title: isNl ? "AI Workshop voor Bedrijven - The Only Constant" : "AI Workshop for Business - The Only Constant",
             description: isNl

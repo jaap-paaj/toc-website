@@ -4,6 +4,7 @@ import { getAllPosts, getAllSlugs, getPostBySlug } from "@/lib/blog/loader";
 import { BlogDetailPage } from "@/app/_components/blog/BlogDetailPage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -30,9 +31,7 @@ export async function generateMetadata({
     return {
         title: `${post.title} | Blog | The Only Constant`,
         description: post.intro,
-        alternates: {
-            canonical: pageUrl,
-        },
+        alternates: buildAlternates(lang, `/blog/${slug}`),
         openGraph: {
             title: post.title,
             description: post.intro,

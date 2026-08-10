@@ -1,35 +1,38 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { Loader2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
-import { submitEhboContact } from "@/lib/ehbo/api";
+import { submitToolContact } from "@/lib/tools/api";
 import { trackEvent } from "@/lib/analytics/ga";
 import { useLocale } from "@/lib/i18n/useLocale";
-import type { EhboContactInfo } from "@/lib/ehbo/types";
+import type {
+    ToolAnalytics,
+    ToolContactContent,
+    ToolContactInfo,
+    ToolEndpoints,
+} from "@/lib/tools/types";
 
-interface EhboContactFormProps {
+interface ToolContactFormProps {
     sessionId: string;
-    content: {
-        title: string;
-        helper: string;
-        emailPlaceholder: string;
-        namePlaceholder: string;
-        companyPlaceholder: string;
-        submit: string;
-        sending: string;
-        success: string;
-        error: string;
-        dismiss: string;
-    };
+    endpoints: ToolEndpoints;
+    analytics: ToolAnalytics;
+    content: ToolContactContent;
     onDismiss: () => void;
     onSent?: () => void;
 }
 
-export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboContactFormProps) {
+export function ToolContactForm({
+    sessionId,
+    endpoints,
+    analytics,
+    content,
+    onDismiss,
+    onSent,
+}: ToolContactFormProps) {
     const lang = useLocale();
-    const [form, setForm] = useState<EhboContactInfo>({ email: "" });
+    const [form, setForm] = useState<ToolContactInfo>({ email: "" });
     const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
     useEffect(() => {
@@ -42,9 +45,9 @@ export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboC
 
         setStatus("sending");
         try {
-            await submitEhboContact(sessionId, form);
-            trackEvent("ehbo_form_submit", {
-                tool: "ehbo",
+            await submitToolContact(endpoints, sessionId, form);
+            trackEvent(analytics.leadEvent, {
+                tool: analytics.tool,
                 step: "lead_submit",
                 language: lang,
             });
@@ -101,9 +104,12 @@ export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboC
                     disabled={status === "sending" || !form.email}
                     className={cn(
                         typography.variants.ui.button.sm,
-                        "rounded-surface bg-foreground text-background px-4 py-2 hover:bg-foreground/80 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
+                        "inline-flex items-center justify-center gap-2 rounded-surface bg-foreground text-background px-4 py-2 hover:bg-foreground/80 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
                     )}
                 >
+                    {status === "sending" && (
+                        <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />
+                    )}
                     {status === "sending" ? content.sending : content.submit}
                 </button>
             </form>
@@ -129,6 +135,11 @@ export function EhboContactForm({ sessionId, content, onDismiss, onSent }: EhboC
                     )}
                 />
             </div>
+            {status === "sending" && (
+                <p className={cn(typography.variants.body.sm, "text-muted-foreground")}>
+                    {content.sendingHint}
+                </p>
+            )}
             {status === "error" && (
                 <p className={cn(typography.variants.body.sm, "text-destructive")}>
                     {content.error}

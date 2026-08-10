@@ -4,13 +4,13 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { cn } from "@/lib/utils";
 import { typography } from "@/design-system/tokens/typography";
-import type { EhboMessage } from "@/lib/ehbo/types";
+import type { ToolMessage } from "@/lib/tools/types";
 
-interface EhboChatMessageProps {
-    message: EhboMessage;
+interface ToolChatMessageProps {
+    message: ToolMessage;
 }
 
-export function EhboChatMessage({ message }: EhboChatMessageProps) {
+export function ToolChatMessage({ message }: ToolChatMessageProps) {
     const isUser = message.role === "user";
 
     if (isUser) {

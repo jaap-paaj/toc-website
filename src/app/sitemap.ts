@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog/loader";
+import { getAnswerSlugs, VRAGEN_BASE_PATH } from "@/app/_content/vragen";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -19,10 +20,16 @@ const staticPages = [
     { path: "/en/contact", priority: 0.5 },
     { path: "/nl/blog", priority: 0.8 },
     { path: "/en/blog", priority: 0.6 },
+    { path: "/nl/ai-act", priority: 0.8 },
+    { path: "/en/ai-act", priority: 0.6 },
+    { path: "/nl/10-ai-tips", priority: 0.7 },
+    { path: "/en/10-ai-tips", priority: 0.5 },
     { path: "/nl/ai-opportunity-scan", priority: 0.8 },
     { path: "/en/ai-opportunity-scan", priority: 0.6 },
     { path: "/nl/ai-ehbo", priority: 0.8 },
     { path: "/en/ai-ehbo", priority: 0.6 },
+    { path: "/nl/ai-readiness-scan", priority: 0.9 },
+    { path: "/en/ai-readiness-scan", priority: 0.7 },
     { path: "/nl/ai-strategie", priority: 0.8 },
     { path: "/en/ai-strategie", priority: 0.6 },
     { path: "/nl/ai-automatisering-gids", priority: 0.8 },
@@ -48,6 +55,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 lastModified: new Date(post.date),
                 changeFrequency: "monthly",
                 priority: locale === "nl" ? 0.7 : 0.5,
+            });
+        }
+    }
+
+    // GEO answer pages — index + every answer, generated from the content file
+    // so the sitemap can never drift out of sync with what is published.
+    for (const locale of ["nl", "en"] as const) {
+        pages.push({
+            url: `${SITE_URL}/${locale}${VRAGEN_BASE_PATH}`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: locale === "nl" ? 0.7 : 0.5,
+        });
+
+        for (const slug of getAnswerSlugs()) {
+            pages.push({
+                url: `${SITE_URL}/${locale}${VRAGEN_BASE_PATH}/${slug}`,
+                lastModified: new Date(),
+                changeFrequency: "monthly",
+                priority: locale === "nl" ? 0.8 : 0.6,
             });
         }
     }

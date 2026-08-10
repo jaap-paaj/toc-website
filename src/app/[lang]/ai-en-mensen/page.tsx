@@ -3,6 +3,7 @@ import { PillarPage } from "@/app/_components/pillar/PillarPage";
 import { pillarContent } from "@/app/_content/pillar";
 import { getPostBySlug } from "@/lib/blog/loader";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 const PILLAR_SLUG = "ai-en-mensen" as const;
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: meta.title,
         description: meta.description,
-        alternates: { canonical: `${SITE_URL}/${lang}/${PILLAR_SLUG}` },
+        alternates: buildAlternates(lang, `/${PILLAR_SLUG}`),
         openGraph: {
             title: meta.title,
             description: meta.description,

@@ -4,6 +4,7 @@ import { HomeModule } from "@/app/_components/home/HomeModule";
 import { FooterCtaSection } from "@/components/sections/FooterCtaSection";
 import { tenAiTipsContent } from "@/app/_content/ten-ai-tips";
 import type { Locale } from "@/lib/i18n/config";
+import { footerIndexLink } from "@/app/_content/footer";
 
 interface TipsCtaModuleProps {
     lang: Locale;
@@ -22,6 +23,7 @@ export function TipsCtaModule({ lang }: TipsCtaModuleProps) {
             gap="none"
         >
             <FooterCtaSection
+                footerLink={footerIndexLink[lang]}
                 title={closing.title}
                 cta={closing.cta}
                 secondaryAction={closing.secondaryAction}

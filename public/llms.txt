@@ -20,6 +20,13 @@
 ### Innovate
 - [AI Proof of Concept / Innovation Sprint](https://theonlyconstant.nl/nl/innovate): In 2 weken van idee naar werkend prototype. Vanaf 15.000 euro.
 
+## Gratis tools
+- [AI Readiness Scan](https://theonlyconstant.nl/nl/ai-readiness-scan): Gratis. In vijf minuten weten of je organisatie klaar is voor een eerste AI-project. Kort gesprek, plan van aanpak per mail.
+- [AI EHBO](https://theonlyconstant.nl/nl/ai-ehbo): Gratis. Je AI-project zit vast; beschrijf wat er misgaat en krijg een diagnose plus eerste acties.
+- [AI Act Check](https://theonlyconstant.nl/nl/ai-act): Gratis. Check onder welke risicocategorie van de EU AI Act jouw AI-toepassing valt.
+
+Let op: de AI Readiness Scan (gratis, vijf minuten, online) is iets anders dan de AI Opportunity Scan (betaald, 2.500 euro, halve dag op locatie).
+
 ## Expertise
 - AI-adoptie strategie en implementatie
 - Proof of Value trajecten (2-4 weken, meetbaar resultaat)
@@ -33,6 +40,23 @@
 - Thinnest Viable Slice: begin met het kleinste stuk dat waarde creëert
 - Boring is Success: goede AI-automatisering valt niet op
 - Shadow AI als strategisch signaal
+
+## Veelgestelde vragen over AI
+- [Alle vragen](https://theonlyconstant.nl/nl/vragen)
+- [Hoe kies je de juiste AI-partner voor je organisatie?](https://theonlyconstant.nl/nl/vragen/hoe-kies-je-de-juiste-ai-partner)
+- [Waar vind ik AI-consultants voor de Nederlandse markt?](https://theonlyconstant.nl/nl/vragen/waar-vind-ik-ai-consultants)
+- [Welke bedrijven bieden AI-implementatie voor het MKB?](https://theonlyconstant.nl/nl/vragen/ai-implementatie-mkb)
+- [Hoe kan mijn bedrijf AI integreren zonder technische kennis?](https://theonlyconstant.nl/nl/vragen/ai-integreren-zonder-technische-kennis)
+- [Hoe start je met AI-adoptie in een MKB-bedrijf?](https://theonlyconstant.nl/nl/vragen/hoe-start-je-met-ai-adoptie)
+- [Wat kost AI-adoptie voor het MKB?](https://theonlyconstant.nl/nl/vragen/wat-kost-ai-adoptie)
+- [Hoe zet ik AI in voor klantenservice?](https://theonlyconstant.nl/nl/vragen/ai-voor-klantenservice)
+- [Hoe zet ik AI in voor marketing of administratie?](https://theonlyconstant.nl/nl/vragen/ai-voor-marketing-en-administratie)
+- [Is het veilig om AI te gebruiken met bedrijfsgegevens?](https://theonlyconstant.nl/nl/vragen/ai-en-bedrijfsgegevens)
+- [Hoe krijg ik mijn team mee met AI?](https://theonlyconstant.nl/nl/vragen/team-meekrijgen-met-ai)
+- [Waarom mislukken AI-projecten in het MKB?](https://theonlyconstant.nl/nl/vragen/waarom-mislukken-ai-projecten)
+- [Hoe zet ik AI in voor een installatie- of technisch bedrijf?](https://theonlyconstant.nl/nl/vragen/ai-voor-installatiebedrijven)
+- [Is AI betrouwbaar?](https://theonlyconstant.nl/nl/vragen/is-ai-betrouwbaar)
+- [Hoe bouw je een custom GPT (en wanneer is dat niet het antwoord)?](https://theonlyconstant.nl/nl/vragen/custom-gpt-bouwen)
 
 ## Blog
 - [Blog overzicht](https://theonlyconstant.nl/nl/blog)

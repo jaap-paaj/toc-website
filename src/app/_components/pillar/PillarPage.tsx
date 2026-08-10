@@ -10,6 +10,7 @@ import { Surface } from "@/design-system/components/Surfaces";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
+import { CategoryPill } from "@/components/ui/CategoryPill";
 import { pillarContent, type PillarSlug } from "@/app/_content/pillar";
 import { blogContent } from "@/app/_content/blog";
 import { BlogBreadcrumb } from "@/app/_components/blog/BlogBreadcrumb";
@@ -104,14 +105,7 @@ export function PillarPage({ slug, posts }: PillarPageProps) {
                                 </Text>
                             )}
                             <div className="flex">
-                                <span
-                                    className={cn(
-                                        typography.variants.meta.badge,
-                                        "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full"
-                                    )}
-                                >
-                                    {content.hero.title}
-                                </span>
+                                <CategoryPill>{content.hero.title}</CategoryPill>
                             </div>
                         </article>
                     ))}

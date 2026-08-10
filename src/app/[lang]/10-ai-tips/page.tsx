@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { TenAiTipsPage } from "@/app/_components/ten-ai-tips/TenAiTipsPage";
 import { tenAiTipsContent } from "@/app/_content/ten-ai-tips";
 import type { Locale } from "@/lib/i18n/config";
+import { buildAlternates } from "@/lib/i18n/alternates";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: meta.title,
         description: meta.description,
-        alternates: { canonical: `${SITE_URL}/${lang}/10-ai-tips` },
+        alternates: buildAlternates(lang, "/10-ai-tips"),
         openGraph: {
             title: meta.title,
             description: meta.description,

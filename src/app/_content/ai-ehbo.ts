@@ -1,4 +1,17 @@
 import type { Locale } from "@/lib/i18n/config";
+import type { ToolAnalytics, ToolEndpoints } from "@/lib/tools/types";
+
+export const EHBO_ENDPOINTS: ToolEndpoints = {
+    chat: "/api/ehbo-chat",
+    contact: "/api/ehbo-contact",
+};
+
+export const EHBO_ANALYTICS: ToolAnalytics = {
+    tool: "ehbo",
+    startEvent: "ehbo_chat_start",
+    completionEvent: "ehbo_completion",
+    leadEvent: "ehbo_form_submit",
+};
 
 const en = {
     meta: {
@@ -74,6 +87,7 @@ const en = {
             companyPlaceholder: "Company (optional)",
             submit: "Send the working document",
             sending: "Sending...",
+            sendingHint: "This takes a moment. We are putting your working document together now.",
             success: "Your plan of action has been sent. Good luck the coming days, and let us know if you have any questions.",
             error: "Something went wrong. Try again or email info@theonlyconstant.nl directly.",
             dismiss: "Dismiss",
@@ -155,6 +169,7 @@ const nl: typeof en = {
             companyPlaceholder: "Bedrijf (optioneel)",
             submit: "Stuur het werkdocument",
             sending: "Versturen...",
+            sendingHint: "Dit duurt even. We stellen je werkdocument nu samen.",
             success: "Je plan van aanpak is verstuurd. Succes de komende dagen, en als je nog vragen hebt, laat het ons dan weten.",
             error: "Er ging iets mis. Probeer het opnieuw of mail info@theonlyconstant.nl.",
             dismiss: "Sluiten",

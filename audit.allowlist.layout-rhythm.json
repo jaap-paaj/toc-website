@@ -140,5 +140,12 @@
         "rationale": "Chat navigation back button internal spacing (component-level).",
         "linkedCanon": "CARD_CANON.md",
         "status": "accepted"
+    },
+    {
+        "path": "src/app/_components/ai-readiness-scan/modules/ReadinessChecksModule.tsx",
+        "rule": "outer-rhythm",
+        "rationale": "Surface card internal padding for the readiness check items (component-level, not module outer spacing). Mirrors the accepted EhboProblemsModule exception.",
+        "linkedCanon": "CARD_CANON.md",
+        "status": "accepted"
     }
 ]
