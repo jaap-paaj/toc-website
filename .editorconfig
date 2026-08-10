@@ -1,0 +1,19 @@
+# The repo is not Prettier-formatted, and adopting it would rewrite ~190 files.
+# This pins the things that matter so an editor — or a stray `prettier --write` —
+# cannot quietly reindent a file to something else.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{json,yml,yaml,md}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false

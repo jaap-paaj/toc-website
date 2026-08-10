@@ -11,42 +11,25 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { HeaderNavShell } from "./HeaderNavShell";
 import { typography } from "@/design-system/tokens/typography";
 import { useLocale, localizeHref } from "@/lib/i18n/useLocale";
-import type { Locale } from "@/lib/i18n/config";
+import { headerLinks, headerCta, type NavLink } from "@/app/_content/navigation";
 
 export interface HeaderProps {
     variant?: "home" | "default";
-    links?: { label: string; href: string }[];
-    cta?: { label: string; href: string };
+    links?: NavLink[];
+    cta?: NavLink;
     showBackButton?: boolean; // Legacy prop support
 }
 
-const DEFAULT_LINKS: Record<Locale, { label: string; href: string }[]> = {
-    en: [
-        { label: "Educate", href: "/educate" },
-        { label: "Automate", href: "/automate" },
-        { label: "Innovate", href: "/innovate" },
-        { label: "About us", href: "/about" },
-    ],
-    nl: [
-        { label: "Educate", href: "/educate" },
-        { label: "Automate", href: "/automate" },
-        { label: "Innovate", href: "/innovate" },
-        { label: "Over ons", href: "/about" },
-    ],
-};
-
-const DEFAULT_CTA = { label: "Contact", href: "/contact" };
-
 export function Header({
     links,
-    cta = DEFAULT_CTA,
+    cta = headerCta,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     variant = "default",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     showBackButton: _showBackButton
 }: HeaderProps) {
     const lang = useLocale();
-    const resolvedLinks = links ?? DEFAULT_LINKS[lang];
+    const resolvedLinks = links ?? headerLinks[lang];
     const localizedLinks = resolvedLinks.map((l) => ({ ...l, href: localizeHref(l.href, lang) }));
     const localizedCta = { ...cta, href: localizeHref(cta.href, lang) };
     const [isMenuOpen, setIsMenuOpen] = useState(false);
