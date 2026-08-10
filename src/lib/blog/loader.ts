@@ -171,6 +171,28 @@ export function getBlogPathsByKey(key: string): Record<Locale, string> | null {
     return paths;
 }
 
+/**
+ * Every published post as its slug in each locale.
+ *
+ * The language switcher runs in the browser and cannot read the content
+ * directory, but swapping only the locale segment of a URL would send a visitor
+ * to a slug that does not exist in the other language. This is the table it
+ * needs, resolved on the server and handed down.
+ */
+export function getBlogSlugPairs(): Record<Locale, string>[] {
+    const byKey = new Map<string, Partial<Record<Locale, string>>>();
+
+    for (const locale of ["nl", "en"] as const) {
+        for (const post of getAllPosts(locale)) {
+            byKey.set(post.key, { ...byKey.get(post.key), [locale]: post.slug });
+        }
+    }
+
+    return [...byKey.values()].filter(
+        (pair): pair is Record<Locale, string> => Boolean(pair.nl && pair.en),
+    );
+}
+
 /** Read one post by its stable key, within a single locale. */
 export function getPostByKey(key: string, locale: Locale = "en"): BlogPost | null {
     const dir = localeDir(locale);

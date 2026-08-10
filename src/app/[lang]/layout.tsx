@@ -7,6 +7,8 @@ import { SmoothScrollAnchor } from "@/components/utils/SmoothScrollAnchor";
 import { colors } from "@/design-system/tokens/colors";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { i18n } from "@/lib/i18n/config";
+import { getBlogSlugPairs } from "@/lib/blog/loader";
+import { BlogSlugPairsProvider } from "@/lib/i18n/BlogSlugPairs";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -82,7 +84,9 @@ export default async function LangLayout({
           }}
         />
         <GoogleAnalytics />
-        {children}
+        <BlogSlugPairsProvider pairs={getBlogSlugPairs()}>
+          {children}
+        </BlogSlugPairsProvider>
         <SmoothScrollAnchor />
       </body>
     </html>
