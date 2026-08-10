@@ -7,7 +7,7 @@ import { ScanWhoThisIsForModule } from "@/app/_components/ai-opportunity-scan/mo
 import { ScanPricingModule } from "@/app/_components/ai-opportunity-scan/modules/ScanPricingModule";
 import { ScanIntroCallModule } from "@/app/_components/ai-opportunity-scan/modules/ScanIntroCallModule";
 import { ScanFaqModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFaqModule";
-import { ScanFooterCtaModule } from "@/app/_components/ai-opportunity-scan/modules/ScanFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { Metadata } from "next";
 import { scanHeroVariants, scanContent } from "@/app/_content/ai-opportunity-scan";
 import type { Locale } from "@/lib/i18n/config";
@@ -47,7 +47,7 @@ export default async function Page({ params, searchParams }: PageProps) {
             <ScanPricingModule />
             <ScanIntroCallModule />
             <ScanFaqModule />
-            <ScanFooterCtaModule />
+            <SiteFooterModule cta={scanContent[lang as Locale].footerCta} />
         </PageLayout>
     );
 }

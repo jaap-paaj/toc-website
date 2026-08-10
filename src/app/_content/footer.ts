@@ -1,5 +1,5 @@
 import type { Locale } from "@/lib/i18n/config";
-import { contactContent } from "@/app/_content/contact";
+import { capabilityLinks } from "@/app/_content/navigation";
 
 /**
  * The site's navigation footer.
@@ -9,18 +9,46 @@ import { contactContent } from "@/app/_content/contact";
  * things on the site, which is the opposite of what they should be.
  */
 
+/** The shape every page-specific closing CTA has to satisfy. */
+export interface FooterCtaContent {
+    title: string | readonly string[];
+    cta: { label: string; href: string };
+    secondaryAction?: { prefix: string; label: string; href: string };
+    panelTitle?: string;
+    panelBody: string;
+}
+
 /**
- * Interim: one link to the answer-page index, on the copyright line of the CTA
- * band. Satisfies the crawl path the pages need until the footer redesign
- * lands, which will absorb it.
+ * The closing call to action every page ends on unless it overrides it.
  *
- * The anchor text is the question phrasing on purpose: that is what an engine
- * matches on.
+ * It lived in home.ts while the home page was the only caller. Fourteen pages
+ * use it now, so it belongs with the rest of the footer.
  */
-export const footerIndexLink: Record<Locale, { label: string; href: string }> = {
-    en: { label: "Frequently asked questions about AI", href: "/vragen" },
-    nl: { label: "Veelgestelde vragen over AI", href: "/vragen" },
+export const footerCta: Record<Locale, FooterCtaContent> = {
+    en: {
+        title: ["FIRST CONVERSATION,", "FIRST DIRECTION"],
+        cta: { label: "GET IN TOUCH", href: "/contact" },
+        panelTitle: "",
+        panelBody:
+            "After one conversation you'll know where the biggest opportunities are and the smallest first step to prove them.",
+    },
+    nl: {
+        title: ["EERSTE GESPREK,", "EERSTE RICHTING"],
+        cta: { label: "NEEM CONTACT OP", href: "/contact" },
+        panelTitle: "",
+        panelBody:
+            "Na een gesprek weet je waar de grootste kansen liggen en wat de kleinste eerste stap is om ze te bewijzen.",
+    },
 };
+
+/**
+ * The dominant block, left of the three secondary columns.
+ *
+ * The three capabilities, not a fourth link list: they are the spine the header
+ * already navigates on, so the footer restates the same spine at a size that
+ * anchors the strip. Same source as the header, so the two cannot drift.
+ */
+export const footerPrimary = capabilityLinks;
 
 const en = {
     columns: [
@@ -87,24 +115,9 @@ const nl: typeof en = {
     ],
 };
 
-export const footerContent: Record<Locale, typeof en> = { en, nl };
-
 /**
- * Company details come from the contact page rather than being restated, so
- * there is one place to change the KvK number.
+ * No registry line here on purpose. The company details are stated once, on the
+ * contact page, where the address can be labelled for what it is. The Company
+ * column links there.
  */
-export function footerLegal(lang: Locale): string[] {
-    const address = contactContent[lang].details.cards.find(
-        (card): card is Extract<typeof card, { items: unknown }> =>
-            "items" in card && card.items !== undefined,
-    );
-    if (!address) return [];
-
-    const name = address.lines[0];
-    const place = address.lines.slice(1, 3).join(", ");
-    const numbers = address.items
-        .filter((item) => !item.label.toUpperCase().includes("IBAN"))
-        .map((item) => `${item.label.replace(/\s*\([^)]*\)/, "")} ${item.value}`);
-
-    return [name, place, ...numbers];
-}
+export const footerContent: Record<Locale, typeof en> = { en, nl };

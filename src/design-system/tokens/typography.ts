@@ -105,6 +105,17 @@ export const typography = {
             nav: {
                 link: `font-sans font-bold uppercase tracking-wide ${scales.ui.navLink}`, // Mapping to MD size (sm/sm/sm/sm...) based on prev val
                 brand: `font-sans font-bold uppercase tracking-wide ${scales.ui.brand}`, // Header Logo
+                /**
+                 * A link inside a stacked list. Same scale as body.sm, but tight
+                 * instead of the size's default leading: when a label wraps, its
+                 * second line has to bind to the first, not read as the next item
+                 * in the list.
+                 *
+                 * The leading class comes after the scale on purpose. Tailwind's
+                 * text-* utilities carry a line-height, so tailwind-merge drops any
+                 * leading-* that precedes them.
+                 */
+                listLink: `font-sans font-normal ${scales.body.sm} leading-tight`,
             },
             input: {
                 value: `font-sans font-medium ${scales.ui.input}`, // Inputs / Selects
@@ -120,6 +131,17 @@ export const typography = {
             caption: `font-sans text-muted-foreground ${scales.meta.code}`, // Assuming matches code/body.sm size
         }
     },
+
+    /**
+     * Optical alignment: trims the leading above cap height so the box edge is
+     * the visual edge.
+     *
+     * Compose it onto the block that starts a text column when that column has
+     * to line up with a solid edge — a filled panel, a rule, a module boundary.
+     * Without it, equal spacing measured in the box model reads unequal, because
+     * only one of the two sides carries the font's ascent.
+     */
+    capTrim: "cap-trim",
 } as const;
 
 export type TypographyRole =
@@ -134,6 +156,7 @@ export type TypographyRole =
     | "heading.prompt"
     | "body.lg" | "body.md" | "body.sm"
     | "meta.eyebrow" | "meta.label" | "meta.badge" | "meta.code" | "meta.step"
+    | "ui.nav.listLink"
     | "ui.button.lg" | "ui.button.md" | "ui.button.sm"
     | "ui.nav.link" | "ui.nav.brand" | "ui.input.value"
     | "ui.placeholder.title"

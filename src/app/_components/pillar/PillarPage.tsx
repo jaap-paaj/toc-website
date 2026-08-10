@@ -3,7 +3,7 @@
 import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { PageLayout } from "@/design-system/components/Layout";
 import { HomeModule } from "@/app/_components/home/HomeModule";
-import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { Heading } from "@/design-system/components/Typography";
 import { Text } from "@/design-system/components/Typography";
 import { Surface } from "@/design-system/components/Surfaces";
@@ -136,16 +136,7 @@ export function PillarPage({ slug, posts }: PillarPageProps) {
             </HomeModule>
 
             {/* Footer CTA */}
-            <HomeModule
-                id="pillar-cta-seam"
-                width="full"
-                tone="dark"
-                pad="none"
-                padTop="m"
-                gap="none"
-            >
-                <HomeFooterCtaModule />
-            </HomeModule>
+            <SiteFooterModule />
         </PageLayout>
     );
 }

@@ -1,6 +1,5 @@
 import { PageLayout } from "@/design-system/components/Layout";
-import { HomeModule } from "@/app/_components/home/HomeModule";
-import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { AnswerHeroModule } from "@/app/_components/vragen/modules/AnswerHeroModule";
 import { AnswerBodyModule } from "@/app/_components/vragen/modules/AnswerBodyModule";
 import { AnswerCtaModule } from "@/app/_components/vragen/modules/AnswerCtaModule";
@@ -18,16 +17,7 @@ export function VragenAnswerPage({ lang, page }: VragenAnswerPageProps) {
             <AnswerHeroModule lang={lang} page={page} />
             <AnswerBodyModule page={page} />
             <AnswerCtaModule page={page} />
-            <HomeModule
-                id="answer-cta-seam"
-                width="full"
-                tone="dark"
-                pad="none"
-                padTop="m"
-                gap="none"
-            >
-                <HomeFooterCtaModule />
-            </HomeModule>
+            <SiteFooterModule />
         </PageLayout>
     );
 }
