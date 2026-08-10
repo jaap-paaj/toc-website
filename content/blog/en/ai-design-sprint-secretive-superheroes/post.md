@@ -1,5 +1,6 @@
 ---
 title: 'The Superheroes You Already Have'
+slug: ai-design-sprint
 date: '2026-01-15'
 intro: >-
   In most organisations, the people figuring out AI are not in the strategy

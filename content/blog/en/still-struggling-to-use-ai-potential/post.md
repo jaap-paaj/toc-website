@@ -1,5 +1,6 @@
 ---
 title: "Still Struggling to Use AI's Potential?"
+slug: unlocking-ai-potential
 date: '2026-03-01'
 intro: >-
   Only 4% of Dutch businesses are fully prepared for AI. The other 96% are not

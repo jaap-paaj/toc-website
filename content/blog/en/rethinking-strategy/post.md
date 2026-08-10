@@ -1,5 +1,6 @@
 ---
 title: 'Rethinking Strategy'
+slug: rethinking-ai-strategy
 date: '2026-02-12'
 intro: >-
   Long-term strategic planning. Does that still work when the next quarter

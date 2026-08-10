@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { getPagePatterns } from "@/lib/routes/patterns";
 
 /**
  * Walks the app directory to find out which pages exist.
@@ -9,9 +10,6 @@ import path from "node:path";
  * to solve.
  */
 
-const APP_DIR = path.join(process.cwd(), "src", "app");
-const LANG_DIR = path.join(APP_DIR, "[lang]");
-
 export interface RouteEntry {
     /** Route pattern below the locale, e.g. "/blog/[slug]". "" is the home page. */
     pattern: string;
@@ -20,22 +18,6 @@ export interface RouteEntry {
     /** A real path we can request, with dynamic segments filled in. */
     sample: string;
     dynamic: boolean;
-}
-
-function walk(dir: string, prefix = ""): string[] {
-    if (!fs.existsSync(dir)) return [];
-
-    const found: string[] = [];
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-        if (!entry.isDirectory()) {
-            if (entry.name === "page.tsx") found.push(prefix || "/");
-            continue;
-        }
-        // Route groups and private folders do not appear in the URL.
-        if (entry.name.startsWith("_") || entry.name.startsWith("(")) continue;
-        found.push(...walk(path.join(dir, entry.name), `${prefix}/${entry.name}`));
-    }
-    return found;
 }
 
 function expand(pattern: string): { count: number; sample: string } {
@@ -68,7 +50,7 @@ function expand(pattern: string): { count: number; sample: string } {
 }
 
 export function getRoutes(): RouteEntry[] {
-    const patterns = walk(LANG_DIR).map((p) => (p === "/" ? "" : p));
+    const patterns = getPagePatterns().map((p) => (p === "/" ? "" : p));
 
     return patterns
         .map((pattern) => {
