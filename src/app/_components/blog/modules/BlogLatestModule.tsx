@@ -95,7 +95,7 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
                         return (
                             <div className="flex justify-center">
                                 <Link
-                                    href={`/${pillar.pillarSlug}`}
+                                    href={pillar.href}
                                     className={cn(
                                         categoryPillClass,
                                         categoryPillInteractiveClass

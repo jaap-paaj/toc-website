@@ -97,9 +97,34 @@ function answerRedirects() {
     ];
 }
 
+/**
+ * The theme pages and the first-aid tool got English paths. Their Dutch paths
+ * are unchanged, so only the /en/ side redirects.
+ *
+ * Hand-listed because these are five fixed pages rather than generated content
+ * — but the locale-path table is what the site actually links and canonicals
+ * through, and e2e/redirects.spec.ts reads that table, so a pair added there
+ * without a redirect here fails the build's tests rather than shipping quietly.
+ */
+const ENGLISH_PATH_MOVES = [
+    ["/en/ai-strategie", "/en/ai-strategy"],
+    ["/en/ai-automatisering-gids", "/en/ai-automation-guide"],
+    ["/en/ai-en-mensen", "/en/ai-and-people"],
+    ["/en/ai-ehbo/chat", "/en/ai-first-aid/chat"],
+    ["/en/ai-ehbo", "/en/ai-first-aid"],
+];
+
 const nextConfig: NextConfig = {
     async redirects() {
-        return [...blogRedirects(), ...answerRedirects()];
+        return [
+            ...blogRedirects(),
+            ...answerRedirects(),
+            ...ENGLISH_PATH_MOVES.map(([source, destination]) => ({
+                source,
+                destination,
+                statusCode: 301,
+            })),
+        ];
     },
 };
 

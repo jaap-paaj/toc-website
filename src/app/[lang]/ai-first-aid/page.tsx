@@ -7,8 +7,8 @@ import { EhboProblemsModule } from "@/app/_components/ai-ehbo/modules/EhboProble
 import { EhboAboutModule } from "@/app/_components/ai-ehbo/modules/EhboAboutModule";
 import { ehboMetadata } from "@/app/_components/ai-ehbo/route";
 
-/** The Dutch AI EHBO landing page. English lives at /en/ai-first-aid. */
-const LANG = "nl";
+/** The English AI First Aid landing page. Dutch lives at /nl/ai-ehbo. */
+const LANG = "en";
 
 export function generateStaticParams() {
     return [{ lang: LANG }];

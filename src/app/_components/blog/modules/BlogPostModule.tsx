@@ -72,7 +72,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                         {/* Pillar tag */}
                         {pillar && (
                             <Link
-                                href={`/${pillar.pillarSlug}`}
+                                href={pillar.href}
                                 className={cn(
                                     categoryPillClass,
                                     categoryPillInteractiveClass
@@ -117,7 +117,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                                     {lang === "nl" ? "Meer over dit onderwerp" : "More on this topic"}
                                 </span>
                                 <Link
-                                    href={`/${pillar.pillarSlug}`}
+                                    href={pillar.href}
                                     className={cn(
                                         typography.variants.body.md,
                                         "underline underline-offset-4 decoration-border hover:decoration-current transition-colors duration-200"

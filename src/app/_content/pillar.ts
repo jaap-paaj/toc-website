@@ -187,6 +187,22 @@ export const pillarContent = {
 export type PillarSlug = keyof typeof pillarContent;
 
 /**
+ * The path of each theme page, per locale.
+ *
+ * The key stays Dutch because it identifies the theme across languages and
+ * never appears in a URL — the same split the blog and the answer pages use.
+ */
+export const PILLAR_PATHS: Record<PillarSlug, Record<Locale, string>> = {
+    "ai-strategie": { nl: "/ai-strategie", en: "/ai-strategy" },
+    "ai-automatisering-gids": { nl: "/ai-automatisering-gids", en: "/ai-automation-guide" },
+    "ai-en-mensen": { nl: "/ai-en-mensen", en: "/ai-and-people" },
+};
+
+export function pillarPath(slug: PillarSlug, locale: Locale): string {
+    return PILLAR_PATHS[slug][locale];
+}
+
+/**
  * Look up which pillar page a blog post belongs to.
  * Returns pillar slug and localized title, or null if no pillar match.
  */
@@ -207,13 +223,17 @@ const pillarTagLabels: Record<PillarSlug, Record<Locale, string>> = {
 export function getPillarForBlog(
     blogKey: string,
     locale: Locale
-): { pillarSlug: PillarSlug; title: string; tagLabel: string } | null {
+): { pillarSlug: PillarSlug; href: string; title: string; tagLabel: string } | null {
     for (const [pillarSlug, pillar] of Object.entries(pillarContent)) {
         const slug = pillarSlug as PillarSlug;
         const content = pillar[locale];
         if (content.blogLinks.some((link) => link.key === blogKey)) {
             return {
                 pillarSlug: slug,
+                // Resolved here rather than by the caller: the theme's key is
+                // Dutch, and linking to `/${key}` would put a Dutch path on
+                // every English page that shows a theme badge.
+                href: pillarPath(slug, locale),
                 title: content.hero.title,
                 tagLabel: pillarTagLabels[slug][locale],
             };

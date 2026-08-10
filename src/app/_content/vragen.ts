@@ -198,7 +198,7 @@ const en = {
         },
         {
             key: "ai-integreren-zonder-technische-kennis",
-            slug: "ai-without-technical-knowledge",
+            slug: "how-to-use-ai-without-technical-knowledge",
             cluster: "Where do we start",
             meta: {
                 title: "Integrating AI without technical knowledge - The Only Constant",
@@ -383,7 +383,7 @@ const en = {
         },
         {
             key: "ai-voor-marketing-en-administratie",
-            slug: "ai-for-marketing-and-admin",
+            slug: "ai-for-marketing-and-administration",
             cluster: "What can we use AI for",
             meta: {
                 title: "How to use AI for marketing or administration - The Only Constant",
@@ -547,7 +547,7 @@ const en = {
         },
         {
             key: "ai-voor-installatiebedrijven",
-            slug: "ai-for-technical-companies",
+            slug: "ai-for-installation-companies",
             cluster: "Technical services",
             meta: {
                 title: "AI for installation and technical companies - The Only Constant",

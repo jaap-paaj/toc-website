@@ -15,26 +15,3 @@ export function useLocale(): Locale {
   }
   return i18n.defaultLocale;
 }
-
-/**
- * Prefixes a path with the current locale.
- * Handles paths that already have a locale prefix.
- */
-export function localizeHref(href: string, lang: Locale): string {
-  // Don't prefix anchors, external URLs, or already-prefixed paths
-  if (href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto:")) {
-    return href;
-  }
-
-  // Strip existing locale prefix if present
-  for (const locale of i18n.locales) {
-    if (href.startsWith(`/${locale}/`) || href === `/${locale}`) {
-      href = href.slice(locale.length + 1) || "/";
-      break;
-    }
-  }
-
-  // Prefix with current locale
-  if (href === "/") return `/${lang}`;
-  return `/${lang}${href}`;
-}

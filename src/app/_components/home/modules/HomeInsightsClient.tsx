@@ -69,7 +69,7 @@ function PillarBadge({ postKey, lang }: { postKey: string; lang: string }) {
     return (
         <div className="flex">
             <Link
-                href={`/${pillar.pillarSlug}`}
+                href={pillar.href}
                 className={cn(
                     typography.variants.meta.badge,
                     "bg-foreground/10 text-foreground px-2 py-0.5 rounded-full hover:bg-foreground/20 transition-colors duration-200"

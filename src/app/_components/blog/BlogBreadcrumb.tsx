@@ -21,7 +21,7 @@ export function BlogBreadcrumb({ postTitle, postKey }: BlogBreadcrumbProps) {
     if (pillar) {
         crumbs.push({
             label: pillar.tagLabel,
-            href: postTitle ? `/${pillar.pillarSlug}` : undefined,
+            href: postTitle ? pillar.href : undefined,
         });
     }
 

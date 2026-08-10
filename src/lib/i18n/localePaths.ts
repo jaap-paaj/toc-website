@@ -5,6 +5,8 @@ import {
     getAnswerPaths,
     vragenContent,
 } from "@/app/_content/vragen";
+import { PILLAR_PATHS } from "@/app/_content/pillar";
+import { EHBO_CHAT_PATHS, EHBO_PATHS } from "@/app/_content/ai-ehbo";
 import type { Locale } from "./config";
 
 /** One page, as its path below the locale in each language. */
@@ -36,6 +38,8 @@ export function getLocalePathPairs(): LocalePathPair[] {
         if (paths) pairs.push(paths);
         else pairs.push({ nl: answerPath("nl", page.slug), en: ANSWERS_BASE_PATH.en });
     }
+
+    pairs.push(...Object.values(PILLAR_PATHS), EHBO_PATHS, EHBO_CHAT_PATHS);
 
     return pairs.filter((pair) => pair.nl !== pair.en);
 }

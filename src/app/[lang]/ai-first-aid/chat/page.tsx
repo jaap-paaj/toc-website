@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { EhboChatModule } from "@/app/_components/ai-ehbo/modules/EhboChatModule";
 import { ehboChatMetadata } from "@/app/_components/ai-ehbo/route";
 
-/** The Dutch AI EHBO chat. English lives at /en/ai-first-aid/chat. */
-const LANG = "nl";
+/** The English AI First Aid chat. Dutch lives at /nl/ai-ehbo/chat. */
+const LANG = "en";
 
 export function generateStaticParams() {
     return [{ lang: LANG }];

@@ -101,6 +101,11 @@ export function pathPairs(): PathPair[] {
         ...blog,
         { key: "answers-index", nl: "/vragen", en: "/questions" },
         ...answers,
+        { key: "pillar-strategy", nl: "/ai-strategie", en: "/ai-strategy" },
+        { key: "pillar-automation", nl: "/ai-automatisering-gids", en: "/ai-automation-guide" },
+        { key: "pillar-people", nl: "/ai-en-mensen", en: "/ai-and-people" },
+        { key: "first-aid", nl: "/ai-ehbo", en: "/ai-first-aid" },
+        { key: "first-aid-chat", nl: "/ai-ehbo/chat", en: "/ai-first-aid/chat" },
     ];
 }
 
@@ -122,6 +127,15 @@ export function retiredUrls(): Retired[] {
 
     // The English answers moved segment as well as slug; the Dutch ones did not.
     retired.push({ from: "/en/vragen", to: "/en/questions" });
+
+    // Theme pages and the first-aid tool: English path changed, Dutch did not.
+    retired.push(
+        { from: "/en/ai-strategie", to: "/en/ai-strategy" },
+        { from: "/en/ai-automatisering-gids", to: "/en/ai-automation-guide" },
+        { from: "/en/ai-en-mensen", to: "/en/ai-and-people" },
+        { from: "/en/ai-ehbo", to: "/en/ai-first-aid" },
+        { from: "/en/ai-ehbo/chat", to: "/en/ai-first-aid/chat" },
+    );
     for (const { key, en } of answerSlugs()) {
         retired.push({ from: `/en/vragen/${key}`, to: `/en/questions/${en}` });
     }
