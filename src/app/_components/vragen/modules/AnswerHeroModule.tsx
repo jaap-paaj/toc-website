@@ -5,7 +5,7 @@ import { Heading } from "@/design-system/components/Typography";
 import { StandfirstSection } from "@/components/sections/StandfirstSection";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
-import { vragenContent, VRAGEN_BASE_PATH, type AnswerPage } from "@/app/_content/vragen";
+import { vragenContent, ANSWERS_BASE_PATH, type AnswerPage } from "@/app/_content/vragen";
 import type { Locale } from "@/lib/i18n/config";
 
 interface AnswerHeroModuleProps {
@@ -19,7 +19,7 @@ export function AnswerHeroModule({ lang, page }: AnswerHeroModuleProps) {
     // The cluster is not a page, so it would be a dead crumb. It shows up as a
     // badge below instead, the same way the index lists it.
     const crumbs: Crumb[] = [
-        { label: index.breadcrumbLabel, href: VRAGEN_BASE_PATH },
+        { label: index.breadcrumbLabel, href: ANSWERS_BASE_PATH[lang] },
         { label: page.question },
     ];
 

@@ -4,8 +4,8 @@ import { VragenAnswerPage } from "@/app/_components/vragen/VragenAnswerPage";
 import { answerMetadata, answerParamsFor } from "@/app/_components/vragen/route";
 import { getAnswerPage } from "@/app/_content/vragen";
 
-/** The Dutch answer pages. English lives at /en/questions/[slug]. */
-const LANG = "nl";
+/** The English answer pages. Dutch lives at /nl/vragen/[slug]. */
+const LANG = "en";
 
 interface PageProps {
     params: Promise<{ slug: string }>;

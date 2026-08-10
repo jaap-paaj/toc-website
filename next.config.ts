@@ -58,9 +58,48 @@ function blogRedirects() {
     return redirects;
 }
 
+/**
+ * The English answers moved from /en/vragen/<dutch slug> to
+ * /en/questions/<english slug>. Both halves changed, so every old English URL
+ * needs a redirect; the Dutch ones are untouched.
+ *
+ * Read out of the content file with a regex for the same reason as above:
+ * next.config.ts is compiled without the app's path aliases. The count check is
+ * the guard — a parse that silently found nothing would ship a section with no
+ * redirects at all.
+ */
+function answerRedirects() {
+    const source = fs.readFileSync(
+        path.join(process.cwd(), "src", "app", "_content", "vragen.ts"),
+        "utf-8",
+    );
+
+    // The English pages are declared first, the Dutch ones after `const nl`.
+    const dutchBlock = source.search(/^const nl\b/m);
+    if (dutchBlock === -1) throw new Error("could not find the Dutch block in vragen.ts");
+
+    const english = source.slice(0, dutchBlock);
+    const pairs = [...english.matchAll(/key: "([^"]+)",\s*\n\s*slug: "([^"]+)",/g)];
+
+    if (pairs.length !== 14) {
+        throw new Error(
+            `expected 14 English answer pages in vragen.ts, parsed ${pairs.length}`,
+        );
+    }
+
+    return [
+        { source: "/en/vragen", destination: "/en/questions", statusCode: 301 },
+        ...pairs.map(([, key, slug]) => ({
+            source: `/en/vragen/${key}`,
+            destination: `/en/questions/${slug}`,
+            statusCode: 301,
+        })),
+    ];
+}
+
 const nextConfig: NextConfig = {
     async redirects() {
-        return blogRedirects();
+        return [...blogRedirects(), ...answerRedirects()];
     },
 };
 

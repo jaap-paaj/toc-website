@@ -48,12 +48,20 @@ function expand(pattern: string): { count: number; sample: string } {
         return { count: posts.length, sample: `/blog/${posts[0]?.slug ?? ""}` };
     }
 
-    if (pattern.startsWith("/vragen/[slug]")) {
+    // The answers live at /vragen in Dutch and /questions in English, so each
+    // route folder holds only its own language's pages.
+    const answers = pattern.match(/^\/(vragen|questions)\/\[slug\]/);
+    if (answers) {
+        const lang = answers[1] === "vragen" ? "nl" : "en";
         // Imported lazily to keep this module free of content dependencies.
         // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { getAnswerSlugs } = require("@/app/_content/vragen");
-        const slugs: string[] = getAnswerSlugs();
-        return { count: slugs.length, sample: `/vragen/${slugs[0] ?? ""}` };
+        const { getAnswerParams } = require("@/app/_content/vragen");
+        const params: { lang: string; slug: string }[] = getAnswerParams();
+        const mine = params.filter((p) => p.lang === lang);
+        return {
+            count: mine.length,
+            sample: `/${answers[1]}/${mine[0]?.slug ?? ""}`,
+        };
     }
 
     return { count: 1, sample: pattern === "/" ? "" : pattern };

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { VragenIndexPage } from "@/app/_components/vragen/VragenIndexPage";
 import { answersIndexMetadata } from "@/app/_components/vragen/route";
 
-/** The Dutch answers index. English lives at /en/questions. */
-const LANG = "nl";
+/** The English answers index. Dutch lives at /nl/vragen. */
+const LANG = "en";
 
 export function generateStaticParams() {
     return [{ lang: LANG }];

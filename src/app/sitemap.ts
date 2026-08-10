@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog/loader";
-import { getAnswerSlugs, VRAGEN_BASE_PATH } from "@/app/_content/vragen";
+import { ANSWERS_BASE_PATH, answerPath, getAnswerParams } from "@/app/_content/vragen";
 
 const SITE_URL = "https://theonlyconstant.nl";
 
@@ -63,20 +63,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // so the sitemap can never drift out of sync with what is published.
     for (const locale of ["nl", "en"] as const) {
         pages.push({
-            url: `${SITE_URL}/${locale}${VRAGEN_BASE_PATH}`,
+            url: `${SITE_URL}/${locale}${ANSWERS_BASE_PATH[locale]}`,
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: locale === "nl" ? 0.7 : 0.5,
         });
+    }
 
-        for (const slug of getAnswerSlugs()) {
-            pages.push({
-                url: `${SITE_URL}/${locale}${VRAGEN_BASE_PATH}/${slug}`,
-                lastModified: new Date(),
-                changeFrequency: "monthly",
-                priority: locale === "nl" ? 0.8 : 0.6,
-            });
-        }
+    for (const { lang, slug } of getAnswerParams()) {
+        pages.push({
+            url: `${SITE_URL}/${lang}${answerPath(lang, slug)}`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: lang === "nl" ? 0.8 : 0.6,
+        });
     }
 
     return pages;
