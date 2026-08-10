@@ -1,6 +1,6 @@
 import { PageLayout } from "@/design-system/components/Layout";
 import { HomeModule } from "@/app/_components/home/HomeModule";
-import { HomeFooterCtaModule } from "@/app/_components/home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { BlogLatestSection } from "./modules/BlogLatestModule";
 import { BlogGridSection } from "./modules/BlogGridModule";
 import { typography } from "@/design-system/tokens/typography";
@@ -38,16 +38,7 @@ export function BlogOverviewPage({ posts, lang }: BlogOverviewPageProps) {
                     <BlogGridSection posts={olderPosts} lang={lang} />
                 </HomeModule>
             )}
-            <HomeModule
-                id="blog-cta-seam"
-                width="full"
-                tone="dark"
-                pad="none"
-                padTop="m"
-                gap="none"
-            >
-                <HomeFooterCtaModule />
-            </HomeModule>
+            <SiteFooterModule />
         </PageLayout>
     );
 }

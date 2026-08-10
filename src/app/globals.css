@@ -260,6 +260,23 @@
 
 @layer utilities {
 
+  /*
+   * Trim the leading above cap height, so a text block's box edge is also its
+   * visual edge.
+   *
+   * Needed wherever text sits a measured distance from a solid edge: the box
+   * carries the font's ascent above the capitals, so identical spacing reads
+   * larger against text than against a filled shape. Exposed as
+   * typography.capTrim — do not reach for the class directly.
+   *
+   * Progressive enhancement. Browsers without text-box-trim render what they
+   * rendered before, which is the untrimmed box.
+   */
+  .cap-trim {
+    text-box-trim: trim-start;
+    text-box-edge: cap alphabetic;
+  }
+
   /* Headings – TOC scale (All Sans) */
   /* Headings – TOC scale (All Sans) */
   /* Replaced by typography.variants.heading.* tokens */

@@ -1,6 +1,6 @@
 
 import { PageLayout } from "@/design-system/components/Layout";
-import { HomeFooterCtaModule } from "../home/modules/HomeFooterCtaModule";
+import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { InnovateHeroModule } from "./modules/InnovateHeroModule";
 import { InnovateImageDuoModule } from "./modules/InnovateImageDuoModule";
 import { InnovatePropositionsModule } from "./modules/InnovatePropositionsModule";
@@ -15,7 +15,7 @@ export function InnovatePage() {
             <InnovateSolutionsModule />
             <InnovateImageDuoModule />
             <InnovateWhyUsModule />
-            <HomeFooterCtaModule />
+            <SiteFooterModule />
         </PageLayout>
     );
 }

@@ -21,11 +21,6 @@ export interface FooterCtaSectionProps {
     };
     panelTitle?: string;
     panelBody: string;
-    /** Quiet link on the copyright line, for pages that need a crawl path. */
-    footerLink?: {
-        label: string;
-        href: string;
-    };
     className?: string; // Standard pattern
 }
 
@@ -35,7 +30,6 @@ export function FooterCtaSection({
     secondaryAction,
     panelTitle,
     panelBody,
-    footerLink,
     className
 }: FooterCtaSectionProps) {
     const lang = useLocale();
@@ -67,67 +61,38 @@ export function FooterCtaSection({
                                 )}
                             </h2>
 
-                            <div className="flex flex-col gap-6">
-                                <div className="flex flex-col gap-3 items-start">
-                                    <div className="flex items-center gap-3">
-                                        <Button
-                                            asChild
-                                            size="xl"
-                                            className="tone-dark bg-background text-foreground hover:bg-background/80 rounded-full"
-                                            onClick={() =>
-                                                trackEvent("cta_click", {
-                                                    cta_label: cta.label,
-                                                    cta_location: "footer",
-                                                })
-                                            }
-                                        >
-                                            <a href={localizeHref(cta.href, lang)}>{cta.label}</a>
-                                        </Button>
-                                        {secondaryAction && (
-                                            <span className={cn(typography.variants.body.md)}>
-                                                {secondaryAction.prefix}
-                                            </span>
-                                        )}
-                                    </div>
+                            <div className="flex flex-col gap-3 items-start">
+                                <div className="flex items-center gap-3">
+                                    <Button
+                                        asChild
+                                        size="xl"
+                                        className="tone-dark bg-background text-foreground hover:bg-background/80 rounded-full"
+                                        onClick={() =>
+                                            trackEvent("cta_click", {
+                                                cta_label: cta.label,
+                                                cta_location: "footer",
+                                            })
+                                        }
+                                    >
+                                        <a href={localizeHref(cta.href, lang)}>{cta.label}</a>
+                                    </Button>
                                     {secondaryAction && (
-                                        <Button
-                                            asChild
-                                            size="xl"
-                                            className="tone-light bg-background text-foreground hover:bg-background/80 rounded-full"
-                                        >
-                                            <a href={secondaryAction.href}>
-                                                {secondaryAction.label}
-                                            </a>
-                                        </Button>
+                                        <span className={cn(typography.variants.body.md)}>
+                                            {secondaryAction.prefix}
+                                        </span>
                                     )}
                                 </div>
-                                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                                    <span className={cn(typography.variants.body.sm, "opacity-50")}>
-                                        © The Only Constant {new Date().getFullYear()}
-                                    </span>
-                                    {footerLink && (
-                                        <>
-                                            <span
-                                                className={cn(
-                                                    typography.variants.body.sm,
-                                                    "opacity-30",
-                                                )}
-                                                aria-hidden="true"
-                                            >
-                                                ·
-                                            </span>
-                                            <a
-                                                href={localizeHref(footerLink.href, lang)}
-                                                className={cn(
-                                                    typography.variants.body.sm,
-                                                    "underline underline-offset-4 decoration-current/40 hover:decoration-current transition-colors",
-                                                )}
-                                            >
-                                                {footerLink.label}
-                                            </a>
-                                        </>
-                                    )}
-                                </div>
+                                {secondaryAction && (
+                                    <Button
+                                        asChild
+                                        size="xl"
+                                        className="tone-light bg-background text-foreground hover:bg-background/80 rounded-full"
+                                    >
+                                        <a href={secondaryAction.href}>
+                                            {secondaryAction.label}
+                                        </a>
+                                    </Button>
+                                )}
                             </div>
                         </div>
 
