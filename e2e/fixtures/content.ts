@@ -19,6 +19,8 @@ export interface PathPair {
     key: string;
     nl: string;
     en: string;
+    /** A page rendered without the site header, so there is no language button. */
+    noHeader?: boolean;
 }
 
 /** A URL that used to work and must now redirect. */
@@ -105,7 +107,7 @@ export function pathPairs(): PathPair[] {
         { key: "pillar-automation", nl: "/ai-automatisering-gids", en: "/ai-automation-guide" },
         { key: "pillar-people", nl: "/ai-en-mensen", en: "/ai-and-people" },
         { key: "first-aid", nl: "/ai-ehbo", en: "/ai-first-aid" },
-        { key: "first-aid-chat", nl: "/ai-ehbo/chat", en: "/ai-first-aid/chat" },
+        { key: "first-aid-chat", nl: "/ai-ehbo/chat", en: "/ai-first-aid/chat", noHeader: true },
     ];
 }
 
