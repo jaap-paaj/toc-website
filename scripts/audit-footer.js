@@ -27,6 +27,7 @@ const MODULE = "SiteFooterModule";
  */
 const NO_FOOTER = [
     "/ai-ehbo/chat", // in the middle of the first-aid conversation
+    "/ai-first-aid/chat", // the same conversation, English route
     "/ai-readiness-scan/chat", // in the middle of the scan conversation
     "/ai-act/check", // in the middle of the wizard
     "/ai-opportunity-scan/book", // on the booking calendar

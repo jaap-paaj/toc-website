@@ -1,6 +1,6 @@
 import { getAllPosts } from "@/lib/blog/loader";
 import { getPillarForBlog } from "@/app/_content/pillar";
-import { vragenContent, VRAGEN_BASE_PATH } from "@/app/_content/vragen";
+import { vragenContent, ANSWERS_BASE_PATH } from "@/app/_content/vragen";
 
 /**
  * The items behind the dynamic routes, so the collapsed rows in the route
@@ -40,7 +40,7 @@ function blogGroup(now: number): ContentGroup {
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
     const items = posts.map((post) => {
-        const pillar = getPillarForBlog(post.slug, "nl");
+        const pillar = getPillarForBlog(post.key, "nl");
         const age = now - new Date(post.date).getTime();
 
         const flags: string[] = [];
@@ -74,7 +74,7 @@ function answersGroup(): ContentGroup {
     return {
         key: "vragen",
         label: "Antwoordpagina's",
-        routePattern: `${VRAGEN_BASE_PATH}/[slug]`,
+        routePattern: `${ANSWERS_BASE_PATH.nl}/[slug]`,
         items,
     };
 }

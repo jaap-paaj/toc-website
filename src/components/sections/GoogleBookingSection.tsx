@@ -5,7 +5,8 @@ import { Surface } from "@/design-system/components/Surfaces";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { Button } from "@/components/ui/Button";
 import { useState } from "react";
-import { useLocale, localizeHref } from "@/lib/i18n/useLocale";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { useLocalizedHref } from "@/lib/i18n/LocalePathsProvider";
 
 interface GoogleBookingSectionProps {
     title?: string;
@@ -37,6 +38,7 @@ export function GoogleBookingSection({
 }: GoogleBookingSectionProps) {
     const [isLoading, setIsLoading] = useState(true);
     const lang = useLocale();
+    const localizeHref = useLocalizedHref();
 
     return (
         <div className={cn(enableContainer && "container mx-auto", className)}>

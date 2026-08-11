@@ -67,7 +67,7 @@ export function BlogGridSection({ posts, lang }: BlogGridSectionProps) {
 
                         {/* Pillar badge */}
                         {(() => {
-                            const pillar = getPillarForBlog(post.slug, lang);
+                            const pillar = getPillarForBlog(post.key, lang);
                             if (!pillar) return null;
                             return (
                                 <div className="flex">

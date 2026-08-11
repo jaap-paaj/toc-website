@@ -1,5 +1,6 @@
 ---
 title: 'The Wrong Axis: Why ''Europe Has Lost the AI Race'' Misses the Point'
+slug: the-wrong-axis
 date: '2026-06-15'
 intro: >-
   Europe isn't out of the AI race. We're just looking at the wrong half of it.
@@ -39,7 +40,7 @@ Our lesson: begin. Preferably small, but broadly supported. Prove the value of A
 
 ---
 
-The Only Constant helps organisations in retail, manufacturing, and high-tech discover where AI delivers the most. Want to see where adoption already pays off for you today? Begin with an [AI Workshop](/nl/educate) to give your team the foundations, or kick off an [AI Automation Programme](/nl/automate) to discover where AI genuinely adds value. That is where we start.
+The Only Constant helps organisations in retail, manufacturing, and high-tech discover where AI delivers the most. Want to see where adoption already pays off for you today? Begin with an [AI Workshop](/en/educate) to give your team the foundations, or kick off an [AI Automation Programme](/en/automate) to discover where AI genuinely adds value. That is where we start.
 
 ---
 

@@ -6,7 +6,8 @@ import { trackEvent } from "@/lib/analytics/ga";
 import { Surface } from "@/design-system/components/Surfaces";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
-import { useLocale, localizeHref } from "@/lib/i18n/useLocale";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { useLocalizedHref } from "@/lib/i18n/LocalePathsProvider";
 
 export interface FooterCtaSectionProps {
     title: string | string[] | readonly string[];
@@ -33,6 +34,7 @@ export function FooterCtaSection({
     className
 }: FooterCtaSectionProps) {
     const lang = useLocale();
+    const localizeHref = useLocalizedHref();
     return (
         <footer className={cn("container mx-auto", className)}>
             <Surface

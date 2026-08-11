@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getAllSlugs, getPostBySlug } from "@/lib/blog/loader";
+import {
+    getAllBlogParams,
+    getAllPosts,
+    getBlogPathsByKey,
+    getPostBySlug,
+} from "@/lib/blog/loader";
 import { BlogDetailPage } from "@/app/_components/blog/BlogDetailPage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import type { Locale } from "@/lib/i18n/config";
@@ -13,8 +18,7 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-    const slugs = getAllSlugs();
-    return slugs.map((slug) => ({ slug }));
+    return getAllBlogParams();
 }
 
 export const dynamicParams = true;
@@ -24,14 +28,16 @@ export async function generateMetadata({
 }: BlogPostPageProps): Promise<Metadata> {
     const { lang, slug } = await params;
     const post = getPostBySlug(slug, lang as Locale);
-    if (!post) return { title: "Post Not Found" };
+    // The page itself will notFound(); metadata for a 404 is metadata for
+    // nothing, so say nothing rather than titling the error page.
+    if (!post) return {};
 
     const pageUrl = `${SITE_URL}/${lang}/blog/${slug}`;
 
     return {
         title: `${post.title} | Blog | The Only Constant`,
         description: post.intro,
-        alternates: buildAlternates(lang, `/blog/${slug}`),
+        alternates: buildAlternates(lang, getBlogPathsByKey(post.key) ?? `/blog/${slug}`),
         openGraph: {
             title: post.title,
             description: post.intro,

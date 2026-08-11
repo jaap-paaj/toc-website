@@ -90,12 +90,12 @@ export function BlogLatestSection({ posts, showBottomBorder }: BlogLatestSection
 
                     {/* Pillar badge */}
                     {(() => {
-                        const pillar = getPillarForBlog(post.slug, lang);
+                        const pillar = getPillarForBlog(post.key, lang);
                         if (!pillar) return null;
                         return (
                             <div className="flex justify-center">
                                 <Link
-                                    href={`/${pillar.pillarSlug}`}
+                                    href={pillar.href}
                                     className={cn(
                                         categoryPillClass,
                                         categoryPillInteractiveClass

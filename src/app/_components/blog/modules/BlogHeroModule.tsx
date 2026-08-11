@@ -7,7 +7,7 @@ import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { blogContent } from "@/app/_content/blog";
-import { VRAGEN_BASE_PATH } from "@/app/_content/vragen";
+import { ANSWERS_BASE_PATH } from "@/app/_content/vragen";
 import { LocalizedLink as Link } from "@/components/i18n/LocalizedLink";
 import { useLocale } from "@/lib/i18n/useLocale";
 
@@ -35,7 +35,7 @@ export function BlogHeroModule() {
                     </Heading>
                     <div className="flex">
                         <Link
-                            href={VRAGEN_BASE_PATH}
+                            href={ANSWERS_BASE_PATH[lang]}
                             className={cn(
                                 typography.variants.meta.label,
                                 "underline underline-offset-4 decoration-border hover:decoration-current transition-colors",

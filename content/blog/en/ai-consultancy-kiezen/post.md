@@ -1,5 +1,6 @@
 ---
 title: 'Choosing an AI consultancy: the question nobody asks'
+slug: choosing-an-ai-consultancy
 date: '2026-04-03'
 intro: >-
   There are hundreds of agencies doing AI projects. Most deliver a report. The good ones deliver a decision.
@@ -44,7 +45,7 @@ The AI consultancy market is growing fast, and that attracts two types of provid
 
 The first type sells tools. They have a partnership with a platform and their advice suspiciously often leads to that one platform. Just sales with an analysis phase in front of it.
 
-The second type sells complexity. The more complicated the engagement, the longer the assignment. Forty-page governance frameworks. Roadmaps running to 2028. Risk analyses so extensive they become a risk themselves. That is [Solutioneering](/nl/blog/solutioneering) from the supply side: the tool sells itself, the problem comes later.
+The second type sells complexity. The more complicated the engagement, the longer the assignment. Forty-page governance frameworks. Roadmaps running to 2028. Risk analyses so extensive they become a risk themselves. That is [Solutioneering](/en/blog/solutioneering) from the supply side: the tool sells itself, the problem comes later.
 
 The question that helps: would this consultancy also advise me to do nothing? If the answer is no, if the recommendation is always "more", then the business model is the problem.
 
@@ -54,9 +55,9 @@ Three principles that help with any AI engagement, regardless of who runs it.
 
 **Pick a fight.** The biggest mistake is starting everywhere at once. Choose one domain, one team, one process. Go deep rather than broad. Every additional scope item halves your learning capacity.
 
-**Demand working things.** Presentations are not a result. Reports are not a result. A working prototype that real people use during their normal working day, that is a result. It does not need to be finished. It needs to be real. A good [AI proof of concept](/nl/blog/ai-proof-of-concept) delivers exactly that: decision data, not slideware.
+**Demand working things.** Presentations are not a result. Reports are not a result. A working prototype that real people use during their normal working day, that is a result. It does not need to be finished. It needs to be real. A good [AI proof of concept](/en/blog/ai-proof-of-concept) delivers exactly that: decision data, not slideware.
 
-**Measure to learn.** The reflex is to measure whether AI "works." That is the wrong question at the start. The right question: what have we learned? Which assumptions held and which did not? Measuring to learn creates safety. Measuring to judge creates politics. And only scale when the evidence is there, not when the enthusiasm is. That principle, [proof before scale](/nl/blog/proof-before-scale), protects against the most expensive mistake in AI adoption.
+**Measure to learn.** The reflex is to measure whether AI "works." That is the wrong question at the start. The right question: what have we learned? Which assumptions held and which did not? Measuring to learn creates safety. Measuring to judge creates politics. And only scale when the evidence is there, not when the enthusiasm is. That principle, [proof before scale](/en/blog/proof-before-scale), protects against the most expensive mistake in AI adoption.
 
 John Snow was initially ignored. The establishment had a theory, and that theory was comfortable. But Snow had data. And data always beats comfort, if you are willing to look.
 
@@ -64,7 +65,7 @@ The right AI consultancy helps you look. At your own processes, your own people,
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team the foundations. Or start an [AI Automation Track](/nl/automate) to discover where AI genuinely adds value in your organisation.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to give your team the foundations. Or start an [AI Automation Track](/en/automate) to discover where AI genuinely adds value in your organisation.
 
 ---
 

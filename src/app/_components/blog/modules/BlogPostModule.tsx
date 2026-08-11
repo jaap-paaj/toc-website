@@ -34,12 +34,12 @@ function formatDate(dateStr: string, lang: string): string {
 export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
     const lang = useLocale();
     const content = blogContent[lang].sidebar;
-    const pillar = getPillarForBlog(post.slug, lang);
+    const pillar = getPillarForBlog(post.key, lang);
     return (
         <HomeModule id="blog-post" width="full" tone="light" pad="m" padTop="xl" gap="s" containsContent>
             <div className={cn("w-full flex flex-col items-center", spacing.stackXl)}>
                 {/* Breadcrumb */}
-                <BlogBreadcrumb postTitle={post.title} slug={post.slug} />
+                <BlogBreadcrumb postTitle={post.title} postKey={post.key} />
 
                 {/* Post header */}
                 <header className={cn("flex flex-col items-center text-center max-w-4xl", spacing.component.sectionHeader, "px-[var(--space-sm)] md:px-0")}>
@@ -72,7 +72,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                         {/* Pillar tag */}
                         {pillar && (
                             <Link
-                                href={`/${pillar.pillarSlug}`}
+                                href={pillar.href}
                                 className={cn(
                                     categoryPillClass,
                                     categoryPillInteractiveClass
@@ -117,7 +117,7 @@ export function BlogPostModule({ post, latestPosts }: BlogPostModuleProps) {
                                     {lang === "nl" ? "Meer over dit onderwerp" : "More on this topic"}
                                 </span>
                                 <Link
-                                    href={`/${pillar.pillarSlug}`}
+                                    href={pillar.href}
                                     className={cn(
                                         typography.variants.body.md,
                                         "underline underline-offset-4 decoration-border hover:decoration-current transition-colors duration-200"
