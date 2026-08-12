@@ -1,5 +1,6 @@
 ---
 title: 'AI Workshops for Businesses: Why Most Deliver Nothing'
+slug: ai-workshops-for-business
 date: '2026-04-03'
 intro: >-
   Half a day of inspiration is enjoyable. But if everything is back to normal by Monday, you might as well have watched a TED Talk.
@@ -28,7 +29,7 @@ There is a more fundamental issue underneath. AI is not a tool you learn to use 
 
 In four out of five workshops we run, the same moment arrives. Someone from the team says: "But don't we already have an AI tool?" And it turns out three people use it, two have never heard of it, and the tool does something entirely different from what it was intended for.
 
-That is a signal. It tells you that people are already searching for solutions to friction in their work. They are doing it alone, without coordination, without direction. We call this [Shadow AI](/nl/blog/shadow-ai), unofficial AI use as strategic radar.
+That is a signal. It tells you that people are already searching for solutions to friction in their work. They are doing it alone, without coordination, without direction. We call this [Shadow AI](/en/blog/shadow-ai), unofficial AI use as strategic radar.
 
 The smartest organisations treat that as information. Where are people already using AI on their own? Those are the places where friction is highest and value is clearest.
 
@@ -40,9 +41,9 @@ Three elements make the difference.
 
 **The emotional check-in.** Ask the team: what excites you about AI? What concerns you? What changes in your work if AI takes over thirty percent of routine tasks? The answers are revealing. Most anxiety sits with middle management, the people who translate between strategy and execution. If they are sceptical, you are nowhere near done.
 
-**The friction inventory.** Walk participants through their own work and have them mark where things snag. Where do they lose time? Where do they copy data between systems? Where do they do things knowing it could be done smarter? This is the [Follow the Friction](/nl/blog/follow-the-friction) principle in action. That inventory yields more than any technology demo ever could.
+**The friction inventory.** Walk participants through their own work and have them mark where things snag. Where do they lose time? Where do they copy data between systems? Where do they do things knowing it could be done smarter? This is the [Follow the Friction](/en/blog/follow-the-friction) principle in action. That inventory yields more than any technology demo ever could.
 
-**The first action.** End with something concrete. An experiment that can start on Monday. The thinnest possible slice: a specific piece of work, a specific team, two weeks to test whether AI adds value there. The wedding cake comes later. Start with the cupcake. This is also the heart of [good AI automation](/nl/blog/ai-automatisering): start small, learn fast.
+**The first action.** End with something concrete. An experiment that can start on Monday. The thinnest possible slice: a specific piece of work, a specific team, two weeks to test whether AI adds value there. The wedding cake comes later. Start with the cupcake. This is also the heart of [good AI automation](/en/blog/ai-automation): start small, learn fast.
 
 ## What it costs and what it delivers
 
@@ -58,7 +59,7 @@ That dot. That is where you begin.
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team the foundation. Or start an [AI Automation trajectory](/nl/automate) to discover where AI genuinely adds value in your organisation.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to give your team the foundation. Or start an [AI Automation trajectory](/en/automate) to discover where AI genuinely adds value in your organisation.
 
 ---
 

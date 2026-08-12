@@ -42,9 +42,9 @@ Between experiment and scale sits a decision point. Seven questions you need to 
 
 **Is the evidence complete?** Have the tests been run, the metrics collected, the feedback heard? A green light based on gut feeling is a red light.
 
-**Can you [detect drift](/nl/blog/ai-drift)?** Everything degrades. Models become less accurate. Users become less critical. Costs creep up. Do you have a system to notice that before it becomes a problem?
+**Can you [detect drift](/en/blog/ai-drift)?** Everything degrades. Models become less accurate. Users become less critical. Costs creep up. Do you have a system to notice that before it becomes a problem?
 
-If any of these questions produces a clear "no," you do not scale. You go back to the experiment. That sounds like a step backwards. It is the most valuable step you can take. You also need [governance](/nl/blog/ai-governance) that supports this rhythm: short lines of communication, clear principles, and the confidence to stop when the evidence is not there.
+If any of these questions produces a clear "no," you do not scale. You go back to the experiment. That sounds like a step backwards. It is the most valuable step you can take. You also need [governance](/en/blog/ai-governance) that supports this rhythm: short lines of communication, clear principles, and the confidence to stop when the evidence is not there.
 
 ## Why stopping has value
 
@@ -52,7 +52,7 @@ Most organisations struggle to stop. Stopping feels like failure. Money wasted. 
 
 But an experiment that stops with clear reasons yields more than a pilot that muddles on. You know what works and what does not. You know which assumptions held and which did not. You have decision data. That is exactly what you ran the experiment for.
 
-The most expensive AI projects are the ones nobody dares to stop. [Zombie Pilots](/nl/blog/zombie-pilots): running quarter after quarter with the promise that it is "almost" working. Slowly consuming budget, energy and trust until there is nothing left.
+The most expensive AI projects are the ones nobody dares to stop. [Zombie Pilots](/en/blog/zombie-pilots): running quarter after quarter with the promise that it is "almost" working. Slowly consuming budget, energy and trust until there is nothing left.
 
 Proof before scale is not a brake on innovation. It is protection against the illusion of progress.
 
@@ -62,7 +62,7 @@ The lesson is the same as for every AI project: prove the value before you incre
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to give your team the foundation. Or start an [Innovation Sprint](/nl/innovate) to produce decision data within two weeks before you scale.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to give your team the foundation. Or start an [Innovation Sprint](/en/innovate) to produce decision data within two weeks before you scale.
 
 ---
 

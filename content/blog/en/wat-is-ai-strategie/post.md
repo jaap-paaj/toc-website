@@ -1,5 +1,6 @@
 ---
 title: 'What Is an AI Strategy (and Why Most of Them Do Not Work)'
+slug: what-is-an-ai-strategy
 date: '2026-04-04'
 intro: >-
   Ninety-three percent of AI pilots never reach production. The problem is rarely the technology.
@@ -30,13 +31,13 @@ The core of a working AI strategy is focus. Pick one fight. Go deep on it. Every
 
 **Measurable criteria defined upfront.** How will you know it works? Define that before you start building. And always measure in pairs: speed alongside quality, cost savings alongside employee satisfaction. One-sided metrics lead to one-sided conclusions.
 
-**A forced decision.** At the end of the cycle, you force a choice: scale, adjust, change direction, or stop. All four are good outcomes. "We're keeping an eye on it" is not. What that looks like in practice is described in [AI strategy in ninety days](/nl/blog/ai-strategie-90-dagen).
+**A forced decision.** At the end of the cycle, you force a choice: scale, adjust, change direction, or stop. All four are good outcomes. "We're keeping an eye on it" is not. What that looks like in practice is described in [AI strategy in ninety days](/en/blog/ai-strategy-in-90-days).
 
 ## Where it goes wrong
 
 Two patterns we encounter in almost every organisation.
 
-The first: starting with the tool. "We need to do something with agents." "Have you looked at Copilot yet?" The technology is central. The problem comes later. Or never. That is [Solutioneering](/nl/blog/solutioneering), the fastest route to an expensive project that delivers nothing.
+The first: starting with the tool. "We need to do something with agents." "Have you looked at Copilot yet?" The technology is central. The problem comes later. Or never. That is [Solutioneering](/en/blog/solutioneering), the fastest route to an expensive project that delivers nothing.
 
 The second: no owner. An AI strategy without someone who has the authority to stop is a strategy without brakes. You need a sponsor who can say "no." To the CEO, to the vendor, to the enthusiasm when it is heading in the wrong direction.
 
@@ -50,7 +51,7 @@ These are not process improvements. They are new capabilities. The interesting A
 
 ## The sequence
 
-Start with the [friction](/nl/blog/follow-the-friction). Inventory where people are already using AI tools on their own initiative. Choose the domain with the most pain and the most potential. Build something small in two weeks. Measure it. Decide.
+Start with the [friction](/en/blog/follow-the-friction). Inventory where people are already using AI tools on their own initiative. Choose the domain with the most pain and the most potential. Build something small in two weeks. Measure it. Decide.
 
 Repeat. Each cycle builds on the previous one. After three cycles, you have an AI strategy that has grown organically from evidence, rather than being designed top-down in a meeting room.
 
@@ -58,7 +59,7 @@ Ninety-three percent never reach production. The seven percent that do started s
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to choose a focus for your AI strategy. Or kick off an [Innovation Sprint](/nl/innovate) to complete the first cycle in two weeks.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to choose a focus for your AI strategy. Or kick off an [Innovation Sprint](/en/innovate) to complete the first cycle in two weeks.
 
 ---
 

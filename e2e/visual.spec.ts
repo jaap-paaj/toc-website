@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { pathPairs } from "./fixtures/content";
 
 const LOCALES = ["nl", "en"] as const;
 
@@ -10,7 +11,8 @@ const STATIC_PAGES = [
     { name: "educate", path: "/educate" },
     { name: "contact", path: "/contact" },
     { name: "blog", path: "/blog" },
-    { name: "vragen", path: "/vragen" },
+    // The answers index has a translated segment: /nl/vragen, /en/questions.
+    { name: "vragen", path: "/vragen", en: "/questions" },
 ];
 
 const SCAN_VARIANTS = [
@@ -37,7 +39,8 @@ const ANSWER_SLUGS = [
 for (const locale of LOCALES) {
     for (const page of STATIC_PAGES) {
         test(`${page.name} — ${locale}`, async ({ page: p }) => {
-            await p.goto(`/${locale}${page.path}`, {
+            const path = locale === "en" && "en" in page ? page.en : page.path;
+            await p.goto(`/${locale}${path}`, {
                 waitUntil: "networkidle",
             });
             await expect(p).toHaveScreenshot(`${page.name}-${locale}.png`, {
@@ -163,13 +166,17 @@ for (const locale of LOCALES) {
 // --- GEO answer pages ---
 
 for (const locale of LOCALES) {
-    for (const slug of ANSWER_SLUGS) {
-        test(`vragen ${slug} — ${locale}`, async ({ page }) => {
-            await page.goto(`/${locale}/vragen/${slug}`, {
+    for (const key of ANSWER_SLUGS) {
+        // Named by the stable key, not the slug, so the baseline survives a
+        // translated URL — the screenshot is of the same page either way.
+        const pair = pathPairs().find((p) => p.key === key)!;
+
+        test(`vragen ${key} — ${locale}`, async ({ page }) => {
+            await page.goto(`/${locale}${pair[locale]}`, {
                 waitUntil: "networkidle",
             });
             await expect(page).toHaveScreenshot(
-                `vragen-${slug}-${locale}.png`,
+                `vragen-${key}-${locale}.png`,
                 { fullPage: true }
             );
         });

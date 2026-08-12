@@ -5,7 +5,7 @@ import { Heading, Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
-import { vragenContent, VRAGEN_BASE_PATH } from "@/app/_content/vragen";
+import { vragenContent, answerPath } from "@/app/_content/vragen";
 import type { Locale } from "@/lib/i18n/config";
 
 interface VragenIndexListModuleProps {
@@ -47,7 +47,7 @@ export function VragenIndexListModule({ lang }: VragenIndexListModuleProps) {
                                     <CategoryPill>{page.cluster}</CategoryPill>
                                 </div>
                                 <Link
-                                    href={`${VRAGEN_BASE_PATH}/${page.slug}`}
+                                    href={answerPath(lang, page.slug)}
                                     className="group"
                                 >
                                     <Heading

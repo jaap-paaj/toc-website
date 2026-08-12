@@ -30,7 +30,7 @@ Organisations that get AI governance right separate two things that almost every
 
 **The strategy track.** Who sets the direction? What is in and out of scope? Which risks are acceptable? This is the work of the sponsor, leadership, and the governance lead. Their mindset: "safe enough to try."
 
-**The experimentation track.** Who runs experiments? Who learns from the results? Who builds working things? This is the work of practitioners, domain experts, and builders. Their mindset: "fast enough to learn." Here the principle of [proof before scale](/nl/blog/proof-before-scale) applies: prove the value at small scale before expanding.
+**The experimentation track.** Who runs experiments? Who learns from the results? Who builds working things? This is the work of practitioners, domain experts, and builders. Their mindset: "fast enough to learn." Here the principle of [proof before scale](/en/blog/proof-before-scale) applies: prove the value at small scale before expanding.
 
 The two tracks run in parallel. They influence each other. But they do not sit in the same meeting, follow the same rhythm, or report in the same way. The strategy track sets the frame. The experimentation track fills it in.
 
@@ -42,7 +42,7 @@ Instead of forty pages, you need three principles. They fit on a Post-it.
 
 **Never three things in one system.** Full access to information, decision authority, and execution power should never sit in the same AI application. Separate them. Or ensure human checkpoints in between.
 
-**Human in the loop for high-impact decisions.** Every decision touching employment, finances above a threshold, legal exposure, or customer relationships requires human approval. Always. And run [the Meaning Test](/nl/blog/meaning-test) regularly: is the work genuinely getting better, or just faster?
+**Human in the loop for high-impact decisions.** Every decision touching employment, finances above a threshold, legal exposure, or customer relationships requires human approval. Always. And run [the Meaning Test](/en/blog/meaning-test) regularly: is the work genuinely getting better, or just faster?
 
 These three principles are the fence around the playing field. Within that fence, the team can move fast. The fence is there so that speed does not come at the cost of safety.
 
@@ -50,7 +50,7 @@ These three principles are the fence around the playing field. Within that fence
 
 Governance is not a one-off document. It is a rhythm of short, regular check-ins.
 
-Every two weeks, thirty minutes. Three questions. What have we learned? What is blocking us? Do we need to adjust scope, timeline, or approach? This rhythm is also the moment to check for [AI drift](/nl/blog/ai-drift): is quality degrading, are costs creeping up, are users stopping their critical review?
+Every two weeks, thirty minutes. Three questions. What have we learned? What is blocking us? Do we need to adjust scope, timeline, or approach? This rhythm is also the moment to check for [AI drift](/en/blog/ai-drift): is quality degrading, are costs creeping up, are users stopping their critical review?
 
 That is it. No two-hour steering committee meeting. No thirty-slide quarterly report. A short conversation with the right people, on a fixed rhythm, with fixed questions.
 
@@ -60,7 +60,7 @@ Good AI governance does the opposite. Short lines. Few layers. Clear principles.
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to shape governance and strategy together. Or start an [Innovation Sprint](/nl/innovate) with built-in governance that is both fast and safe.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to shape governance and strategy together. Or start an [Innovation Sprint](/en/innovate) with built-in governance that is both fast and safe.
 
 ---
 

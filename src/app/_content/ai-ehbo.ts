@@ -178,3 +178,17 @@ const nl: typeof en = {
 };
 
 export const ehboContent: Record<Locale, typeof en> = { en, nl };
+
+/**
+ * The tool's path, per locale. It is called "AI First Aid" in English
+ * everywhere but the URL, which still said ai-ehbo.
+ */
+export const EHBO_PATHS: Record<Locale, string> = {
+    nl: "/ai-ehbo",
+    en: "/ai-first-aid",
+};
+
+export const EHBO_CHAT_PATHS: Record<Locale, string> = {
+    nl: "/ai-ehbo/chat",
+    en: "/ai-first-aid/chat",
+};

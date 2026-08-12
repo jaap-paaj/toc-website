@@ -1,5 +1,6 @@
 ---
 title: 'The Four Forms of AI That Matter for Your Organisation'
+slug: four-forms-of-ai
 date: '2026-04-04'
 intro: >-
   Forget narrow AI, general AI, and superintelligence. The framework that actually matters for your business is different.
@@ -32,7 +33,7 @@ Where it gets interesting: AI that generates based on what it has perceived and 
 
 **Decide.** AI can make recommendations. Which complaints require escalation? Which leads are most promising? Which products need reordering? AI does not decide. AI advises. The decision stays with the human. But the advice can be based on more data, processed faster, than any human could ever survey.
 
-This is where a boundary [needs to be deliberately designed](/nl/blog/ai-governance): advice and authority kept separate. AI may recommend. Humans decide.
+This is where a boundary [needs to be deliberately designed](/en/blog/ai-governance): advice and authority kept separate. AI may recommend. Humans decide.
 
 ## The combinations
 
@@ -46,17 +47,17 @@ All four: a customer service operation that reads incoming queries (Sense), clas
 
 ## What this means for your strategy
 
-Most organisations start with Generate. They have AI write texts, make presentations, draft emails. That produces something, but it is the least strategic application. The real difference lies in Sense and Interpret, the capabilities that let your organisation see things [you could not see yesterday](/nl/blog/ai-readiness).
+Most organisations start with Generate. They have AI write texts, make presentations, draft emails. That produces something, but it is the least strategic application. The real difference lies in Sense and Interpret, the capabilities that let your organisation see things [you could not see yesterday](/en/blog/ai-readiness).
 
 The question for every AI investment: which capability are we adding? And which combination delivers the most value for this specific process?
 
-Start with the pain. Identify which capability fits. Build the smallest possible proof. Test with real people. And [measure not just speed but also quality](/nl/blog/meaning-test).
+Start with the pain. Identify which capability fits. Build the smallest possible proof. Test with real people. And [measure not just speed but also quality](/en/blog/meaning-test).
 
 That is an AI strategy that starts with what your organisation can become, not just what it already was.
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to discover which AI capabilities offer the most value for your organisation. Or kick off an [AI Automation Programme](/nl/automate) to build and test the first combination.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to discover which AI capabilities offer the most value for your organisation. Or kick off an [AI Automation Programme](/en/automate) to build and test the first combination.
 
 ---
 

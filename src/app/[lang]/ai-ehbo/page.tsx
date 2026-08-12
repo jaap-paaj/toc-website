@@ -5,46 +5,19 @@ import { EhboHeroModule } from "@/app/_components/ai-ehbo/modules/EhboHeroModule
 import { EhboHowItWorksModule } from "@/app/_components/ai-ehbo/modules/EhboHowItWorksModule";
 import { EhboProblemsModule } from "@/app/_components/ai-ehbo/modules/EhboProblemsModule";
 import { EhboAboutModule } from "@/app/_components/ai-ehbo/modules/EhboAboutModule";
-import { ehboContent } from "@/app/_content/ai-ehbo";
-import type { Locale } from "@/lib/i18n/config";
-import { buildAlternates } from "@/lib/i18n/alternates";
+import { ehboMetadata } from "@/app/_components/ai-ehbo/route";
 
-const SITE_URL = "https://theonlyconstant.nl";
+/** The Dutch AI EHBO landing page. English lives at /en/ai-first-aid. */
+const LANG = "nl";
 
-interface PageProps {
-    params: Promise<{ lang: string }>;
+export function generateStaticParams() {
+    return [{ lang: LANG }];
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { lang } = await params;
-    const { meta } = ehboContent[lang as Locale];
-    return {
-        title: meta.title,
-        description: meta.description,
-        alternates: buildAlternates(lang, "/ai-ehbo"),
-        openGraph: {
-            title: meta.title,
-            description: meta.description,
-            type: "website",
-            url: `${SITE_URL}/${lang}/ai-ehbo`,
-            siteName: "The Only Constant",
-            locale: lang === "nl" ? "nl_NL" : "en_GB",
-            images: [
-                {
-                    url: `${SITE_URL}/images/brand/toc/og-ai-ehbo.png`,
-                    width: 1200,
-                    height: 630,
-                    alt: meta.title,
-                },
-            ],
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: meta.title,
-            description: meta.description,
-            images: [`${SITE_URL}/images/brand/toc/og-ai-ehbo.png`],
-        },
-    };
+export const dynamicParams = false;
+
+export async function generateMetadata(): Promise<Metadata> {
+    return ehboMetadata(LANG);
 }
 
 export default function Page() {

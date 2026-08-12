@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { getPagePatterns } from "@/lib/routes/patterns";
 
 /**
  * Walks the app directory to find out which pages exist.
@@ -8,9 +9,6 @@ import path from "node:path";
  * update is stale the day you write it, which is the problem this page exists
  * to solve.
  */
-
-const APP_DIR = path.join(process.cwd(), "src", "app");
-const LANG_DIR = path.join(APP_DIR, "[lang]");
 
 export interface RouteEntry {
     /** Route pattern below the locale, e.g. "/blog/[slug]". "" is the home page. */
@@ -22,51 +20,37 @@ export interface RouteEntry {
     dynamic: boolean;
 }
 
-function walk(dir: string, prefix = ""): string[] {
-    if (!fs.existsSync(dir)) return [];
-
-    const found: string[] = [];
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-        if (!entry.isDirectory()) {
-            if (entry.name === "page.tsx") found.push(prefix || "/");
-            continue;
-        }
-        // Route groups and private folders do not appear in the URL.
-        if (entry.name.startsWith("_") || entry.name.startsWith("(")) continue;
-        found.push(...walk(path.join(dir, entry.name), `${prefix}/${entry.name}`));
-    }
-    return found;
-}
-
-/** Reads the directory names behind a dynamic segment, e.g. blog post folders. */
-function contentSlugs(...segments: string[]): string[] {
-    const dir = path.join(process.cwd(), ...segments);
-    if (!fs.existsSync(dir)) return [];
-    return fs
-        .readdirSync(dir, { withFileTypes: true })
-        .filter((e) => e.isDirectory())
-        .map((e) => e.name);
-}
-
 function expand(pattern: string): { count: number; sample: string } {
     if (pattern.startsWith("/blog/[slug]")) {
-        const slugs = contentSlugs("content", "blog", "nl");
-        return { count: slugs.length, sample: `/blog/${slugs[0] ?? ""}` };
+        // The folder name is the key, not the URL — the slug lives in the
+        // frontmatter, so ask the loader rather than the filesystem.
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        const { getAllPosts } = require("@/lib/blog/loader");
+        const posts: { slug: string }[] = getAllPosts("nl");
+        return { count: posts.length, sample: `/blog/${posts[0]?.slug ?? ""}` };
     }
 
-    if (pattern.startsWith("/vragen/[slug]")) {
+    // The answers live at /vragen in Dutch and /questions in English, so each
+    // route folder holds only its own language's pages.
+    const answers = pattern.match(/^\/(vragen|questions)\/\[slug\]/);
+    if (answers) {
+        const lang = answers[1] === "vragen" ? "nl" : "en";
         // Imported lazily to keep this module free of content dependencies.
         // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { getAnswerSlugs } = require("@/app/_content/vragen");
-        const slugs: string[] = getAnswerSlugs();
-        return { count: slugs.length, sample: `/vragen/${slugs[0] ?? ""}` };
+        const { getAnswerParams } = require("@/app/_content/vragen");
+        const params: { lang: string; slug: string }[] = getAnswerParams();
+        const mine = params.filter((p) => p.lang === lang);
+        return {
+            count: mine.length,
+            sample: `/${answers[1]}/${mine[0]?.slug ?? ""}`,
+        };
     }
 
     return { count: 1, sample: pattern === "/" ? "" : pattern };
 }
 
 export function getRoutes(): RouteEntry[] {
-    const patterns = walk(LANG_DIR).map((p) => (p === "/" ? "" : p));
+    const patterns = getPagePatterns().map((p) => (p === "/" ? "" : p));
 
     return patterns
         .map((pattern) => {

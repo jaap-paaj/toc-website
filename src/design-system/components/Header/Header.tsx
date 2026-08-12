@@ -10,7 +10,8 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 
 import { HeaderNavShell } from "./HeaderNavShell";
 import { typography } from "@/design-system/tokens/typography";
-import { useLocale, localizeHref } from "@/lib/i18n/useLocale";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { useLocalizedHref } from "@/lib/i18n/LocalePathsProvider";
 import { headerLinks, headerCta, type NavLink } from "@/app/_content/navigation";
 
 export interface HeaderProps {
@@ -29,6 +30,7 @@ export function Header({
     showBackButton: _showBackButton
 }: HeaderProps) {
     const lang = useLocale();
+    const localizeHref = useLocalizedHref();
     const resolvedLinks = links ?? headerLinks[lang];
     const localizedLinks = resolvedLinks.map((l) => ({ ...l, href: localizeHref(l.href, lang) }));
     const localizedCta = { ...cta, href: localizeHref(cta.href, lang) };

@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
 import { EhboChatModule } from "@/app/_components/ai-ehbo/modules/EhboChatModule";
-import { ehboContent } from "@/app/_content/ai-ehbo";
-import type { Locale } from "@/lib/i18n/config";
-import { buildAlternates } from "@/lib/i18n/alternates";
+import { ehboChatMetadata } from "@/app/_components/ai-ehbo/route";
 
+/** The Dutch AI EHBO chat. English lives at /en/ai-first-aid/chat. */
+const LANG = "nl";
 
-interface PageProps {
-    params: Promise<{ lang: string }>;
+export function generateStaticParams() {
+    return [{ lang: LANG }];
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { lang } = await params;
-    const { meta } = ehboContent[lang as Locale];
-    return {
-        title: meta.title,
-        description: meta.description,
-        alternates: buildAlternates(lang, "/ai-ehbo/chat"),
-    };
+export const dynamicParams = false;
+
+export async function generateMetadata(): Promise<Metadata> {
+    return ehboChatMetadata(LANG);
 }
 
 export default function Page() {

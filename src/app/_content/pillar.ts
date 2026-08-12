@@ -1,7 +1,8 @@
 import type { Locale } from "@/lib/i18n/config";
 
 interface PillarBlogLink {
-    slug: string;
+    /** The blog post's stable key (its folder name), not its URL slug. */
+    key: string;
     title: string;
 }
 
@@ -30,16 +31,16 @@ const aiStrategie = {
             "These articles help you build an AI strategy that starts with the work and produces evidence, not slide decks.",
         ],
         blogLinks: [
-            { slug: "wat-is-ai-strategie", title: "What is an AI strategy (and why most don't work)" },
-            { slug: "ai-strategie-90-dagen", title: "AI strategy in ninety days" },
-            { slug: "ai-readiness", title: "AI readiness: when is your organization ready?" },
-            { slug: "follow-the-friction", title: "Follow the Friction: why the best AI strategy starts with looking" },
-            { slug: "solutioneering", title: "Solutioneering: the most expensive mistake in AI" },
-            { slug: "shadow-ai", title: "Shadow AI: the signal you're missing" },
-            { slug: "rethinking-strategy", title: "Rethinking Strategy" },
-            { slug: "ai-cannot-fix-what-you-cannot-explain", title: "AI Cannot Fix What You Cannot Explain" },
-            { slug: "still-struggling-to-use-ai-potential", title: "Still Struggling to Use AI's Potential?" },
-            { slug: "verkeerde-as", title: "The Wrong Axis: Why 'Europe Has Lost the AI Race' Misses the Point" },
+            { key: "wat-is-ai-strategie", title: "What is an AI strategy (and why most don't work)" },
+            { key: "ai-strategie-90-dagen", title: "AI strategy in ninety days" },
+            { key: "ai-readiness", title: "AI readiness: when is your organization ready?" },
+            { key: "follow-the-friction", title: "Follow the Friction: why the best AI strategy starts with looking" },
+            { key: "solutioneering", title: "Solutioneering: the most expensive mistake in AI" },
+            { key: "shadow-ai", title: "Shadow AI: the signal you're missing" },
+            { key: "rethinking-strategy", title: "Rethinking Strategy" },
+            { key: "ai-cannot-fix-what-you-cannot-explain", title: "AI Cannot Fix What You Cannot Explain" },
+            { key: "still-struggling-to-use-ai-potential", title: "Still Struggling to Use AI's Potential?" },
+            { key: "verkeerde-as", title: "The Wrong Axis: Why 'Europe Has Lost the AI Race' Misses the Point" },
         ],
         services: [
             { href: "/educate", label: "AI Workshop" },
@@ -57,16 +58,16 @@ const aiStrategie = {
             "Deze artikelen helpen je een AI-strategie bouwen die begint bij het werk en bewijs oplevert, geen slideware.",
         ],
         blogLinks: [
-            { slug: "wat-is-ai-strategie", title: "Wat is een AI-strategie (en waarom de meeste niet werken)" },
-            { slug: "ai-strategie-90-dagen", title: "AI-strategie in negentig dagen" },
-            { slug: "ai-readiness", title: "AI readiness: wanneer is je organisatie klaar?" },
-            { slug: "follow-the-friction", title: "Follow the Friction: waarom de beste AI-strategie begint met kijken" },
-            { slug: "solutioneering", title: "Solutioneering: de duurste fout bij AI" },
-            { slug: "shadow-ai", title: "Shadow AI: het signaal dat je mist" },
-            { slug: "rethinking-strategy", title: "Strategie heroverwogen" },
-            { slug: "ai-cannot-fix-what-you-cannot-explain", title: "AI lost niet op wat je zelf niet kunt uitleggen" },
-            { slug: "still-struggling-to-use-ai-potential", title: "Worstelt je organisatie nog met het potentieel van AI?" },
-            { slug: "verkeerde-as", title: "De verkeerde as: waarom 'Europa heeft de AI-race verloren' de plank misslaat" },
+            { key: "wat-is-ai-strategie", title: "Wat is een AI-strategie (en waarom de meeste niet werken)" },
+            { key: "ai-strategie-90-dagen", title: "AI-strategie in negentig dagen" },
+            { key: "ai-readiness", title: "AI readiness: wanneer is je organisatie klaar?" },
+            { key: "follow-the-friction", title: "Follow the Friction: waarom de beste AI-strategie begint met kijken" },
+            { key: "solutioneering", title: "Solutioneering: de duurste fout bij AI" },
+            { key: "shadow-ai", title: "Shadow AI: het signaal dat je mist" },
+            { key: "rethinking-strategy", title: "Strategie heroverwogen" },
+            { key: "ai-cannot-fix-what-you-cannot-explain", title: "AI lost niet op wat je zelf niet kunt uitleggen" },
+            { key: "still-struggling-to-use-ai-potential", title: "Worstelt je organisatie nog met het potentieel van AI?" },
+            { key: "verkeerde-as", title: "De verkeerde as: waarom 'Europa heeft de AI-race verloren' de plank misslaat" },
         ],
         services: [
             { href: "/educate", label: "AI Workshop" },
@@ -87,12 +88,12 @@ const aiAutomatisering = {
             "These articles show how to approach AI automation that truly adds value, without paving the cow path.",
         ],
         blogLinks: [
-            { slug: "ai-automatisering", title: "AI automation doesn't start with the tool" },
-            { slug: "ai-agents-bedrijven", title: "AI agents for business: what they can and can't do" },
-            { slug: "vier-vormen-ai", title: "Four forms of AI for organizations" },
-            { slug: "proof-before-scale", title: "Proof before Scale: don't scale what isn't proven" },
-            { slug: "zombie-pilots", title: "Zombie Pilots: the pilots that won't die" },
-            { slug: "ai-drift", title: "AI drift: the silent degradation nobody sees" },
+            { key: "ai-automatisering", title: "AI automation doesn't start with the tool" },
+            { key: "ai-agents-bedrijven", title: "AI agents for business: what they can and can't do" },
+            { key: "vier-vormen-ai", title: "Four forms of AI for organizations" },
+            { key: "proof-before-scale", title: "Proof before Scale: don't scale what isn't proven" },
+            { key: "zombie-pilots", title: "Zombie Pilots: the pilots that won't die" },
+            { key: "ai-drift", title: "AI drift: the silent degradation nobody sees" },
         ],
         services: [
             { href: "/automate", label: "AI Automation" },
@@ -109,12 +110,12 @@ const aiAutomatisering = {
             "Deze artikelen laten zien hoe je AI-automatisering aanpakt die echt waarde toevoegt, zonder het bestaande spoor te asfalteren.",
         ],
         blogLinks: [
-            { slug: "ai-automatisering", title: "AI automatisering begint niet bij de tool" },
-            { slug: "ai-agents-bedrijven", title: "AI agents voor bedrijven: wat ze wel en niet kunnen" },
-            { slug: "vier-vormen-ai", title: "Vier vormen van AI voor organisaties" },
-            { slug: "proof-before-scale", title: "Proof before Scale: schaal niet op wat niet bewezen is" },
-            { slug: "zombie-pilots", title: "Zombie Pilots: de pilots die niet doodgaan" },
-            { slug: "ai-drift", title: "AI drift: de stille degradatie die niemand ziet" },
+            { key: "ai-automatisering", title: "AI automatisering begint niet bij de tool" },
+            { key: "ai-agents-bedrijven", title: "AI agents voor bedrijven: wat ze wel en niet kunnen" },
+            { key: "vier-vormen-ai", title: "Vier vormen van AI voor organisaties" },
+            { key: "proof-before-scale", title: "Proof before Scale: schaal niet op wat niet bewezen is" },
+            { key: "zombie-pilots", title: "Zombie Pilots: de pilots die niet doodgaan" },
+            { key: "ai-drift", title: "AI drift: de stille degradatie die niemand ziet" },
         ],
         services: [
             { href: "/automate", label: "AI Automatisering" },
@@ -134,16 +135,16 @@ const aiEnMensen = {
             "These articles explore the human side: governance, responsibility, skills, and the question whether work has actually gotten better.",
         ],
         blogLinks: [
-            { slug: "meaning-test", title: "The Meaning Test: has work improved or just gotten faster?" },
-            { slug: "junior-gap", title: "The Junior Gap: the invisible risk of AI" },
-            { slug: "ai-governance", title: "AI governance: less framework, more rhythm" },
-            { slug: "ai-eu-ai-act", title: "The EU AI Act: what it means for your organization" },
-            { slug: "ai-workshop-bedrijven", title: "AI workshop for business: beyond the inspiration session" },
-            { slug: "ai-consultancy-kiezen", title: "Choosing an AI consultancy: the question nobody asks" },
-            { slug: "ai-proof-of-concept", title: "AI proof of concept: from pilot graveyard to decision data" },
-            { slug: "the-age-of-the-ideas-people", title: "The Age of the Ideas People" },
-            { slug: "the-design-process-is-dead", title: "The Design Process Is Dead. The Design Discipline Isn't." },
-            { slug: "ai-design-sprint-secretive-superheroes", title: "The Superheroes You Already Have" },
+            { key: "meaning-test", title: "The Meaning Test: has work improved or just gotten faster?" },
+            { key: "junior-gap", title: "The Junior Gap: the invisible risk of AI" },
+            { key: "ai-governance", title: "AI governance: less framework, more rhythm" },
+            { key: "ai-eu-ai-act", title: "The EU AI Act: what it means for your organization" },
+            { key: "ai-workshop-bedrijven", title: "AI workshop for business: beyond the inspiration session" },
+            { key: "ai-consultancy-kiezen", title: "Choosing an AI consultancy: the question nobody asks" },
+            { key: "ai-proof-of-concept", title: "AI proof of concept: from pilot graveyard to decision data" },
+            { key: "the-age-of-the-ideas-people", title: "The Age of the Ideas People" },
+            { key: "the-design-process-is-dead", title: "The Design Process Is Dead. The Design Discipline Isn't." },
+            { key: "ai-design-sprint-secretive-superheroes", title: "The Superheroes You Already Have" },
         ],
         services: [
             { href: "/educate", label: "AI Workshop" },
@@ -160,16 +161,16 @@ const aiEnMensen = {
             "Deze artikelen gaan over de menselijke kant: governance, verantwoordelijkheid, vaardigheden en de vraag of het werk echt beter is geworden.",
         ],
         blogLinks: [
-            { slug: "meaning-test", title: "De Meaning Test: is het werk beter geworden of alleen sneller?" },
-            { slug: "junior-gap", title: "De Junior Gap: het onzichtbare risico van AI" },
-            { slug: "ai-governance", title: "AI governance: minder framework, meer ritme" },
-            { slug: "ai-eu-ai-act", title: "De EU AI Act: wat het betekent voor je organisatie" },
-            { slug: "ai-workshop-bedrijven", title: "AI workshop voor bedrijven: voorbij de inspiratiesessie" },
-            { slug: "ai-consultancy-kiezen", title: "AI consultancy kiezen: de vraag die niemand stelt" },
-            { slug: "ai-proof-of-concept", title: "AI proof of concept: van pilot-kerkhof naar beslisdata" },
-            { slug: "the-age-of-the-ideas-people", title: "Het tijdperk van de ideeënmensen" },
-            { slug: "the-design-process-is-dead", title: "Het designproces is dood. De ontwerpdiscipline niet." },
-            { slug: "ai-design-sprint-secretive-superheroes", title: "De superhelden die je al in huis hebt" },
+            { key: "meaning-test", title: "De Meaning Test: is het werk beter geworden of alleen sneller?" },
+            { key: "junior-gap", title: "De Junior Gap: het onzichtbare risico van AI" },
+            { key: "ai-governance", title: "AI governance: minder framework, meer ritme" },
+            { key: "ai-eu-ai-act", title: "De EU AI Act: wat het betekent voor je organisatie" },
+            { key: "ai-workshop-bedrijven", title: "AI workshop voor bedrijven: voorbij de inspiratiesessie" },
+            { key: "ai-consultancy-kiezen", title: "AI consultancy kiezen: de vraag die niemand stelt" },
+            { key: "ai-proof-of-concept", title: "AI proof of concept: van pilot-kerkhof naar beslisdata" },
+            { key: "the-age-of-the-ideas-people", title: "Het tijdperk van de ideeënmensen" },
+            { key: "the-design-process-is-dead", title: "Het designproces is dood. De ontwerpdiscipline niet." },
+            { key: "ai-design-sprint-secretive-superheroes", title: "De superhelden die je al in huis hebt" },
         ],
         services: [
             { href: "/educate", label: "AI Workshop" },
@@ -186,6 +187,22 @@ export const pillarContent = {
 export type PillarSlug = keyof typeof pillarContent;
 
 /**
+ * The path of each theme page, per locale.
+ *
+ * The key stays Dutch because it identifies the theme across languages and
+ * never appears in a URL — the same split the blog and the answer pages use.
+ */
+export const PILLAR_PATHS: Record<PillarSlug, Record<Locale, string>> = {
+    "ai-strategie": { nl: "/ai-strategie", en: "/ai-strategy" },
+    "ai-automatisering-gids": { nl: "/ai-automatisering-gids", en: "/ai-automation-guide" },
+    "ai-en-mensen": { nl: "/ai-en-mensen", en: "/ai-and-people" },
+};
+
+export function pillarPath(slug: PillarSlug, locale: Locale): string {
+    return PILLAR_PATHS[slug][locale];
+}
+
+/**
  * Look up which pillar page a blog post belongs to.
  * Returns pillar slug and localized title, or null if no pillar match.
  */
@@ -199,17 +216,24 @@ const pillarTagLabels: Record<PillarSlug, Record<Locale, string>> = {
 /**
  * Look up which pillar page a blog post belongs to.
  * Returns pillar slug, localized title, and short tag label.
+ *
+ * Keyed on the post's stable key, not its URL slug: the slug is translated per
+ * locale, so matching on it would drop every badge on the English side.
  */
 export function getPillarForBlog(
-    blogSlug: string,
+    blogKey: string,
     locale: Locale
-): { pillarSlug: PillarSlug; title: string; tagLabel: string } | null {
+): { pillarSlug: PillarSlug; href: string; title: string; tagLabel: string } | null {
     for (const [pillarSlug, pillar] of Object.entries(pillarContent)) {
         const slug = pillarSlug as PillarSlug;
         const content = pillar[locale];
-        if (content.blogLinks.some((link) => link.slug === blogSlug)) {
+        if (content.blogLinks.some((link) => link.key === blogKey)) {
             return {
                 pillarSlug: slug,
+                // Resolved here rather than by the caller: the theme's key is
+                // Dutch, and linking to `/${key}` would put a Dutch path on
+                // every English page that shows a theme badge.
+                href: pillarPath(slug, locale),
                 title: content.hero.title,
                 tagLabel: pillarTagLabels[slug][locale],
             };

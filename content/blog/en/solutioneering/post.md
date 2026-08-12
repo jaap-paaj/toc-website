@@ -22,7 +22,7 @@ It always starts the same way. Someone on the management team comes back from a 
 
 The tool is central. The question of which problem it solves comes later. Or never.
 
-A project team is assembled. The vendor is invited. A proof of concept is launched. The proof of concept succeeds, because proofs of concept with sufficient budget always succeed. The steering committee is pleased. They scale. A [good proof of concept](/nl/blog/ai-proof-of-concept) works the other way around: it starts with the question, not the tool.
+A project team is assembled. The vendor is invited. A proof of concept is launched. The proof of concept succeeds, because proofs of concept with sufficient budget always succeed. The steering committee is pleased. They scale. A [good proof of concept](/en/blog/ai-proof-of-concept) works the other way around: it starts with the question, not the tool.
 
 And then it turns out nobody uses it. Because it is a solution to a problem that does not exist. Or a problem that should have been solved differently. Or a problem that does exist, but not for the people who are supposed to use the system.
 
@@ -40,7 +40,7 @@ Three signals that an AI project is suffering from Solutioneering.
 
 **The technology appears in the brief.** "Build a chatbot for customer service" is Solutioneering. "Cut response time on product complaints in half" is a problem. That difference determines whether you find the right solution or stay locked to the one you started with.
 
-**Nobody has observed the work.** If the project team has not sat alongside an employee to watch how the work is actually done, the solution is almost certainly based on assumptions. [Follow the Friction](/nl/blog/follow-the-friction): go and see where things snag first, then build. Assumptions are rarely correct.
+**Nobody has observed the work.** If the project team has not sat alongside an employee to watch how the work is actually done, the solution is almost certainly based on assumptions. [Follow the Friction](/en/blog/follow-the-friction): go and see where things snag first, then build. Assumptions are rarely correct.
 
 **The success criteria are vague.** "More efficiency" is not a criterion. "20% reduction in complaint handling time while maintaining customer satisfaction" is a criterion. Vague criteria lead to vague results and an inability to decide whether something works.
 
@@ -48,7 +48,7 @@ Three signals that an AI project is suffering from Solutioneering.
 
 Start with the problem. State it as a sentence with no technology in it. "We lose too much time manually classifying incoming orders." "Our quotes take three weeks when the competition does it in three days." "The team spends forty percent of its time on work that contributes nothing to the end product."
 
-Then go and check whether that is actually true. Observe the work. Talk to the people doing it. Map the friction. A [good AI consultancy](/nl/blog/ai-consultancy-kiezen) helps you do exactly that: look before you build.
+Then go and check whether that is actually true. Observe the work. Talk to the people doing it. Map the friction. A [good AI consultancy](/en/blog/choosing-an-ai-consultancy) helps you do exactly that: look before you build.
 
 Only then, once the problem is sharp and the friction is visible, do you look at which technology fits. Maybe that is AI. Maybe it is a simpler automation. Maybe it is a process change with no technology at all. All three are good outcomes.
 
@@ -60,7 +60,7 @@ With AI projects, it is exactly the same. The technology is rarely the problem. 
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to find the right problem together. Or kick off an [Innovation Sprint](/nl/innovate) to test whether the solution holds up in two weeks.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to find the right problem together. Or kick off an [Innovation Sprint](/en/innovate) to test whether the solution holds up in two weeks.
 
 ---
 

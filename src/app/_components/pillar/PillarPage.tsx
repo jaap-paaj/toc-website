@@ -46,7 +46,7 @@ export function PillarPage({ slug, posts }: PillarPageProps) {
             {/* Hero */}
             <HomeModule id="pillar-hero" width="full" tone="light" pad="m" padTop="xl" gap="none" containsContent>
                 <div className={cn("w-full flex flex-col items-center", spacing.stackLg)}>
-                    <BlogBreadcrumb slug={posts[0]?.slug} />
+                    <BlogBreadcrumb postKey={posts[0]?.key} />
                     <div className={cn(spacing.stackSm, "flex flex-col items-center text-center")}>
                         {/* 1. Pillar badge */}
                         <span className={cn(

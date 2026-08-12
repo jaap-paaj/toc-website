@@ -30,15 +30,15 @@ The question is how to get started without getting lost. Three things that genui
 
 **A sponsor who dares to say no.** To the CEO, to vendors, to the team's enthusiasm when things are heading the wrong way. Budget and authority to stop is more important than budget to start.
 
-**A defined playing field.** Choose a domain. One team. One process. The biggest mistake is starting everywhere at once. Every additional scope item halves your learning capacity. "Customer service" is too broad. "First-line email triage for product complaints" is exactly right. It helps to begin by [observing where the friction is](/nl/blog/follow-the-friction) rather than brainstorming possibilities in a meeting room.
+**A defined playing field.** Choose a domain. One team. One process. The biggest mistake is starting everywhere at once. Every additional scope item halves your learning capacity. "Customer service" is too broad. "First-line email triage for product complaints" is exactly right. It helps to begin by [observing where the friction is](/en/blog/follow-the-friction) rather than brainstorming possibilities in a meeting room.
 
 **The willingness to learn.** Measure to learn, not to judge. That sounds like a platitude, but the difference is enormous. Measuring to judge creates politics: people start managing results instead of reporting honestly. Measuring to learn creates safety: the team feels comfortable saying when something is not working.
 
 ## Ninety days
 
-An AI experiment does not need to take long. [Ninety days](/nl/blog/ai-strategie-90-dagen) is enough to get from strategic question to decision data. Ten weeks, roughly divided: one week to choose focus, two weeks to discover where the friction is, two weeks to design a solution, two to four weeks to build and test it.
+An AI experiment does not need to take long. [Ninety days](/en/blog/ai-strategy-in-90-days) is enough to get from strategic question to decision data. Ten weeks, roughly divided: one week to choose focus, two weeks to discover where the friction is, two weeks to design a solution, two to four weeks to build and test it.
 
-At the end of those ninety days you know more than any assessment could tell you. You know whether your team can handle change. You know whether your data is usable. You know whether AI genuinely adds value to this specific piece of work. And you know it based on evidence, not a questionnaire. An additional signal: look at where employees are already using AI on their own initiative. [Shadow AI](/nl/blog/shadow-ai) is a free diagnosis of where the friction is greatest.
+At the end of those ninety days you know more than any assessment could tell you. You know whether your team can handle change. You know whether your data is usable. You know whether AI genuinely adds value to this specific piece of work. And you know it based on evidence, not a questionnaire. An additional signal: look at where employees are already using AI on their own initiative. [Shadow AI](/en/blog/shadow-ai) is a free diagnosis of where the friction is greatest.
 
 ## The human conversation
 
@@ -56,7 +56,7 @@ That point is now. Choose a small stretch of coastline. Go ashore. Learn the ter
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to bring your team along. Or start an [AI Automation Track](/nl/automate) to discover in two weeks what AI can mean for your organisation.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to bring your team along. Or start an [AI Automation Track](/en/automate) to discover in two weeks what AI can mean for your organisation.
 
 ---
 

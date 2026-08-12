@@ -1,5 +1,6 @@
 ---
 title: 'AI Agents for Business: The Promise, the Reality, and What Lies Between'
+slug: ai-agents-for-business
 date: '2026-04-04'
 intro: >-
   "We need to do something with agents." Five words that cause more damage than any competitor.
@@ -32,7 +33,7 @@ We call it agentish AI. Intelligent systems that act autonomously within clear, 
 
 **Functionality.** What does the system do? An agent that reads incoming complaints, classifies them by urgency, and drafts a first response. Clearly scoped.
 
-**Guardrails.** Where does the system stop? Complaints above a certain severity are always escalated to a human. Financial decisions above a threshold require approval. The system may advise, but never act autonomously on high-impact matters. How you build that [governance in](/nl/blog/ai-governance) without creating bureaucracy is critical.
+**Guardrails.** Where does the system stop? Complaints above a certain severity are always escalated to a human. Financial decisions above a threshold require approval. The system may advise, but never act autonomously on high-impact matters. How you build that [governance in](/en/blog/ai-governance) without creating bureaucracy is critical.
 
 **Explainability.** Why did the system do what it did? Every action is traceable. Every decision can be explained, to the customer, to management, to the regulator.
 
@@ -44,9 +45,9 @@ Three patterns where agentish AI has the most impact.
 
 **Triage and routing.** A stream of incoming information, complaints, requests, orders, that needs to be assessed and routed. The agent reads, classifies, and directs. The human handles. The volume a human can process multiplies tenfold.
 
-**Monitoring and alerting.** An agent that continuously watches: quality of output, deviations in patterns, costs that are climbing. Not reacting to problems, noticing them before they become problems. That is also how you [detect drift](/nl/blog/ai-drift) in existing AI systems.
+**Monitoring and alerting.** An agent that continuously watches: quality of output, deviations in patterns, costs that are climbing. Not reacting to problems, noticing them before they become problems. That is also how you [detect drift](/en/blog/ai-drift) in existing AI systems.
 
-**First drafts.** An agent that creates an initial version based on input, a quote, a report, an analysis, that a human then reviews and completes. The human shifts from maker to reviewer. That requires the human to genuinely master the craft, which is precisely the [Junior Gap](/nl/blog/junior-gap) risk.
+**First drafts.** An agent that creates an initial version based on input, a quote, a report, an analysis, that a human then reviews and completes. The human shifts from maker to reviewer. That requires the human to genuinely master the craft, which is precisely the [Junior Gap](/en/blog/junior-gap) risk.
 
 ## How to start
 
@@ -60,7 +61,7 @@ The market is shouting "agents." The organisations that benefit most are whisper
 
 ---
 
-Ready to get started? Begin with an [AI Workshop](/nl/educate) to discover where AI agents add value in your organisation. Or kick off an [AI Automation Programme](/nl/automate) to build and test your first agentish solution.
+Ready to get started? Begin with an [AI Workshop](/en/educate) to discover where AI agents add value in your organisation. Or kick off an [AI Automation Programme](/en/automate) to build and test your first agentish solution.
 
 ---
 

@@ -6,6 +6,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { useLocale } from "@/lib/i18n/useLocale";
+import { useLocalePaths } from "@/lib/i18n/LocalePathsProvider";
 import { typography } from "@/design-system/tokens/typography";
 
 interface LanguageSwitcherProps {
@@ -21,16 +22,31 @@ function LanguageSwitcherInner({ className }: LanguageSwitcherProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentLocale = useLocale();
+  const localePaths = useLocalePaths();
 
   function getLocalizedPath(locale: Locale): string {
-    // Replace the current locale segment with the new one
     const segments = pathname.split("/");
+    let path = pathname;
+
     if (i18n.locales.includes(segments[1] as Locale)) {
+      const from = segments[1] as Locale;
+      const rest = `/${segments.slice(2).join("/")}`;
+
+      // Most pages share their path and only need the locale segment swapped.
+      // Translated blog slugs and the answers section do not: the same page
+      // sits at a different path per language, and swapping only the first
+      // segment lands on a 404 — on the one button whose whole job is not to
+      // lose the reader.
+      const pair = localePaths.find((p) => p[from] === rest);
+
       segments[1] = locale;
+      if (pair) segments.splice(2, segments.length - 2, ...pair[locale].split("/").slice(1));
+
+      path = segments.join("/");
     }
-    const path = segments.join("/") || `/${locale}`;
+
     const qs = searchParams.toString();
-    return qs ? `${path}?${qs}` : path;
+    return qs ? `${path || `/${locale}`}?${qs}` : path || `/${locale}`;
   }
 
   return (

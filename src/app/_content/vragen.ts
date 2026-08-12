@@ -24,6 +24,11 @@ export const SCAN_HREF = READINESS_SCAN_CHAT_PATH;
 export type AnswerBlock = ProseBlock;
 
 export interface AnswerPage {
+    /**
+     * Stable identity across locales. The same key is the same question; the
+     * slug is the URL and is translated. Never appears in a URL.
+     */
+    key: string;
     slug: string;
     cluster: string;
     meta: { title: string; description: string };
@@ -51,7 +56,8 @@ const en = {
     },
     pages: [
         {
-            slug: "hoe-kies-je-de-juiste-ai-partner",
+            key: "hoe-kies-je-de-juiste-ai-partner",
+            slug: "how-to-choose-an-ai-partner",
             cluster: "Who can help us",
             meta: {
                 title: "How to choose the right AI partner - The Only Constant",
@@ -103,7 +109,8 @@ const en = {
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
         {
-            slug: "waar-vind-ik-ai-consultants",
+            key: "waar-vind-ik-ai-consultants",
+            slug: "where-to-find-ai-consultants",
             cluster: "Who can help us",
             meta: {
                 title: "Where to find AI consultants in the Netherlands - The Only Constant",
@@ -147,7 +154,8 @@ const en = {
             cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
-            slug: "ai-implementatie-mkb",
+            key: "ai-implementatie-mkb",
+            slug: "ai-implementation-for-smes",
             cluster: "Who can help us",
             meta: {
                 title: "AI implementation for SMEs: who offers it - The Only Constant",
@@ -189,7 +197,8 @@ const en = {
             cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
-            slug: "ai-integreren-zonder-technische-kennis",
+            key: "ai-integreren-zonder-technische-kennis",
+            slug: "how-to-use-ai-without-technical-knowledge",
             cluster: "Where do we start",
             meta: {
                 title: "Integrating AI without technical knowledge - The Only Constant",
@@ -234,7 +243,8 @@ const en = {
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
         {
-            slug: "hoe-start-je-met-ai-adoptie",
+            key: "hoe-start-je-met-ai-adoptie",
+            slug: "how-to-start-with-ai",
             cluster: "Where do we start",
             meta: {
                 title: "How to start with AI adoption in an SME - The Only Constant",
@@ -276,7 +286,8 @@ const en = {
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
         {
-            slug: "wat-kost-ai-adoptie",
+            key: "wat-kost-ai-adoptie",
+            slug: "what-does-ai-adoption-cost",
             cluster: "What does it cost",
             meta: {
                 title: "What does AI adoption cost for an SME - The Only Constant",
@@ -325,7 +336,8 @@ const en = {
             cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
-            slug: "ai-voor-klantenservice",
+            key: "ai-voor-klantenservice",
+            slug: "ai-for-customer-service",
             cluster: "What can we use AI for",
             meta: {
                 title: "How to use AI for customer service - The Only Constant",
@@ -370,7 +382,8 @@ const en = {
             cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
-            slug: "ai-voor-marketing-en-administratie",
+            key: "ai-voor-marketing-en-administratie",
+            slug: "ai-for-marketing-and-administration",
             cluster: "What can we use AI for",
             meta: {
                 title: "How to use AI for marketing or administration - The Only Constant",
@@ -412,7 +425,8 @@ const en = {
             cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
-            slug: "ai-en-bedrijfsgegevens",
+            key: "ai-en-bedrijfsgegevens",
+            slug: "ai-and-company-data",
             cluster: "Is it safe",
             meta: {
                 title: "Is it safe to use AI with company data - The Only Constant",
@@ -453,7 +467,8 @@ const en = {
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
         {
-            slug: "team-meekrijgen-met-ai",
+            key: "team-meekrijgen-met-ai",
+            slug: "getting-your-team-on-board-with-ai",
             cluster: "Will the team come along",
             meta: {
                 title: "How to get your team on board with AI - The Only Constant",
@@ -485,7 +500,8 @@ const en = {
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
         {
-            slug: "waarom-mislukken-ai-projecten",
+            key: "waarom-mislukken-ai-projecten",
+            slug: "why-ai-projects-fail",
             cluster: "Does it really work",
             meta: {
                 title: "Why AI projects fail in SMEs - The Only Constant",
@@ -530,7 +546,8 @@ const en = {
             cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
-            slug: "ai-voor-installatiebedrijven",
+            key: "ai-voor-installatiebedrijven",
+            slug: "ai-for-installation-companies",
             cluster: "Technical services",
             meta: {
                 title: "AI for installation and technical companies - The Only Constant",
@@ -575,7 +592,8 @@ const en = {
             cta: { label: "Start the free AI First Aid", href: EHBO_HREF },
         },
         {
-            slug: "is-ai-betrouwbaar",
+            key: "is-ai-betrouwbaar",
+            slug: "is-ai-reliable",
             cluster: "Reliability",
             meta: {
                 title: "Is AI reliable? - The Only Constant",
@@ -621,7 +639,8 @@ const en = {
             cta: { label: "Take the free Readiness Scan", href: SCAN_HREF },
         },
         {
-            slug: "custom-gpt-bouwen",
+            key: "custom-gpt-bouwen",
+            slug: "how-to-build-a-custom-gpt",
             cluster: "Building it ourselves",
             meta: {
                 title: "How to build a custom GPT (and when not to) - The Only Constant",
@@ -693,6 +712,7 @@ const nl: typeof en = {
     },
     pages: [
         {
+            key: "hoe-kies-je-de-juiste-ai-partner",
             slug: "hoe-kies-je-de-juiste-ai-partner",
             cluster: "Wie kan me helpen",
             meta: {
@@ -745,6 +765,7 @@ const nl: typeof en = {
             cta: { label: "Doe de gratis Readiness Scan", href: SCAN_HREF },
         },
         {
+            key: "waar-vind-ik-ai-consultants",
             slug: "waar-vind-ik-ai-consultants",
             cluster: "Wie kan me helpen",
             meta: {
@@ -789,6 +810,7 @@ const nl: typeof en = {
             cta: { label: "Start de gratis AI EHBO", href: EHBO_HREF },
         },
         {
+            key: "ai-implementatie-mkb",
             slug: "ai-implementatie-mkb",
             cluster: "Wie kan me helpen",
             meta: {
@@ -831,6 +853,7 @@ const nl: typeof en = {
             cta: { label: "Start de gratis AI EHBO", href: EHBO_HREF },
         },
         {
+            key: "ai-integreren-zonder-technische-kennis",
             slug: "ai-integreren-zonder-technische-kennis",
             cluster: "Hoe begin ik",
             meta: {
@@ -876,6 +899,7 @@ const nl: typeof en = {
             cta: { label: "Doe de gratis Readiness Scan", href: SCAN_HREF },
         },
         {
+            key: "hoe-start-je-met-ai-adoptie",
             slug: "hoe-start-je-met-ai-adoptie",
             cluster: "Hoe begin ik",
             meta: {
@@ -918,6 +942,7 @@ const nl: typeof en = {
             cta: { label: "Doe de gratis Readiness Scan", href: SCAN_HREF },
         },
         {
+            key: "wat-kost-ai-adoptie",
             slug: "wat-kost-ai-adoptie",
             cluster: "Wat kost het",
             meta: {
@@ -967,6 +992,7 @@ const nl: typeof en = {
             cta: { label: "Start de gratis AI EHBO", href: EHBO_HREF },
         },
         {
+            key: "ai-voor-klantenservice",
             slug: "ai-voor-klantenservice",
             cluster: "Waarvoor kan ik AI inzetten",
             meta: {
@@ -1012,6 +1038,7 @@ const nl: typeof en = {
             cta: { label: "Start de gratis AI EHBO", href: EHBO_HREF },
         },
         {
+            key: "ai-voor-marketing-en-administratie",
             slug: "ai-voor-marketing-en-administratie",
             cluster: "Waarvoor kan ik AI inzetten",
             meta: {
@@ -1054,6 +1081,7 @@ const nl: typeof en = {
             cta: { label: "Start de gratis AI EHBO", href: EHBO_HREF },
         },
         {
+            key: "ai-en-bedrijfsgegevens",
             slug: "ai-en-bedrijfsgegevens",
             cluster: "Is het veilig",
             meta: {
@@ -1095,6 +1123,7 @@ const nl: typeof en = {
             cta: { label: "Doe de gratis Readiness Scan", href: SCAN_HREF },
         },
         {
+            key: "team-meekrijgen-met-ai",
             slug: "team-meekrijgen-met-ai",
             cluster: "Krijg ik mijn mensen mee",
             meta: {
@@ -1127,6 +1156,7 @@ const nl: typeof en = {
             cta: { label: "Doe de gratis Readiness Scan", href: SCAN_HREF },
         },
         {
+            key: "waarom-mislukken-ai-projecten",
             slug: "waarom-mislukken-ai-projecten",
             cluster: "Werkt het echt",
             meta: {
@@ -1172,6 +1202,7 @@ const nl: typeof en = {
             cta: { label: "Start de gratis AI EHBO", href: EHBO_HREF },
         },
         {
+            key: "ai-voor-installatiebedrijven",
             slug: "ai-voor-installatiebedrijven",
             cluster: "Voor mijn sector",
             meta: {
@@ -1214,6 +1245,7 @@ const nl: typeof en = {
             cta: { label: "Start de gratis AI EHBO", href: EHBO_HREF },
         },
         {
+            key: "is-ai-betrouwbaar",
             slug: "is-ai-betrouwbaar",
             cluster: "Betrouwbaarheid",
             meta: {
@@ -1260,6 +1292,7 @@ const nl: typeof en = {
             cta: { label: "Doe de gratis Readiness Scan", href: SCAN_HREF },
         },
         {
+            key: "custom-gpt-bouwen",
             slug: "custom-gpt-bouwen",
             cluster: "Zelf bouwen",
             meta: {
@@ -1317,13 +1350,51 @@ const nl: typeof en = {
 
 export const vragenContent: Record<Locale, typeof en> = { en, nl };
 
-export const VRAGEN_BASE_PATH = "/vragen";
+/**
+ * The answers index, per locale. The Dutch site keeps the path it has always
+ * had; the English site gets an English one, because a Dutch word in the URL is
+ * the part of an English page a search engine cannot read.
+ */
+export const ANSWERS_BASE_PATH: Record<Locale, string> = {
+    nl: "/vragen",
+    en: "/questions",
+};
 
-/** Slugs are shared across locales, matching the blog and pillar pages. */
-export function getAnswerSlugs(): string[] {
-    return en.pages.map((page) => page.slug);
+/** The full path to one answer, in one locale. */
+export function answerPath(lang: Locale, slug: string): string {
+    return `${ANSWERS_BASE_PATH[lang]}/${slug}`;
 }
 
+/**
+ * Every ({lang, slug}) pair that has a page.
+ *
+ * Not one list reused for both locales: the slugs differ per language now, so a
+ * shared list would prerender half the site under paths that do not exist.
+ */
+export function getAnswerParams(): { lang: Locale; slug: string }[] {
+    return (Object.keys(vragenContent) as Locale[]).flatMap((lang) =>
+        vragenContent[lang].pages.map((page) => ({ lang, slug: page.slug })),
+    );
+}
+
+/** The path to one answer in every locale, for hreflang and canonical. */
+export function getAnswerPaths(key: string): Record<Locale, string> | null {
+    const paths = {} as Record<Locale, string>;
+
+    for (const lang of Object.keys(vragenContent) as Locale[]) {
+        const page = vragenContent[lang].pages.find((p) => p.key === key);
+        if (!page) return null;
+        paths[lang] = answerPath(lang, page.slug);
+    }
+
+    return paths;
+}
+
+/**
+ * Look up an answer by the slug in its URL, within one locale. Deliberately no
+ * cross-locale fallback: a miss in Dutch is a Dutch 404, not a licence to serve
+ * the English text under a Dutch URL.
+ */
 export function getAnswerPage(lang: Locale, slug: string): AnswerPage | null {
     return vragenContent[lang].pages.find((page) => page.slug === slug) ?? null;
 }
