@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { EHBO_CHAT_PATHS, EHBO_PATHS, ehboContent } from "@/app/_content/ai-ehbo";
 import type { Locale } from "@/lib/i18n/config";
 import { buildAlternates } from "@/lib/i18n/alternates";
+import { SITE_URL } from "@/lib/site";
 
-const SITE_URL = "https://theonlyconstant.nl";
 const OG_IMAGE = `${SITE_URL}/images/brand/toc/og-ai-ehbo.png`;
 
 /**

@@ -3,8 +3,7 @@ import { TenAiTipsPage } from "@/app/_components/ten-ai-tips/TenAiTipsPage";
 import { tenAiTipsContent } from "@/app/_content/ten-ai-tips";
 import type { Locale } from "@/lib/i18n/config";
 import { buildAlternates } from "@/lib/i18n/alternates";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 interface PageProps {
     params: Promise<{ lang: string }>;

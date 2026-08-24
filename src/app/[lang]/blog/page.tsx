@@ -3,8 +3,7 @@ import { getAllPosts } from "@/lib/blog/loader";
 import { BlogOverviewPage } from "@/app/_components/blog/BlogOverviewPage";
 import type { Locale } from "@/lib/i18n/config";
 import { buildAlternates } from "@/lib/i18n/alternates";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 interface BlogPageProps {
     params: Promise<{ lang: string }>;
