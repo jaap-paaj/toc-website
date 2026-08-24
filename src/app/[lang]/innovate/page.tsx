@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { InnovatePage } from "@/app/_components/innovate/InnovatePage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { buildAlternates } from "@/lib/i18n/alternates";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 interface PageProps {
     params: Promise<{ lang: string }>;

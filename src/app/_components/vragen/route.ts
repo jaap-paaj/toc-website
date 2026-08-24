@@ -9,8 +9,7 @@ import {
 } from "@/app/_content/vragen";
 import type { Locale } from "@/lib/i18n/config";
 import { buildAlternates } from "@/lib/i18n/alternates";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * The answer pages live at a different path per locale — /nl/vragen and

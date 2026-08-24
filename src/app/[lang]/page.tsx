@@ -3,8 +3,7 @@ import { HomePage } from "@/app/_components/home/HomePage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import type { Locale } from "@/lib/i18n/config";
 import { buildAlternates } from "@/lib/i18n/alternates";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 interface HomePageProps {
     params: Promise<{ lang: string }>;

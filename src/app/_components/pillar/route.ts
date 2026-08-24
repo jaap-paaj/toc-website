@@ -8,8 +8,7 @@ import {
 import { getPostByKey } from "@/lib/blog/loader";
 import type { Locale } from "@/lib/i18n/config";
 import { buildAlternates } from "@/lib/i18n/alternates";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * The theme pages sit at a different path per locale — /nl/ai-strategie and

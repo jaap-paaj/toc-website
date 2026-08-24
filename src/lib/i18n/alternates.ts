@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * The route below the locale for a page. A single string when both locales

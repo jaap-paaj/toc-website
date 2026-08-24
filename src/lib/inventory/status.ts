@@ -1,6 +1,5 @@
 import sitemap from "@/app/sitemap";
-
-const PRODUCTION_URL = "https://www.theonlyconstant.nl";
+import { SITE_URL as PRODUCTION_URL } from "@/lib/site";
 
 export type LiveStatus = "live" | "missing" | "unknown";
 
