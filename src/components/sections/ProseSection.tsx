@@ -11,7 +11,7 @@ import { typography } from "@/design-system/tokens/typography";
  */
 export type ProseBlock =
     | { kind: "paragraph"; text: string }
-    | { kind: "subheading"; text: string }
+    | { kind: "subheading"; text: string; level?: 2 | 3 }
     | { kind: "list"; ordered: boolean; items: string[] };
 
 export interface ProseSectionProps {
@@ -63,6 +63,23 @@ export function ProseSection({ blocks, className }: ProseSectionProps) {
         >
             {blocks.map((block, i) => {
                 if (block.kind === "subheading") {
+                    // Level 3 steps down to the eyebrow treatment — the same
+                    // small head the footer columns use. Two card-size
+                    // headings stacked read as one title with a broken line,
+                    // which is exactly the case a third level exists for.
+                    if (block.level === 3) {
+                        return (
+                            <h3
+                                key={i}
+                                className={cn(
+                                    typography.variants.meta.eyebrow,
+                                    "text-foreground text-balance",
+                                )}
+                            >
+                                {block.text}
+                            </h3>
+                        );
+                    }
                     return (
                         <Heading key={i} level={2} size="card" className="text-balance">
                             {block.text}

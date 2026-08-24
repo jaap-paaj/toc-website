@@ -58,7 +58,7 @@ const en: PrivacyContent = {
             text: "Questions about your data: maarten@theonlyconstant.nl.",
         },
         { kind: "subheading", text: "Which data we process, and why" },
-        { kind: "subheading", text: "If you use one of our tools" },
+        { kind: "subheading", text: "If you use one of our tools", level: 3 },
         {
             kind: "paragraph",
             text: "This site offers three free tools: the AI First Aid, the AI Readiness Scan and the AI Act Check. What you enter there, we process in order to give you the result.",
@@ -79,12 +79,12 @@ const en: PrivacyContent = {
             kind: "paragraph",
             text: "Legal basis: performance of your request and our legitimate interest in business services (GDPR art. 6(1)(b) and (f)).",
         },
-        { kind: "subheading", text: "If you email or call us" },
+        { kind: "subheading", text: "If you email or call us", level: 3 },
         {
             kind: "paragraph",
             text: "Then we process your contact details and the content of your message, to answer your question and to follow up on the contact.",
         },
-        { kind: "subheading", text: "If you visit the site" },
+        { kind: "subheading", text: "If you visit the site", level: 3 },
         {
             kind: "paragraph",
             text: "We measure how the site is used with Google Analytics, so that we know which pages work and which do not, and where visitors get stuck. For that we set cookies, but only if you consent to it. If you decline, we do not measure your visit.",
@@ -193,7 +193,7 @@ const nl: PrivacyContent = {
             text: "Vragen over je gegevens: maarten@theonlyconstant.nl.",
         },
         { kind: "subheading", text: "Welke gegevens wij verwerken, en waarom" },
-        { kind: "subheading", text: "Als je een van onze tools gebruikt" },
+        { kind: "subheading", text: "Als je een van onze tools gebruikt", level: 3 },
         {
             kind: "paragraph",
             text: "Op deze site staan drie gratis tools: de AI EHBO, de AI Readiness Scan en de AI Act Check. Wat je daarin invult, verwerken wij om je het resultaat te kunnen geven.",
@@ -214,12 +214,12 @@ const nl: PrivacyContent = {
             kind: "paragraph",
             text: "Grondslag: uitvoering van je verzoek en ons gerechtvaardigd belang bij zakelijke dienstverlening (AVG art. 6 lid 1 sub b en f).",
         },
-        { kind: "subheading", text: "Als je ons mailt of belt" },
+        { kind: "subheading", text: "Als je ons mailt of belt", level: 3 },
         {
             kind: "paragraph",
             text: "Dan verwerken wij je contactgegevens en de inhoud van je bericht, om je vraag te beantwoorden en het contact te kunnen vervolgen.",
         },
-        { kind: "subheading", text: "Als je de site bezoekt" },
+        { kind: "subheading", text: "Als je de site bezoekt", level: 3 },
         {
             kind: "paragraph",
             text: "Wij meten hoe de site gebruikt wordt met Google Analytics, zodat we weten welke pagina's werken en welke niet en waar bezoekers vastlopen. Daarvoor plaatsen wij cookies, maar alleen als je daar toestemming voor geeft. Weiger je, dan meten wij je bezoek niet.",
