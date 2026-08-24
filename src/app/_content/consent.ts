@@ -14,6 +14,11 @@ const en = {
     privacyLabel: "Privacy statement",
     accept: "Accept",
     decline: "Decline",
+    embed: {
+        mapNotice:
+            "The map comes from Google Maps and only loads with your consent.",
+        mapLoad: "Load the map",
+    },
 };
 
 const nl: typeof en = {
@@ -23,6 +28,11 @@ const nl: typeof en = {
     privacyLabel: "Privacyverklaring",
     accept: "Accepteren",
     decline: "Weigeren",
+    embed: {
+        mapNotice:
+            "De kaart komt van Google Maps en laadt alleen met jouw toestemming.",
+        mapLoad: "Kaart laden",
+    },
 };
 
 export const consentContent: Record<Locale, typeof en> = { en, nl };
