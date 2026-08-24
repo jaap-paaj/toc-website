@@ -9,6 +9,14 @@ import type { ProseBlock } from "@/components/sections/ProseSection";
  * Swap the whole body when his final version lands — do not patch sentences,
  * or the two languages drift apart on a legal page.
  *
+ * EXCEPTION to that swap: the "Kaarten en de agenda" / "Maps and the
+ * appointment calendar" subsection describes what the site factually does,
+ * measured (zero requests to Google from /contact on refusal, 26 to six
+ * Google hosts from the booking page, no cookies from either), not Maarten's
+ * legal choices. It must survive the swap: put it back after replacing his
+ * body, and do not reword it without re-measuring those facts. If the
+ * calendar later goes behind the gate too, only its last sentence changes.
+ *
  * The date in hero.updated is the publication date, not the build date: set it
  * by hand on the day the page actually goes live, together with the cookie
  * banner. The cookie paragraph assumes the banner exists.
@@ -92,6 +100,15 @@ const en: PrivacyContent = {
         {
             kind: "paragraph",
             text: "You can change or withdraw your choice at any time via the cookie settings at the bottom of the site. Cookies that are strictly necessary for the site to work are always set; those do not collect data about your behaviour.",
+        },
+        { kind: "subheading", text: "Maps and the appointment calendar", level: 3 },
+        {
+            kind: "paragraph",
+            text: "Our contact page shows a Google Maps map, and the booking page shows a Google calendar. These load from Google rather than from us: the moment they appear, Google receives your IP address, information about your browser, and the page you came from. They do not set cookies.",
+        },
+        {
+            kind: "paragraph",
+            text: "We only load the map if you have accepted cookies, or if you click to load it yourself. The calendar on the booking page loads straight away, because it is the service itself: you come to that page to make an appointment.",
         },
         { kind: "subheading", text: "Who we share your data with" },
         {
@@ -227,6 +244,15 @@ const nl: PrivacyContent = {
         {
             kind: "paragraph",
             text: "Je kunt je keuze op elk moment wijzigen of intrekken via de cookie-instellingen onderaan de site. Cookies die strikt nodig zijn om de site te laten werken, plaatsen wij altijd; die verzamelen geen gegevens over je gedrag.",
+        },
+        { kind: "subheading", text: "Kaarten en de agenda", level: 3 },
+        {
+            kind: "paragraph",
+            text: "Op onze contactpagina staat een kaart van Google Maps, en op de boekingspagina een agenda van Google. Die laden bij Google en niet bij ons: op het moment dat ze verschijnen krijgt Google jouw IP-adres, gegevens over je browser, en de pagina waar je vandaan komt. Ze plaatsen geen cookies.",
+        },
+        {
+            kind: "paragraph",
+            text: "De kaart laden we alleen als je cookies hebt geaccepteerd, of als je er zelf op klikt om hem te laden. De agenda op de boekingspagina laadt meteen, omdat die de dienst zelf is: je komt op die pagina om een afspraak te maken.",
         },
         { kind: "subheading", text: "Met wie wij je gegevens delen" },
         {
