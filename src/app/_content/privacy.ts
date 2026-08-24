@@ -9,13 +9,22 @@ import type { ProseBlock } from "@/components/sections/ProseSection";
  * Swap the whole body when his final version lands — do not patch sentences,
  * or the two languages drift apart on a legal page.
  *
- * EXCEPTION to that swap: the "Kaarten en de agenda" / "Maps and the
- * appointment calendar" subsection describes what the site factually does,
- * measured (zero requests to Google from /contact on refusal, 26 to six
- * Google hosts from the booking page, no cookies from either), not Maarten's
- * legal choices. It must survive the swap: put it back after replacing his
- * body, and do not reword it without re-measuring those facts. If the
- * calendar later goes behind the gate too, only its last sentence changes.
+ * EXCEPTIONS to that swap — passages that describe what the site factually
+ * does, verified in this repo's code, not Maarten's legal choices. They must
+ * survive the swap: put them back after replacing his body, and do not
+ * reword them without re-verifying the facts.
+ *
+ * 1. The "Kaarten en de agenda" / "Maps and the appointment calendar"
+ *    subsection. Measured: zero requests to Google from /contact on refusal,
+ *    26 to six Google hosts from the booking page, no cookies from either.
+ *    If the calendar later goes behind the gate too, only its last sentence
+ *    changes.
+ * 2. The tools passage. No form asks for a phone number (ToolContactForm:
+ *    email/name/company; AiActLeadForm adds role). The AI EHBO and the
+ *    Readiness Scan are conversations (ToolChat); the AI Act Check is a
+ *    fixed-choice wizard whose answers are stored, and its required
+ *    checkbox is stored as consent_marketing, so approach after that tool
+ *    rests on consent (art. 6(1)(a)), the other two on legitimate interest.
  *
  * The date in hero.updated is the publication date, not the build date: set it
  * by hand on the day the page actually goes live, together with the cookie
@@ -52,7 +61,7 @@ const en: PrivacyContent = {
     },
     hero: {
         title: "Privacy statement",
-        updated: "Last updated: 24 August 2026",
+        updated: "Last updated: 25 August 2026",
         lead: "The Only Constant B.V. processes personal data of visitors to this website. This statement explains which data that is, why we process it, how long we keep it and what rights you have.",
     },
     beforeProcessors: [
@@ -73,19 +82,23 @@ const en: PrivacyContent = {
         },
         {
             kind: "paragraph",
-            text: "What you fill in yourself: your name, email address, company name, role and phone number, insofar as you provide them. Only the email address is needed to send you the result; the rest is optional.",
+            text: "What you fill in yourself: your name, email address, company name and role, insofar as a tool asks for them and you provide them. Only the email address is needed to send you the result; the rest is optional.",
         },
         {
             kind: "paragraph",
-            text: "What you type in the conversation: the tools work through a conversation. What you write there about your organisation and your question, we store, together with the assessment that follows from it. Do not share confidential business information or other people's data in it.",
+            text: "What you type in the conversation: the AI First Aid and the AI Readiness Scan work through a conversation. What you write there about your organisation and your question, we store, together with the assessment that follows from it. Do not share confidential business information or other people's data in it.",
         },
         {
             kind: "paragraph",
-            text: "What for: to send you the requested report or advice, and to contact you if you ask us to. If you use our tool and leave your details, we may approach you about our services on the basis of our legitimate interest. You can always object to this; one email suffices.",
+            text: "The AI Act Check works differently: it is a questionnaire with fixed choices, without free text. Of that, we keep your answers and the outcome.",
         },
         {
             kind: "paragraph",
-            text: "Legal basis: performance of your request and our legitimate interest in business services (GDPR art. 6(1)(b) and (f)).",
+            text: "What for: to send you the requested report or advice, and to contact you if you ask us to. After the AI Act Check we only approach you if you ticked the box for that; we record that consent. If you use the AI First Aid or the AI Readiness Scan and leave your details, we may approach you about our services on the basis of our legitimate interest. You can always object to this; one email suffices.",
+        },
+        {
+            kind: "paragraph",
+            text: "Legal basis: performance of your request, your consent in the case of the AI Act Check, and our legitimate interest in business services (GDPR art. 6(1)(a), (b) and (f)).",
         },
         { kind: "subheading", text: "If you email or call us", level: 3 },
         {
@@ -196,7 +209,7 @@ const nl: PrivacyContent = {
     },
     hero: {
         title: "Privacyverklaring",
-        updated: "Laatst bijgewerkt: 24 augustus 2026",
+        updated: "Laatst bijgewerkt: 25 augustus 2026",
         lead: "The Only Constant B.V. verwerkt persoonsgegevens van bezoekers van deze website. In deze verklaring staat welke gegevens dat zijn, waarom we ze verwerken, hoe lang we ze bewaren en welke rechten je hebt.",
     },
     beforeProcessors: [
@@ -217,19 +230,23 @@ const nl: PrivacyContent = {
         },
         {
             kind: "paragraph",
-            text: "Wat je zelf invult: je naam, e-mailadres, bedrijfsnaam, functie en telefoonnummer, voor zover je die opgeeft. Alleen het e-mailadres is nodig om je het resultaat te sturen; de rest is optioneel.",
+            text: "Wat je zelf invult: je naam, e-mailadres, bedrijfsnaam en functie, voor zover een tool erom vraagt en jij ze opgeeft. Alleen het e-mailadres is nodig om je het resultaat te sturen; de rest is optioneel.",
         },
         {
             kind: "paragraph",
-            text: "Wat je in het gesprek typt: de tools werken met een gesprek. Wat je daarin schrijft over je organisatie en je vraagstuk, slaan wij op, samen met de beoordeling die eruit volgt. Deel daarin geen vertrouwelijke bedrijfsinformatie en geen gegevens van anderen.",
+            text: "Wat je in het gesprek typt: de AI EHBO en de AI Readiness Scan werken met een gesprek. Wat je daarin schrijft over je organisatie en je vraagstuk, slaan wij op, samen met de beoordeling die eruit volgt. Deel daarin geen vertrouwelijke bedrijfsinformatie en geen gegevens van anderen.",
         },
         {
             kind: "paragraph",
-            text: "Waarvoor: om je het gevraagde rapport of advies te sturen, en om contact met je op te nemen als je daarom vraagt. Als je onze tool gebruikt en je gegevens achterlaat, mogen we je op grond van ons gerechtvaardigd belang benaderen over onze dienstverlening. Je kunt daar altijd bezwaar tegen maken; één mail volstaat.",
+            text: "De AI Act Check werkt anders: dat is een vragenlijst met vaste keuzes, zonder vrije tekst. Daarvan bewaren wij je antwoorden en de uitkomst.",
         },
         {
             kind: "paragraph",
-            text: "Grondslag: uitvoering van je verzoek en ons gerechtvaardigd belang bij zakelijke dienstverlening (AVG art. 6 lid 1 sub b en f).",
+            text: "Waarvoor: om je het gevraagde rapport of advies te sturen, en om contact met je op te nemen als je daarom vraagt. Bij de AI Act Check benaderen we je daarna alleen als je daarvoor het vakje hebt aangevinkt; die toestemming leggen we vast. Gebruik je de AI EHBO of de AI Readiness Scan en laat je je gegevens achter, dan mogen we je op grond van ons gerechtvaardigd belang benaderen over onze dienstverlening. Je kunt daar altijd bezwaar tegen maken; één mail volstaat.",
+        },
+        {
+            kind: "paragraph",
+            text: "Grondslag: uitvoering van je verzoek, jouw toestemming bij de AI Act Check, en ons gerechtvaardigd belang bij zakelijke dienstverlening (AVG art. 6 lid 1 sub a, b en f).",
         },
         { kind: "subheading", text: "Als je ons mailt of belt", level: 3 },
         {
