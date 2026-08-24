@@ -29,9 +29,13 @@ export function PrivacyHeroModule({ lang }: PrivacyHeroModuleProps) {
             <div className="flex justify-center">
                 <div className={cn(spacing.stackLg, "w-full max-w-2xl")}>
                     <div className={spacing.stackSm}>
-                        {/* "section", the blog post's H1 size: the title has
-                            to outrank the card-size subheadings below it. */}
-                        <Heading level={1} size="section" className="text-balance">
+                        {/* "page", the structural H1 of the heading tier —
+                            not "section", which is display tier and sized for
+                            landing heroes: at that scale the unbreakable word
+                            "Privacyverklaring" pushes past a 375px viewport.
+                            SCALES_CANON: heading.page is the H1 "with enough
+                            air to stay readable when it wraps". */}
+                        <Heading level={1} size="page" className="text-balance">
                             {hero.title}
                         </Heading>
                         {/* The revision date is part of the statement itself:
