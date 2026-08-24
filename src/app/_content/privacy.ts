@@ -61,7 +61,7 @@ const en: PrivacyContent = {
     },
     hero: {
         title: "Privacy statement",
-        updated: "Last updated: 24 August 2026",
+        updated: "Last updated: 25 August 2026",
         lead: "The Only Constant B.V. processes personal data of visitors to this website. This statement explains which data that is, why we process it, how long we keep it and what rights you have.",
     },
     beforeProcessors: [
@@ -209,7 +209,7 @@ const nl: PrivacyContent = {
     },
     hero: {
         title: "Privacyverklaring",
-        updated: "Laatst bijgewerkt: 24 augustus 2026",
+        updated: "Laatst bijgewerkt: 25 augustus 2026",
         lead: "The Only Constant B.V. verwerkt persoonsgegevens van bezoekers van deze website. In deze verklaring staat welke gegevens dat zijn, waarom we ze verwerken, hoe lang we ze bewaren en welke rechten je hebt.",
     },
     beforeProcessors: [
