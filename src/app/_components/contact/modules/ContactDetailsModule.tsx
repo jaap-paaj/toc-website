@@ -10,6 +10,8 @@ import { Heading } from "@/design-system/components/Typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { typography } from "@/design-system/tokens/typography";
 import { useLocale } from "@/lib/i18n/useLocale";
+import { ConsentGatedEmbed } from "@/components/consent/ConsentGatedEmbed";
+import { consentContent } from "@/app/_content/consent";
 
 type AddressCard = {
     title: string;
@@ -83,14 +85,19 @@ export function ContactDetailsModule() {
                                                 </dl>
                                             )}
                                         </div>
-                                        {/* Media Column */}
+                                        {/* Media Column. The map is a Google
+                                            embed, so it sits behind the same
+                                            consent as GA4; without it the box
+                                            holds the address and a button that
+                                            loads the map for this visit. */}
                                         <div className="relative w-full h-full min-h-[200px] rounded-surface overflow-hidden bg-muted">
-                                            <iframe
+                                            <ConsentGatedEmbed
                                                 src={card.media.src}
                                                 title={card.media.title}
+                                                notice={consentContent[lang].embed.mapNotice}
+                                                loadLabel={consentContent[lang].embed.mapLoad}
+                                                lines={card.lines}
                                                 className="absolute inset-0 w-full h-full border-0"
-                                                loading="lazy"
-                                                referrerPolicy="no-referrer-when-downgrade"
                                             />
                                         </div>
                                     </div>
