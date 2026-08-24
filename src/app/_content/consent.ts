@@ -10,7 +10,7 @@ import type { Locale } from "@/lib/i18n/config";
 const en = {
     ariaLabel: "Cookie consent",
     message:
-        "We use cookies to measure how this site is used — only if you allow it. Strictly necessary cookies are always set.",
+        "We use cookies to measure how this site is used, only if you allow it. Strictly necessary cookies are always set.",
     privacyLabel: "Privacy statement",
     accept: "Accept",
     decline: "Decline",
@@ -19,7 +19,7 @@ const en = {
 const nl: typeof en = {
     ariaLabel: "Cookietoestemming",
     message:
-        "Wij gebruiken cookies om te meten hoe de site gebruikt wordt — alleen als jij dat goed vindt. Strikt noodzakelijke cookies plaatsen we altijd.",
+        "Wij gebruiken cookies om te meten hoe de site gebruikt wordt, alleen als jij dat goed vindt. Strikt noodzakelijke cookies plaatsen we altijd.",
     privacyLabel: "Privacyverklaring",
     accept: "Accepteren",
     decline: "Weigeren",
