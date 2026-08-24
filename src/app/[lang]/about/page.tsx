@@ -5,8 +5,7 @@ import { AboutHeroModule } from "@/app/_components/about/modules/AboutHeroModule
 import { AboutApproachModule } from "@/app/_components/about/modules/AboutApproachModule";
 import { AboutTeamModule } from "@/app/_components/about/modules/AboutTeamModule";
 import { buildAlternates } from "@/lib/i18n/alternates";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 interface AboutPageProps {
     params: Promise<{ lang: string }>;

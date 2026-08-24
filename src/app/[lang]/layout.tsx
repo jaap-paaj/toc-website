@@ -9,8 +9,7 @@ import { StructuredData } from "@/components/seo/StructuredData";
 import { i18n } from "@/lib/i18n/config";
 import { getLocalePathPairs } from "@/lib/i18n/localePaths";
 import { LocalePathsProvider } from "@/lib/i18n/LocalePathsProvider";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 const fontSans = Figtree({
   variable: "--font-sans", // lint:allowed
@@ -18,6 +17,10 @@ const fontSans = Figtree({
 });
 
 export const metadata: Metadata = {
+  // Anything a page expresses as a relative URL — a canonical, an og:image —
+  // is resolved against this. Without it Next resolves against localhost, so a
+  // page that forgets an absolute URL ships one silently.
+  metadataBase: new URL(SITE_URL),
   title: "TOC | The Only Constant",
   description: "AI that helps you understand, not just generate.",
   manifest: "/site.webmanifest",

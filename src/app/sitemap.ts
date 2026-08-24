@@ -4,8 +4,7 @@ import { answerPath, getAnswerParams } from "@/app/_content/vragen";
 import { getPagePatterns } from "@/lib/routes/patterns";
 import { getLocalePathPairs } from "@/lib/i18n/localePaths";
 import { i18n, type Locale } from "@/lib/i18n/config";
-
-const SITE_URL = "https://theonlyconstant.nl";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * Pages deliberately kept out of the sitemap. Each one is a step inside a tool
