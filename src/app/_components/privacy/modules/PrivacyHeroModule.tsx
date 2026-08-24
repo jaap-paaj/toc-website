@@ -29,7 +29,9 @@ export function PrivacyHeroModule({ lang }: PrivacyHeroModuleProps) {
             <div className="flex justify-center">
                 <div className={cn(spacing.stackLg, "w-full max-w-2xl")}>
                     <div className={spacing.stackSm}>
-                        <Heading level={1} size="prompt" className="text-balance">
+                        {/* "section", the blog post's H1 size: the title has
+                            to outrank the card-size subheadings below it. */}
+                        <Heading level={1} size="section" className="text-balance">
                             {hero.title}
                         </Heading>
                         {/* The revision date is part of the statement itself:
