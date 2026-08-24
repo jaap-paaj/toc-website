@@ -14,6 +14,22 @@ export default defineConfig({
         },
     },
 
+    use: {
+        // A stored cookie choice keeps the consent banner out of every
+        // baseline, and "denied" keeps GA out of the test runs. The banner
+        // itself is photographed by the cookie-banner tests, which clear
+        // this state.
+        storageState: {
+            cookies: [],
+            origins: [
+                {
+                    origin: "http://localhost:3000",
+                    localStorage: [{ name: "toc-consent", value: "denied" }],
+                },
+            ],
+        },
+    },
+
     snapshotPathTemplate:
         "e2e/__screenshots__/{projectName}/{testFilePath}/{arg}{ext}",
 

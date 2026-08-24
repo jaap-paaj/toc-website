@@ -5,8 +5,9 @@ import { typography } from "@/design-system/tokens/typography";
 import { spacing } from "@/design-system/tokens/spacing";
 import { cn } from "@/lib/utils";
 import { layoutTokens } from "@/design-system/tokens/layout";
-import { footerContent, footerPrimary } from "@/app/_content/footer";
+import { footerContent, footerLegal, footerPrimary } from "@/app/_content/footer";
 import { useLocale } from "@/lib/i18n/useLocale";
+import { openConsentSettings } from "@/lib/consent/consent";
 
 /**
  * The navigation layer of the footer.
@@ -22,9 +23,10 @@ export function SiteFooterNav() {
     const lang = useLocale();
     const { columns } = footerContent[lang];
     const primary = footerPrimary[lang];
+    const legal = footerLegal[lang];
 
     return (
-        <div className="container">
+        <div className={cn("container", spacing.stackXl)}>
             {/* One dominant block, three secondary columns grouped opposite it.
                 No rule and no top padding: the distance down from the CTA band
                 is the band's own padBottom, which is the same scale step as the
@@ -94,6 +96,30 @@ export function SiteFooterNav() {
                         </div>
                     ))}
                 </div>
+            </div>
+
+            {/* The legal strip. The cookie control is a button, not a link:
+                it reopens the banner in place rather than navigating, which is
+                what keeps the consent choice revocable from every page. */}
+            <div className="flex flex-wrap items-center gap-[var(--space-sm)]">
+                <span className={typography.variants.ui.nav.listLink}>
+                    <Link
+                        href={legal.privacy.href}
+                        className="text-foreground/60 hover:text-foreground transition-colors"
+                    >
+                        {legal.privacy.label}
+                    </Link>
+                </span>
+                <button
+                    type="button"
+                    onClick={openConsentSettings}
+                    className={cn(
+                        typography.variants.ui.nav.listLink,
+                        "text-foreground/60 hover:text-foreground transition-colors cursor-pointer",
+                    )}
+                >
+                    {legal.cookieSettings}
+                </button>
             </div>
         </div>
     );
