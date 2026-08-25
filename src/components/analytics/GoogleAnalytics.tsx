@@ -3,6 +3,7 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, Suspense } from "react";
 import Script from "next/script";
+import { useConsent } from "@/lib/consent/consent";
 
 // Canonical key preference with fallback
 const GA_MEASUREMENT_ID =
@@ -31,7 +32,13 @@ function GoogleAnalyticsInner() {
 }
 
 export function GoogleAnalytics() {
-    if (!GA_MEASUREMENT_ID) {
+    // GA4 sets a _ga cookie and processes IP addresses, which makes loading it
+    // consent-gated under the AVG. Nothing renders — so nothing loads — until
+    // the cookie banner is answered with "granted"; granting flips this render
+    // in place, so the first pageview is still counted without a reload.
+    const consent = useConsent();
+
+    if (!GA_MEASUREMENT_ID || consent !== "granted") {
         return null;
     }
 

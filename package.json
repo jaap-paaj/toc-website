@@ -23,13 +23,14 @@
     "audit:legacy-heights": "node scripts/audit-legacy-heights.js",
     "audit:layout-rhythm": "node scripts/audit-layout-rhythm.js",
     "audit:footer": "node scripts/audit-footer.js",
-    "audit:all": "npm run audit:typography && npm run audit:surfaces && npm run audit:spacing && npm run audit:states && npm run audit:color && npm run audit:theme && npm run audit:pages && npm run audit:content-shape && npm run audit:card-canon && npm run audit:legacy-heights && npm run audit:layout-rhythm && npm run audit:footer && npm run audit:locale-pairs && npm run audit:canonical-host",
+    "audit:all": "npm run audit:typography && npm run audit:surfaces && npm run audit:spacing && npm run audit:states && npm run audit:color && npm run audit:theme && npm run audit:pages && npm run audit:content-shape && npm run audit:card-canon && npm run audit:legacy-heights && npm run audit:layout-rhythm && npm run audit:footer && npm run audit:locale-pairs && npm run audit:canonical-host && npm run audit:page-metadata",
     "validate": "npm run lint && npx tsc --noEmit && npm run audit:all",
     "test:visual": "npx playwright test",
     "test:visual:update": "npx playwright test --update-snapshots",
     "test:visual:report": "npx playwright show-report",
     "audit:locale-pairs": "node scripts/audit-locale-pairs.js",
-    "audit:canonical-host": "node scripts/audit-canonical-host.js"
+    "audit:canonical-host": "node scripts/audit-canonical-host.js",
+    "audit:page-metadata": "node scripts/audit-page-metadata.js"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",

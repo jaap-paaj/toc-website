@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { CookieBanner } from "@/components/consent/CookieBanner";
 import { Figtree } from "next/font/google";
 import "../globals.css";
 import { cn } from "@/lib/utils";
@@ -89,6 +90,9 @@ export default async function LangLayout({
         <GoogleAnalytics />
         <LocalePathsProvider pairs={getLocalePathPairs()}>
           {children}
+          {/* Inside the provider: the banner links to the privacy statement
+              through LocalizedLink. */}
+          <CookieBanner />
         </LocalePathsProvider>
         <SmoothScrollAnchor />
       </body>

@@ -13,6 +13,7 @@ const STATIC_PAGES = [
     { name: "blog", path: "/blog" },
     // The answers index has a translated segment: /nl/vragen, /en/questions.
     { name: "vragen", path: "/vragen", en: "/questions" },
+    { name: "privacy", path: "/privacy" },
 ];
 
 const SCAN_VARIANTS = [
@@ -198,3 +199,20 @@ for (const locale of LOCALES) {
         });
     }
 }
+
+// --- Cookie banner ---
+//
+// Every other test seeds a stored consent choice (playwright.config.ts), so
+// the banner never appears in their baselines. These two clear that state and
+// photograph the one page state where the banner is meant to show.
+
+test.describe("cookie banner", () => {
+    test.use({ storageState: { cookies: [], origins: [] } });
+
+    for (const locale of LOCALES) {
+        test(`cookie-banner — ${locale}`, async ({ page }) => {
+            await page.goto(`/${locale}`, { waitUntil: "networkidle" });
+            await expect(page).toHaveScreenshot(`cookie-banner-${locale}.png`);
+        });
+    }
+});

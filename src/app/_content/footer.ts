@@ -121,3 +121,24 @@ const nl: typeof en = {
  * column links there.
  */
 export const footerContent: Record<Locale, typeof en> = { en, nl };
+
+/**
+ * The legal strip under the columns: the privacy statement, and the control
+ * that reopens the cookie banner. The AVG asks that consent stays revocable —
+ * this link is where that promise in the privacy statement ("via the cookie
+ * settings at the bottom of the site") is kept.
+ */
+const legalEn = {
+    privacy: { label: "Privacy statement", href: "/privacy" },
+    cookieSettings: "Cookie settings",
+};
+
+const legalNl: typeof legalEn = {
+    privacy: { label: "Privacyverklaring", href: "/privacy" },
+    cookieSettings: "Cookie-instellingen",
+};
+
+export const footerLegal: Record<Locale, typeof legalEn> = {
+    en: legalEn,
+    nl: legalNl,
+};

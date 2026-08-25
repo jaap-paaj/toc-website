@@ -1,3 +1,4 @@
+import type React from "react";
 import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/design-system/components/Typography";
 import { typography } from "@/design-system/tokens/typography";
@@ -10,12 +11,41 @@ import { typography } from "@/design-system/tokens/typography";
  */
 export type ProseBlock =
     | { kind: "paragraph"; text: string }
-    | { kind: "subheading"; text: string }
+    | { kind: "subheading"; text: string; level?: 2 | 3 }
     | { kind: "list"; ordered: boolean; items: string[] };
 
 export interface ProseSectionProps {
     blocks: readonly ProseBlock[];
     className?: string;
+}
+
+const EMAIL = /[\w.+-]+@[\w-]+(?:\.[\w-]+)+/g;
+
+/**
+ * Email addresses in prose render as mailto links. Detected, not marked up:
+ * the content files stay plain strings, and an address that appears in a
+ * paragraph is always meant to be written to — the privacy statement's
+ * "questions about your data" line is the case this exists for.
+ */
+function withEmailLinks(text: string): React.ReactNode {
+    const parts = text.split(EMAIL);
+    if (parts.length === 1) return text;
+
+    const emails = text.match(EMAIL)!;
+    return parts.flatMap((part, i) =>
+        i < emails.length
+            ? [
+                  part,
+                  <a
+                      key={i}
+                      href={`mailto:${emails[i]}`}
+                      className="underline underline-offset-4 decoration-foreground/30 hover:decoration-current transition-colors"
+                  >
+                      {emails[i]}
+                  </a>,
+              ]
+            : [part],
+    );
 }
 
 /**
@@ -33,6 +63,23 @@ export function ProseSection({ blocks, className }: ProseSectionProps) {
         >
             {blocks.map((block, i) => {
                 if (block.kind === "subheading") {
+                    // Level 3 steps down to the eyebrow treatment — the same
+                    // small head the footer columns use. Two card-size
+                    // headings stacked read as one title with a broken line,
+                    // which is exactly the case a third level exists for.
+                    if (block.level === 3) {
+                        return (
+                            <h3
+                                key={i}
+                                className={cn(
+                                    typography.variants.meta.eyebrow,
+                                    "text-foreground text-balance",
+                                )}
+                            >
+                                {block.text}
+                            </h3>
+                        );
+                    }
                     return (
                         <Heading key={i} level={2} size="card" className="text-balance">
                             {block.text}
@@ -52,7 +99,7 @@ export function ProseSection({ blocks, className }: ProseSectionProps) {
                         >
                             {block.items.map((item, j) => (
                                 <li key={j} className={typography.variants.body.lg}>
-                                    {item}
+                                    {withEmailLinks(item)}
                                 </li>
                             ))}
                         </ListTag>
@@ -61,7 +108,7 @@ export function ProseSection({ blocks, className }: ProseSectionProps) {
 
                 return (
                     <Text key={i} size="lg" measure="2xl">
-                        {block.text}
+                        {withEmailLinks(block.text)}
                     </Text>
                 );
             })}
