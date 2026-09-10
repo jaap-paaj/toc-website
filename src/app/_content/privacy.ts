@@ -25,6 +25,12 @@ import type { ProseBlock } from "@/components/sections/ProseSection";
  *    fixed-choice wizard whose answers are stored, and its required
  *    checkbox is stored as consent_marketing, so approach after that tool
  *    rests on consent (art. 6(1)(a)), the other two on legitimate interest.
+ * 3. The Vercel Analytics paragraph, and the words "met Google Analytics" /
+ *    "with Google Analytics" scoping the refusal sentence. The site counts
+ *    every visit cookielessly via <VercelAnalytics /> in the [lang] layout
+ *    (nothing stored on the device, legitimate interest); an unscoped "we
+ *    do not measure your visit" would be false. Maarten still owes Vercel
+ *    an entry in his processors list.
  *
  * The date in hero.updated is the publication date, not the build date: set it
  * by hand on the day the page actually goes live, together with the cookie
@@ -108,11 +114,15 @@ const en: PrivacyContent = {
         { kind: "subheading", text: "If you visit the site", level: 3 },
         {
             kind: "paragraph",
-            text: "We measure how the site is used with Google Analytics, so that we know which pages work and which do not, and where visitors get stuck. For that we set cookies, but only if you consent to it. If you decline, we do not measure your visit.",
+            text: "We measure how the site is used with Google Analytics, so that we know which pages work and which do not, and where visitors get stuck. For that we set cookies, but only if you consent to it. If you decline, we do not measure your visit with Google Analytics.",
         },
         {
             kind: "paragraph",
             text: "You can change or withdraw your choice at any time via the cookie settings at the bottom of the site. Cookies that are strictly necessary for the site to work are always set; those do not collect data about your behaviour.",
+        },
+        {
+            kind: "paragraph",
+            text: "In addition, we count visits with Vercel Analytics, the statistics service of our hosting platform. That counting uses no cookies and stores nothing on your device; what we see are totals, not profiles. The legal basis is our legitimate interest in understanding how the site is used.",
         },
         { kind: "subheading", text: "Maps and the appointment calendar", level: 3 },
         {
@@ -256,11 +266,15 @@ const nl: PrivacyContent = {
         { kind: "subheading", text: "Als je de site bezoekt", level: 3 },
         {
             kind: "paragraph",
-            text: "Wij meten hoe de site gebruikt wordt met Google Analytics, zodat we weten welke pagina's werken en welke niet en waar bezoekers vastlopen. Daarvoor plaatsen wij cookies, maar alleen als je daar toestemming voor geeft. Weiger je, dan meten wij je bezoek niet.",
+            text: "Wij meten hoe de site gebruikt wordt met Google Analytics, zodat we weten welke pagina's werken en welke niet en waar bezoekers vastlopen. Daarvoor plaatsen wij cookies, maar alleen als je daar toestemming voor geeft. Weiger je, dan meten wij je bezoek niet met Google Analytics.",
         },
         {
             kind: "paragraph",
             text: "Je kunt je keuze op elk moment wijzigen of intrekken via de cookie-instellingen onderaan de site. Cookies die strikt nodig zijn om de site te laten werken, plaatsen wij altijd; die verzamelen geen gegevens over je gedrag.",
+        },
+        {
+            kind: "paragraph",
+            text: "Daarnaast tellen wij bezoeken met Vercel Analytics, de statistiekdienst van ons hostingplatform. Die telling gebruikt geen cookies en slaat niets op je apparaat op; wat wij zien zijn totalen, geen profielen. Grondslag is ons gerechtvaardigd belang bij inzicht in het gebruik van de site.",
         },
         { kind: "subheading", text: "Kaarten en de agenda", level: 3 },
         {
