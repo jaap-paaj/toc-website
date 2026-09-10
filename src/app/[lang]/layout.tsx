@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { CookieBanner } from "@/components/consent/CookieBanner";
 import { Figtree } from "next/font/google";
@@ -88,6 +89,11 @@ export default async function LangLayout({
           }}
         />
         <GoogleAnalytics />
+        {/* Cookieless first-party counting, deliberately outside the consent
+            gate: it stores nothing on the device (no ePrivacy consent needed)
+            and counts every visit, which GA4 behind the banner cannot. The
+            privacy statement describes it under "Als je de site bezoekt". */}
+        <VercelAnalytics />
         <LocalePathsProvider pairs={getLocalePathPairs()}>
           {children}
           {/* Inside the provider: the banner links to the privacy statement
