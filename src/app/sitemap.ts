@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog/loader";
+import { aboutContent } from "@/app/_content/about";
 import { answerPath, getAnswerParams } from "@/app/_content/vragen";
 import { getPagePatterns } from "@/lib/routes/patterns";
 import { getLocalePathPairs } from "@/lib/i18n/localePaths";
 import { i18n, type Locale } from "@/lib/i18n/config";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, siteUrl } from "@/lib/site";
 
 /**
  * Pages deliberately kept out of the sitemap. Each one is a step inside a tool
@@ -47,6 +48,15 @@ const PRIORITY: Record<string, number> = {
     "/questions": 0.7,
 };
 
+/**
+ * Photos worth finding in Google Images, by the page they appear on. The page
+ * itself serves them through the image optimizer, so this is where Google
+ * learns their stable address.
+ */
+const IMAGES: Record<string, string[]> = {
+    "/about": aboutContent.nl.team.members.map((member) => siteUrl(member.imageSrc)),
+};
+
 /** Dutch is the primary market, so English pages sit a step lower. */
 function priorityFor(path: string, locale: Locale): number {
     const base = PRIORITY[path] ?? 0.6;
@@ -82,6 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 url: `${SITE_URL}/${locale}${path}`,
                 changeFrequency: "weekly",
                 priority: priorityFor(path || "/", locale),
+                ...(IMAGES[path] && { images: IMAGES[path] }),
             });
         }
     }

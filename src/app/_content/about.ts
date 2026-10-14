@@ -17,26 +17,30 @@ const en = {
     team: {
         eyebrow: "OUR TEAM",
         title: "",
+        jobTitle: "Co-founder",
         description: "Small team, hands-on. Three founders who build alongside you, supported by specialists when the work calls for it. No layers between client and maker.",
         members: [
             {
                 name: "Maarten Mantje",
                 role: "",
-                imageSrc: "/images/team/team-03.png",
+                imageAlt: "Maarten Mantje, co-founder of The Only Constant",
+                imageSrc: "/images/team/maarten-mantje.png",
                 email: "maarten@theonlyconstant.nl",
                 linkedinUrl: "https://www.linkedin.com/in/maarten-mantje-385612/"
             },
             {
                 name: "Julien Amoureus",
                 role: "",
-                imageSrc: "/images/team/team-02.jpg",
+                imageAlt: "Julien Amoureus, co-founder of The Only Constant",
+                imageSrc: "/images/team/julien-amoureus.jpg",
                 email: "julien@theonlyconstant.nl",
                 linkedinUrl: "https://www.linkedin.com/in/julienamoureus/"
             },
             {
-                name: "JAAP BEÄRDA",
+                name: "Jaap Beärda",
                 role: "",
-                imageSrc: "/images/team/team-01.jpg",
+                imageAlt: "Jaap Beärda, co-founder of The Only Constant",
+                imageSrc: "/images/team/jaap-bearda.jpg",
                 email: "jaap@theonlyconstant.nl",
                 linkedinUrl: "https://www.linkedin.com/in/jaapbearda/"
             }
@@ -61,26 +65,30 @@ const nl: typeof en = {
     team: {
         eyebrow: "ONS TEAM",
         title: "",
+        jobTitle: "Mede-oprichter",
         description: "Klein team, hands-on. Drie oprichters die zelf meebouwen, aangevuld met specialisten wanneer het werk daarom vraagt. Geen laag tussen klant en maker.",
         members: [
             {
                 name: "Maarten Mantje",
                 role: "",
-                imageSrc: "/images/team/team-03.png",
+                imageAlt: "Maarten Mantje, mede-oprichter van The Only Constant",
+                imageSrc: "/images/team/maarten-mantje.png",
                 email: "maarten@theonlyconstant.nl",
                 linkedinUrl: "https://www.linkedin.com/in/maarten-mantje-385612/"
             },
             {
                 name: "Julien Amoureus",
                 role: "",
-                imageSrc: "/images/team/team-02.jpg",
+                imageAlt: "Julien Amoureus, mede-oprichter van The Only Constant",
+                imageSrc: "/images/team/julien-amoureus.jpg",
                 email: "julien@theonlyconstant.nl",
                 linkedinUrl: "https://www.linkedin.com/in/julienamoureus/"
             },
             {
-                name: "JAAP BEÄRDA",
+                name: "Jaap Beärda",
                 role: "",
-                imageSrc: "/images/team/team-01.jpg",
+                imageAlt: "Jaap Beärda, mede-oprichter van The Only Constant",
+                imageSrc: "/images/team/jaap-bearda.jpg",
                 email: "jaap@theonlyconstant.nl",
                 linkedinUrl: "https://www.linkedin.com/in/jaapbearda/"
             }

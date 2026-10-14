@@ -18,3 +18,10 @@ export function siteUrl(path = ""): string {
     if (path === "" || path === "/") return SITE_URL;
     return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }
+
+/**
+ * The one Organization node in structured data. Every page that describes The
+ * Only Constant points at this id, so Google merges them into a single entity
+ * instead of reading each page's copy as a different company.
+ */
+export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
