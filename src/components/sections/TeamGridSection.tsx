@@ -11,6 +11,8 @@ export type Role = "FOUNDER" | "PARTNER" | "PRINCIPAL" | "ASSOCIATE" | "ADVISOR"
 export interface TeamMember {
     name: string;
     role: string;
+    /** Who is in the photo and in what capacity. Falls back to the name. */
+    imageAlt?: string;
     imageSrc: string;
     email: string;
     linkedinUrl: string;
@@ -53,7 +55,7 @@ export function TeamGridSection({
                         <div className="relative aspect-[4/5] w-full bg-muted">
                             <Image
                                 src={member.imageSrc}
-                                alt={member.name}
+                                alt={member.imageAlt ?? member.name}
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
