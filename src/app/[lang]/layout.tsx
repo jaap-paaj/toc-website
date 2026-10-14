@@ -11,7 +11,7 @@ import { StructuredData } from "@/components/seo/StructuredData";
 import { i18n } from "@/lib/i18n/config";
 import { getLocalePathPairs } from "@/lib/i18n/localePaths";
 import { LocalePathsProvider } from "@/lib/i18n/LocalePathsProvider";
-import { SITE_URL } from "@/lib/site";
+import { ORGANIZATION_ID, SITE_URL } from "@/lib/site";
 
 const fontSans = Figtree({
   variable: "--font-sans", // lint:allowed
@@ -65,6 +65,7 @@ export default async function LangLayout({
           data={{
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": ORGANIZATION_ID,
             name: "The Only Constant",
             url: SITE_URL,
             logo: `${SITE_URL}/images/brand/toc/TOC_Logo_black.svg`,

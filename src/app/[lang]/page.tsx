@@ -3,7 +3,7 @@ import { HomePage } from "@/app/_components/home/HomePage";
 import { StructuredData } from "@/components/seo/StructuredData";
 import type { Locale } from "@/lib/i18n/config";
 import { buildAlternates } from "@/lib/i18n/alternates";
-import { SITE_URL } from "@/lib/site";
+import { ORGANIZATION_ID, SITE_URL } from "@/lib/site";
 
 interface HomePageProps {
     params: Promise<{ lang: string }>;
@@ -40,6 +40,7 @@ export default async function Home({ params }: HomePageProps) {
                 data={{
                     "@context": "https://schema.org",
                     "@type": "Organization",
+                    "@id": ORGANIZATION_ID,
                     name: "The Only Constant",
                     url: SITE_URL,
                     description: "AI consultancy voor marketing en organisatie-innovatie",
