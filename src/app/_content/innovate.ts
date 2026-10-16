@@ -83,8 +83,8 @@ const en = {
     imageDuo: {
         left: "/images/innovate/innovate-workshop-mapping.png",
         altLeft: "Innovate workshop mapping",
-        right: "/images/innovate/innovate-ideation-sketch.png",
-        altRight: "Innovate ideation sketch"
+        right: "/images/innovate/innovate-ai-capability-cards-workshop.jpg",
+        altRight: "Workshop participant holding an AI capability card above a process map"
     }
 };
 
@@ -171,8 +171,8 @@ const nl: typeof en = {
     imageDuo: {
         left: "/images/innovate/innovate-workshop-mapping.png",
         altLeft: "Innovate workshop mapping sessie",
-        right: "/images/innovate/innovate-ideation-sketch.png",
-        altRight: "Innovate ideatie schets"
+        right: "/images/innovate/innovate-ai-capability-cards-workshop.jpg",
+        altRight: "Workshopdeelnemer houdt een AI capability-kaart boven een procesmap"
     }
 };
 

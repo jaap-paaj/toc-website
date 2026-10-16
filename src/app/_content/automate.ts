@@ -85,6 +85,12 @@ const en = {
                 body: "We design around how you actually work: inputs, decision points, exceptions, escalations. The solution fits the business, not the other way around."
             }
         ]
+    },
+    imageDuo: {
+        left: "/images/automate/maarten-mantje-session-ebeltoft-lisbon.jpg",
+        altLeft: "Maarten Mantje of The Only Constant leading a session at the Ebeltoft Lisbon Meeting 2026",
+        right: "/images/automate/automate-ai-cards-collaboration.jpg",
+        altRight: "Two workshop participants pointing at the same card on a process map"
     }
 };
 
@@ -173,6 +179,12 @@ const nl: typeof en = {
                 body: "We ontwerpen rond hoe je daadwerkelijk werkt: inputs, beslismomenten, uitzonderingen, escalaties. De oplossing past bij het bedrijf, niet andersom."
             }
         ]
+    },
+    imageDuo: {
+        left: "/images/automate/maarten-mantje-session-ebeltoft-lisbon.jpg",
+        altLeft: "Maarten Mantje van The Only Constant leidt een sessie op de Ebeltoft Lisbon Meeting 2026",
+        right: "/images/automate/automate-ai-cards-collaboration.jpg",
+        altRight: "Twee workshopdeelnemers wijzen naar dezelfde kaart op een procesmap"
     }
 };
 

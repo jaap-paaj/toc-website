@@ -2,6 +2,7 @@ import { PageLayout } from "@/design-system/components/Layout";
 import { SiteFooterModule } from "@/app/_components/footer/SiteFooterModule";
 import { AutomateHeroModule } from "./modules/AutomateHeroModule";
 import { AutomateReadyToRunModule } from "./modules/AutomateReadyToRunModule";
+import { AutomateImageDuoModule } from "./modules/AutomateImageDuoModule";
 import { AutomateApproachModule } from "./modules/AutomateApproachModule";
 import { AutomateWhyUsModule } from "./modules/AutomateWhyUsModule";
 import { AutomateFaqModule } from "./modules/AutomateFaqModule";
@@ -11,6 +12,7 @@ export function AutomatePage() {
         <PageLayout variant="landing">
             <AutomateHeroModule />
             <AutomateReadyToRunModule />
+            <AutomateImageDuoModule />
             <AutomateApproachModule />
             <AutomateWhyUsModule />
             <AutomateFaqModule />
