@@ -23,7 +23,7 @@ export function AutomateApproachModule() {
     }));
 
     return (
-        <HomeModule id="approach" width="full" tone="dark" pad="m" gap="none">
+        <HomeModule id="approach" width="full" tone="dark" pad="m" padTop="none" gap="none">
             <div className={cn("container mx-auto flex flex-col", spacing.component.sectionHeader)}>
                 <SectionHeader variant="stacked" eyebrow={approach.eyebrow} />
                 <CatalogGridSection
