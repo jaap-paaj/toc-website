@@ -22,6 +22,12 @@
   --card-foreground: #f5f5f5;
   /* neutral-100 */
 
+  /* Tone Backgrounds (shared by the tone scopes and the split tone) */
+  --tone-light-background: #fafafa;
+  /* neutral-50 */
+  --tone-dark-background: #0a0a0a;
+  /* neutral-950 */
+
   /* Surface Layer Defaults */
   --surface-background: #0a0a0a;
   --surface-panel: #171717;
@@ -102,7 +108,7 @@
      ======================================== */
 
   .tone-light {
-    --background: #fafafa;
+    --background: var(--tone-light-background);
     /* neutral-50 */
     --foreground: #0a0a0a;
     /* neutral-950 */
@@ -139,7 +145,7 @@
   }
 
   .tone-dark {
-    --background: #0a0a0a;
+    --background: var(--tone-dark-background);
     /* neutral-950 */
     --foreground: #f5f5f5;
     /* neutral-100 */
@@ -172,6 +178,14 @@
     /* neutral-900 */
     /* neutral-900 (Subdued) */
     --surface-media: #171717;
+  }
+
+  /* Split Scope: top half paints .tone-light, bottom half .tone-dark,
+     so it meets the light module above and the dark module below seamlessly. */
+  .tone-split-light-dark {
+    background: linear-gradient(to bottom,
+        var(--tone-light-background) 50%,
+        var(--tone-dark-background) 50%);
   }
 
   /* Brand Surface Scope (Foreground Only - No Background Paint) */

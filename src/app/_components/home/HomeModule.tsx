@@ -86,7 +86,7 @@ const TONE_MAP: Record<HomeModuleTone, string> = {
     dark: "tone-dark bg-background text-foreground", // System Logic /* lint:allowed */
     muted: "text-muted-foreground", // Legacy
     accent: "text-accent-foreground", // Legacy
-    "split-light-dark": "bg-[linear-gradient(to_bottom,theme(colors.zinc.100)_0%,theme(colors.zinc.100)_50%,theme(colors.background)_50%,theme(colors.background)_100%)]",
+    "split-light-dark": "tone-split-light-dark", // System Logic
     brand: "tone-brand bg-background text-foreground", // Systemic Brand Surface
 };
 
