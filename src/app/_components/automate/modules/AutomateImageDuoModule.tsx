@@ -22,7 +22,7 @@ export function AutomateImageDuoModule() {
                     { src: automateContent[lang].imageDuo.left, alt: automateContent[lang].imageDuo.altLeft },
                     { src: automateContent[lang].imageDuo.right, alt: automateContent[lang].imageDuo.altRight }
                 ]}
-                dominant="right"
+                dominant="left"
             />
         </HomeModule>
     );
